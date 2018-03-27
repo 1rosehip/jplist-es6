@@ -1,4 +1,4 @@
-.bd-navbar {
+.bd-navbar{
     min-height: 4rem;
     background-color: rgba(0,0,0,0.75);
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
@@ -7,6 +7,10 @@
 .bd-navbar .navbar-brand img{
     max-width: 130px;
     margin-bottom: -4px;
+}
+
+.bd-navbar .nav-link{
+    transition: color 0.5s;
 }
 
 .bd-title{
