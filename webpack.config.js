@@ -44,14 +44,21 @@ const baseConfig = {
     devtool: 'source-map',
 
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        //new CleanWebpackPlugin(['dist']),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production') //development, production
         }),
 
         //https://webpack.js.org/plugins/extract-text-webpack-plugin/
         new ExtractTextPlugin('jplist.styles.css'),
-    ]
+    ],
+
+    devServer: {
+        port: 3000,
+        staticOptions: {
+            extensions: ['html']
+        }
+    }
 };
 
 const es5Config = Object.assign({}, baseConfig, {

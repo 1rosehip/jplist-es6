@@ -7,7 +7,8 @@
     "watch": "webpack --config webpack.config.js --watch",
     "test": "jest src",
     "lint": "./node_modules/.bin/eslint src",
-    "site": "node ./build/site/render.js"
+    "site": "node ./build/site/render.js",
+    "start": "webpack-dev-server"
   },
   "author": "Miriam Zusin",
   "license": "MIT",
@@ -57,7 +58,8 @@
     "sinon": "^4.3.0",
     "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11"
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
   },
   "jest": {
     "moduleFileExtensions": [
