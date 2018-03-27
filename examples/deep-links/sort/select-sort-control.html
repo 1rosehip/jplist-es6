@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>jPList JavaScript library</title>
+        <meta name="description" content="jPList is a vanilla JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc." />
+
+        <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <!-- =========================== Group 1 ================================ -->
+        <h1>Select Sort Control<br/> with deep link - Group 1</h1>
+
+        <select
+                data-jplist-control="select-sort"
+                data-group="group1"
+                data-name="name1"
+                data-id="select1">
+
+            <option
+                    value="0"
+                    data-path="default">Sort by</option>
+
+            <option
+                    value="1"
+                    data-path=".title"
+                    data-order="asc"
+                    data-type="text"
+                    selected>Title A-Z</option>
+
+            <option
+                    value="2"
+                    data-path=".title"
+                    data-order="desc"
+                    data-type="text">Title Z-A</option>
+
+            <option
+                    value="3"
+                    data-path=".desc"
+                    data-order="asc"
+                    data-type="text">Description A-Z</option>
+
+            <option
+                    value="4"
+                    data-path=".desc"
+                    data-order="desc"
+                    data-type="text">Description Z-A</option>
+
+            <option
+                    value="5"
+                    data-path=".likes"
+                    data-order="asc"
+                    data-type="number">Likes asc</option>
+
+            <option
+                    value="6"
+                    data-path=".likes"
+                    data-order="desc"
+                    data-type="number">Likes desc</option>
+        </select>
+
+        <!-- items group -->
+        <div data-jplist-group="group1">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">10</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">aaa</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">2</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ccc</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It has survived not only five centuries.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">8</span>
+                </p>
+            </div>
+        </div>
+
+        <select
+                data-jplist-control="select-sort"
+                data-group="group1"
+                data-name="name1"
+            data-id="select1">
+
+            <option
+                    value="0"
+                    data-path="default">Sort by</option>
+
+            <option
+                    value="1"
+                    data-path=".title"
+                    data-order="asc"
+                    data-type="text"
+                    selected>Title A-Z</option>
+
+            <option
+                    value="2"
+                    data-path=".title"
+                    data-order="desc"
+                    data-type="text">Title Z-A</option>
+
+            <option
+                    value="3"
+                    data-path=".desc"
+                    data-order="asc"
+                    data-type="text">Description A-Z</option>
+
+            <option
+                    value="4"
+                    data-path=".desc"
+                    data-order="desc"
+                    data-type="text">Description Z-A</option>
+
+            <option
+                    value="5"
+                    data-path=".likes"
+                    data-order="asc"
+                    data-type="number">Likes asc</option>
+
+            <option
+                    value="6"
+                    data-path=".likes"
+                    data-order="desc"
+                    data-type="number">Likes desc</option>
+        </select>
+
+        <!-- =========================== Group 2 ================================ -->
+        <h1>Select Sort Control<br/> with deep link - Group 2</h1>
+
+        <select
+                data-jplist-control="select-sort"
+                data-group="group2"
+                data-name="name2"
+                data-id="select2">
+
+            <option
+                    value="0"
+                    data-path="default">Sort by</option>
+
+            <option
+                    value="1"
+                    data-path=".title"
+                    data-order="asc"
+                    data-type="text">Title A-Z</option>
+
+            <option
+                    value="2"
+                    data-path=".title"
+                    data-order="desc"
+                    data-type="text">Title Z-A</option>
+
+            <option
+                    value="3"
+                    data-path=".desc"
+                    data-order="asc"
+                    data-type="text">Description A-Z</option>
+
+            <option
+                    value="4"
+                    data-path=".desc"
+                    data-order="desc"
+                    data-type="text">Description Z-A</option>
+
+            <option
+                    value="5"
+                    data-path=".likes"
+                    data-order="asc"
+                    data-type="number"
+                    selected>Likes asc</option>
+
+            <option
+                    value="6"
+                    data-path=".likes"
+                    data-order="desc"
+                    data-type="number">Likes desc</option>
+        </select>
+
+        <!-- items group -->
+        <div data-jplist-group="group2">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">10</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">aaa</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">2</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ccc</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It has survived not only five centuries.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">8</span>
+                </p>
+            </div>
+        </div>
+
+        <select
+                data-jplist-control="select-sort"
+                data-group="group2"
+                data-name="name2"
+                data-id="select2">
+
+            <option
+                    value="0"
+                    data-path="default">Sort by</option>
+
+            <option
+                    value="1"
+                    data-path=".title"
+                    data-order="asc"
+                    data-type="text">Title A-Z</option>
+
+            <option
+                    value="2"
+                    data-path=".title"
+                    data-order="desc"
+                    data-type="text">Title Z-A</option>
+
+            <option
+                    value="3"
+                    data-path=".desc"
+                    data-order="asc"
+                    data-type="text">Description A-Z</option>
+
+            <option
+                    value="4"
+                    data-path=".desc"
+                    data-order="desc"
+                    data-type="text">Description Z-A</option>
+
+            <option
+                    value="5"
+                    data-path=".likes"
+                    data-order="asc"
+                    data-type="number"
+                    selected>Likes asc</option>
+
+            <option
+                    value="6"
+                    data-path=".likes"
+                    data-order="desc"
+                    data-type="number">Likes desc</option>
+        </select>
+
+        <script src="../../../dist/jplist.min.js"></script>
+        <script>
+            jplist.init({
+                deepLinking: true
+                //hashStart: '#!'
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+    font-size: 16px;
+    width: 100%;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 150%;
+}
+
+h1{
+    padding: 0 15px;
+    margin: 30px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 600px;
+    max-width: 90%;
+    line-height: 150%;
+}
+
+[data-jplist-group]{
+    width: 600px;
+    max-width: 90%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[data-jplist-item]{
+    width: 100%;
+    background: #efefef;
+    border-radius: 2px;
+    margin: 0 0 15px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px 15px 10px 15px;
+}
+
+p{
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+
+.title{
+    color: #c15808;
+}
+
+.likes{
+    color: #1d728c;
+}
+
+.buttons{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 600px;
+    max-width: 90%;
+    margin: 0 0 20px 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.buttons button{
+    margin: 0 15px 15px 15px;
+    width: 150px;
+    padding: 7px 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0;
+    background: #9cd0f9;
+    border-radius: 3px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.buttons button:focus{
+    outline: none;
+}
+
+.buttons .jplist-selected{
+    background: #ff8a35;
+}
+
+label{
+    margin: 10px;
+}
+
+input[type="radio"].jplist-selected{
+    color: #ff8a35;
+}
+
+select{
+    margin: 20px 0;
+}
+
+[data-jplist-control="pagination"]{
+    margin: 20px 0;
+}
+
+[data-jplist-control="pagination"] .jplist-selected{
+    color: #ff8a35;
+}
+
+.jplist-holder{
+    display: inline-block;
+}
+
+.jplist-disabled{
+    color: #e0e0e0;
+}
+
+input[type="text"]{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 7px 10px;
+    margin: 0 10px;
+}
+
+[data-jplist-control="no-results"]{
+    margin: 0 0 30px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #423b70;
+}
+
+.jplist-grid{
+    border: 1px solid red;
+}
+
+.jplist-list{
+    border: 1px solid green;
+}
+
+.jplist-thumb{
+    border: 1px solid blue;
+}

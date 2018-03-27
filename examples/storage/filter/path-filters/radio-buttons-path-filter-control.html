@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>jPList JavaScript library</title>
+        <meta name="description" content="jPList is a vanilla JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc." />
+
+        <link href="../../../css/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <!-- =========================== Group 1 ================================ -->
+        <h1>Radio buttons path<br/> filter control with storage - Group 1</h1>
+
+        <div class="buttons">
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-path=".title"
+                        data-group="group1"
+                        data-name="name1"
+                        data-id="title"
+                        name="r1"
+                        checked>
+                Filter by title
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-group="group1"
+                        data-name="name1"
+                        data-id="desc"
+                        name="r1"
+                        data-path=".desc">
+                Filter by description
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-group="group1"
+                        data-name="name1"
+                        data-id="likes"
+                        name="r1"
+                        data-path=".likes">
+                Filter by likes
+                </input>
+            </label>
+
+        </div>
+
+        <!-- items group -->
+        <div data-jplist-group="group1">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="buttons">
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-path=".title"
+                        data-group="group1"
+                        name="r2"
+                        data-name="name1"
+                        data-id="title"
+                        checked>
+                Filter by title
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-group="group1"
+                        data-name="name1"
+                        data-id="desc"
+                        name="r2"
+                        data-path=".desc">
+                Filter by description
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-group="group1"
+                        data-name="name1"
+                        data-id="likes"
+                        name="r2"
+                        data-path=".likes">
+                Filter by likes
+                </input>
+            </label>
+
+        </div>
+
+        <!-- =========================== Group 2 ================================ -->
+        <h1>Radio buttons path<br/> filter control with storage  - Group 2</h1>
+
+        <div class="buttons">
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-path=".title"
+                        data-group="group2"
+                        data-name="name2"
+                        data-id="title"
+                        name="r3"
+                        checked>
+                Filter by title
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-group="group2"
+                        data-name="name2"
+                        data-id="desc"
+                        name="r3"
+                        data-path=".desc">
+                Filter by description
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-group="group2"
+                        data-name="name2"
+                        data-id="likes"
+                        name="r3"
+                        data-path=".likes">
+                Filter by likes
+                </input>
+            </label>
+
+        </div>
+
+        <!-- items group -->
+        <div data-jplist-group="group2">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="buttons">
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-path=".title"
+                        data-group="group2"
+                        data-name="name2"
+                        data-id="title"
+                        name="r4"
+                        checked>
+                Filter by title
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-group="group2"
+                        data-name="name2"
+                        name="r4"
+                        data-id="desc"
+                        data-path=".desc">
+                Filter by description
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-path-filter"
+                        data-group="group2"
+                        data-name="name2"
+                        name="r4"
+                        data-id="likes"
+                        data-path=".likes">
+                Filter by likes
+                </input>
+            </label>
+
+        </div>
+
+        <script src="../../../../dist/jplist.min.js"></script>
+        <script>
+            jplist.init({
+                storage: 'localStorage'
+            });
+        </script>
+    </body>
+</html>

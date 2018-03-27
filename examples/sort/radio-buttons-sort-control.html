@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>jPList JavaScript library</title>
+        <meta name="description" content="jPList is a vanilla JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc." />
+
+        <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <!-- =========================== Group 1 ================================ -->
+        <h1>Radio Buttons Sort Control - Group 1</h1>
+
+        <div class="buttons">
+
+            <!--
+                jplist radio buttons sort control:
+                ---------------------------
+                it's identified by data-jplist-control="radio-buttons-sort" attribute;
+                it sorts all elements located in <div data-group="group1">...</div>;
+                each element in the group should have data-jplist-item attribute;
+                data-path can be any CSS selector;
+                data-order can be: asc (default) or desc
+                data-type can be: text (default), number or datetime;
+
+            -->
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".title"
+                        data-group="group1"
+                        data-order="asc"
+                        data-type="text"
+                        name="sort1"
+                        checked>
+                    Sort by title asc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".title"
+                        data-group="group1"
+                        data-order="desc"
+                        data-type="text"
+                        name="sort1">
+                    Sort by title desc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".desc"
+                        data-group="group1"
+                        data-order="asc"
+                        data-type="text"
+                        name="sort1">
+                    Sort by description asc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".desc"
+                        data-group="group1"
+                        data-order="desc"
+                        data-type="text"
+                        name="sort1">
+                    Sort by description desc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".likes"
+                        data-group="group1"
+                        data-order="asc"
+                        data-type="number"
+                        name="sort1">
+                    Sort by likes asc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".likes"
+                        data-group="group1"
+                        data-order="desc"
+                        data-type="number"
+                        name="sort1">
+                    Sort by likes desc
+                </input>
+            </label>
+
+        </div>
+
+        <!-- items group -->
+        <div data-jplist-group="group1">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">10</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">aaa</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">2</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ccc</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It has survived not only five centuries.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">8</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- =========================== Group 2 ================================ -->
+        <h1>Radio Buttons Sort Control - Group 2</h1>
+
+        <div class="buttons">
+
+            <!--
+                jplist radio buttons sort control:
+                ---------------------------
+                it's identified by data-jplist-control="radio-buttons-sort" attribute;
+                it sorts all elements located in <div data-group="group2">...</div>;
+                each element in the group should have data-jplist-item attribute;
+                data-path can be any CSS selector;
+                data-order can be: asc (default) or desc
+                data-type can be: text (default), number or datetime;
+
+            -->
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".title"
+                        data-group="group2"
+                        data-order="asc"
+                        data-type="text"
+                        name="sort2"
+                        checked>
+                Sort by title asc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".title"
+                        data-group="group2"
+                        data-order="desc"
+                        data-type="text"
+                        name="sort2">
+                Sort by title desc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".desc"
+                        data-group="group2"
+                        data-order="asc"
+                        data-type="text"
+                        name="sort2">
+                Sort by description asc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".desc"
+                        data-group="group2"
+                        data-order="desc"
+                        data-type="text"
+                        name="sort2">
+                Sort by description desc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".likes"
+                        data-group="group2"
+                        data-order="asc"
+                        data-type="number"
+                        name="sort2">
+                Sort by likes asc
+                </input>
+            </label>
+
+            <label>
+                <input
+                        type="radio"
+                        data-jplist-control="radio-buttons-sort"
+                        data-path=".likes"
+                        data-group="group2"
+                        data-order="desc"
+                        data-type="number"
+                        name="sort2">
+                Sort by likes desc
+                </input>
+            </label>
+
+        </div>
+
+        <!-- items group -->
+        <div data-jplist-group="group2">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">10</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">aaa</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">2</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ccc</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It has survived not only five centuries.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">8</span>
+                </p>
+            </div>
+        </div>
+
+        <script src="../../dist/jplist.min.js"></script>
+        <script>
+            jplist.init();
+        </script>
+    </body>
+</html>

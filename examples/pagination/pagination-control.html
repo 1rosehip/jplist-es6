@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>jPList JavaScript library</title>
+        <meta name="description" content="jPList is a vanilla JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc." />
+
+        <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <h1>Pagination Control</h1>
+
+        <!-- pagination in the top panel -->
+        <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-name="name1"
+            data-items-per-page="5"
+            data-current-page="0">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <button type="button" data-type="page">Page {pageNumber}</button>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+
+            <span data-type="info">
+                Page {pageNumber} of {pagesNumber}
+            </span>
+        </div>
+
+        <!-- items group -->
+        <div data-jplist-group="group1">
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">10</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">aaa</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">2</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ccc</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It has survived not only five centuries.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">8</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">10</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">aaa</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">2</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ccc</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It has survived not only five centuries.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">8</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">10</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">aaa</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">2</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ccc</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It has survived not only five centuries.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">8</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">10</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">aaa</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">2</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ccc</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It has survived not only five centuries.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">8</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- pagination in the bottom panel -->
+        <div
+                data-jplist-control="pagination"
+                data-group="group1"
+                data-name="name1"
+                data-items-per-page="5"
+                data-current-page="0">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <button type="button" data-type="page">Page {pageNumber}</button>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+
+            <span data-type="info">
+               {startItem} - {endItem} of {itemsNumber}
+            </span>
+        </div>
+
+        <script src="../../dist/jplist.min.js"></script>
+        <script>
+            jplist.init();
+        </script>
+    </body>
+</html>

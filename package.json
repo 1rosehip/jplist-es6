@@ -1,0 +1,71 @@
+{
+  "name": "jplist6",
+  "version": "6.0.0",
+  "description": "jPList is a JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc.",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch",
+    "test": "jest src",
+    "lint": "./node_modules/.bin/eslint src"
+  },
+  "author": "Miriam Zusin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1rosehip/jplist"
+  },
+  "bugs": {
+    "url": "https://github.com/1rosehip/jplist/issues"
+  },
+  "keywords": [
+    "sort",
+    "sorting",
+    "filter",
+    "filtering",
+    "search",
+    "pagination",
+    "paging"
+  ],
+  "homepage": "http://jplist.com",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-runtime": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.10",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.18.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "from": "^0.1.7",
+    "import": "0.0.6",
+    "jest": "^22.4.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.1",
+    "postcss-nested": "^3.0.0",
+    "postcss-prettify": "^0.3.4",
+    "postcss-simple-vars": "^4.1.0",
+    "resolve": "^1.5.0",
+    "sinon": "^4.3.0",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest/globals.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/jest/mocks/style-mock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/jest/mocks/file-mock.js"
+    }
+  }
+}

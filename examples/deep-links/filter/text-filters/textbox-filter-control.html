@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>jPList JavaScript library</title>
+        <meta name="description" content="jPList is a vanilla JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc." />
+
+        <link href="../../../css/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <h1>Textbox filter control with deep link</h1>
+
+        <div class="buttons">
+
+            <input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-path=".title"
+                    type="text"
+                    value=""
+                    data-id="title"
+                    placeholder="Filter by Title"
+            />
+
+            <input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-path=".desc"
+                    type="text"
+                    value=""
+                    data-id="desc"
+                    placeholder="Filter by Description"
+            />
+
+            <input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-path=".likes"
+                    type="text"
+                    value=""
+                    data-id="likes"
+                    placeholder="Filter by Likes"
+            />
+
+        </div>
+
+        <!-- items group -->
+        <div data-jplist-group="group1">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">10</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">aaa</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">2</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ccc</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It has survived not only five centuries.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</span>
+                </p>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">8</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="buttons">
+
+            <input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-path=".title"
+                    type="text"
+                    value=""
+                    data-id="title"
+                    placeholder="Filter by Title"
+            />
+
+            <input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-path=".desc"
+                    type="text"
+                    value=""
+                    data-id="desc"
+                    placeholder="Filter by Description"
+            />
+
+            <input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-path=".likes"
+                    type="text"
+                    value=""
+                    data-id="likes"
+                    placeholder="Filter by Likes"
+            />
+
+        </div>
+
+        <script src="../../../../dist/jplist.min.js"></script>
+        <script>
+            jplist.init({
+                deepLinking: true
+            });
+        </script>
+    </body>
+</html>
