@@ -1,8 +1,6 @@
 import BaseRangeFilterControlsGroup from '../../../base/groups/filter/base-range-filter-controls-group';
 import ButtonsMixin from '../../../base/groups/mixins/buttons.mixin';
 
-const SELECTED_CLASS = 'jplist-selected';
-
 /**
  * buttons range filter
  */

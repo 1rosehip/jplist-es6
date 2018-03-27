@@ -142,7 +142,7 @@ class BaseSliderControl{
     jump(e){
         e.preventDefault();
 
-        let position = this.getHandlerPos(e)
+        let position = this.getHandlerPos(e);
 
         if(this.isVertical){
             this.dragging = Math.abs(position.y - this.handler1.top) < Math.abs(position.y - this.handler2.top) ? this.handler1 : this.handler2;

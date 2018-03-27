@@ -962,12 +962,6 @@ describe('Filter Action', () => {
                 </div>
             `);
 
-            const item2 = generateHTMLElement(`
-                <div>
-                    <p class="title">12</p>
-                </div>
-            `);
-
             const items = [item1];
 
             const res = FilterAction.rangeFilter(items, '.title', 1, 11, 5, 20);

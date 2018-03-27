@@ -1,8 +1,8 @@
+@!(data, header, body)
 <!DOCTYPE html>
 <html>
     <head>
-        
-	<title>AAA</title>
+        @header()
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
@@ -33,9 +33,10 @@
     <body>
 
         <div>
-            
-    AAA
+            @body()
         </div>
+
+        @* @render(process.cwd() + '/src/components/colored-footer/index.html', data) *@
 
         <!-- scripts
         <script src="/js/website.min.js?v=1"></script>
