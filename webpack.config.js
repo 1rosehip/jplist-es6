@@ -55,6 +55,7 @@ const baseConfig = {
 
     devServer: {
         port: 3000,
+        contentBase: path.resolve('docs'),
         staticOptions: {
             extensions: ['html']
         }
