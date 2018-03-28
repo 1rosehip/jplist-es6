@@ -1,0 +1,12 @@
+@!(data, header, body)
+
+@function docsHeader(){
+	<title>Documentation | jPList Library</title>
+    @header()
+}
+
+@function docsBody(){
+    @body()
+}
+
+@render(process.cwd() + '/build/site/layouts/default.html', data, docsHeader, docsBody, 'documentation')
