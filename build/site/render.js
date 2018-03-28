@@ -61,4 +61,4 @@ const renderStaticHelper = (folderPath, relativeFolderPath, data) => {
 
 };
 
-renderStaticHelper(process.cwd() + '/build/site/templates', '', {});
+renderStaticHelper(process.cwd() + '/build/site/templates', 'docs/', {});
