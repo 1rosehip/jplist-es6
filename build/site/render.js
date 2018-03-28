@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const uglifycss = require('uglifycss');
 
 //https://github.com/jprichardson/node-fs-extra
 const fse = require('fs-extra');
@@ -62,3 +63,14 @@ const renderStaticHelper = (folderPath, relativeFolderPath, data) => {
 };
 
 renderStaticHelper(process.cwd() + '/build/site/templates', 'docs/', {});
+
+//minify site css file
+//https://github.com/fmarcia/uglifycss
+const inputCSSFile = path.join(process.cwd(), 'docs/css/styles.css');
+const outputCSSFile = path.join(process.cwd(), 'docs/css/styles.min.css');
+
+const uglified = uglifycss.processFiles(
+    [ inputCSSFile ],
+    {}
+);
+fs.writeFileSync(outputCSSFile, uglified, 'utf8');

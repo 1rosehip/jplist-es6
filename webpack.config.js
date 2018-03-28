@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+//const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const cssOptions = {
     test: /\.css$/,
@@ -51,6 +52,10 @@ const baseConfig = {
 
         //https://webpack.js.org/plugins/extract-text-webpack-plugin/
         new ExtractTextPlugin('jplist.styles.css'),
+
+        new CopyWebpackPlugin([
+            { from: 'dist', to: path.resolve(__dirname, 'docs/js') }
+        ], {})
     ],
 
     devServer: {

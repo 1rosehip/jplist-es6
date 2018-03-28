@@ -11,7 +11,7 @@
 
         <!-- css -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-        <link rel="stylesheet" href="/css/styles.css?v=1" />
+        <link rel="stylesheet" href="/css/styles.min.css?v=1" />
 
         <!-- google analytics
         <script>
@@ -29,61 +29,66 @@
     </head>
     <body>
 
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row main-navbar">
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row main-navbar">
 
-        <!-- logo -->
-        <a class="navbar-brand mr-0 mr-md-4" href="/" aria-label="jPList">
-            <img src="/img/logo/logo.png" alt="jPList" title="jPList" />
-        </a>
+            <!-- logo -->
+            <a class="navbar-brand mr-0 mr-md-4" href="/" aria-label="jPList">
+                <img src="/img/logo/logo.png" alt="jPList" title="jPList" />
+            </a>
 
-        <div class="navbar-nav-scroll">
-            <ul class="navbar-nav main-navbar-nav flex-row flex-wrap justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link 
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav main-navbar-nav flex-row flex-wrap justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link 
 
     " href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
 
     " href="/controls">Controls</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
 
     
         active" href="/documentation">Documentation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
 
-    " href="/examples">Examples</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link 
+    " href="/examples/index">Examples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
 
     " href="/download">Download</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+
+                <li class="nav-item">
+                    <a
+                            class="nav-link github-link"
+                            href="https://github.com/1rosehip/jplist-es6"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="GitHub">
+
+                        <img
+                                src="/img/icons/github-logo-light.png"
+                                class="d-inline-block align-top mr-1"
+                                alt="Fork me on GitHub"
+                                title="Fork me on GitHub" />
+                        Fork me on GitHub
+                    </a>
                 </li>
             </ul>
-        </div>
+        </header>
 
-        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-
-            <li class="nav-item">
-                <a
-                        class="nav-link github-link"
-                        href="https://github.com/1rosehip/jplist-es6"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="GitHub">
-                    <img src="/img/icons/github-logo-light.png" class="d-inline-block align-top mr-1" alt="Fork me on GitHub" title="Fork me on GitHub" />
-                    Fork me on GitHub
-                </a>
-            </li>
-        </ul>
-    </header>
-
-    
+        
     
     <div class="container-fluid">
         <div class="row flex-xl-nowrap">
@@ -359,6 +364,20 @@
             </div>
         </div>
     </div>
+
+        <footer class="bd-footer text-muted">
+            <div class="container-fluid p-3 p-md-5">
+                <ul class="bd-footer-links">
+                    <li><a href="/controls">Controls</a></li>
+                    <li><a href="/documentation">Documentation</a></li>
+                    <li><a href="/examples/index">Examples</a></li>
+                    <li><a href="/download">Download</a></li>
+                    <li><a href="https://github.com/1rosehip/jplist-es6" target="_blank">GitHub</a></li>
+                </ul>
+
+                <p>jPList Library v1.0.0. <a href="https://github.com/1rosehip/jplist-es6/blob/master/LICENSE.txt" target="_blank" rel="license noopener">MIT License</a>.</p>
+            </div>
+        </footer>
 
     </body>
 </html>

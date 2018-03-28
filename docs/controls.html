@@ -9,7 +9,7 @@
 
         <!-- css -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-        <link rel="stylesheet" href="/css/styles.css?v=1" />
+        <link rel="stylesheet" href="/css/styles.min.css?v=1" />
 
         <!-- google analytics
         <script>
@@ -27,62 +27,360 @@
     </head>
     <body>
 
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row main-navbar">
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row main-navbar">
 
-        <!-- logo -->
-        <a class="navbar-brand mr-0 mr-md-4" href="/" aria-label="jPList">
-            <img src="/img/logo/logo.png" alt="jPList" title="jPList" />
-        </a>
+            <!-- logo -->
+            <a class="navbar-brand mr-0 mr-md-4" href="/" aria-label="jPList">
+                <img src="/img/logo/logo.png" alt="jPList" title="jPList" />
+            </a>
 
-        <div class="navbar-nav-scroll">
-            <ul class="navbar-nav main-navbar-nav flex-row flex-wrap justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link 
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav main-navbar-nav flex-row flex-wrap justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link 
 
     " href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
 
     
         active" href="/controls">Controls</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
 
     " href="/documentation">Documentation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
 
-    " href="/examples">Examples</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link 
+    " href="/examples/index">Examples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
 
     " href="/download">Download</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+
+                <li class="nav-item">
+                    <a
+                            class="nav-link github-link"
+                            href="https://github.com/1rosehip/jplist-es6"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="GitHub">
+
+                        <img
+                                src="/img/icons/github-logo-light.png"
+                                class="d-inline-block align-top mr-1"
+                                alt="Fork me on GitHub"
+                                title="Fork me on GitHub" />
+                        Fork me on GitHub
+                    </a>
                 </li>
             </ul>
+        </header>
+
+        
+
+    <header class="d-flex flex-column flex-md-row align-items-md-center p-5 bg-light">
+
+        <div class="pt-md-3 pb-md-4">
+            <h1 class="bd-title mt-0">jPList Controls</h1>
+            <p class="bd-lead">Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.</p>
+            <a href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip" class="btn btn-lg btn-bd-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">Download source code</a>
         </div>
 
-        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-
-            <li class="nav-item">
-                <a
-                        class="nav-link github-link"
-                        href="https://github.com/1rosehip/jplist-es6"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="GitHub">
-                    <img src="/img/icons/github-logo-light.png" class="d-inline-block align-top mr-1" alt="Fork me on GitHub" title="Fork me on GitHub" />
-                    Fork me on GitHub
-                </a>
-            </li>
-        </ul>
     </header>
 
-    
-    <h1 class="bd-title">Controls</h1>
+    <main class="bd-content p-5" role="main">
+
+        <!-- sort controls -->
+        <h2 id="sort-controls">
+            <div>
+                Sort Controls
+                <a
+                        class="anchorjs-link"
+                        href="#sort-controls"
+                        aria-label="Anchor"
+                        data-anchorjs-icon="#"
+                        style="padding-left: 0.375em;"></a>
+            </div>
+        </h2>
+
+        <p>Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework.</p>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Hidden Sort Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/pricing/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Pricing screenshot" width="960" height="600">
+                    <h5 class="mb-1">Sort Buttons Control</h5>
+                </a>
+                <p class="text-muted">Example pricing page built with Cards and featuring a custom header and footer.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/checkout/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Checkout screenshot" width="960" height="600">
+                    <h5 class="mb-1">Radio Buttons Sort Control</h5>
+                </a>
+                <p class="text-muted">Custom checkout form showing our form components and their validation features.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/product/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Product screenshot" width="960" height="600">
+                    <h5 class="mb-1">Checkbox Sort Control</h5>
+                </a>
+                <p class="text-muted">Lean product-focused marketing page with extensive grid and image work.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/cover/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Cover screenshot" width="960" height="600">
+                    <h5 class="mb-1">Select Sort Control</h5>
+                </a>
+                <p class="text-muted">A one-page template for building simple and beautiful home pages.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/carousel/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Carousel screenshot" width="960" height="600">
+                    <h5 class="mb-1">Dropdown Sort Control</h5>
+                </a>
+                <p class="text-muted">Customize the navbar and carousel, then add some new components.</p>
+            </div>
+
+        </div>
+
+        <!-- pagination controls -->
+        <h2 id="pagination-controls">
+            <div>
+                Pagination Controls
+                <a
+                        class="anchorjs-link"
+                        href="#pagination-controls"
+                        aria-label="Anchor"
+                        data-anchorjs-icon="#"
+                        style="padding-left: 0.375em;"></a>
+            </div>
+        </h2>
+
+        <p>Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework.</p>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Pagination Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+        </div>
+
+        <!-- text filter controls -->
+        <h2 id="text-filter-controls">
+            <div>
+                Text Filter Controls
+                <a
+                        class="anchorjs-link"
+                        href="#text-filter-controls"
+                        aria-label="Anchor"
+                        data-anchorjs-icon="#"
+                        style="padding-left: 0.375em;"></a>
+            </div>
+        </h2>
+
+        <p>Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework.</p>
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Textbox Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Checkbox Text Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Radio Buttons Text Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Buttons Text Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+        </div>
+
+        <!-- path filter controls -->
+        <h2 id="path-filter-controls">
+            <div>
+                Path Filter Controls
+                <a
+                        class="anchorjs-link"
+                        href="#path-filter-controls"
+                        aria-label="Anchor"
+                        data-anchorjs-icon="#"
+                        style="padding-left: 0.375em;"></a>
+            </div>
+        </h2>
+
+        <p>Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework.</p>
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Select Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Dropdown Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Checkbox Path Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Radio Buttons Path Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Buttons Path Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+        </div>
+
+        <!-- range filter controls -->
+        <h2 id="range-filter-controls">
+            <div>
+                Range Filter Controls
+                <a
+                        class="anchorjs-link"
+                        href="#range-filter-controls"
+                        aria-label="Anchor"
+                        data-anchorjs-icon="#"
+                        style="padding-left: 0.375em;"></a>
+            </div>
+        </h2>
+
+        <p>Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework.</p>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">Buttons Range Filter Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/pricing/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Pricing screenshot" width="960" height="600">
+                    <h5 class="mb-1">Range Slider Filter Control</h5>
+                </a>
+                <p class="text-muted">Example pricing page built with Cards and featuring a custom header and footer.</p>
+            </div>
+        </div>
+
+        <!-- other controls -->
+        <h2 id="other-controls">
+            <div>
+                Other Controls
+                <a
+                        class="anchorjs-link"
+                        href="#other-controls"
+                        aria-label="Anchor"
+                        data-anchorjs-icon="#"
+                        style="padding-left: 0.375em;"></a>
+            </div>
+        </h2>
+
+        <p>Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework.</p>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/album/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Album screenshot" width="960" height="600">
+                    <h5 class="mb-1">No Results Control</h5>
+                </a>
+                <p class="text-muted">Simple one-page template for photo galleries, portfolios, and more.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+                <a href="/docs/4.0/examples/pricing/">
+                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Pricing screenshot" width="960" height="600">
+                    <h5 class="mb-1">Layout Control</h5>
+                </a>
+                <p class="text-muted">Example pricing page built with Cards and featuring a custom header and footer.</p>
+            </div>
+        </div>
+
+    </main>
+
+        <footer class="bd-footer text-muted">
+            <div class="container-fluid p-3 p-md-5">
+                <ul class="bd-footer-links">
+                    <li><a href="/controls">Controls</a></li>
+                    <li><a href="/documentation">Documentation</a></li>
+                    <li><a href="/examples/index">Examples</a></li>
+                    <li><a href="/download">Download</a></li>
+                    <li><a href="https://github.com/1rosehip/jplist-es6" target="_blank">GitHub</a></li>
+                </ul>
+
+                <p>jPList Library v1.0.0. <a href="https://github.com/1rosehip/jplist-es6/blob/master/LICENSE.txt" target="_blank" rel="license noopener">MIT License</a>.</p>
+            </div>
+        </footer>
 
     </body>
 </html>
