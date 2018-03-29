@@ -172,7 +172,7 @@
 }
 */
 
-/*
+/* ==================== CONTENT ====================== */
 .bd-content {
     order: 1;
 }
@@ -192,7 +192,6 @@
     visibility: hidden;
     content: "";
 }
-*/
 
 /* ================== TABLE ======================= */
 
@@ -228,7 +227,8 @@
     white-space: nowrap;
 }
 
-/*
+/* ================== Content H2 / H3 / Lists ======================= */
+
 .bd-content > h2:not(:first-child) {
     margin-top: 3rem;
 }
@@ -246,7 +246,6 @@
         max-width: 80%;
     }
 }
-*/
 
 /*
 .bd-lead {
@@ -331,6 +330,14 @@
 .toc-entry a:hover {
     color: #007bff;
     text-decoration: none;
+}
+
+.toc-h3{
+    margin-bottom: 5px;
+}
+
+.toc-h3:first-child{
+    margin-top: 5px;
 }
 
 /* ======================== SIDE BAR 1 =================================== */

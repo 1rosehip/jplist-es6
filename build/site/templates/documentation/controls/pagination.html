@@ -8,22 +8,20 @@
     <div class="d-none d-xl-block col-xl-2 bd-toc">
 
         <ul class="section-nav">
-            <li class="toc-entry toc-h2"><a href="#quick-start">Quick start</a>
+            <li class="toc-entry toc-h2"><a href="#html-structure">HTML Structure</a>
                 <ul>
-                    <li class="toc-entry toc-h3"><a href="#css">CSS</a></li>
-                    <li class="toc-entry toc-h3"><a href="#js">JS</a></li>
+                    <li class="toc-entry toc-h3"><a href="#information-labels">Information Labels</a></li>
+                    <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
+                    <li class="toc-entry toc-h3"><a href="#items-per-page-select">Items per page select</a></li>
+                    <li class="toc-entry toc-h3"><a href="#items-per-page-dropdown">Items per page dropdown</a></li>
                 </ul>
             </li>
-            <li class="toc-entry toc-h2"><a href="#starter-template">Starter template</a></li>
-            <li class="toc-entry toc-h2"><a href="#important-globals">Important globals</a>
+            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a>
                 <ul>
-                    <li class="toc-entry toc-h3"><a href="#html5-doctype">HTML5 doctype</a></li>
-                    <li class="toc-entry toc-h3"><a href="#responsive-meta-tag">Responsive meta tag</a></li>
-                    <li class="toc-entry toc-h3"><a href="#box-sizing">Box-sizing</a></li>
-                    <li class="toc-entry toc-h3"><a href="#reboot">Reboot</a></li>
+                    <li class="toc-entry toc-h3"><a href="#inner-elements-data-attributes">Inner elements</a></li>
+                    <li class="toc-entry toc-h3"><a href="#macros">Macros</a></li>
                 </ul>
             </li>
-            <li class="toc-entry toc-h2"><a href="#community">Community</a></li>
         </ul>
 
     </div>
@@ -35,17 +33,90 @@
 
         <p class="bd-lead">This control lets you split large amounts of content into pages with navigation buttons and <i>items per page</i> dropdown.</p>
 
-        <h2 id="basic-structure">
-            <div>Basic Structure</div>
-        </h2>
+        <h2 id="html-structure">HTML Structure</h2>
 
-        <p>Pagination control is defined by required <code class="highlighter-rouge">data-jplist-control="pagination"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be paginated. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+        <p>
+            Pagination control is defined by required <code class="highlighter-rouge">data-jplist-control="pagination"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be paginated. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+        </p>
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
 &lt;div
         data-jplist-control="pagination"
         data-group="group1"
+        data-items-per-page="5"
+        data-current-page="0">
+
+    &lt;button type="button" data-type="first">«&lt;/button>
+    &lt;button type="button" data-type="prev">‹&lt;/button>
+
+    &lt;button type="button" data-type="page">Page {pageNumber}&lt;/button>
+
+    &lt;button type="button" data-type="next">›&lt;/button>
+    &lt;button type="button" data-type="last">»&lt;/button>
+&lt;/div>
+
+&lt;!-- content to paginate -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h3 id="information-labels">Information Labels</h3>
+
+        <p>
+            Information labels can be used to print current page number, the whole pages number and other pagination data.
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
+&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="5"
+        data-current-page="0">
+
+    ...
+
+    &lt;span data-type="info">
+        Page {pageNumber} of {pagesNumber}
+    &lt;/span>
+
+    &lt;span data-type="info">
+        {startItem} - {endItem} of {itemsNumber}
+    &lt;/span>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h3 id="panels">Top and bottom panels</h3>
+
+        <p>
+            Pagination control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. <code class="highlighter-rouge">data-items-per-page</code> and <code class="highlighter-rouge">data-current-page</code> should also have the same values, but HTML structure including macros can be different:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control in the top panel -->
+&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-name="name1"
         data-items-per-page="5"
         data-current-page="0">
 
@@ -81,12 +152,97 @@
     &lt;/div>
 
 &lt;/div>
+
+&lt;!-- pagination control in the bottom panel -->
+&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-name="name1"
+        data-items-per-page="5"
+        data-current-page="0">
+
+    &lt;button type="button" data-type="first">First Page&lt;/button>
+    &lt;button type="button" data-type="prev">Previous Page&lt;/button>
+
+    &lt;button type="button" data-type="page">Page #{pageNumber}&lt;/button>
+
+    &lt;button type="button" data-type="next">Next Page&lt;/button>
+    &lt;button type="button" data-type="last">Last Page&lt;/button>
+
+    &lt;span data-type="info">
+        {startItem} - {endItem} of {itemsNumber}
+    &lt;/span>
+&lt;/div>
             </code></pre>
         </div>
 
-        <h2 id="data-attributes">
-            <div>Data Attributes</div>
-        </h2>
+        <h3 id="items-per-page-select">Items per page select</h3>
+
+        <p>The number of items per page can be selected by the user using inner select control. <b>The number of items</b> is defined by the option <b>value</b>, where 0 means all items (1 page). <code class="highlighter-rouge">data-items-per-page</code> data attribute defines the initial selected option.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="10"
+        data-current-page="0">
+
+    &lt;button type="button" data-type="first">«&lt;/button>
+    &lt;button type="button" data-type="prev">‹&lt;/button>
+
+    &lt;button type="button" data-type="page">Page {pageNumber}&lt;/button>
+
+    &lt;button type="button" data-type="next">›&lt;/button>
+    &lt;button type="button" data-type="last">»&lt;/button>
+
+    &lt;!-- items per page select -->
+    &lt;select data-type="items-per-page">
+        &lt;option value="3"> 3 per page &lt;/option>
+        &lt;option value="5"> 5 per page &lt;/option>
+        &lt;option value="10"> 10 per page &lt;/option>
+        &lt;option value="0"> view all &lt;/option>
+    &lt;/select>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h3 id="items-per-page-dropdown">Items per page dropdown</h3>
+
+        <p>UL / LI dropdown with custom styles can be used instead of SELECT as items per page selector. <b>The number of items</b> is defined by <b>data-value</b> data attribute, where 0 means all items (1 page). <code class="highlighter-rouge">data-items-per-page</code> data attribute defines the initial selected value.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="5"
+        data-current-page="0">
+
+    &lt;button type="button" data-type="first">«&lt;/button>
+    &lt;button type="button" data-type="prev">‹&lt;/button>
+
+    &lt;button type="button" data-type="page">Page {pageNumber}&lt;/button>
+
+    &lt;button type="button" data-type="next">›&lt;/button>
+    &lt;button type="button" data-type="last">»&lt;/button>
+
+    &lt;!-- items per page dropdown -->
+    &lt;div data-type="items-per-page-dd" class="jplist-dd">
+        &lt;div data-type="panel" class="jplist-dd-panel">Items per page&lt;/div>
+
+        &lt;div data-type="content" class="jplist-dd-content">
+            &lt;div class="jplist-dd-item" data-value="3" data-selected="true">3 per page&lt;/div>
+            &lt;div class="jplist-dd-item" data-value="5">5 per page&lt;/div>
+            &lt;div class="jplist-dd-item" data-value="10">10 per page&lt;/div>
+            &lt;div class="jplist-dd-item" data-value="0">View all&lt;/div>
+        &lt;/div>
+
+    &lt;/div>
+&lt;/div>
+
+            </code></pre>
+        </div>
+
+        <h2 id="data-attributes">Data Attributes</h2>
 
         <p>The full list of pagination data attributes.</p>
 
@@ -123,6 +279,108 @@
                     <td>numeric value</td>
                 </tr>
 
+            </tbody>
+        </table>
+
+        <h3 id="inner-elements-data-attributes">Inner elements</h3>
+
+        <p>Data attributes of inner elements.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="first"</code></td>
+                    <td>Defines a button. Once clicked, the first page will be opened.</td>
+                    <td>"first"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="last"</code></td>
+                    <td>Defines a button. Once clicked, the last page will be opened.</td>
+                    <td>"last"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="prev"</code></td>
+                    <td>Defines a button. Once clicked, the previous page will be opened.</td>
+                    <td>"prev"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="next"</code></td>
+                    <td>Defines a button. Once clicked, the next page will be opened.</td>
+                    <td>"next"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="page"</code></td>
+                    <td>Defines HTML of page button. Once clicked, the specified page number will be opened.</td>
+                    <td>"next"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="info"</code></td>
+                    <td>Defines information label.</td>
+                    <td>"info"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="items-per-page"</code></td>
+                    <td>Items per page select control.</td>
+                    <td>"items-per-page"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="items-per-page-dd"</code></td>
+                    <td>Items per page UL / LI dropdown with custom styles.</td>
+                    <td>"items-per-page-dd"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="macros">Macros</h3>
+
+        <p>The macros represent pagination data and can be used in information labels and other places.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="highlighter-rouge">{pageNumber}</code></td>
+                    <td>Indicates the current page number. Can be used in page button and in information labels.</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">{pagesNumber}</code></td>
+                    <td>Indicates the whole pages number. Can be used in information labels.</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">{startItem}</code></td>
+                    <td>Indicates starting content item.</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">{endItem}</code></td>
+                    <td>Indicates ending content item.</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">{itemsNumber}</code></td>
+                    <td>Indicates the number of content items.</td>
+                </tr>
             </tbody>
         </table>
     </div>
