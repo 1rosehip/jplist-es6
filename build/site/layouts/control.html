@@ -1,0 +1,12 @@
+@!(data, header, body)
+
+@function controlHeader(){
+	<title>Control | jPList Library</title>
+    @header()
+}
+
+@function controlBody(){
+    @body()
+}
+
+@render(process.cwd() + '/build/site/layouts/default.html', data, controlHeader, controlBody, 'controls')

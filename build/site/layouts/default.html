@@ -43,7 +43,7 @@
                         <a class="nav-link @isMenuActive('controls')" href="/controls">Controls</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @isMenuActive('documentation')" href="/documentation">Documentation</a>
+                        <a class="nav-link @isMenuActive('documentation')" href="/documentation/index">Documentation</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link @isMenuActive('examples')" href="/examples/index">Examples</a>
@@ -77,13 +77,11 @@
 
         @body()
 
-        @* @render(process.cwd() + '/src/components/colored-footer/index.html', data) *@
-
         <footer class="bd-footer text-muted">
             <div class="container-fluid p-3 p-md-5">
                 <ul class="bd-footer-links">
                     <li><a href="/controls">Controls</a></li>
-                    <li><a href="/documentation">Documentation</a></li>
+                    <li><a href="/documentation/index">Documentation</a></li>
                     <li><a href="/examples/index">Examples</a></li>
                     <li><a href="/download">Download</a></li>
                     <li><a href="https://github.com/1rosehip/jplist-es6" target="_blank">GitHub</a></li>
@@ -101,5 +99,4 @@
     @if(activeMenuItem === currentMenuItem){
         active
     }
-
 }

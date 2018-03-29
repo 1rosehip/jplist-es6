@@ -1,0 +1,11 @@
+@!(data, header, body, activeMenuItem)
+
+@function header(){
+	<title>AAA</title>
+}
+
+@function body(){
+    Test
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, header, body)

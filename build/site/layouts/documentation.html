@@ -1,4 +1,4 @@
-@!(data, header, body)
+@!(data, header, body, activeMenuItem)
 
 @function docsHeader(){
 	<title>Documentation | jPList Library</title>
@@ -6,7 +6,34 @@
 }
 
 @function docsBody(){
-    @body()
+
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+
+            <!-- first sidebar -->
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/getting-started.html', data, isMenuItemActive('getting-started'))
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/controls.html', data, isMenuItemActive('controls'))
+                </nav>
+
+            </div>
+
+            @body()
+
+        </div>
+    </div>
 }
 
 @render(process.cwd() + '/build/site/layouts/default.html', data, docsHeader, docsBody, 'documentation')
+
+
+
+@function isMenuItemActive(currentMenuItem) {
+
+    @if(activeMenuItem === currentMenuItem){
+        active
+    }
+}
