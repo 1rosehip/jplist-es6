@@ -192,6 +192,9 @@
     visibility: hidden;
     content: "";
 }
+*/
+
+/* ================== TABLE ======================= */
 
 .bd-content > table {
     width: 100%;
@@ -225,6 +228,7 @@
     white-space: nowrap;
 }
 
+/*
 .bd-content > h2:not(:first-child) {
     margin-top: 3rem;
 }
@@ -829,7 +833,7 @@
 }
 */
 
-/*
+/* ================== HIGHLIGHT ================= */
 .highlight {
     padding: 1rem;
     margin-top: 1rem;
@@ -868,7 +872,10 @@
     font-size: inherit;
     color: #212529;
 }
-*/
+
+.highlight .hljs{
+    background: #f7f7f9;
+}
 
 /*
 .btn-bd-primary {

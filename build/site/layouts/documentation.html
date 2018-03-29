@@ -12,6 +12,7 @@
 
 @function docsHeader(){
     @header()
+    <link rel="stylesheet" href="/highlight/default.min.css" />
 }
 
 @function docsBody(){
@@ -34,6 +35,9 @@
 
         </div>
     </div>
+
+    <script src="/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 }
 
 @render(process.cwd() + '/build/site/layouts/default.html', data, docsTitle(), docsHeader, docsBody, 'documentation')

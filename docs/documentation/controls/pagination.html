@@ -17,6 +17,7 @@
 
         
     
+    <link rel="stylesheet" href="/highlight/default.min.css" />
 
         <!-- google analytics
         <script>
@@ -329,11 +330,108 @@
 
     <!-- main content -->
     <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
         <h1 class="bd-title">Pagination Control</h1>
+
+        <p class="bd-lead">This control lets you split large amounts of content into pages with navigation buttons and <i>items per page</i> dropdown.</p>
+
+        <h2 id="basic-structure">
+            <div>Basic Structure</div>
+        </h2>
+
+        <p>Pagination control is defined by required <code class="highlighter-rouge">data-jplist-control="pagination"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be paginated. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
+&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="5"
+        data-current-page="0">
+
+    &lt;button type="button" data-type="first">«&lt;/button>
+    &lt;button type="button" data-type="prev">‹&lt;/button>
+
+    &lt;button type="button" data-type="page">Page {pageNumber}&lt;/button>
+
+    &lt;button type="button" data-type="next">›&lt;/button>
+    &lt;button type="button" data-type="last">»&lt;/button>
+
+    &lt;span data-type="info">
+        Page {pageNumber} of {pagesNumber}
+    &lt;/span>
+&lt;/div>
+
+&lt;!-- content to paginate -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h2 id="data-attributes">
+            <div>Data Attributes</div>
+        </h2>
+
+        <p>The full list of pagination data attributes.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="highlighter-rouge">data-jplist-control</code></td>
+                    <td>Defines pagination control.</td>
+                    <td>"pagination"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-group</code></td>
+                    <td>Defines group of items that should be paginated. For example, if pagination control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
+                    <td>any text value</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-items-per-page</code></td>
+                    <td>Defines number of items per page.</td>
+                    <td>numeric value</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-current-page</code></td>
+                    <td>Defines initial page number starting from 0.</td>
+                    <td>numeric value</td>
+                </tr>
+
+            </tbody>
+        </table>
     </div>
 
         </div>
     </div>
+
+    <script src="/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
         <footer class="bd-footer text-muted">
             <div class="container-fluid p-3 p-md-5">
