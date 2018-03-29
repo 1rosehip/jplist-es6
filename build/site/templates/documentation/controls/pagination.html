@@ -1,8 +1,6 @@
 @!(data, className)
 
-@function header(){
-	<title>AAA</title>
-}
+@function header(){}
 
 @function body(){
 
@@ -36,4 +34,4 @@
     </div>
 }
 
-@render(process.cwd() + '/build/site/layouts/documentation.html', data, header, body, 'controls')
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Pagination Control', header, body, 'controls', 'pagination')

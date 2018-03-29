@@ -1,7 +1,16 @@
-@!(data, header, body, activeMenuItem)
+@!(data, title, header, body, activeMenuItem, additionalActiveMenuItem)
+
+@function docsTitle(){
+
+    @if(title){
+        @title | Documentation
+    }
+    else{
+        Documentation
+    }
+}
 
 @function docsHeader(){
-	<title>Documentation | jPList Library</title>
     @header()
 }
 
@@ -15,8 +24,8 @@
 
                 <nav class="collapse bd-links" id="bd-docs-nav">
 
-                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/getting-started.html', data, isMenuItemActive('getting-started'))
-                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/controls.html', data, isMenuItemActive('controls'))
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/getting-started.html', data, isMenuItemActive('getting-started'), additionalActiveMenuItem)
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/controls.html', data, isMenuItemActive('controls'), additionalActiveMenuItem)
                 </nav>
 
             </div>
@@ -27,9 +36,7 @@
     </div>
 }
 
-@render(process.cwd() + '/build/site/layouts/default.html', data, docsHeader, docsBody, 'documentation')
-
-
+@render(process.cwd() + '/build/site/layouts/default.html', data, docsTitle(), docsHeader, docsBody, 'documentation')
 
 @function isMenuItemActive(currentMenuItem) {
 

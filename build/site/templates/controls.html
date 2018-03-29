@@ -1,8 +1,6 @@
 @!(data)
 
-@function header(){
-	<title>AAA</title>
-}
+@function header(){}
 
 @function body(){
 
@@ -288,4 +286,4 @@
 
 }
 
-@render(process.cwd() + '/build/site/layouts/default.html', data, header, body, 'controls')
+@render(process.cwd() + '/build/site/layouts/default.html', data, 'Controls', header, body, 'controls')

@@ -1,120 +1,127 @@
-@!(data,  className)
+@!(data, mainClassName, additionalClassName)
 
-<div class="bd-toc-item @className">
+<div class="bd-toc-item @mainClassName">
     <a class="bd-toc-link" href="/documentation/controls/hidden-sort">
         Controls
     </a>
 
     <ul class="nav bd-sidenav">
-        <li>
+        <li @isMenuItemActive('hidden-sort')>
             <a href="/documentation/controls/hidden-sort">
                 Hidden Sort Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('sort-buttons')>
             <a href="/documentation/controls/sort-buttons">
                 Buttons Sort Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('radio-buttons-sort')>
             <a href="/documentation/controls/radio-buttons-sort">
                 Radio Buttons Sort Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('checkbox-sort')>
             <a href="/documentation/controls/checkbox-sort">
                 Checkbox Sort Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('select-sort')>
             <a href="/documentation/controls/select-sort">
                 Select Sort Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('dropdown-sort')>
             <a href="/documentation/controls/dropdown-sort">
                 Dropdown Sort Control
             </a>
         </li>
         <li class="spacer"></li>
 
-        <li>
+        <li @isMenuItemActive('pagination')>
             <a href="/documentation/controls/pagination">
                 Pagination Control
             </a>
         </li>
         <li class="spacer"></li>
 
-        <li>
+        <li @isMenuItemActive('textbox-filter')>
             <a href="/documentation/controls/textbox-filter">
                 Textbox Filter Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('checkbox-text-filter')>
             <a href="/documentation/controls/checkbox-text-filter">
                 Checkbox Text Filter Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('radio-buttons-text-filter')>
             <a href="/documentation/controls/radio-buttons-text-filter">
                 Radio Buttons Text Filter Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('buttons-text-filter')>
             <a href="/documentation/controls/buttons-text-filter">
                 Buttons Text Filter Control
             </a>
         </li>
         <li class="spacer"></li>
 
-        <li>
+        <li @isMenuItemActive('select-filter')>
             <a href="/documentation/controls/select-filter">
                 Select Filter Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('dropdown-filter')>
             <a href="/documentation/controls/dropdown-filter">
                 Dropdown Filter Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('checkbox-path-filter')>
             <a href="/documentation/controls/checkbox-path-filter">
                 Checkbox Path Filter Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('radio-buttons-path-filter')>
             <a href="/documentation/controls/radio-buttons-path-filter">
                 Radio Buttons Path Filter Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('buttons-path-filter')>
             <a href="/documentation/controls/buttons-path-filter">
                 Buttons Path Filter Control
             </a>
         </li>
         <li class="spacer"></li>
 
-        <li>
+        <li @isMenuItemActive('buttons-range-filter')>
             <a href="/documentation/controls/buttons-range-filter">
                 Buttons Range Filter Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('slider-range-filter')>
             <a href="/documentation/controls/slider-range-filter">
                 Range Slider Filter Control
             </a>
         </li>
         <li class="spacer"></li>
 
-        <li>
+        <li @isMenuItemActive('no-results')>
             <a href="/documentation/controls/no-results">
                 No Results Control
             </a>
         </li>
-        <li>
+        <li @isMenuItemActive('layout')>
             <a href="/documentation/controls/layout">
                 Layout Control
             </a>
         </li>
     </ul>
 </div>
+
+@function isMenuItemActive(currentMenuItem) {
+
+    @if(additionalClassName === currentMenuItem){
+        class="active bd-sidenav-active"
+    }
+}

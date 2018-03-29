@@ -1,40 +1,27 @@
-@!(data,  className)
+@!(data, mainClassName, additionalClassName)
 
-<div class="bd-toc-item @className">
-    <a class="bd-toc-link" href="/docs/4.0/components/alerts/">
+<div class="bd-toc-item @mainClassName">
+    <a class="bd-toc-link" href="/documentation/controls/hidden-sort">
         Getting Started
     </a>
 
     <ul class="nav bd-sidenav">
-        <li>
-            <a href="/docs/4.0/components/alerts/">
-                Alerts
+        <li @isMenuItemActive('hidden-sort')>
+            <a href="/documentation/controls/hidden-sort">
+                Hidden Sort Control
             </a>
         </li>
-        <li>
-            <a href="/docs/4.0/components/badge/">
-                Badge
-            </a>
-        </li>
-        <li>
-            <a href="/docs/4.0/components/badge/">
-                Badge
-            </a>
-        </li>
-        <li>
-            <a href="/docs/4.0/components/badge/">
-                Badge
-            </a>
-        </li>
-        <li>
-            <a href="/docs/4.0/components/badge/">
-                Badge
-            </a>
-        </li>
-        <li>
-            <a href="/docs/4.0/components/badge/">
-                Badge
+        <li @isMenuItemActive('sort-buttons')>
+            <a href="/documentation/controls/sort-buttons">
+                Buttons Sort Control
             </a>
         </li>
     </ul>
 </div>
+
+@function isMenuItemActive(currentMenuItem) {
+
+    @if(additionalClassName === currentMenuItem){
+        class="active bd-sidenav-active"
+    }
+}
