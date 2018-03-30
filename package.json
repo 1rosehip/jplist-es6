@@ -8,7 +8,7 @@
     "test": "jest src",
     "lint": "./node_modules/.bin/eslint src",
     "site": "node ./build/site/render.js",
-    "start": "webpack-dev-server"
+    "server": "light-server -s docs -p 3000 -b localhost --no-reload -w 'build/site/** # npm run site && echo Rendered!'"
   },
   "author": "Miriam Zusin",
   "license": "MIT",
@@ -49,6 +49,7 @@
     "fs-extra": "^5.0.0",
     "import": "0.0.6",
     "jest": "^22.4.0",
+    "light-server": "^2.5.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.1",
@@ -60,8 +61,7 @@
     "style-loader": "^0.20.3",
     "uglifycss": "0.0.29",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-cli": "^2.0.11"
   },
   "jest": {
     "moduleFileExtensions": [

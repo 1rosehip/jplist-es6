@@ -61,6 +61,7 @@ const baseConfig = {
     devServer: {
         port: 3000,
         contentBase: path.resolve('docs'),
+        compress: true,
         staticOptions: {
             extensions: ['html']
         }
