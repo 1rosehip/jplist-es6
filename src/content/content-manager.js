@@ -243,6 +243,8 @@ class ContentManager{
             rangeFilterOptions: []
         };
 
+        if(!baseControlsGroups) return options;
+
         for(let baseControlsGroup of baseControlsGroups){
 
             //get sort options only from sort controls
