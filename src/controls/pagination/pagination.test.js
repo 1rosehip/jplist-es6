@@ -228,6 +228,226 @@ describe('Pagination Control', () => {
         expect(paginationControl.controls[0].firstButtons).toBeDefined();
     });
 
+
+    it('pagination control first button should have jplist-disabled class', () => {
+
+        const paginationControl = new PaginationControl('group1', 'name1');
+
+        const basePaginationControl1 = new BasePaginationControl(generateHTMLElement(`
+                <div
+                    data-jplist-control="pagination"
+                    data-group="group1"
+                    data-name="name1"
+                    data-items-per-page="2"
+                    data-current-page="0">
+        
+                    <button type="button" data-type="first">«</button>
+                    <button type="button" data-type="prev">‹</button>
+        
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
+        
+                    <button type="button" data-type="next">›</button>
+                    <button type="button" data-type="last">»</button>
+                </div>
+            `));
+
+        paginationControl.addControl(basePaginationControl1);
+
+        paginationControl.setPaginationOptions({
+            pagesNumber: 10,
+            currentPage: 0,
+            prevPage: 0,
+            nextPage: 1
+        });
+
+        expect(paginationControl.controls[0].firstButtons[0].classList.contains('jplist-disabled')).toEqual(true);
+    });
+
+    it('pagination control first button should have disabled class', () => {
+
+        const paginationControl = new PaginationControl('group1', 'name1');
+
+        const basePaginationControl1 = new BasePaginationControl(generateHTMLElement(`
+                <div
+                    data-jplist-control="pagination"
+                    data-group="group1"
+                    data-name="name1"
+                    data-items-per-page="2"
+                    data-current-page="0"
+                    data-disabled-class="disabled">
+        
+                    <button type="button" data-type="first">«</button>
+                    <button type="button" data-type="prev">‹</button>
+        
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
+        
+                    <button type="button" data-type="next">›</button>
+                    <button type="button" data-type="last">»</button>
+                </div>
+            `));
+
+        paginationControl.addControl(basePaginationControl1);
+
+        paginationControl.setPaginationOptions({
+            pagesNumber: 10,
+            currentPage: 0,
+            prevPage: 0,
+            nextPage: 1
+        });
+
+        expect(paginationControl.controls[0].firstButtons[0].classList.contains('disabled')).toEqual(true);
+    });
+
+    it('pagination control prev button should have jplist-disabled class', () => {
+
+        const paginationControl = new PaginationControl('group1', 'name1');
+
+        const basePaginationControl1 = new BasePaginationControl(generateHTMLElement(`
+                <div
+                    data-jplist-control="pagination"
+                    data-group="group1"
+                    data-name="name1"
+                    data-items-per-page="2"
+                    data-current-page="0">
+        
+                    <button type="button" data-type="first">«</button>
+                    <button type="button" data-type="prev">‹</button>
+        
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
+        
+                    <button type="button" data-type="next">›</button>
+                    <button type="button" data-type="last">»</button>
+                </div>
+            `));
+
+        paginationControl.addControl(basePaginationControl1);
+
+        paginationControl.setPaginationOptions({
+            pagesNumber: 10,
+            currentPage: 0,
+            prevPage: 0,
+            nextPage: 1
+        });
+
+        expect(paginationControl.controls[0].prevButtons[0].classList.contains('jplist-disabled')).toEqual(true);
+    });
+
+    it('pagination control prev button should have disabled class', () => {
+
+        const paginationControl = new PaginationControl('group1', 'name1');
+
+        const basePaginationControl1 = new BasePaginationControl(generateHTMLElement(`
+                <div
+                    data-jplist-control="pagination"
+                    data-group="group1"
+                    data-name="name1"
+                    data-items-per-page="2"
+                    data-current-page="0"
+                    data-disabled-class="disabled">
+        
+                    <button type="button" data-type="first">«</button>
+                    <button type="button" data-type="prev">‹</button>
+        
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
+        
+                    <button type="button" data-type="next">›</button>
+                    <button type="button" data-type="last">»</button>
+                </div>
+            `));
+
+        paginationControl.addControl(basePaginationControl1);
+
+        paginationControl.setPaginationOptions({
+            pagesNumber: 10,
+            currentPage: 0,
+            prevPage: 0,
+            nextPage: 1
+        });
+
+        expect(paginationControl.controls[0].prevButtons[0].classList.contains('disabled')).toEqual(true);
+    });
+
+    it('pagination control page #0 button should have jplist-selected class', () => {
+
+        const paginationControl = new PaginationControl('group1', 'name1');
+
+        const basePaginationControl1 = new BasePaginationControl(generateHTMLElement(`
+                <div
+                    data-jplist-control="pagination"
+                    data-group="group1"
+                    data-name="name1"
+                    data-items-per-page="2"
+                    data-current-page="0">
+        
+                    <button type="button" data-type="first">«</button>
+                    <button type="button" data-type="prev">‹</button>
+        
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
+        
+                    <button type="button" data-type="next">›</button>
+                    <button type="button" data-type="last">»</button>
+                </div>
+            `));
+
+        paginationControl.addControl(basePaginationControl1);
+
+        paginationControl.setPaginationOptions({
+            pagesNumber: 10,
+            currentPage: 0,
+            prevPage: 0,
+            nextPage: 1
+        });
+
+        expect(paginationControl.controls[0].pageButtonsHolder.querySelector('[data-type="page"]').classList.contains('jplist-selected')).toEqual(true);
+    });
+
+    it('pagination control page #0 button should have "active" class', () => {
+
+        const paginationControl = new PaginationControl('group1', 'name1');
+
+        const basePaginationControl1 = new BasePaginationControl(generateHTMLElement(`
+                <div
+                    data-jplist-control="pagination"
+                    data-group="group1"
+                    data-name="name1"
+                    data-items-per-page="2"
+                    data-current-page="0"
+                    data-selected-class="active">
+        
+                    <button type="button" data-type="first">«</button>
+                    <button type="button" data-type="prev">‹</button>
+        
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
+        
+                    <button type="button" data-type="next">›</button>
+                    <button type="button" data-type="last">»</button>
+                </div>
+            `));
+
+        paginationControl.addControl(basePaginationControl1);
+
+        paginationControl.setPaginationOptions({
+            pagesNumber: 10,
+            currentPage: 0,
+            prevPage: 0,
+            nextPage: 1
+        });
+
+        expect(paginationControl.controls[0].pageButtonsHolder.querySelector('[data-type="page"]').classList.contains('active')).toEqual(true);
+    });
+
     it('pagination control lastButtons', () => {
 
         const paginationControl = new PaginationControl('group1', 'name1');
