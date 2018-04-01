@@ -3,12 +3,12 @@
   "version": "6.0.0",
   "description": "jPList is a JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc.",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.js",
     "test": "jest src",
     "lint": "./node_modules/.bin/eslint src",
-    "site": "node ./build/site/render.js",
-    "server": "light-server -s docs -p 3000 -b localhost --no-reload -w 'build/site/** # npm run site && echo Rendered!'"
+    "site": "light-server -s docs -p 3000 -b localhost --no-reload -w 'build/site/** # npm run render && echo Rendered!'",
+    "render": "node ./build/site/render.js"
   },
   "author": "Miriam Zusin",
   "license": "MIT",
@@ -40,7 +40,6 @@
     "babel-runtime": "^6.26.0",
     "bliss": "^1.0.1",
     "clean-webpack-plugin": "^0.1.19",
-    "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.10",
     "cssnano": "^3.10.0",
     "eslint": "^4.18.1",

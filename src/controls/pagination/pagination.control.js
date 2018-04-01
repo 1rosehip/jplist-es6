@@ -40,12 +40,10 @@ class PaginationControl extends BasePaginationControlsGroup{
         this.restoreFromDeepLink(basePaginationControl);
 
         //this template is used for generating pagination buttons
-        basePaginationControl.btnTemplate = basePaginationControl.element.querySelector('[data-type="page"]');
+        basePaginationControl.pageButtonsHolder = basePaginationControl.element.querySelector('[data-type="pages"]');
 
-        if(basePaginationControl.btnTemplate){
-            basePaginationControl.pageButtonsHolder = document.createElement('div');
-            basePaginationControl.pageButtonsHolder.classList.add('jplist-holder');
-            basePaginationControl.element.replaceChild(basePaginationControl.pageButtonsHolder, basePaginationControl.btnTemplate);
+        if(basePaginationControl.pageButtonsHolder){
+            basePaginationControl.btnTemplate = basePaginationControl.pageButtonsHolder.innerHTML;
         }
 
         //first, last, next and prev button
@@ -214,21 +212,26 @@ class PaginationControl extends BasePaginationControlsGroup{
             //generate new buttons
             for (let i = 0; i < paginationOptions.pagesNumber; i++) {
 
-                //generate new button from the template
-                const pageButton = control.btnTemplate.cloneNode(true);
-
                 //update button text macros and button attributes
-                pageButton.innerHTML = pageButton.innerHTML.replace(new RegExp('{pageNumber}', 'g'), (i+1));
-                pageButton.setAttribute('data-page', i.toString());
+                const div = document.createElement('div');
+                div.innerHTML = control.btnTemplate.replace(new RegExp('{pageNumber}', 'g'), (i+1)).trim();
+                const pageButton = div.firstChild;
+
+                let btn = pageButton.querySelector('[data-type="page"]');
+                if(!btn){
+                    btn = pageButton;
+                }
+
+                btn.setAttribute('data-page', i.toString());
 
                 if(i === this.currentPage){
 
-                    pageButton.classList.add(SELECTED_CLASS);
-                    pageButton.setAttribute('data-selected', 'true');
+                    btn.classList.add(SELECTED_CLASS);
+                    btn.setAttribute('data-selected', 'true');
                 }
 
                 //on page button click event handler
-                pageButton.addEventListener('click', this.pageButtonClick.bind(this));
+                btn.addEventListener('click', this.pageButtonClick.bind(this));
 
                 //add button to the buttons holder
                 control.pageButtonsHolder.appendChild(pageButton);

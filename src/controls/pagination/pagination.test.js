@@ -29,7 +29,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -55,7 +57,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -81,7 +85,9 @@ describe('Pagination Control', () => {
                 <button type="button" data-type="first">«</button>
                 <button type="button" data-type="prev">‹</button>
     
-                <button type="button" data-type="page">Page {pageNumber}</button>
+                <div class="jplist-holder" data-type="pages">
+                    <button type="button" data-type="page">Page {pageNumber}</button>
+                </div>
     
                 <button type="button" data-type="next">›</button>
                 <button type="button" data-type="last">»</button>
@@ -101,7 +107,9 @@ describe('Pagination Control', () => {
                 <button type="button" data-type="first">«</button>
                 <button type="button" data-type="prev">‹</button>
     
-                <button type="button" data-type="page">Page {pageNumber}</button>
+                <div class="jplist-holder" data-type="pages">
+                    <button type="button" data-type="page">Page {pageNumber}</button>
+                </div>
     
                 <button type="button" data-type="next">›</button>
                 <button type="button" data-type="last">»</button>
@@ -128,7 +136,9 @@ describe('Pagination Control', () => {
                 <button type="button" data-type="first">«</button>
                 <button type="button" data-type="prev">‹</button>
     
-                <button type="button" data-type="page">Page {pageNumber}</button>
+                <div class="jplist-holder" data-type="pages">
+                    <button type="button" data-type="page">Page {pageNumber}</button>
+                </div>
     
                 <button type="button" data-type="next">›</button>
                 <button type="button" data-type="last">»</button>
@@ -148,7 +158,9 @@ describe('Pagination Control', () => {
                 <button type="button" data-type="first">«</button>
                 <button type="button" data-type="prev">‹</button>
     
-                <button type="button" data-type="page">Page {pageNumber}</button>
+                <div class="jplist-holder" data-type="pages">
+                    <button type="button" data-type="page">Page {pageNumber}</button>
+                </div>
     
                 <button type="button" data-type="next">›</button>
                 <button type="button" data-type="last">»</button>
@@ -175,7 +187,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -201,7 +215,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -227,7 +243,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -253,7 +271,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -279,7 +299,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -288,6 +310,35 @@ describe('Pagination Control', () => {
 
         paginationControl.addControl(basePaginationControl1);
         expect(paginationControl.controls[0].nextButtons).toBeDefined();
+    });
+
+    it('bootstrap pagination control with nav as root element', () => {
+
+        const paginationControl = new PaginationControl('group1', 'name1');
+
+        const basePaginationControl1 = new BasePaginationControl(generateHTMLElement(`
+            <nav
+                 data-jplist-control="pagination"
+                 data-group="group1"
+                 data-name="name1"
+                 data-items-per-page="5"
+                 data-current-page="3">
+                 
+                <ul class="pagination">
+
+                    <li class="page-item" data-type="first"><a class="page-link" href="#">«</a></li>
+                    <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
+
+                    <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
+
+                    <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
+                    <li class="page-item" data-type="last"><a class="page-link" href="#">»</a></li>
+                </ul>
+            </nav>
+        `));
+
+        paginationControl.addControl(basePaginationControl1);
+        expect(paginationControl.currentPage).toEqual(3);
     });
 
     describe('Get Pagination Options', () => {
@@ -307,7 +358,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -333,7 +386,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -359,7 +414,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -379,7 +436,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -406,7 +465,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -426,7 +487,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -456,7 +519,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -487,7 +552,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -521,7 +588,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -555,7 +624,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -589,7 +660,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -623,7 +696,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -659,7 +734,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -698,7 +775,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -725,7 +804,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -752,7 +833,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -773,7 +856,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -809,7 +894,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -844,7 +931,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -874,7 +963,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -910,7 +1001,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -961,7 +1054,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -1012,7 +1107,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -1089,7 +1186,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -1140,7 +1239,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -1191,7 +1292,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -1243,7 +1346,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -1298,7 +1403,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
@@ -1335,7 +1442,9 @@ describe('Pagination Control', () => {
                     <button type="button" data-type="first">«</button>
                     <button type="button" data-type="prev">‹</button>
         
-                    <button type="button" data-type="page">Page {pageNumber}</button>
+                    <div class="jplist-holder" data-type="pages">
+                        <button type="button" data-type="page">Page {pageNumber}</button>
+                    </div>
         
                     <button type="button" data-type="next">›</button>
                     <button type="button" data-type="last">»</button>
