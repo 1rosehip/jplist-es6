@@ -25,7 +25,9 @@ describe('Base Pagination Control', () => {
             <button type="button" data-type="first">«</button>
             <button type="button" data-type="prev">‹</button>
 
-            <button type="button" data-type="page">Page {pageNumber}</button>
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
 
             <button type="button" data-type="next">›</button>
             <button type="button" data-type="last">»</button>
@@ -44,7 +46,9 @@ describe('Base Pagination Control', () => {
             <button type="button" data-type="first">«</button>
             <button type="button" data-type="prev">‹</button>
 
-            <button type="button" data-type="page">Page {pageNumber}</button>
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
 
             <button type="button" data-type="next">›</button>
             <button type="button" data-type="last">»</button>
@@ -64,7 +68,9 @@ describe('Base Pagination Control', () => {
             <button type="button" data-type="first">«</button>
             <button type="button" data-type="prev">‹</button>
 
-            <button type="button" data-type="page">Page {pageNumber}</button>
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
 
             <button type="button" data-type="next">›</button>
             <button type="button" data-type="last">»</button>
@@ -83,7 +89,9 @@ describe('Base Pagination Control', () => {
             <button type="button" data-type="first">«</button>
             <button type="button" data-type="prev">‹</button>
 
-            <button type="button" data-type="page">Page {pageNumber}</button>
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
 
             <button type="button" data-type="next">›</button>
             <button type="button" data-type="last">»</button>
@@ -102,11 +110,149 @@ describe('Base Pagination Control', () => {
             <button type="button" data-type="first">«</button>
             <button type="button" data-type="prev">‹</button>
 
-            <button type="button" data-type="page">Page {pageNumber}</button>
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
 
             <button type="button" data-type="next">›</button>
             <button type="button" data-type="last">»</button>
         </div>
         `).currentPage).toEqual(10);
+    });
+
+    it('base pagination control disabledClass default value', () => {
+        expect(generateControl(`
+         <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-name="name1"
+            data-items-per-page="2"
+            data-current-page="0">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+        </div>
+        `).disabledClass).toEqual('jplist-disabled');
+    });
+
+    it('base pagination control disabledClass', () => {
+        expect(generateControl(`
+         <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-name="name1"
+            data-items-per-page="2"
+            data-current-page="0"
+            data-disabled-class="disabled">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+        </div>
+        `).disabledClass).toEqual('disabled');
+    });
+
+    it('base pagination control disabledClass trim', () => {
+        expect(generateControl(`
+         <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-name="name1"
+            data-items-per-page="2"
+            data-current-page="0"
+            data-disabled-class="       disabled       ">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+        </div>
+        `).disabledClass).toEqual('disabled');
+    });
+
+    it('base pagination control selectedClass default value', () => {
+        expect(generateControl(`
+         <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-name="name1"
+            data-items-per-page="2"
+            data-current-page="0">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+        </div>
+        `).selectedClass).toEqual('jplist-selected');
+    });
+
+    it('base pagination control selectedClass', () => {
+        expect(generateControl(`
+         <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-name="name1"
+            data-items-per-page="2"
+            data-current-page="0"
+            data-selected-class="selected">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+        </div>
+        `).selectedClass).toEqual('selected');
+    });
+
+    it('base pagination control selectedClass trim', () => {
+        expect(generateControl(`
+         <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-name="name1"
+            data-items-per-page="2"
+            data-current-page="0"
+            data-selected-class="       selected       ">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+        </div>
+        `).selectedClass).toEqual('selected');
     });
 });

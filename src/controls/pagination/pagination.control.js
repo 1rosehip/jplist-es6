@@ -1,9 +1,6 @@
 import BasePaginationControlsGroup from '../base/groups/pagination/base-pagination-controls-group';
 import BaseDropdownControl from '../base/controls/dropdown/base-dropdown.control';
 
-const SELECTED_CLASS = 'jplist-selected';
-const DISABLED_CLASS = 'jplist-disabled';
-
 /**
  * pagination control
  */
@@ -226,29 +223,34 @@ class PaginationControl extends BasePaginationControlsGroup{
 
                 if(i === this.currentPage){
 
-                    btn.classList.add(SELECTED_CLASS);
+                    btn.classList.add(control.selectedClass);
                     btn.setAttribute('data-selected', 'true');
                 }
 
                 //on page button click event handler
-                btn.addEventListener('click', this.pageButtonClick.bind(this));
+                btn.addEventListener('click', (e) => { this.pageButtonClick(e, btn); });
 
                 //add button to the buttons holder
                 control.pageButtonsHolder.appendChild(pageButton);
             }
 
             //update data-page attribute of first, last, prev and next buttons
-            PaginationControl.setPageAttr(control.firstButtons, 0, this.currentPage !== 0);
+            PaginationControl.setPageAttr(control.firstButtons, 0, this.currentPage !== 0, control.disabledClass);
 
             PaginationControl.setPageAttr(control.lastButtons,
                 paginationOptions.pagesNumber - 1,
-                this.currentPage !== paginationOptions.pagesNumber - 1);
+                this.currentPage !== paginationOptions.pagesNumber - 1,
+                control.disabledClass);
 
-            PaginationControl.setPageAttr(control.prevButtons, paginationOptions.prevPage, this.currentPage !== 0);
+            PaginationControl.setPageAttr(control.prevButtons,
+                paginationOptions.prevPage,
+                this.currentPage !== 0,
+                control.disabledClass);
 
             PaginationControl.setPageAttr(control.nextButtons,
                 paginationOptions.nextPage,
-                this.currentPage !== paginationOptions.pagesNumber - 1);
+                this.currentPage !== paginationOptions.pagesNumber - 1,
+                control.disabledClass);
 
             const infos = [
                 {key: '{pageNumber}', value: paginationOptions.currentPage + 1},
@@ -280,12 +282,16 @@ class PaginationControl extends BasePaginationControlsGroup{
 
     /**
      * page, first, last, prev and next button onclick handler
+     * @param {HTMLElement} btn
      */
-    pageButtonClick(e){
+    pageButtonClick(e, btn){
 
-        e.preventDefault();
+        if(e) {
+            e.preventDefault();
+        }
 
-        this.currentPage = Number(e.target.getAttribute('data-page')) || 0;
+        const pageNumber = btn ? btn.getAttribute('data-page') : e.target.getAttribute('data-page');
+        this.currentPage = Number(pageNumber) || 0;
 
         if(window.jplist) {
 
@@ -369,8 +375,9 @@ class PaginationControl extends BasePaginationControlsGroup{
      * @param {HTMLCollection} items
      * @param {number} page
      * @param {boolean} isEnabled
+     * @param {string} disabledClass
      */
-    static setPageAttr(items, page, isEnabled){
+    static setPageAttr(items, page, isEnabled, disabledClass){
 
         if(!items) return;
 
@@ -378,16 +385,16 @@ class PaginationControl extends BasePaginationControlsGroup{
             item.setAttribute('data-page', page);
 
             if(isEnabled){
-                item.classList.remove(DISABLED_CLASS);
+                item.classList.remove(disabledClass);
             }
             else{
-                item.classList.add(DISABLED_CLASS);
+                item.classList.add(disabledClass);
             }
         }
     }
 
     /**
-     * bind pageButtonClick handler to the items collection
+     * bind event handler to the items collection
      * @param {HTMLCollection} items
      * @param {string} eventName
      * @param {Function} func
@@ -397,7 +404,7 @@ class PaginationControl extends BasePaginationControlsGroup{
         if(!items) return;
 
         for(let item of items){
-            item.addEventListener(eventName, func);
+            item.addEventListener(eventName, (e) => {func(e, item); });
         }
     }
 }

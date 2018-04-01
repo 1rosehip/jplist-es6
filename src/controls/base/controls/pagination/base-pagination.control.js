@@ -25,6 +25,18 @@ class BasePaginationControl extends BaseControl{
              * the initial page
              */
             this.currentPage = Number(element.getAttribute('data-current-page')) || 0;
+
+            /**
+             * CSS class that is used on disabled pagination buttons
+             * @type {string|string}
+             */
+            this.disabledClass = (element.getAttribute('data-disabled-class') || 'jplist-disabled').trim();
+
+            /**
+             * CSS class that is used on selected pagination buttons
+             * @type {string|string}
+             */
+            this.selectedClass = (element.getAttribute('data-selected-class') || 'jplist-selected').trim();
         }
     }
 
