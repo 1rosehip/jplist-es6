@@ -21,10 +21,12 @@ class BaseDropdownControl{
 
             //dropdown panel elements defined by data-type="panel" data attribute; can be multiple;
             this.panels = this.element.querySelectorAll('[data-type="panel"]');
+            this.element.openedClass = (this.element.getAttribute('data-opened-class') || 'jplist-dd-opened').trim();
 
             //keep panels initial html
             for(let panel of this.panels){
                 panel.initialContent = panel.innerHTML;
+                panel.element = element;
             }
 
             //dropdown content elements defined by data-type="content" data attribute; can be multiple;
@@ -40,7 +42,7 @@ class BaseDropdownControl{
      */
     handlePanelsClick(){
 
-        if(!this.panels) return;
+        if(!this.panels || this.panels.length <= 0) return;
 
         for(let panel of this.panels){
 
@@ -55,36 +57,39 @@ class BaseDropdownControl{
 
                 for(let dropdownContent of this.contents){
 
-                    dropdownContent.classList.toggle('jplist-dd-visible');
+                    dropdownContent.classList.toggle(panel.element.openedClass);
 
-                    if(dropdownContent.classList.contains('jplist-dd-visible')){
+                    if(dropdownContent.classList.contains(panel.element.openedClass)){
                         atLeastOnePanelIsOpened = true;
                     }
                 }
 
                 if(atLeastOnePanelIsOpened){
-                    panel.classList.add('jplist-dd-opened');
+                    panel.classList.add(panel.element.openedClass);
+                    panel.element.classList.add(panel.element.openedClass);
                 }
                 else{
-                    panel.classList.remove('jplist-dd-opened');
-                }
-            });
-
-            /**
-             * close dropdowns on body click
-             */
-            document.body.addEventListener('click', e => {
-
-                for(let dropdownContent of this.contents){
-
-                    dropdownContent.classList.remove('jplist-dd-visible');
-                }
-
-                for(let panel of this.panels){
-                    panel.classList.remove('jplist-dd-opened');
+                    panel.classList.remove(panel.element.openedClass);
+                    panel.element.classList.remove(panel.element.openedClass);
                 }
             });
         }
+
+        /**
+         * close dropdowns on body click
+         */
+        document.body.addEventListener('click', e => {
+
+            for(let dropdownContent of this.contents){
+
+                dropdownContent.classList.remove(this.panels[0].element.openedClass);
+            }
+
+            for(let panel of this.panels){
+                panel.classList.remove(panel.element.openedClass);
+                panel.element.classList.remove(panel.element.openedClass);
+            }
+        });
     }
 
     /**

@@ -164,6 +164,7 @@ class PaginationControl extends BasePaginationControlsGroup{
                 }
 
                 if(selectedButton){
+
                     dd.dropdown.setPanelsContent(selectedButton.textContent);
                 }
             }

@@ -45,7 +45,7 @@
   display: none;
 }
 
-.jplist-dd-content.jplist-dd-visible{
+.jplist-dd-content.jplist-dd-opened{
   display: flex;
   flex-direction: column;
   width: 100%;

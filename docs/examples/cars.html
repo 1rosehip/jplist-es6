@@ -17,7 +17,30 @@
 
         
     
-	<title>AAA</title>
+	<title>Cars Example Page</title>
+
+    <style>
+        .card{
+            font-size: 12px;
+            height: 100%;
+        }
+
+        .card-header{
+            background-color: rgb(227, 236, 243);
+        }
+
+        .card-header h5{
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        .card-img-top{
+            height: 225px;
+            width: 100%;
+            display: block;
+        }
+
+    </style>
 
         <!-- google analytics
         <script>
@@ -98,6 +121,7 @@
     
 
     <main role="main">
+        <!--
         <section class="jumbotron text-center">
 
             <div class="container">
@@ -108,7 +132,7 @@
                     <a href="#" class="btn btn-secondary my-2">Secondary action</a>
                 </p>
             </div>
-        </section>
+        </section>-->
 
         <div class="album py-5 bg-light">
             <div class="container">
@@ -124,174 +148,2450 @@
                             data-disabled-class="disabled"
                             data-selected-class="active">
 
+                        <!-- first and previous buttons -->
                         <ul class="pagination d-inline-flex">
                             <li class="page-item" data-type="first"><a class="page-link" href="#">«</a></li>
                             <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
                         </ul>
 
+                        <!-- pages buttons -->
                         <ul class="pagination d-inline-flex" data-type="pages">
                             <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
                         </ul>
 
+                        <!-- next and last buttons -->
                         <ul class="pagination d-inline-flex">
                             <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
                             <li class="page-item" data-type="last"><a class="page-link" href="#">»</a></li>
                         </ul>
+
+                        <!-- items per page dropdown -->
+                        <div class="dropdown d-inline-flex ml-3"
+                             data-type="items-per-page-dd"
+                             data-opened-class="show">
+
+                            <button
+                                    data-type="panel"
+                                    class="btn btn-primary dropdown-toggle"
+                                    type="button">
+                                Dropdown button
+                            </button>
+
+                            <div
+                                data-type="content"
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton">
+
+                                <a class="dropdown-item" href="#" data-value="3">3 per page</a>
+                                <a class="dropdown-item" href="#" data-value="6">6 per page</a>
+                                <a class="dropdown-item" href="#" data-value="9">9 per page</a>
+                                <a class="dropdown-item" href="#" data-value="0">View All</a>
+
+                            </div>
+                        </div>
+
+                        <!-- information labels -->
+                        <span data-type="info" class="badge badge-secondary ml-3 p-2">
+                            Page {pageNumber} of {pagesNumber}
+                        </span>
+
                     </nav>
 
                 </div>
 
                 <div class="row" data-jplist-group="group1">
 
-                    <!-- item -->
-                    <div class="col-md-4" data-jplist-item>
-                        <div class="card mb-4 box-shadow">
+                    
 
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1626d9fcf52%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1626d9fcf52%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                            <div class="card-body">
-                                <h5 class="card-title">GAZ-M20</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                    
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="GAZ-M20" src="/img/examples/cars/gaz-m20.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="GAZ-M20">GAZ-M20</a>
+                                    </h5>
                                 </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1949</span>–<span class="end">1958</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">GAZ</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">2.1L M-20 I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-stage synchronizer 2nd and 3rd gear</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,665</span>
+                                            mm (183.7 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,695</span>
+                                            mm (66.7 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1460</span>
+                                            kg
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                        
 
-                    <div class="col-md-4" data-jplist-item>
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1626d9fcf53%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1626d9fcf53%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                            <div class="card-body">
-                                <h5 class="card-title">Zastava 750</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Zastava 750" src="/img/examples/cars/zastava-850.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Zastava 750">Zastava 750</a>
+                                    </h5>
                                 </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1955</span>–<span class="end">1985</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Zastava Automobili</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">767 cc OHV I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-Speed Manual gearbox</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">3,300</span>
+                                            mm (129.9 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,390</span>
+                                            mm (54.7 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">640</span>
+                                            kg (1,411 lb)
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                        
 
-                    <div class="col-md-4" data-jplist-item>
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1626d9fcf55%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1626d9fcf55%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                            <div class="card-body">
-                                <h5 class="card-title">Fiat Tipo 70</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Fiat Tipo 70" src="/img/examples/cars/fiat-tipo-70-sedan.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Fiat Tipo 70">Fiat Tipo 70</a>
+                                    </h5>
                                 </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1915</span>–<span class="end">1920</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Fiat</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">straight-4 2001 cc</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">3,820</span>
+                                            mm (150 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">2,706</span>
+                                            , mm (107 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,735</span>
+                                            kg (3,825 lb)
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                        
 
-                    <div class="col-md-4" data-jplist-item>
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1626d9fcf56%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1626d9fcf56%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Fiat 8V" src="/img/examples/cars/fiat-v8-berlinetta-coupe.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Fiat 8V">Fiat 8V</a>
+                                    </h5>
                                 </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1952</span>–<span class="end">1954</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Fiat</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">V8 1996 cc</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4 and 5-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,060</span>
+                                            mm (159.8 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,500</span>
+                                            , mm (59.1 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,000</span>
+                                            kg (2,200 lb)
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                        
 
-                    <div class="col-md-4" data-jplist-item>
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1626d9fcf57%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1626d9fcf57%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Saab 92B" src="/img/examples/cars/saab92b.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Saab 92B">Saab 92B</a>
+                                    </h5>
                                 </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1949</span>–<span class="end">1956</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Saab Automobile</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">764 cc Two-stroke I2 (Gasoline)</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">3,950</span>
+                                            mm (155.5 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,620</span>
+                                            , mm (63.8 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">765</span>
+                                            kg (1,687 lb)
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                        
 
-                    <div class="col-md-4" data-jplist-item>
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1626d9fcf58%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1626d9fcf58%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Autobianchi Bianchina" src="/img/examples/cars/autobianchi-bianchina-alameda.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Autobianchi Bianchina">Autobianchi Bianchina</a>
+                                    </h5>
                                 </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1957</span>–<span class="end">1970</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Autobianchi</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">479 cc ohv straight-2 15-17 hp</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">3,020</span>
+                                            , mm (119 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,340</span>
+                                            , mm (53 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">530</span>
+                                            kg (1,170 lb)
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                        
 
-                    <div class="col-md-4" data-jplist-item>
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1626d9fcf59%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1626d9fcf59%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Fiat 520 Superfiat Dorsay-Torpedo" src="/img/examples/cars/fiat-520-superfiat-dorsay-torpedo.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Fiat 520 Superfiat Dorsay-Torpedo">Fiat 520 Superfiat Dorsay-Torpedo</a>
+                                    </h5>
                                 </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1921</span>–<span class="end">1922</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Fiat</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">V12 6805 cc</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,150</span>
+                                            , mm (163.4 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,660</span>
+                                            , mm (65.4 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,850</span>
+                                            kg (4,080 lb)
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                        
 
-                    <div class="col-md-4" data-jplist-item>
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1626d9fcf5b%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1626d9fcf5b%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Fiat 500" src="/img/examples/cars/fiat-500.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Fiat 500">Fiat 500</a>
+                                    </h5>
                                 </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1957</span>–<span class="end">1975</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Fiat</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">479 cc I2</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">2,970</span>
+                                            , mm (116.9 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,320</span>
+                                            , mm (52.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">499</span>
+                                            kg (1,100 lb)
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                        
 
-                    <div class="col-md-4" data-jplist-item>
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1626d9fcf5c%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1626d9fcf5c%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71875%22%20y%3D%22120.15%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Alvis Fourteen TA 14" src="/img/examples/cars/alvis-ta-14.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Alvis Fourteen TA 14">Alvis Fourteen TA 14</a>
+                                    </h5>
                                 </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1946</span>–<span class="end">1950</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Alvis Cars</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">Alvis 1892 cc Straight-4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual synchromesh on top 3 ratios clutch Borg & beck type 9 A6-G single plate</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,432</span>
+                                            , mm (174.5 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,676</span>
+                                            , mm (66 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">2744</span>
+                                            kg
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Lotus Elite Type 14" src="/img/examples/cars/lotus-elite-60.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Lotus Elite Type 14">Lotus Elite Type 14</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1958</span>–<span class="end">1963</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Lotus Cars</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1.2 L Coventry Climax Straight-4 75-105hp</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">3,759</span>
+                                            , mm (148.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,506</span>
+                                            mm (59.3 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">503.5</span>
+                                            kg (1,110 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Alfa Romeo G1" src="/img/examples/cars/alfa-romeo-g1-limousine.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Alfa Romeo G1">Alfa Romeo G1</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1921</span>–<span class="end">1923</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Alfa Romeo</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">6,330 cc I6 sidevalve 70 bhp</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual with reverse gear</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,494</span>
+                                            , mm (176.9 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">3,400</span>
+                                            , mm (130 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1500</span>
+                                            kg (3306 lbs)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Mini" src="/img/examples/cars/morris-mini-minor.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Mini">Mini</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1959</span>–<span class="end">2000</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">British Motor Corporation</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">848 cc</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">3,054</span>
+                                            , mm (120.2 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,397</span>
+                                            , mm (55.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">617</span>
+                                            kg (1,360 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Ford Model A" src="/img/examples/cars/ford-model-a.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Ford Model A">Ford Model A</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1927</span>–<span class="end">1931</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Ford Motor Company</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">201 CID (3.3 L) L-head-4 I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed sliding gear manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,191</span>
+                                            , mm (165 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,702</span>
+                                            , mm (67 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,027</span>
+                                            kg (2,265 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="ZiL-111" src="/img/examples/cars/zil-111v.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="ZiL-111">ZiL-111</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1958</span>–<span class="end">1967</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">ZIL</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">6.0 L ZiL-111 V8</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">2-speed PowerFlite automatic</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">6,137</span>
+                                            , mm (241.6 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">2,033</span>
+                                            , mm (80.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">2,610</span>
+                                            kg (5,754 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Mercedes-Benz SSK" src="/img/examples/cars/mercedes-benz-SSK.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Mercedes-Benz SSK">Mercedes-Benz SSK</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1928</span>–<span class="end">1932</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Mercedes-Benz</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">supercharged 7,069 cc (7.1 L) SOHC I6</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,240</span>
+                                            , mm (167 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,700</span>
+                                            , mm  (67 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,700</span>
+                                            kg (3,750 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="GAZ-21" src="/img/examples/cars/gaz-m-21-volga.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="GAZ-21">GAZ-21</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1956</span>–<span class="end">1970</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">GAZ</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">2.4L M-21 I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed automatic</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,810</span>
+                                            , mm (189 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,800</span>
+                                            , mm (71 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1890</span>
+                                            kg
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="BMW 501" src="/img/examples/cars/bmw-barockengel.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="BMW 501">BMW 501</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1952</span>–<span class="end">1962</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Bayerische Motoren Werke AG (BMW)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1971 cc OHV straight-6</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,730</span>
+                                            , mm (186 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,780</span>
+                                            , mm (70 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,340</span>
+                                            kg (2,950 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Fiat 1400" src="/img/examples/cars/fiat-195x.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Fiat 1400">Fiat 1400</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1950</span>–<span class="end">1958</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Fiat</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">straight-4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4 and 5-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,240</span>
+                                            , mm (166.9 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,660</span>
+                                            , mm (65.4 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,150</span>
+                                            kg (2,540 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Cadillac V-16 Roadster" src="/img/examples/cars/cadillac-v-16-roadster.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Cadillac V-16 Roadster">Cadillac V-16 Roadster</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1930</span>–<span class="end">1940</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">General Motors</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">V-16</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed synchromesh manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">5,639</span>
+                                            , mm
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,971</span>
+                                            , mm
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">2400-2600</span>
+                                            kg
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Alfa Romeo 8C" src="/img/examples/cars/alfa-romeo-8c.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Alfa Romeo 8C">Alfa Romeo 8C</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1931</span>–<span class="end">1939</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Alfa Romeo</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">2.3 L 2336 cc I8</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">Four mechanical, located behind</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,430</span>
+                                            , mm
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,669</span>
+                                            , mm
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1143</span>
+                                            kg
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="DKW Sonderklasse DKW 3=6 DKW F91/F93/F94" src="/img/examples/cars/dkw-3=6-f93.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="DKW Sonderklasse DKW 3=6 DKW F91/F93/F94">DKW Sonderklasse DKW 3=6 DKW F91/F93/F94</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1953</span>–<span class="end">1959</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Auto Union GmbH</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">896 cc two stroke straight-3</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3 or 4 speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,170</span>
+                                            , mm (164 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">2,350</span>
+                                            , mm (93 in) (2-door)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">870</span>
+                                            kg (1,920 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Facel-Vega Excellence" src="/img/examples/cars/facel-vegal-excellence.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Facel-Vega Excellence">Facel-Vega Excellence</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1958</span>–<span class="end">1964</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Facel-Vega</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">V8 Chrysler 6.4, 5.9 or 6.3 Litre</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4 speed manual by Pont-à-Mousson or Chrysler Torqueflite</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">5,235</span>
+                                            , mm (206.1 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,830</span>
+                                            , mm (72 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,920</span>
+                                            kg (4,230 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Mercedes-Benz 500K" src="/img/examples/cars/silver-mercedes-benz.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Mercedes-Benz 500K">Mercedes-Benz 500K</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1934</span>–<span class="end">1936</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Mercedes-Benz</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">5,018 cc (5.018 L) I8</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">5,150</span>
+                                            , mm ( 202.8 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,820</span>
+                                            , mm (71.7 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">2,700</span>
+                                            kg (6,000 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Borgward Hansa 1800" src="/img/examples/cars/borgward-hansa-1800.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Borgward Hansa 1800">Borgward Hansa 1800</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1949</span>–<span class="end">1954</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Carl F. W. Borgward GmbH</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1758 cc straight-4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,450</span>
+                                            , mm (175 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,620</span>
+                                            , mm (64 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,120</span>
+                                            kg (2,470 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Fiat 2100" src="/img/examples/cars/fiat-2100-deLuxe.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Fiat 2100">Fiat 2100</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1959</span>–<span class="end">1968</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Fiat</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">straight-6 1795 cc</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4 stupas. fur.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,465</span>
+                                            , mm (175.8 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,620</span>
+                                            , mm (63.8 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,250</span>
+                                            kg (2,760 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="BMW 507" src="/img/examples/cars/bmw-507.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="BMW 507">BMW 507</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1956</span>–<span class="end">1959</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">BMW</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">3168 cc BMW OHV V8</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed ZF manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,380</span>
+                                            , mm (172.4 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,650</span>
+                                            , mm (65.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,330</span>
+                                            kg (2,930 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Alfa Romeo Giulietta Sprint" src="/img/examples/cars/alfa-romeo-giulietta.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Alfa Romeo Giulietta Sprint">Alfa Romeo Giulietta Sprint</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1954</span>–<span class="end">1965</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Alfa Romeo</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1.3 L DOHC I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,033</span>
+                                            , mm (158.8 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,550</span>
+                                            , mm (61.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">880</span>
+                                            kg (1,940 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Citroën Traction Avant" src="/img/examples/cars/citroen-traction-avant.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Citroën Traction Avant">Citroën Traction Avant</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1934</span>–<span class="end">1957</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Citroën</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1.3 / 1.5 / 1.6 / 1.9 L I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual, column/dash shift</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,450</span>
+                                            , mm (175.2 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,620</span>
+                                            , mm (63.8 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,025</span>
+                                            kg (2,260 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Alfa Romeo 8C 35" src="/img/examples/cars/alfa-romeo-2900.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Alfa Romeo 8C 35">Alfa Romeo 8C 35</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1935</span>–<span class="end">1939</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Alfa Romeo</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">Supercharged 3822 cc straight eight twin overhead cam</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">Unsynchronised rear transaxle four-speed with reverse gear</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,300</span>
+                                            , mm (169.3 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">863.6</span>
+                                            , mm (34.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">746.613</span>
+                                            kg (1646 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Alfa Romeo 1900 S" src="/img/examples/cars/alfa-romeo-1900-s.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Alfa Romeo 1900 S">Alfa Romeo 1900 S</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1950</span>–<span class="end">1959</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Alfa Romeo</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1.9 L tipo 1306 DOHC I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4 and 5-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,400</span>
+                                            , mm (173.2 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,600</span>
+                                            , mm (63.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">900</span>
+                                            kg (2,000 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="GAZ-M1" src="/img/examples/cars/gaz-m1.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="GAZ-M1">GAZ-M1</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1936</span>–<span class="end">1943</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">GAZ</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">3.6 L (221 ci) Ford V8-40 V-8</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,625</span>
+                                            , mm (182.1 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,770</span>
+                                            , mm (69.7 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,370</span>
+                                            kg (3,020 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="RAF-977" src="/img/examples/cars/raf-977-front.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="RAF-977">RAF-977</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1958</span>–<span class="end">1976</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Riga Autobus Factory</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">4-cylinder 2,445 cc (149.2 cu in) 75 hp (56 kW; 76 PS) at 4000rpm</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,900</span>
+                                            , mm (193 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,815</span>
+                                            , mm (71 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,675</span>
+                                            kg (3,693 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="BMW 328" src="/img/examples/cars/bmw-328.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="BMW 328">BMW 328</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1936</span>–<span class="end">1940</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Bayerische Motorenwerke</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1,971 cc M328 straight-6</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">3,900</span>
+                                            , mm (153.5 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,550</span>
+                                            , mm (61.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">830</span>
+                                            kg (1,830 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Jaguar SS100" src="/img/examples/cars/jaguar-ss100.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Jaguar SS100">Jaguar SS100</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1936</span>–<span class="end">1940</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">SS Cars Ltd</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">2663 cc straight-6 overhead valve</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">3,886</span>
+                                            , mm (153 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,600</span>
+                                            , mm (63 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1180</span>
+                                            kg
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Alfa Romeo Giulia Sprint Speciale" src="/img/examples/cars/alfa-romeo-giulia-ss-sprint-speciale.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Alfa Romeo Giulia Sprint Speciale">Alfa Romeo Giulia Sprint Speciale</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1959</span>–<span class="end">1966</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Alfa Romeo</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1.3 L AR 00120 DOHC I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">5-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,120</span>
+                                            , mm (162.2 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,660</span>
+                                            , mm (65.4 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">860</span>
+                                            kg (1,900 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Alfa Romeo 2000" src="/img/examples/cars/alfa-2000.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Alfa Romeo 2000">Alfa Romeo 2000</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1958</span>–<span class="end">1961</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Alfa Romeo</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">2.0 L DOHC I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">5-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,710</span>
+                                            , mm (185 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,700</span>
+                                            , mm (67 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,700</span>
+                                            , mm (67 in)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="BMW/EMW 327" src="/img/examples/cars/emw327-totale-nah.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="BMW/EMW 327">BMW/EMW 327</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1937</span>–<span class="end">1941</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Bayerische Motoren Werke AG (BMW)</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1971 cc OHV Straight 6</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4 speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,500</span>
+                                            , mm (180 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,600</span>
+                                            , mm (63 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,100</span>
+                                            kg (2,400 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Moskvich 407" src="/img/examples/cars/moskvich-407.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Moskvich 407">Moskvich 407</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1956</span>–<span class="end">1965</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">MZMA</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">1.2L MZMA-402 I4</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,055</span>
+                                            , mm (159.6 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,540</span>
+                                            , mm (60.6 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">910</span>
+                                            kg (2,006 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Cadillac Series 62 Convertible" src="/img/examples/cars/cadillac-series-62-convertible.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Cadillac Series 62 Convertible">Cadillac Series 62 Convertible</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1940</span>–<span class="end">1941</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">General Motors</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">346 cu in (5.7 L) Monobloc V8</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed selective synchromesh manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">5,489</span>
+                                            , mm (216.1 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,920</span>
+                                            , mm (75.6 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,900</span>
+                                            kg (4,100 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="ZIS-110" src="/img/examples/cars/zis-110.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="ZIS-110">ZIS-110</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1946</span>–<span class="end">1958</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">ZiS</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">6.0L ZIS-110 I8</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">6,000</span>
+                                            , mm (236.2 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,960</span>
+                                            , mm (77.2 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">2,575</span>
+                                            kg (5,677 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Tatra 603" src="/img/examples/cars/tatra-603.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Tatra 603">Tatra 603</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1956</span>–<span class="end">1962</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Tatra</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">Tatra 603F V-8 air-cooled 2545 cc, 73,5kW</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">manual, 4-speed, synchronous</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">5,065</span>
+                                            , mm (199.4 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,910</span>
+                                            , mm (75 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,400</span>
+                                            kg (3,100 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Ford Vedette" src="/img/examples/cars/ford-vedette-coupe.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Ford Vedette">Ford Vedette</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1948</span>–<span class="end">1954</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Ford SAF</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">2.2 L Aquillon V8</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,500</span>
+                                            , mm (180 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,720</span>
+                                            , mm (68 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,180</span>
+                                            kg (2,600 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Citroën 2CV" src="/img/examples/cars/citroen-2cv.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Citroën 2CV">Citroën 2CV</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1948</span>–<span class="end">1990</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Citroën</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">375 cc (23CID) H2 air-cooled 9hp.</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">4-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">3,860</span>
+                                            , mm (152.0 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,480</span>
+                                            , mm (58.3 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">600</span>
+                                            kg (1,300 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="Hudson Jet" src="/img/examples/cars/hudson-jet-liner-4d-sdn.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="Hudson Jet">Hudson Jet</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1953</span>–<span class="end">1954</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">Hudson Motor Car Company. American Motors Corporation.</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">202 cu in (3.3 L) I6</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">4,590</span>
+                                            , mm (180.7 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,702</span>
+                                            , mm (67 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,202</span>
+                                            kg (2,650 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <img class="card-img-top" alt="ZIM-12" src="/img/examples/cars/gaz-12-zim.jpg" />
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">
+                                        <a href="" title="ZIM-12">ZIM-12</a>
+                                    </h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Production:</b>
+                                        <span class="production">
+                                            <span class="start">1950</span>–<span class="end">1960</span>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header manufacturer-header">Manufacturer:</b>
+                                        <span class="manufacturer">GAZ</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header engine-header">Engine:</b>
+                                        <span class="engine">3.5 L GAZ-12 I6</span>
+                                    </li>
+                                    <li class="list-group-item transmission-box">
+                                        <b class="header transmission-header">Transmission:</b>
+                                        <span class="transmission">3-speed manual with a hydrodynamic fluid coupling</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header length-header">Length:</b>
+                                        <span class="length">
+                                            <span class="val">5,530</span>
+                                            , mm (217.7 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header width-header">Width:</b>
+                                        <span class="width">
+                                            <span class="val">1,900</span>
+                                            , mm (74.8 in)
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b class="header weight-header">Curb weight:</b>
+                                        <span class="weight">
+                                            <span class="val">1,700</span>
+                                            kg (3,800 lb)
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                 </div>
+
             </div>
         </div>
 

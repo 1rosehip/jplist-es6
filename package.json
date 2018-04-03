@@ -28,7 +28,7 @@
     "pagination",
     "paging"
   ],
-  "homepage": "http://jplist.com",
+  "homepage": "http://jplist.org",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-jest": "^22.4.0",

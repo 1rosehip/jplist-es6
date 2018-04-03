@@ -82,6 +82,23 @@ describe('Base Dropdown Control', () => {
         expect(control.panels[0].initialContent).toEqual('Sort by');
     });
 
+    it('a panel should have element property', () => {
+
+        const control = new BaseDropdownControl(generateHTMLElement(`
+            <div
+                data-jplist-control="dropdown-sort"
+                class="jplist-dd"
+                data-group="group1"
+                data-name="name1">
+
+            <div data-type="panel" class="jplist-dd-panel">Sort by</div>
+            <div data-type="content" class="jplist-dd-content">Content</div>
+        </div>
+        `));
+
+        expect(control.panels[0].element).toBeDefined();
+    });
+
     it('control should have 1 content block', () => {
 
         const control = new BaseDropdownControl(generateHTMLElement(`
@@ -107,15 +124,73 @@ describe('Base Dropdown Control', () => {
                 class="jplist-dd"
                 data-group="group1"
                 data-name="name1">
-
-            <div data-type="panel" class="jplist-dd-panel">Sort by 1</div>
-            <div data-type="content" class="jplist-dd-content">Content 1</div>
-            <div data-type="content" class="jplist-dd-content">Content 2</div>
-        </div>
+    
+                <div data-type="panel" class="jplist-dd-panel">Sort by 1</div>
+                <div data-type="content" class="jplist-dd-content">Content 1</div>
+                <div data-type="content" class="jplist-dd-content">Content 2</div>
+            </div>
         `));
 
         expect(control.contents.length).toEqual(2);
     });
+
+
+    it('control openedClass default value', () => {
+
+        const control = new BaseDropdownControl(generateHTMLElement(`
+             <div
+                data-jplist-control="dropdown-sort"
+                class="jplist-dd"
+                data-group="group1"
+                data-name="name1">
+    
+                <div data-type="panel" class="jplist-dd-panel">Sort by 1</div>
+                <div data-type="content" class="jplist-dd-content">Content 1</div>
+                <div data-type="content" class="jplist-dd-content">Content 2</div>
+            </div>
+        `));
+
+        expect(control.element.openedClass).toEqual('jplist-dd-opened');
+    });
+
+    it('control openedClass', () => {
+
+        const control = new BaseDropdownControl(generateHTMLElement(`
+              <div
+                data-jplist-control="dropdown-sort"
+                class="jplist-dd"
+                data-group="group1"
+                data-opened-class="opened"
+                data-name="name1">
+    
+                <div data-type="panel" class="jplist-dd-panel">Sort by 1</div>
+                <div data-type="content" class="jplist-dd-content">Content 1</div>
+                <div data-type="content" class="jplist-dd-content">Content 2</div>
+              </div>
+        `));
+
+        expect(control.element.openedClass).toEqual('opened');
+    });
+
+    it('control openedClass trim', () => {
+
+        const control = new BaseDropdownControl(generateHTMLElement(`
+              <div
+                data-jplist-control="dropdown-sort"
+                class="jplist-dd"
+                data-group="group1"
+                data-opened-class="        opened           "
+                data-name="name1">
+    
+                <div data-type="panel" class="jplist-dd-panel">Sort by 1</div>
+                <div data-type="content" class="jplist-dd-content">Content 1</div>
+                <div data-type="content" class="jplist-dd-content">Content 2</div>
+              </div>
+        `));
+
+        expect(control.element.openedClass).toEqual('opened');
+    });
+
 
     it('click on first panel -> first content should have jplist-dd-visible class', () => {
 
