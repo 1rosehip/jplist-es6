@@ -314,8 +314,12 @@
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
                     <li class="toc-entry toc-h3"><a href="#items-per-page-select">Items per page select</a></li>
                     <li class="toc-entry toc-h3"><a href="#items-per-page-dropdown">Items per page dropdown</a></li>
+                    <li class="toc-entry toc-h3"><a href="#bootstrap-pagination-example">Bootstrap pagination example</a></li>
+                    <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
                 </ul>
             </li>
+            <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
+            <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
             <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a>
                 <ul>
                     <li class="toc-entry toc-h3"><a href="#inner-elements-data-attributes">Inner elements</a></li>
@@ -340,7 +344,10 @@
         </p>
 
         <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+                
+&lt;!-- pagination control -->
 &lt;div
         data-jplist-control="pagination"
         data-group="group1"
@@ -377,6 +384,12 @@
     &lt;/div>
 
 &lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
             </code></pre>
         </div>
 
@@ -552,6 +565,203 @@
             </code></pre>
         </div>
 
+
+        <h3 id="bootstrap-pagination-example">Bootstrap pagination example</h3>
+
+        <p>The following example demonstrates how to use jPList pagination with bootstrap controls:</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
+&lt;nav
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="3"
+        data-current-page="0"
+        data-disabled-class="disabled"
+        data-selected-class="active">
+
+    &lt;!-- first and previous buttons -->
+    &lt;ul class="pagination d-inline-flex">
+        &lt;li class="page-item" data-type="first">&lt;a class="page-link" href="#">«&lt;/a>&lt;/li>
+        &lt;li class="page-item" data-type="prev">&lt;a class="page-link" href="#">‹&lt;/a>&lt;/li>
+    &lt;/ul>
+
+    &lt;!-- pages buttons -->
+    &lt;ul class="pagination d-inline-flex" data-type="pages">
+        &lt;li class="page-item" data-type="page">&lt;a class="page-link" href="#">{pageNumber}&lt;/a>&lt;/li>
+    &lt;/ul>
+
+    &lt;!-- next and last buttons -->
+    &lt;ul class="pagination d-inline-flex">
+        &lt;li class="page-item" data-type="next">&lt;a class="page-link" href="#">›&lt;/a>&lt;/li>
+        &lt;li class="page-item" data-type="last">&lt;a class="page-link" href="#">»&lt;/a>&lt;/li>
+    &lt;/ul>
+
+    &lt;!-- items per page dropdown -->
+    &lt;div class="dropdown d-inline-flex ml-3"
+         data-type="items-per-page-dd"
+         data-opened-class="show">
+
+        &lt;button
+                data-type="panel"
+                class="btn btn-primary dropdown-toggle"
+                type="button">
+            Dropdown button
+        &lt;/button>
+
+        &lt;div
+            data-type="content"
+            class="dropdown-menu"
+            aria-labelledby="dropdownMenuButton">
+
+            &lt;a class="dropdown-item" href="#" data-value="3">3 per page&lt;/a>
+            &lt;a class="dropdown-item" href="#" data-value="6">6 per page&lt;/a>
+            &lt;a class="dropdown-item" href="#" data-value="9">9 per page&lt;/a>
+            &lt;a class="dropdown-item" href="#" data-value="0">View All&lt;/a>
+
+        &lt;/div>
+    &lt;/div>
+
+    &lt;!-- information labels -->
+    &lt;span data-type="info" class="badge badge-secondary ml-3 p-2">
+        Page {pageNumber} of {pagesNumber}
+    &lt;/span>
+
+&lt;/nav>
+            </code></pre>
+        </div>
+
+        <h3 id="jump">Jump to top</h3>
+
+        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user clicks a page button. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
+&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="5"
+        data-current-page="0"
+        data-jump="top">
+
+    ...
+&lt;/div>
+
+&lt;!-- content to paginate -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h2 id="deep-linking">Deep Linking</h2>
+
+        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>deepLinking</i> setting should be <i>true</i> in jPList parameters.</p>
+
+        <p>In the example below deep link may look like <b>http://www.example.com/page#group=group1&paging1=0-5</b> where <i>group1</i> is taken from <code class="highlighter-rouge">data-jplist-group="group1"</code>, <b>0</b> is current selected page and <b>5</b> is the current number of <i>items per page</i>.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
+&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="5"
+        data-current-page="0"
+        data-id="paging1">
+
+    ...
+&lt;/div>
+
+&lt;!-- content to paginate -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+&lt;/div>
+                
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        deepLinking: true
+    });
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="storage">Storage</h2>
+
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>storage</i> setting should be passed to jPList constructor.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
+&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="5"
+        data-current-page="0"
+        data-id="paging1">
+
+    ...
+&lt;/div>
+
+&lt;!-- content to paginate -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+&lt;/div>
+
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        storage: 'localStorage', //'localStorage', 'sessionStorage' or 'cookies'
+        storageName: 'my-page-storage' //the same storage name can be used to share storage between multiple pages
+    });
+&lt;/script>
+            </code></pre>
+        </div>
+
         <h2 id="data-attributes">Data Attributes</h2>
 
         <p>The full list of pagination data attributes.</p>
@@ -599,6 +809,24 @@
                     <td><code class="highlighter-rouge">data-disabled-class</code></td>
                     <td>Optional data attribute that defines CSS class of disabled buttons and can be applied on <i>first</i>, <i>previous</i>, <i>next</i>, and <i>last</i> buttons.</td>
                     <td>CSS class name, by default <i>jplist-disabled</i></td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-opened-class</code></td>
+                    <td>Optional data attribute that defines CSS class of opened <i>items per page</i> dropdown with custom styles.</td>
+                    <td>CSS class name, by default <i>jplist-dd-opened</i></td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-jump</code></td>
+                    <td>This data attribute can be used to scroll page to the specified location when user clicks a page button. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
+                    <td><i>top</i> keyword or any CS selector</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-id</code></td>
+                    <td>This attribute is used for deep linking.</td>
+                    <td>any text value that may contain letters, digits, underscores or dashes</td>
                 </tr>
 
             </tbody>

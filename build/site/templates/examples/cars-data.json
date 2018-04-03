@@ -68,7 +68,7 @@
 
     "width": {
       "val": "2,706",
-      "units": ", mm (107 in)"
+      "units": "mm (107 in)"
     },
     "weight": {
       "val": "1,735",
@@ -94,7 +94,7 @@
 
     "width": {
       "val": "1,500",
-      "units": ", mm (59.1 in)"
+      "units": "mm (59.1 in)"
     },
     "weight": {
       "val": "1,000",
@@ -120,7 +120,7 @@
 
     "width": {
       "val": "1,620",
-      "units": ", mm (63.8 in)"
+      "units": "mm (63.8 in)"
     },
     "weight": {
       "val": "765",
@@ -141,12 +141,12 @@
   "dimensions": {
     "length": {
       "val": "3,020",
-      "units": ", mm (119 in)"
+      "units": "mm (119 in)"
     },
 
     "width": {
       "val": "1,340",
-      "units": ", mm (53 in)"
+      "units": "mm (53 in)"
     },
     "weight": {
       "val": "530",
@@ -167,12 +167,12 @@
   "dimensions": {
     "length": {
       "val": "4,150",
-      "units": ", mm (163.4 in)"
+      "units": "mm (163.4 in)"
     },
 
     "width": {
       "val": "1,660",
-      "units": ", mm (65.4 in)"
+      "units": "mm (65.4 in)"
     },
 
     "weight": {
@@ -194,12 +194,12 @@
   "dimensions": {
     "length": {
       "val": "2,970",
-      "units": ", mm (116.9 in)"
+      "units": "mm (116.9 in)"
     },
 
     "width": {
       "val": "1,320",
-      "units": ", mm (52.0 in)"
+      "units": "mm (52.0 in)"
     },
 
     "weight": {
@@ -221,11 +221,11 @@
   "dimensions": {
     "length": {
       "val": "4,432",
-      "units": ", mm (174.5 in)"
+      "units": "mm (174.5 in)"
     },
     "width": {
       "val": "1,676",
-      "units": ", mm (66 in)"
+      "units": "mm (66 in)"
     },
     "weight": {
       "val": "2744",
@@ -246,7 +246,7 @@
   "dimensions": {
     "length": {
       "val": "3,759",
-      "units": ", mm (148.0 in)"
+      "units": "mm (148.0 in)"
     },
     "width": {
       "val": "1,506",
@@ -271,11 +271,11 @@
   "dimensions": {
     "length": {
       "val": "4,494",
-      "units": ", mm (176.9 in)"
+      "units": "mm (176.9 in)"
     },
     "width": {
       "val": "3,400",
-      "units": ", mm (130 in)"
+      "units": "mm (130 in)"
     },
     "weight": {
       "val": "1500",
@@ -296,12 +296,12 @@
   "dimensions": {
     "length": {
       "val": "3,054",
-      "units": ", mm (120.2 in)"
+      "units": "mm (120.2 in)"
     },
 
     "width": {
       "val": "1,397",
-      "units": ", mm (55.0 in)"
+      "units": "mm (55.0 in)"
     },
     "weight": {
       "val": "617",
@@ -322,11 +322,11 @@
   "dimensions": {
     "length": {
       "val": "4,191",
-      "units": ", mm (165 in)"
+      "units": "mm (165 in)"
     },
     "width": {
       "val": "1,702",
-      "units": ", mm (67 in)"
+      "units": "mm (67 in)"
     },
     "weight": {
       "val": "1,027",
@@ -347,11 +347,11 @@
   "dimensions": {
     "length": {
       "val": "6,137",
-      "units": ", mm (241.6 in)"
+      "units": "mm (241.6 in)"
     },
     "width": {
       "val": "2,033",
-      "units": ", mm (80.0 in)"
+      "units": "mm (80.0 in)"
     },
     "weight": {
       "val": "2,610",
@@ -372,11 +372,11 @@
   "dimensions": {
     "length": {
       "val": "4,240",
-      "units": ", mm (167 in)"
+      "units": "mm (167 in)"
     },
     "width": {
       "val": "1,700",
-      "units": ", mm  (67 in)"
+      "units": "mm  (67 in)"
     },
     "weight": {
       "val": "1,700",
@@ -397,11 +397,11 @@
   "dimensions": {
     "length": {
       "val": "4,810",
-      "units": ", mm (189 in)"
+      "units": "mm (189 in)"
     },
     "width": {
       "val": "1,800",
-      "units": ", mm (71 in)"
+      "units": "mm (71 in)"
     },
     "weight": {
       "val": "1890",
@@ -422,11 +422,11 @@
   "dimensions": {
     "length": {
       "val": "4,730",
-      "units": ", mm (186 in)"
+      "units": "mm (186 in)"
     },
     "width": {
       "val": "1,780",
-      "units": ", mm (70 in)"
+      "units": "mm (70 in)"
     },
     "weight": {
       "val": "1,340",
@@ -447,11 +447,11 @@
   "dimensions": {
     "length": {
       "val": "4,240",
-      "units": ", mm (166.9 in)"
+      "units": "mm (166.9 in)"
     },
     "width": {
       "val": "1,660",
-      "units": ", mm (65.4 in)"
+      "units": "mm (65.4 in)"
     },
     "weight": {
       "val": "1,150",
@@ -472,12 +472,12 @@
   "dimensions": {
     "length": {
       "val": "5,639",
-      "units": ", mm"
+      "units": "mm"
     },
 
     "width": {
       "val": "1,971",
-      "units": ", mm"
+      "units": "mm"
     },
     "weight": {
       "val": "2400-2600",
@@ -498,11 +498,11 @@
   "dimensions": {
     "length": {
       "val": "4,430",
-      "units": ", mm"
+      "units": "mm"
     },
     "width": {
       "val": "1,669",
-      "units": ", mm"
+      "units": "mm"
     },
     "weight": {
       "val": "1143",
@@ -523,11 +523,11 @@
   "dimensions": {
     "length": {
       "val": "4,170",
-      "units": ", mm (164 in)"
+      "units": "mm (164 in)"
     },
     "width": {
       "val": "2,350",
-      "units": ", mm (93 in) (2-door)"
+      "units": "mm (93 in) (2-door)"
     },
     "weight": {
       "val": "870",
@@ -548,11 +548,11 @@
   "dimensions": {
     "length": {
       "val": "5,235",
-      "units": ", mm (206.1 in)"
+      "units": "mm (206.1 in)"
     },
     "width": {
       "val": "1,830",
-      "units": ", mm (72 in)"
+      "units": "mm (72 in)"
     },
     "weight": {
       "val": "1,920",
@@ -573,11 +573,11 @@
   "dimensions": {
     "length": {
       "val": "5,150",
-      "units": ", mm ( 202.8 in)"
+      "units": "mm ( 202.8 in)"
     },
     "width": {
       "val": "1,820",
-      "units": ", mm (71.7 in)"
+      "units": "mm (71.7 in)"
     },
     "weight": {
       "val": "2,700",
@@ -598,12 +598,12 @@
   "dimensions": {
     "length": {
       "val": "4,450",
-      "units": ", mm (175 in)"
+      "units": "mm (175 in)"
     },
 
     "width": {
       "val": "1,620",
-      "units": ", mm (64 in)"
+      "units": "mm (64 in)"
     },
     "weight": {
       "val": "1,120",
@@ -624,11 +624,11 @@
   "dimensions": {
     "length": {
       "val": "4,465",
-      "units": ", mm (175.8 in)"
+      "units": "mm (175.8 in)"
     },
     "width": {
       "val": "1,620",
-      "units": ", mm (63.8 in)"
+      "units": "mm (63.8 in)"
     },
     "weight": {
       "val": "1,250",
@@ -649,12 +649,12 @@
   "dimensions": {
     "length": {
       "val": "4,380",
-      "units": ", mm (172.4 in)"
+      "units": "mm (172.4 in)"
     },
 
     "width": {
       "val": "1,650",
-      "units": ", mm (65.0 in)"
+      "units": "mm (65.0 in)"
     },
     "weight": {
       "val": "1,330",
@@ -675,11 +675,11 @@
   "dimensions": {
     "length": {
       "val": "4,033",
-      "units": ", mm (158.8 in)"
+      "units": "mm (158.8 in)"
     },
     "width": {
       "val": "1,550",
-      "units": ", mm (61.0 in)"
+      "units": "mm (61.0 in)"
     },
     "weight": {
       "val": "880",
@@ -700,11 +700,11 @@
   "dimensions": {
     "length": {
       "val": "4,450",
-      "units": ", mm (175.2 in)"
+      "units": "mm (175.2 in)"
     },
     "width": {
       "val": "1,620",
-      "units": ", mm (63.8 in)"
+      "units": "mm (63.8 in)"
     },
     "weight": {
       "val": "1,025",
@@ -725,12 +725,12 @@
   "dimensions": {
     "length": {
       "val": "4,300",
-      "units": ", mm (169.3 in)"
+      "units": "mm (169.3 in)"
     },
 
     "width": {
       "val": "863.6",
-      "units": ", mm (34.0 in)"
+      "units": "mm (34.0 in)"
     },
 
     "weight": {
@@ -752,12 +752,12 @@
   "dimensions": {
     "length": {
       "val": "4,400",
-      "units": ", mm (173.2 in)"
+      "units": "mm (173.2 in)"
     },
 
     "width": {
       "val": "1,600",
-      "units": ", mm (63.0 in)"
+      "units": "mm (63.0 in)"
     },
 
     "weight": {
@@ -779,12 +779,12 @@
   "dimensions": {
     "length": {
       "val": "4,625",
-      "units": ", mm (182.1 in)"
+      "units": "mm (182.1 in)"
     },
 
     "width": {
       "val": "1,770",
-      "units": ", mm (69.7 in)"
+      "units": "mm (69.7 in)"
     },
 
     "weight": {
@@ -806,12 +806,12 @@
   "dimensions": {
     "length": {
       "val": "4,900",
-      "units": ", mm (193 in)"
+      "units": "mm (193 in)"
     },
 
     "width": {
       "val": "1,815",
-      "units": ", mm (71 in)"
+      "units": "mm (71 in)"
     },
 
     "weight": {
@@ -833,12 +833,12 @@
   "dimensions": {
     "length": {
       "val": "3,900",
-      "units": ", mm (153.5 in)"
+      "units": "mm (153.5 in)"
     },
 
     "width": {
       "val": "1,550",
-      "units": ", mm (61.0 in)"
+      "units": "mm (61.0 in)"
     },
 
     "weight": {
@@ -860,12 +860,12 @@
   "dimensions": {
     "length": {
       "val": "3,886",
-      "units": ", mm (153 in)"
+      "units": "mm (153 in)"
     },
 
     "width": {
       "val": "1,600",
-      "units": ", mm (63 in)"
+      "units": "mm (63 in)"
     },
 
     "weight": {
@@ -887,12 +887,12 @@
   "dimensions": {
     "length": {
       "val": "4,120",
-      "units": ", mm (162.2 in)"
+      "units": "mm (162.2 in)"
     },
 
     "width": {
       "val": "1,660",
-      "units": ", mm (65.4 in)"
+      "units": "mm (65.4 in)"
     },
 
     "weight": {
@@ -914,17 +914,17 @@
   "dimensions": {
     "length": {
       "val": "4,710",
-      "units": ", mm (185 in)"
+      "units": "mm (185 in)"
     },
 
     "width": {
       "val": "1,700",
-      "units": ", mm (67 in)"
+      "units": "mm (67 in)"
     },
 
     "weight": {
       "val": "1,700",
-      "units": ", mm (67 in)"
+      "units": "mm (67 in)"
     }
   }
 }, {
@@ -941,12 +941,12 @@
   "dimensions": {
     "length": {
       "val": "4,500",
-      "units": ", mm (180 in)"
+      "units": "mm (180 in)"
     },
 
     "width": {
       "val": "1,600",
-      "units": ", mm (63 in)"
+      "units": "mm (63 in)"
     },
 
     "weight": {
@@ -968,12 +968,12 @@
   "dimensions": {
     "length": {
       "val": "4,055",
-      "units": ", mm (159.6 in)"
+      "units": "mm (159.6 in)"
     },
 
     "width": {
       "val": "1,540",
-      "units": ", mm (60.6 in)"
+      "units": "mm (60.6 in)"
     },
 
     "weight": {
@@ -995,12 +995,12 @@
   "dimensions": {
     "length": {
       "val": "5,489",
-      "units": ", mm (216.1 in)"
+      "units": "mm (216.1 in)"
     },
 
     "width": {
       "val": "1,920",
-      "units": ", mm (75.6 in)"
+      "units": "mm (75.6 in)"
     },
 
     "weight": {
@@ -1022,12 +1022,12 @@
   "dimensions": {
     "length": {
       "val": "6,000",
-      "units": ", mm (236.2 in)"
+      "units": "mm (236.2 in)"
     },
 
     "width": {
       "val": "1,960",
-      "units": ", mm (77.2 in)"
+      "units": "mm (77.2 in)"
     },
 
     "weight": {
@@ -1049,12 +1049,12 @@
   "dimensions": {
     "length": {
       "val": "5,065",
-      "units": ", mm (199.4 in)"
+      "units": "mm (199.4 in)"
     },
 
     "width": {
       "val": "1,910",
-      "units": ", mm (75 in)"
+      "units": "mm (75 in)"
     },
 
     "weight": {
@@ -1076,12 +1076,12 @@
   "dimensions": {
     "length": {
       "val": "4,500",
-      "units": ", mm (180 in)"
+      "units": "mm (180 in)"
     },
 
     "width": {
       "val": "1,720",
-      "units": ", mm (68 in)"
+      "units": "mm (68 in)"
     },
 
     "weight": {
@@ -1103,12 +1103,12 @@
   "dimensions": {
     "length": {
       "val": "3,860",
-      "units": ", mm (152.0 in)"
+      "units": "mm (152.0 in)"
     },
 
     "width": {
       "val": "1,480",
-      "units": ", mm (58.3 in)"
+      "units": "mm (58.3 in)"
     },
 
     "weight": {
@@ -1131,12 +1131,12 @@
   "dimensions": {
     "length": {
       "val": "4,590",
-      "units": ", mm (180.7 in)"
+      "units": "mm (180.7 in)"
     },
 
     "width": {
       "val": "1,702",
-      "units": ", mm (67 in)"
+      "units": "mm (67 in)"
     },
 
     "weight": {
@@ -1158,12 +1158,12 @@
   "dimensions": {
     "length": {
       "val": "5,530",
-      "units": ", mm (217.7 in)"
+      "units": "mm (217.7 in)"
     },
 
     "width": {
       "val": "1,900",
-      "units": ", mm (74.8 in)"
+      "units": "mm (74.8 in)"
     },
 
     "weight": {
