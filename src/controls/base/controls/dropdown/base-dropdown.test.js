@@ -192,7 +192,7 @@ describe('Base Dropdown Control', () => {
     });
 
 
-    it('click on first panel -> first content should have jplist-dd-visible class', () => {
+    it('click on first panel -> first content should have jplist-dd-opened class', () => {
 
         const control = new BaseDropdownControl(generateHTMLElement(`
             <div
@@ -207,10 +207,10 @@ describe('Base Dropdown Control', () => {
         `));
 
         control.panels[0].dispatchEvent(new Event('click'));
-        expect(control.contents[0].classList.contains('jplist-dd-visible')).toBeTruthy();
+        expect(control.contents[0].classList.contains('jplist-dd-opened')).toBeTruthy();
     });
 
-    it('click on first panel -> second content should have jplist-dd-visible class', () => {
+    it('click on first panel -> second content should have jplist-dd-opened class', () => {
 
         const control = new BaseDropdownControl(generateHTMLElement(`
             <div
@@ -226,10 +226,10 @@ describe('Base Dropdown Control', () => {
         `));
 
         control.panels[0].dispatchEvent(new Event('click'));
-        expect(control.contents[1].classList.contains('jplist-dd-visible')).toBeTruthy();
+        expect(control.contents[1].classList.contains('jplist-dd-opened')).toBeTruthy();
     });
 
-    it('click on first panel twice -> first content should not have jplist-dd-visible class', () => {
+    it('click on first panel twice -> first content should not have jplist-dd-opened class', () => {
 
         const control = new BaseDropdownControl(generateHTMLElement(`
             <div
@@ -245,7 +245,7 @@ describe('Base Dropdown Control', () => {
 
         control.panels[0].dispatchEvent(new Event('click'));
         control.panels[0].dispatchEvent(new Event('click'));
-        expect(!control.contents[0].classList.contains('jplist-dd-visible')).toBeTruthy();
+        expect(!control.contents[0].classList.contains('jplist-dd-opened')).toBeTruthy();
     });
 
     it('click on first panel -> first panel should have jplist-dd-opened class', () => {
@@ -286,7 +286,7 @@ describe('Base Dropdown Control', () => {
         expect(!control.panels[0].classList.contains('jplist-dd-opened')).toBeTruthy();
     });*/
 
-    it('click on first panel -> first content should have jplist-dd-visible class', () => {
+    it('click on first panel -> first content should have jplist-dd-opened class', () => {
 
         const control = new BaseDropdownControl(generateHTMLElement(`
             <div
@@ -301,7 +301,7 @@ describe('Base Dropdown Control', () => {
         `));
 
         control.panels[0].dispatchEvent(new Event('click'));
-        expect(control.contents[0].classList.contains('jplist-dd-visible')).toBeTruthy();
+        expect(control.contents[0].classList.contains('jplist-dd-opened')).toBeTruthy();
     });
 
     it('setPanelsContent for the first panel', () => {

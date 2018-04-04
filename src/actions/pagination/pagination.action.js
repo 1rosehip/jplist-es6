@@ -9,8 +9,9 @@ class PaginationAction{
      * @param {number} currentPage
      * @param {number} itemsPerPage
      * @param {number} itemsNumber
+     * @param {number} range
      */
-    constructor(currentPage, itemsPerPage, itemsNumber){
+    constructor(currentPage, itemsPerPage, itemsNumber, range){
 
         this.itemsNumber = Number(itemsNumber) || 0;
         this.itemsPerPage = Number.isInteger(itemsPerPage) ? Number(itemsPerPage) : this.itemsNumber;
@@ -38,6 +39,22 @@ class PaginationAction{
 
         this.prevPage = this.currentPage <= 0 ? 0 : this.currentPage - 1;
         this.nextPage = this.pagesNumber === 0 ? 0 : (this.currentPage >= this.pagesNumber - 1 ? this.pagesNumber - 1 : this.currentPage + 1);
+
+        this.range = Number(range) || 10;
+
+        const halfRange = Math.ceil((this.range - 1) / 2);
+        this.rangeStart = this.currentPage - halfRange;
+        this.rangeEnd = Math.min(this.rangeStart + this.range - 1, this.pagesNumber - 1);
+
+        if(this.rangeStart <= 0){
+            this.rangeStart = 0;
+            this.rangeEnd = Math.min(this.range - 1, this.pagesNumber - 1);
+        }
+
+        if(this.rangeEnd >= this.pagesNumber - 1){
+            this.rangeStart = Math.max(this.pagesNumber - this.range, 0);
+            this.rangeEnd = this.pagesNumber - 1;
+        }
     }
 }
 

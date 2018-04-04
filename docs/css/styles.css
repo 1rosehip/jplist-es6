@@ -1661,3 +1661,27 @@
     background-color: rgba(208, 189, 236, 0.15) !important;
 }
 */
+
+/**
+ * breadcrumbs
+ */
+.breadcrumb-container{
+    background: #fff;
+}
+
+.breadcrumb-container .breadcrumb{
+    margin-bottom: 0;
+    background: #fff;
+}
+
+/**
+ * controls panel
+ */
+.pagination{
+    margin-bottom: 0;
+}
+
+.controls-panel > .container > .row{
+    margin-right: 0px;
+    margin-left: 0px;
+}

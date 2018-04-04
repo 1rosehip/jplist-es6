@@ -27,6 +27,12 @@ class BasePaginationControl extends BaseControl{
             this.currentPage = Number(element.getAttribute('data-current-page')) || 0;
 
             /**
+             * optional, 10 by default
+             * max number of visible pagination button
+             */
+            this.range = Number(element.getAttribute('data-range')) || 10;
+
+            /**
              * CSS class that is used on disabled pagination buttons
              * @type {string|string}
              */
@@ -48,7 +54,8 @@ class BasePaginationControl extends BaseControl{
 
         return {
             itemsPerPage: this.itemsPerPage,
-            currentPage: this.currentPage
+            currentPage: this.currentPage,
+            range: this.range
         };
     }
 }

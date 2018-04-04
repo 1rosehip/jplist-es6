@@ -255,4 +255,48 @@ describe('Base Pagination Control', () => {
         </div>
         `).selectedClass).toEqual('selected');
     });
+
+    it('base pagination control range default is 10', () => {
+        expect(generateControl(`
+         <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-name="name1"
+            data-current-page="0">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+        </div>
+        `).range).toEqual(10);
+    });
+
+    it('base pagination control range', () => {
+        expect(generateControl(`
+         <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-name="name1"
+            data-items-per-page="2"
+            data-current-page="0"
+            data-range="15">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+        </div>
+        `).range).toEqual(15);
+    });
 });

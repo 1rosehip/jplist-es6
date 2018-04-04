@@ -181,4 +181,160 @@ describe('Pagination', function(){
         const pagination = new PaginationAction(0, 0, 0);
         expect(pagination.nextPage).toEqual(0);
     });
+
+    it('if range is NaN -> it should be 10', function(){
+
+        const pagination = new PaginationAction();
+        expect(pagination.range).toEqual(10);
+    });
+
+    it('range should be 15', function(){
+
+        const pagination = new PaginationAction(3, 10, 100, 15);
+        expect(pagination.range).toEqual(15);
+    });
+
+    it('rangeStart should be 2', function(){
+        const currentPage = 5;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 6;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeStart).toEqual(2);
+    });
+
+    it('rangeEnd should be 7', function(){
+        const currentPage = 5;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 6;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeEnd).toEqual(7);
+    });
+
+    it('rangeStart should be 0', function(){
+        const currentPage = 0;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 5;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeStart).toEqual(0);
+    });
+
+    it('rangeEnd should be 4', function(){
+        const currentPage = 0;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 5;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeEnd).toEqual(4);
+    });
+
+    it('rangeStart should be 5', function(){
+        const currentPage = 9;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 5;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeStart).toEqual(5);
+    });
+
+    it('rangeEnd should be 9', function(){
+        const currentPage = 9;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 5;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeEnd).toEqual(9);
+    });
+
+    it('rangeStart should be 0', function(){
+        const currentPage = 0;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 3;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeStart).toEqual(0);
+    });
+
+    it('rangeEnd should be 2', function(){
+        const currentPage = 0;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 3;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeEnd).toEqual(2);
+    });
+
+    it('rangeStart should be 5', function(){
+        const currentPage = 9;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 3;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeStart).toEqual(7);
+    });
+
+    it('rangeEnd should be 9', function(){
+        const currentPage = 9;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 3;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeEnd).toEqual(9);
+    });
+
+    it('rangeStart should be 0', function(){
+        const currentPage = 0;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 10;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeStart).toEqual(0);
+    });
+
+    it('rangeEnd should be 9', function(){
+        const currentPage = 0;
+        const itemsPerPage = 10;
+        const itemsNumber = 100;
+        const range = 10;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeEnd).toEqual(9);
+    });
+
+    it('rangeStart should be 5', function(){
+        const currentPage = 14;
+        const itemsPerPage = 3;
+        const itemsNumber = 45;
+        const range = 10;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeStart).toEqual(5);
+    });
+
+    it('rangeEnd should be 14', function(){
+        const currentPage = 14;
+        const itemsPerPage = 3;
+        const itemsNumber = 45;
+        const range = 10;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeEnd).toEqual(14);
+    });
+
+    it('rangeStart should be 4', function(){
+        const currentPage = 9;
+        const itemsPerPage = 3;
+        const itemsNumber = 45;
+        const range = 10;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeStart).toEqual(4);
+    });
+
+    it('rangeEnd should be 13', function(){
+        const currentPage = 9;
+        const itemsPerPage = 3;
+        const itemsNumber = 45;
+        const range = 10;
+        const pagination = new PaginationAction(currentPage, itemsPerPage, itemsNumber, range);
+        expect(pagination.rangeEnd).toEqual(13);
+    });
 });

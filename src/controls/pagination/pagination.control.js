@@ -18,6 +18,7 @@ class PaginationControl extends BasePaginationControlsGroup{
 
         this.currentPage = 0;
         this.itemsPerPage = 0;
+        this.range = 0;
         this.id = '';
     }
 
@@ -32,6 +33,7 @@ class PaginationControl extends BasePaginationControlsGroup{
         //update properties - we take them from the latest pagination control in the group
         this.currentPage = basePaginationControl.currentPage;
         this.itemsPerPage = Number(basePaginationControl.itemsPerPage) || 0;
+        this.range = basePaginationControl.range;
 
         //restore control state from the deep link value if needed
         this.restoreFromDeepLink(basePaginationControl);
@@ -182,7 +184,8 @@ class PaginationControl extends BasePaginationControlsGroup{
 
         return {
             itemsPerPage: this.itemsPerPage,
-            currentPage: this.currentPage
+            currentPage: this.currentPage,
+            range: this.range
         };
     }
 
@@ -208,7 +211,7 @@ class PaginationControl extends BasePaginationControlsGroup{
             }
 
             //generate new buttons
-            for (let i = 0; i < paginationOptions.pagesNumber; i++) {
+            for (let i = paginationOptions.rangeStart; i <= paginationOptions.rangeEnd; i++) {
 
                 //update button text macros and button attributes
                 const div = document.createElement('div');

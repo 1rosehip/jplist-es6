@@ -405,7 +405,9 @@ describe('Pagination Control', () => {
             pagesNumber: 10,
             currentPage: 0,
             prevPage: 0,
-            nextPage: 1
+            nextPage: 1,
+            rangeStart: 0,
+            rangeEnd: 10
         });
 
         expect(paginationControl.controls[0].pageButtonsHolder.querySelector('[data-type="page"]').classList.contains('jplist-selected')).toEqual(true);
@@ -442,7 +444,9 @@ describe('Pagination Control', () => {
             pagesNumber: 10,
             currentPage: 0,
             prevPage: 0,
-            nextPage: 1
+            nextPage: 1,
+            rangeStart: 0,
+            rangeEnd: 10
         });
 
         expect(paginationControl.controls[0].pageButtonsHolder.querySelector('[data-type="page"]').classList.contains('active')).toEqual(true);
@@ -724,7 +728,7 @@ describe('Pagination Control', () => {
 
     describe('Set Pagination Options', () => {
 
-        it('1 pagination control should have 10 page buttons and 4 additional: first, last, prev and next', () => {
+        it('1 pagination control should have 10 page buttons', () => {
 
             const paginationControl = new PaginationControl('group1', 'name1');
 
@@ -751,10 +755,15 @@ describe('Pagination Control', () => {
             paginationControl.addControl(basePaginationControl1);
 
             paginationControl.setPaginationOptions({
-                pagesNumber: 10
+                pagesNumber: 10,
+                currentPage: 0,
+                prevPage: 0,
+                nextPage: 1,
+                rangeStart: 0,
+                rangeEnd: 9
             });
 
-            expect(paginationControl.controls[0].element.querySelectorAll('[data-page]').length).toEqual(10+4);
+            expect(paginationControl.controls[0].element.querySelector('.jplist-holder').querySelectorAll('[data-page]').length).toEqual(10);
         });
 
         it('second page button should have data-selected="true"', () => {
@@ -785,7 +794,11 @@ describe('Pagination Control', () => {
 
             paginationControl.setPaginationOptions({
                 pagesNumber: 10,
-                currentPage: 1
+                currentPage: 1,
+                prevPage: 0,
+                nextPage: 1,
+                rangeStart: 0,
+                rangeEnd: 10
             });
 
             const buttons = paginationControl.controls[0].element.querySelectorAll('[data-page]');
@@ -821,7 +834,11 @@ describe('Pagination Control', () => {
 
             paginationControl.setPaginationOptions({
                 pagesNumber: 10,
-                currentPage: 1
+                currentPage: 1,
+                prevPage: 0,
+                nextPage: 1,
+                rangeStart: 0,
+                rangeEnd: 10
             });
 
             const buttons = paginationControl.controls[0].element.querySelectorAll('[data-page]');
@@ -893,7 +910,11 @@ describe('Pagination Control', () => {
 
             paginationControl.setPaginationOptions({
                 pagesNumber: 10,
-                currentPage: 1
+                currentPage: 1,
+                prevPage: 0,
+                nextPage: 1,
+                rangeStart: 0,
+                rangeEnd: 9
             });
 
             const buttons = paginationControl.controls[0].element.querySelectorAll('[data-page]');
@@ -969,7 +990,9 @@ describe('Pagination Control', () => {
                 pagesNumber: 10,
                 currentPage: 5,
                 prevPage: 4,
-                nextPage: 6
+                nextPage: 6,
+                rangeStart: 0,
+                rangeEnd: 9
             });
 
             const buttons = paginationControl.controls[0].element.querySelectorAll('[data-page]');

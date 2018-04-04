@@ -98,7 +98,8 @@ class ContentManager{
                         const paginationAction = new PaginationAction(
                             options.paginationOptions.currentPage,
                             options.paginationOptions.itemsPerPage,
-                            filtered.length
+                            filtered.length,
+                            options.paginationOptions.range
                         );
 
                         //setPaginationOptions applies all computed properties of PaginationAction class to the latest pagination control
