@@ -1,0 +1,189 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2"><a href="#html-structure">HTML Structure</a></li>
+            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a>
+                <ul>
+                    <li class="toc-entry toc-h3"><a href="#inner-elements-data-attributes">Inner elements</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">Dropdown Sort Control</h1>
+
+        <p class="bd-lead">This is a dropdown control with custom styles that sorts content by the specified CSS selector.</p>
+
+        <h2 id="html-structure">HTML Structure</h2>
+
+        <p>
+            Dropdown sort control is defined by required <code class="highlighter-rouge">data-jplist-control="dropdown-sort"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be sorted. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+                
+&lt;!-- sort dropdown control -->
+&lt;div
+    data-jplist-control="dropdown-sort"
+    class="jplist-dd"
+    data-group="group1"
+    data-name="name1">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path="default">Sort by&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="asc"
+                data-type="text"
+                data-selected="true">Title A-Z&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="desc"
+                data-type="text">Title Z-A&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        ...
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="data-attributes">Data Attributes</h2>
+
+        <p>The full list of control data attributes.</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Values</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code class="highlighter-rouge">data-jplist-control</code></td>
+                <td>Defines dropdown sort control.</td>
+                <td>"dropdown-sort"</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-group</code></td>
+                <td>Defines group of items that should be sorted. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
+                <td>any text value</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-jump</code></td>
+                <td>This data attribute can be used to scroll page to the specified location when user selects an option. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
+                <td><i>top</i> keyword or any CS selector</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-id</code></td>
+                <td>This attribute is used for deep linking.</td>
+                <td>any text value that may contain letters, digits, underscores or dashes</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <h3 id="inner-elements-data-attributes">Inner elements</h3>
+
+        <p>Data attributes of inner elements.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="panel"</code></td>
+                    <td>Defines a dropdown panel that contains selected text.</td>
+                    <td>"panel"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="content"</code></td>
+                    <td>Defines a wrapper around dropdown options.</td>
+                    <td>"content"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-path</code></td>
+                    <td>CSS selector that defines the HTML element that should be sorted</td>
+                    <td>"default" keyword for the initial value or any CSS selector</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-order</code></td>
+                    <td>Specifies the sort order.</td>
+                    <td>"asc" or "desc"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type</code></td>
+                    <td>Specifies the type of content that should be sorted.</td>
+                    <td>"text", "number" or "datetime"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-selected</code></td>
+                    <td>Specifies the initial selected value</td>
+                    <td>"true" or "false"</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Dropdown Sort Control', header, body, 'controls', 'dropdown-sort')

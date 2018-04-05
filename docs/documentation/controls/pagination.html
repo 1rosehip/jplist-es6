@@ -332,6 +332,7 @@
         <ul class="section-nav">
             <li class="toc-entry toc-h2"><a href="#html-structure">HTML Structure</a>
                 <ul>
+                    <li class="toc-entry toc-h3"><a href="#add-remove-buttons">Add / remove buttons</a></li>
                     <li class="toc-entry toc-h3"><a href="#information-labels">Information Labels</a></li>
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
                     <li class="toc-entry toc-h3"><a href="#items-per-page-select">Items per page select</a></li>
@@ -374,7 +375,8 @@
         data-jplist-control="pagination"
         data-group="group1"
         data-items-per-page="5"
-        data-current-page="0">
+        data-current-page="0"
+        data-name="pagination1">
 
     &lt;button type="button" data-type="first">«&lt;/button>
     &lt;button type="button" data-type="prev">‹&lt;/button>
@@ -415,6 +417,48 @@
             </code></pre>
         </div>
 
+        <h3 id="add-remove-buttons">Add / remove buttons</h3>
+
+        <p>
+            To show only page buttons just remove the other buttons:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
+&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="5"
+        data-current-page="0"
+        data-name="pagination1">
+
+    &lt;div class="jplist-holder" data-type="pages">
+        &lt;button type="button" data-type="page">Page {pageNumber}&lt;/button>
+    &lt;/div>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <p>
+            The same way it's possible to remove all buttons except previous and next buttons:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- pagination control -->
+&lt;div
+        data-jplist-control="pagination"
+        data-group="group1"
+        data-items-per-page="5"
+        data-current-page="0"
+        data-name="pagination1">
+
+    &lt;button type="button" data-type="prev">‹&lt;/button>
+    &lt;button type="button" data-type="next">›&lt;/button>
+&lt;/div>
+            </code></pre>
+        </div>
+
+
         <h3 id="information-labels">Information Labels</h3>
 
         <p>
@@ -427,7 +471,8 @@
         data-jplist-control="pagination"
         data-group="group1"
         data-items-per-page="5"
-        data-current-page="0">
+        data-current-page="0"
+        data-name="pagination1">
 
     ...
 
@@ -526,7 +571,8 @@
         data-jplist-control="pagination"
         data-group="group1"
         data-items-per-page="10"
-        data-current-page="0">
+        data-current-page="0"
+        data-name="pagination1">
 
     &lt;button type="button" data-type="first">«&lt;/button>
     &lt;button type="button" data-type="prev">‹&lt;/button>
@@ -558,7 +604,8 @@
         data-jplist-control="pagination"
         data-group="group1"
         data-items-per-page="5"
-        data-current-page="0">
+        data-current-page="0"
+        data-name="pagination1">
 
     &lt;button type="button" data-type="first">«&lt;/button>
     &lt;button type="button" data-type="prev">‹&lt;/button>
@@ -600,7 +647,8 @@
         data-items-per-page="3"
         data-current-page="0"
         data-disabled-class="disabled"
-        data-selected-class="active">
+        data-selected-class="active"
+        data-name="pagination1">
 
     &lt;!-- first and previous buttons -->
     &lt;ul class="pagination d-inline-flex">
@@ -664,7 +712,8 @@
         data-group="group1"
         data-items-per-page="5"
         data-current-page="0"
-        data-jump="top">
+        data-jump="top"
+        data-name="pagination1">
 
     ...
 &lt;/div>
@@ -704,7 +753,8 @@
         data-group="group1"
         data-items-per-page="5"
         data-current-page="0"
-        data-id="paging1">
+        data-id="paging1"
+        data-name="paging1">
 
     ...
 &lt;/div>
@@ -749,7 +799,8 @@
         data-group="group1"
         data-items-per-page="5"
         data-current-page="0"
-        data-id="paging1">
+        data-id="paging1"
+        data-name="paging1">
 
     ...
 &lt;/div>
@@ -818,6 +869,12 @@
                 <tr>
                     <td><code class="highlighter-rouge">data-current-page</code></td>
                     <td>Defines initial page number starting from 0.</td>
+                    <td>numeric value</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-range</code></td>
+                    <td>Defines the maximal number of visible pagination button.</td>
                     <td>numeric value</td>
                 </tr>
 
