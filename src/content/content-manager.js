@@ -103,8 +103,13 @@ class ContentManager{
                         );
 
                         //setPaginationOptions applies all computed properties of PaginationAction class to the latest pagination control
-                        if(baseControlsGroups.length > 0 && baseControlsGroups[baseControlsGroups.length - 1].setPaginationOptions){
-                            baseControlsGroups[baseControlsGroups.length - 1].setPaginationOptions(paginationAction);
+                        if(baseControlsGroups.length > 0){
+
+                            for(let bcg of baseControlsGroups){
+                                if(bcg.setPaginationOptions){
+                                    bcg.setPaginationOptions(paginationAction);
+                                }
+                            }
                         }
 
                         const paginatedItems = filtered.slice(paginationAction.start, paginationAction.end);

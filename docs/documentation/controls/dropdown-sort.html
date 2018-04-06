@@ -330,7 +330,16 @@
     <div class="d-none d-xl-block col-xl-2 bd-toc">
 
         <ul class="section-nav">
-            <li class="toc-entry toc-h2"><a href="#html-structure">HTML Structure</a></li>
+            <li class="toc-entry toc-h2">
+                <a href="#html-structure">HTML Structure</a>
+                <ul>
+                    <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
+                    <li class="toc-entry toc-h3"><a href="#bootstrap-pagination-example">Bootstrap dropdown</a></li>
+                    <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
+                </ul>
+            </li>
+            <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
+            <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
             <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a>
                 <ul>
                     <li class="toc-entry toc-h3"><a href="#inner-elements-data-attributes">Inner elements</a></li>
@@ -362,7 +371,7 @@
     data-jplist-control="dropdown-sort"
     class="jplist-dd"
     data-group="group1"
-    data-name="name1">
+    data-name="sorttitle">
 
     &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
     &lt;div data-type="content" class="jplist-dd-content">
@@ -391,17 +400,20 @@
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        ...
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        ...
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        ...
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
     &lt;/div>
 
 &lt;/div>
@@ -410,6 +422,324 @@
 &lt;script src="jplist.min.js">&lt;/script>
 &lt;script>
     jplist.init();
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h3 id="panels">Top and bottom panels</h3>
+
+        <p>
+            Dropdown control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. All other data attributes should also have the same values:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- sort dropdown control in the top panel -->
+&lt;div
+    data-jplist-control="dropdown-sort"
+    class="jplist-dd"
+    data-group="group1"
+    data-name="sort-by-title">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path="default">Sort by&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="asc"
+                data-type="text"
+                data-selected="true">Title A-Z&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="desc"
+                data-type="text">Title Z-A&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- sort dropdown control in the bottom panel -->
+&lt;div
+    data-jplist-control="dropdown-sort"
+    class="jplist-dd"
+    data-group="group1"
+    data-name="sort-by-title">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path="default">Sort by&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="asc"
+                data-type="text"
+                data-selected="true">Title A-Z&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="desc"
+                data-type="text">Title Z-A&lt;/div>
+    &lt;/div>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h3 id="bootstrap-pagination-example">Bootstrap dropdown example</h3>
+
+        <p>The following example demonstrates how to use jPList control with bootstrap framework:</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;div class="dropdown mr-3"
+       data-jplist-control="dropdown-sort"
+       data-opened-class="show"
+       data-group="group1"
+       data-name="sort1">
+    
+    &lt;button
+            data-type="panel"
+            class="btn btn-primary dropdown-toggle"
+            type="button">
+        Sort by
+    &lt;/button>
+    
+    &lt;div
+            data-type="content"
+            class="dropdown-menu"
+            aria-labelledby="dropdownMenuButton">
+    
+        &lt;a class="dropdown-item"
+           href="#"
+           data-path="default">Sort By&lt;/a>
+    
+        &lt;a class="dropdown-item"
+           href="#"
+           data-path=".title"
+           data-order="asc"
+           data-type="text">Title A-Z&lt;/a>
+    
+        &lt;a class="dropdown-item"
+           href="#"
+           data-path=".title"
+           data-order="desc"
+           data-type="text">Title Z-A&lt;/a>
+    &lt;/div>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h3 id="jump">Jump to top</h3>
+
+        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user selects a dropdown option. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;div
+    data-jplist-control="dropdown-sort"
+    class="jplist-dd"
+    data-group="group1"
+    data-jump="top"
+    data-name="sorttitle">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path="default">Sort by&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="asc"
+                data-type="text"
+                data-selected="true">Title A-Z&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="desc"
+                data-type="text">Title Z-A&lt;/div>
+    &lt;/div>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h2 id="deep-linking">Deep Linking</h2>
+
+        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>deepLinking</i> setting should be <i>true</i> in jPList parameters and <code class="highlighter-rouge">data-value</code> should be added to each option.</p>
+
+        <p>In the example below deep link may look like <b>http://www.example.com/page#group=group1&sorttitle=1</b> where <i>group1</i> is taken from <code class="highlighter-rouge">data-jplist-group="group1"</code> and <b>1</b> is data-value attribute of the selected option.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+
+&lt;!-- sort dropdown control -->
+&lt;div
+    data-jplist-control="dropdown-sort"
+    class="jplist-dd"
+    data-group="group1"
+    data-id="sorttitle"
+    data-name="sorttitle">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path="default">Sort by&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="asc"
+                data-type="text"
+                data-value="1"
+                data-selected="true">Title A-Z&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="desc"
+                data-type="text"
+                data-value="2">Title Z-A&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        deepLinking: true
+    });
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="storage">Storage</h2>
+
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>storage</i> setting should be passed to jPList constructor and <code class="highlighter-rouge">data-value</code> should be added to each option.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+
+&lt;!-- sort dropdown control -->
+&lt;div
+    data-jplist-control="dropdown-sort"
+    class="jplist-dd"
+    data-group="group1"
+    data-id="sorttitle"
+    data-name="sorttitle">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path="default">Sort by&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="asc"
+                data-type="text"
+                data-value="1"
+                data-selected="true">Title A-Z&lt;/div>
+
+        &lt;div
+                class="jplist-dd-item"
+                data-path=".title"
+                data-order="desc"
+                data-type="text"
+                data-value="2">Title Z-A&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        storage: 'localStorage',
+        storageName: 'jplist'
+    });
 &lt;/script>
             </code></pre>
         </div>
@@ -440,6 +770,12 @@
             </tr>
 
             <tr>
+                <td><code class="highlighter-rouge">data-name</code></td>
+                <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
+                <td>any text value</td>
+            </tr>
+
+            <tr>
                 <td><code class="highlighter-rouge">data-jump</code></td>
                 <td>This data attribute can be used to scroll page to the specified location when user selects an option. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
                 <td><i>top</i> keyword or any CS selector</td>
@@ -449,6 +785,12 @@
                 <td><code class="highlighter-rouge">data-id</code></td>
                 <td>This attribute is used for deep linking.</td>
                 <td>any text value that may contain letters, digits, underscores or dashes</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-opened-class</code></td>
+                <td>Optional data attribute that defines CSS class of opened dropdown with custom styles.</td>
+                <td>CSS class name, by default <i>jplist-dd-opened</i></td>
             </tr>
 
             </tbody>
