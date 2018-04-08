@@ -44,52 +44,112 @@
         <div class="py-3 py-lg-5 controls-panel control-top-panel">
             <div class="container">
 
+                <div class="row mb-2">
+
+                    <div class="col-md-3">
+
+                        <!-- text filter by model -->
+                        <input
+                                type="text"
+                                data-jplist-control="textbox-filter"
+                                data-group="group1"
+                                data-name="model-text-filter"
+                                data-path=".card-title"
+                                class="form-control"
+                                placeholder="Filter by Model" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" placeholder="Filter by Manufacturer">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" placeholder="Filter by Engine">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" placeholder="Filter by Transmission">
+                    </div>
+                </div>
+
                 <div class="row">
+                    <div class="col-md-9">
 
-                    <!-- pagination control -->
-                    <nav
-                            data-jplist-control="pagination"
-                            data-group="group1"
-                            data-items-per-page="3"
-                            data-current-page="0"
-                            data-disabled-class="disabled"
-                            data-selected-class="active"
-                            data-jump="top"
-                            data-name="pagination1"
-                            class="mb-2 mb-lg-0">
+                        <!-- pagination control -->
+                        <nav
+                                data-jplist-control="pagination"
+                                data-group="group1"
+                                data-items-per-page="3"
+                                data-current-page="0"
+                                data-disabled-class="disabled"
+                                data-selected-class="active"
+                                data-jump="top"
+                                data-name="pagination1"
+                                class="mb-2 mb-lg-0">
 
-                        <!-- first and previous buttons -->
-                        <ul class="pagination d-inline-flex">
-                            <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="first"><a class="page-link" href="#">«</a></li>
-                            <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
-                        </ul>
+                            <!-- first and previous buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="first"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
+                            </ul>
 
-                        <!-- pages buttons -->
-                        <ul class="pagination d-none d-sm-none d-lg-inline-flex" data-type="pages">
-                            <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
-                        </ul>
+                            <!-- pages buttons -->
+                            <ul class="pagination d-none d-sm-none d-lg-inline-flex" data-type="pages">
+                                <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
+                            </ul>
 
-                        <!-- next and last buttons -->
-                        <ul class="pagination d-inline-flex">
-                            <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
-                            <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="last"><a class="page-link" href="#">»</a></li>
-                        </ul>
+                            <!-- next and last buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="last"><a class="page-link" href="#">»</a></li>
+                            </ul>
 
-                        <!-- information labels -->
-                        <span data-type="info" class="badge badge-secondary ml-3 p-2">
-                            Page {pageNumber} of {pagesNumber}
-                        </span>
+                            <!-- items per page dropdown -->
+                            <div class="dropdown d-inline-flex ml-3"
+                                 data-type="items-per-page-dd"
+                                 data-opened-class="show">
 
-                        <!-- items per page dropdown -->
-                        <div class="dropdown d-inline-flex ml-3"
-                             data-type="items-per-page-dd"
-                             data-opened-class="show">
+                                <button
+                                        data-type="panel"
+                                        class="btn btn-primary dropdown-toggle"
+                                        type="button">
+                                    Dropdown button
+                                </button>
+
+                                <div
+                                        data-type="content"
+                                        class="dropdown-menu"
+                                        aria-labelledby="dropdownMenuButton">
+
+                                    <a class="dropdown-item" href="#" data-value="3">3 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="6">6 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="9">9 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="0">View All</a>
+
+                                </div>
+                            </div>
+
+                            <!-- information labels -->
+                            <span data-type="info" class="badge badge-secondary ml-3 p-2">
+                                Page {pageNumber} of {pagesNumber}
+                            </span>
+
+                        </nav>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <!-- dropdown sort control -->
+                        <div class="dropdown ml-3 mb-sm-2 mb-lg-0"
+                             data-jplist-control="dropdown-sort"
+                             data-opened-class="show"
+                             data-group="group1"
+                             data-name="sort1">
 
                             <button
                                     data-type="panel"
                                     class="btn btn-primary dropdown-toggle"
                                     type="button">
-                                Dropdown button
+                                Sort by
                             </button>
 
                             <div
@@ -97,65 +157,36 @@
                                     class="dropdown-menu"
                                     aria-labelledby="dropdownMenuButton">
 
-                                <a class="dropdown-item" href="#" data-value="3">3 per page</a>
-                                <a class="dropdown-item" href="#" data-value="6">6 per page</a>
-                                <a class="dropdown-item" href="#" data-value="9">9 per page</a>
-                                <a class="dropdown-item" href="#" data-value="0">View All</a>
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path="default">Sort By</a>
 
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path=".card-title"
+                                   data-order="asc"
+                                   data-type="text">Model A-Z</a>
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path=".card-title"
+                                   data-order="desc"
+                                   data-type="text">Model Z-A</a>
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path=".manufacturer"
+                                   data-order="asc"
+                                   data-type="text">Manufacturer A-Z</a>
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path=".manufacturer"
+                                   data-order="desc"
+                                   data-type="text">Manufacturer Z-A</a>
                             </div>
                         </div>
-
-                    </nav>
-
-                    <!-- dropdown sort control -->
-                    <div class="dropdown ml-3 mb-sm-2 mb-lg-0"
-                         data-jplist-control="dropdown-sort"
-                         data-opened-class="show"
-                         data-group="group1"
-                         data-name="sort1">
-
-                        <button
-                                data-type="panel"
-                                class="btn btn-primary dropdown-toggle"
-                                type="button">
-                            Sort by
-                        </button>
-
-                        <div
-                                data-type="content"
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton">
-
-                            <a class="dropdown-item"
-                               href="#"
-                               data-path="default">Sort By</a>
-
-                            <a class="dropdown-item"
-                               href="#"
-                               data-path=".card-title"
-                               data-order="asc"
-                               data-type="text">Model A-Z</a>
-
-                            <a class="dropdown-item"
-                               href="#"
-                               data-path=".card-title"
-                               data-order="desc"
-                               data-type="text">Model Z-A</a>
-
-                            <a class="dropdown-item"
-                               href="#"
-                               data-path=".manufacturer"
-                               data-order="asc"
-                               data-type="text">Manufacturer A-Z</a>
-
-                            <a class="dropdown-item"
-                               href="#"
-                               data-path=".manufacturer"
-                               data-order="desc"
-                               data-type="text">Manufacturer Z-A</a>
-                        </div>
                     </div>
-
                 </div>
 
             </div>
