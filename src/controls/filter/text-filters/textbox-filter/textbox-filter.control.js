@@ -47,20 +47,51 @@ class TextboxFilterControl extends BaseTextFilterControlsGroup{
 
             baseTextFilterControl.text = e.target.value;
 
-            this.controls.forEach(control => {
+            this.textChanged(baseTextFilterControl);
+        });
 
-                if(control.isEqualTo(baseTextFilterControl, false)){
+        //handle clear button
+        baseTextFilterControl.clearButtonID = (baseTextFilterControl.element.getAttribute('data-clear-btn-id') || '').trim();
 
-                    control.element.value = baseTextFilterControl.text;
-                    control.text = baseTextFilterControl.text;
-                }
-            });
+        if(baseTextFilterControl.clearButtonID){
 
-            if(window.jplist) {
+            const clearBtn = document.getElementById(baseTextFilterControl.clearButtonID);
 
-                window.jplist.refresh(this.group);
+            if(clearBtn){
+
+                /**
+                 * on clear button click
+                 */
+                clearBtn.addEventListener('click', e => {
+
+                    e.preventDefault();
+
+                    baseTextFilterControl.text = '';
+
+                    this.textChanged(baseTextFilterControl);
+                });
+            }
+        }
+    }
+
+    /**
+     * on text change
+     */
+    textChanged(baseTextFilterControl){
+
+        this.controls.forEach(control => {
+
+            if(control.isEqualTo(baseTextFilterControl, false)){
+
+                control.element.value = baseTextFilterControl.text;
+                control.text = baseTextFilterControl.text;
             }
         });
+
+        if(window.jplist) {
+
+            window.jplist.refresh(this.group);
+        }
     }
 
 }

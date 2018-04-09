@@ -11,6 +11,7 @@
             <li class="toc-entry toc-h2">
                 <a href="#html-structure">HTML Structure</a>
                 <ul>
+                    <li class="toc-entry toc-h3"><a href="#clear-button">Textbox with clear button</a></li>
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
                     <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
                 </ul>
@@ -78,6 +79,28 @@
 &lt;script>
     jplist.init();
 &lt;/script>
+            </code></pre>
+        </div>
+
+        <h3 id="clear-button">Textbox with clear button</h3>
+
+        <p>
+            Clear button can be added using <code class="highlighter-rouge">data-clear-btn-id</code> data attribute that points to the button element:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;input
+     data-jplist-control="textbox-filter"
+     data-group="group1"
+     data-name="my-filter-1"
+     data-path=".title"
+     data-clear-btn-id="title-clear-btn"
+     type="text"
+     value=""
+     placeholder="Filter by Title"
+/>
+                
+&lt;button type="button" id="title-clear-btn">Clear&lt;/button>
             </code></pre>
         </div>
 
@@ -297,6 +320,13 @@
                 <td><code class="highlighter-rouge">data-path</code></td>
                 <td>CSS selector that defines the HTML element that should be filtered</td>
                 <td>"default" keyword for the initial value or any CSS selector</td>
+            </tr>
+
+
+            <tr>
+                <td><code class="highlighter-rouge">data-clear-btn-id</code></td>
+                <td>The ID of the clear button element.</td>
+                <td>ID of the button</td>
             </tr>
 
             <tr>
