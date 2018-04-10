@@ -3,6 +3,7 @@
 @function header(){
 	<title>Cars Example Page</title>
 
+    <!--<link href="/js/jplist.styles.css" rel="stylesheet" type="text/css" />-->
     <style>
         .card{
             font-size: 12px;
@@ -28,12 +29,104 @@
             background: rgb(227, 236, 243);
         }
 
-        /*
-        @@media (min-width: 768px){
-            .container {
-                max-width: 720px;
-            }
-        }*/
+
+        /**
+         * slider styles
+         */
+        [data-jplist-control="slider-range-filter"]{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-size: 12px;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        [data-type="value-1"]{
+            width: 30px;
+            margin-left: 5px;
+        }
+
+        .jplist-slider {
+            width: 300px;
+            height: 20px;
+            background-color: #fff;
+            margin-right: 15px;
+            margin-left: 15px;
+            border-radius: .25rem;
+            position: relative;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .jplist-slider::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #106CD6;
+            position: absolute;
+            z-index: 100;
+            left: 0;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            opacity: 0.6;
+        }
+
+        .jplist-slider-holder-1,
+        .jplist-slider-holder-2 {
+            width: 10px;
+            height: 100%;
+            border-radius: .25rem;
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform: translate(-50%, 0);
+            -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+            z-index: 200;
+            -webkit-transition: 0.3s background-color;
+            -o-transition: 0.3s background-color;
+            transition: 0.3s background-color;
+            padding: 0;
+            margin: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .jplist-slider-holder-1 {
+            background: #000;
+        }
+
+        .jplist-slider-holder-1:active {
+            background: #9f35ff;
+        }
+
+        .jplist-slider-holder-2 {
+            background: #106CD6;
+        }
+
+        .jplist-slider-holder-2:active {
+            background: #00448c;
+        }
+
+        .jplist-slider-range {
+            width: 0;
+            height: 20px;
+            background: #ccc;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+            background-size: 1rem 1rem;
+        }
     </style>
 }
 
@@ -45,7 +138,6 @@
             <div class="container">
 
                 <div class="row mb-2">
-
                     <div class="col-md-3">
                         <div class="input-group">
 
@@ -65,7 +157,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3">
                         <div class="input-group">
 
@@ -85,7 +176,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-3">
                         <div class="input-group">
 
@@ -243,6 +333,27 @@
                                    data-order="desc"
                                    data-type="text">Manufacturer Z-A</a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div
+                                data-jplist-control="slider-range-filter"
+                                data-path=".length .val"
+                                data-group="group1"
+                                data-name="length-range-slider"
+                                data-selected="true"
+                                data-min="355"
+                                data-from="355"
+                                data-to="10000"
+                                data-max="10000">
+
+                            Length: <span data-type="value-1"></span>
+                            <div class="jplist-slider" data-type="slider"></div>
+                            <span data-type="value-2"></span>
+
                         </div>
                     </div>
                 </div>
