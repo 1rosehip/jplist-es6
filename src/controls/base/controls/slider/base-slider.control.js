@@ -156,13 +156,38 @@ class BaseSliderControl{
     }
 
     /**
+     * update z-index of the active handler
+     */
+    setZIndex(){
+
+        const handler1ZIndex = window.getComputedStyle ? Number(document.defaultView.getComputedStyle(this.handler1, null).getPropertyValue('z-index')) || 200 : 200;
+        const handler2ZIndex = window.getComputedStyle ? Number(document.defaultView.getComputedStyle(this.handler2, null).getPropertyValue('z-index')) || 200 : 200;
+
+        if(handler1ZIndex === handler2ZIndex){
+            this.dragging.style['z-index'] = handler1ZIndex + 1;
+        }
+        else{
+            const max = Math.max(handler1ZIndex, handler2ZIndex);
+            const min = Math.min(handler1ZIndex, handler2ZIndex);
+
+            this.handler1.style['z-index'] = min;
+            this.handler2.style['z-index'] = min;
+            this.dragging.style['z-index'] = max;
+        }
+    }
+
+    /**
      * start dragging
      * @param {Object} e
      */
     start(e){
         e.preventDefault();
+        e.stopPropagation();
 
         this.dragging = e.target;
+
+        //update z-index of the active handler
+        this.setZIndex();
 
         //render the updated state
         this.render();
@@ -182,7 +207,6 @@ class BaseSliderControl{
      * render the updated state
      */
     render(e){
-
         if(e && this.dragging){
 
             this.update(this.getHandlerPos(e), this.dragging);
@@ -212,11 +236,11 @@ class BaseSliderControl{
                 position[xy] = rect[size];
             }
 
-            if(handler === this.handler1 && position[xy] > this.handler2[lefttop]){
+            if(handler === this.handler1 && position[xy] >= this.handler2[lefttop]){
                 position[xy] = this.handler2[lefttop];
             }
 
-            if(handler === this.handler2 && position[xy] < this.handler1[lefttop]){
+            if(handler === this.handler2 && position[xy] <= this.handler1[lefttop]){
                 position[xy] = this.handler1[lefttop];
             }
 
