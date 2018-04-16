@@ -1,0 +1,72 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2">
+                <a href="#html-structure">HTML Structure</a></ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">No Results Control</h1>
+
+        <p class="bd-lead">This control represents a text or HTML that is shown after filtering when no results are found.</p>
+
+        <h2 id="html-structure">HTML Structure</h2>
+
+        <p>
+            No results control is defined by required <code class="highlighter-rouge">data-jplist-control="no-results"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. Multiple not found controls are allowed.
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- different jplist filter controls -->
+...
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+                
+    &lt;!-- no results control -->               
+    &lt;div data-jplist-control="no-results" data-group="group1" data-name="no-results">No Results Found&lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
+            </code></pre>
+        </div>
+
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'No Results Control', header, body, 'controls', 'no-results')
