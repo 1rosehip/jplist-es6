@@ -69,6 +69,20 @@ describe('Base Range Filter Control', () => {
         `).from).toEqual(-Infinity);
     });
 
+    it('control from 0', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-min="0"
+                data-from="0"
+                data-to="20"
+                data-max="25"
+         />
+        `).from).toEqual(0);
+    });
+
     it('control to', () => {
         expect(generateControl(`
          <div
@@ -109,18 +123,32 @@ describe('Base Range Filter Control', () => {
         `).max).toEqual(25);
     });
 
-    it('control min', () => {
+    it('control max is 0', () => {
         expect(generateControl(`
          <div
                 data-jplist-control="abc-filter"
                 data-group="group1"
                 data-path=".title"
-                data-min="10"
-                data-from="15"
-                data-to="20"
-                data-max="25"
+                data-min="-10"
+                data-from="-15"
+                data-to="0"
+                data-max="0"
          />
-        `).min).toEqual(10);
+        `).max).toEqual(0);
+    });
+
+    it('control max is aaa', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-min="-10"
+                data-from="-15"
+                data-to="0"
+                data-max="aaa"
+         />
+        `).max).toEqual(0);
     });
 
     it('control default max', () => {
@@ -135,6 +163,34 @@ describe('Base Range Filter Control', () => {
         `).max).toEqual(20);
     });
 
+    it('control min', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-min="10"
+                data-from="15"
+                data-to="20"
+                data-max="25"
+         />
+        `).min).toEqual(10);
+    });
+
+    it('control min is 0', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-min="0"
+                data-from="15"
+                data-to="20"
+                data-max="25"
+         />
+        `).min).toEqual(0);
+    });
+
     it('control default min', () => {
         expect(generateControl(`
          <div
@@ -143,6 +199,20 @@ describe('Base Range Filter Control', () => {
                 data-path=".title"
                 data-from="15"
                 data-to="20"
+         />
+        `).min).toEqual(15);
+    });
+
+    it('control min is aaa', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-min="aaa"
+                data-from="15"
+                data-to="20"
+                data-max="25"
          />
         `).min).toEqual(15);
     });

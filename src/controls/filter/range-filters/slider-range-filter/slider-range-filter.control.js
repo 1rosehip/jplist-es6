@@ -73,11 +73,18 @@ class SliderRangeFilter extends BaseRangeFilterControlsGroup{
             (value1, value2) => {
 
                 for(let el of rangeSliderFilterControl.val1Elements){
-                    el.textContent = value1;
+                    el.textContent = Math.round(value1);
                 }
 
                 for(let el of rangeSliderFilterControl.val2Elements){
-                    el.textContent = value2;
+                    el.textContent = Math.round(value2);
+                }
+
+                for(let control of this.controls){
+
+                    if(!control.slider) continue;
+
+                    control.slider.setValues(value1, value2, false);
                 }
 
                 if(window.jplist) {
@@ -123,6 +130,7 @@ class SliderRangeFilter extends BaseRangeFilterControlsGroup{
         }).filter(str => str !== '');
 
         const unique = Array.from(new Set(arr));
+
         return unique.join('&');
 
     }

@@ -12,7 +12,6 @@
                 <a href="#html-structure">HTML Structure</a>
                 <ul>
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
-                    <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
                 </ul>
             </li>
             <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
@@ -95,37 +94,27 @@
         <h3 id="panels">Top and bottom panels</h3>
 
         <p>
-            Dropdown control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. All other data attributes should also have the same values:
+            Slider control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. All other data attributes should also have the same values. Inner elements could be different though.
         </p>
 
         <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- sort dropdown control in the top panel -->
+            <pre><code class="language-html" data-lang="html">&lt;!-- slider control in the top panel -->
 &lt;div
-    data-jplist-control="dropdown-sort"
-    class="jplist-dd"
+    data-jplist-control="slider-range-filter"
+    data-path=".like"
     data-group="group1"
-    data-name="sort-by-title">
+    data-name="my-like-range-filter-1"
+    data-min="-100"
+    data-from="50"
+    data-to="100"
+    data-max="800">
 
-    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
-    &lt;div data-type="content" class="jplist-dd-content">
+     Min: &lt;span data-type="min">&lt;/span>
+     From Likes: &lt;span data-type="value-1">&lt;/span>
+     &lt;div class="jplist-slider" data-type="slider">&lt;/div>
+     To Likes: &lt;span data-type="value-2">&lt;/span>
+     Max: &lt;span data-type="max">&lt;/span>
 
-        &lt;div
-                class="jplist-dd-item"
-                data-path="default">Sort by&lt;/div>
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="asc"
-                data-type="text"
-                data-selected="true">Title A-Z&lt;/div>
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="desc"
-                data-type="text">Title Z-A&lt;/div>
-    &lt;/div>
 &lt;/div>
 
 &lt;!-- content to sort -->
@@ -133,131 +122,71 @@
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="like">15&lt;/div>
         ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="like">100&lt;/div>
         ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="like">350&lt;/div>
         ....
     &lt;/div>
 
 &lt;/div>
 
-&lt;!-- sort dropdown control in the bottom panel -->
+&lt;!-- slider control in the bottom panel -->
 &lt;div
-    data-jplist-control="dropdown-sort"
-    class="jplist-dd"
+    data-jplist-control="slider-range-filter"
+    data-path=".like"
     data-group="group1"
-    data-name="sort-by-title">
+    data-name="my-like-range-filter-1"
+    data-min="-100"
+    data-from="50"
+    data-to="100"
+    data-max="800">
 
-    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
-    &lt;div data-type="content" class="jplist-dd-content">
 
-        &lt;div
-                class="jplist-dd-item"
-                data-path="default">Sort by&lt;/div>
+     From: &lt;span data-type="value-1">&lt;/span>
+     &lt;div class="jplist-slider" data-type="slider">&lt;/div>
+     To: &lt;span data-type="value-2">&lt;/span>
 
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="asc"
-                data-type="text"
-                data-selected="true">Title A-Z&lt;/div>
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="desc"
-                data-type="text">Title Z-A&lt;/div>
-    &lt;/div>
-&lt;/div>
-            </code></pre>
-        </div>
-
-        <h3 id="jump">Jump to top</h3>
-
-        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user selects a dropdown option. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
-
-        <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;div
-    data-jplist-control="dropdown-sort"
-    class="jplist-dd"
-    data-group="group1"
-    data-jump="top"
-    data-name="sorttitle">
-
-    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
-    &lt;div data-type="content" class="jplist-dd-content">
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path="default">Sort by&lt;/div>
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="asc"
-                data-type="text"
-                data-selected="true">Title A-Z&lt;/div>
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="desc"
-                data-type="text">Title Z-A&lt;/div>
-    &lt;/div>
 &lt;/div>
             </code></pre>
         </div>
 
         <h2 id="deep-linking">Deep Linking</h2>
 
-        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>deepLinking</i> setting should be <i>true</i> in jPList parameters and <code class="highlighter-rouge">data-value</code> should be added to each option.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>deepLinking</i> setting should be <i>true</i> in jPList parameters.</p>
 
-        <p>In the example below deep link may look like <b>http://www.example.com/page#group=group1&sorttitle=1</b> where <i>group1</i> is taken from <code class="highlighter-rouge">data-jplist-group="group1"</code> and <b>1</b> is data-value attribute of the selected option.</p>
+        <p>In the example below deep link may look like <b>http://www.example.com/page#group=group1&range1=10_50</b> where <i>group1</i> is taken from <code class="highlighter-rouge">data-jplist-group="group1"</code>, <code class="highlighter-rouge">range1</code> is data-id value, <code class="highlighter-rouge">10</code> is current <b>from</b> value and <code class="highlighter-rouge">50</code> is current <b>to</b> value.</p>
 
         <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles -->
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
-&lt;!-- sort dropdown control -->
 &lt;div
-    data-jplist-control="dropdown-sort"
-    class="jplist-dd"
+    data-jplist-control="slider-range-filter"
+    data-path=".like"
     data-group="group1"
-    data-id="sorttitle"
-    data-name="sorttitle">
+    data-name="my-like-range-filter-1"
+    data-id="range1"
+    data-min="-100"
+    data-from="50"
+    data-to="100"
+    data-max="800">
 
-    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
-    &lt;div data-type="content" class="jplist-dd-content">
+     &lt;span data-type="min">&lt;/span> Min |
+     &lt;span data-type="value-1">&lt;/span> Likes |
+     &lt;div class="jplist-slider" data-type="slider">&lt;/div>
+     &lt;span data-type="value-2">&lt;/span> Likes |
+     &lt;span data-type="max">&lt;/span> Max
 
-        &lt;div
-                class="jplist-dd-item"
-                data-path="default">Sort by&lt;/div>
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="asc"
-                data-type="text"
-                data-value="1"
-                data-selected="true">Title A-Z&lt;/div>
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="desc"
-                data-type="text"
-                data-value="2">Title Z-A&lt;/div>
-    &lt;/div>
 &lt;/div>
 
 &lt;!-- content to sort -->
@@ -265,19 +194,19 @@
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="like">100&lt;/div>
         ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="like">12&lt;/div>
         ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="like">151&lt;/div>
         ....
     &lt;/div>
 
@@ -295,42 +224,29 @@
 
         <h2 id="storage">Storage</h2>
 
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>storage</i> setting should be passed to jPList constructor and <code class="highlighter-rouge">data-value</code> should be added to each option.</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>storage</i> setting should be passed to jPList constructor.</p>
 
         <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles -->
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
-&lt;!-- sort dropdown control -->
 &lt;div
-    data-jplist-control="dropdown-sort"
-    class="jplist-dd"
+    data-jplist-control="slider-range-filter"
+    data-path=".like"
     data-group="group1"
-    data-id="sorttitle"
-    data-name="sorttitle">
+    data-name="my-like-range-filter-1"
+    data-id="range1"
+    data-min="-100"
+    data-from="50"
+    data-to="100"
+    data-max="800">
 
-    &lt;div data-type="panel" class="jplist-dd-panel">Sort by&lt;/div>
-    &lt;div data-type="content" class="jplist-dd-content">
+     Min: &lt;span data-type="min">&lt;/span>
+     From: &lt;span data-type="value-1">&lt;/span>
+     &lt;div class="jplist-slider" data-type="slider">&lt;/div>
+     To: &lt;span data-type="value-2">&lt;/span>
+     Max: &lt;span data-type="max">&lt;/span>
 
-        &lt;div
-                class="jplist-dd-item"
-                data-path="default">Sort by&lt;/div>
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="asc"
-                data-type="text"
-                data-value="1"
-                data-selected="true">Title A-Z&lt;/div>
-
-        &lt;div
-                class="jplist-dd-item"
-                data-path=".title"
-                data-order="desc"
-                data-type="text"
-                data-value="2">Title Z-A&lt;/div>
-    &lt;/div>
 &lt;/div>
 
 &lt;!-- content to sort -->
@@ -338,19 +254,19 @@
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="like">100&lt;/div>
         ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="like">12&lt;/div>
         ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="like">151&lt;/div>
         ....
     &lt;/div>
 

@@ -88,7 +88,7 @@
         }
 
         .jplist-slider {
-            width: 300px;
+            min-width: 150px;
             height: 20px;
             background-color: #fff;
             margin-right: 15px;
@@ -468,19 +468,55 @@
                 </div>
 
                 <div class="row">
-                    <div class="col">
+
+                    <div class="col-md-4">
                         <div
                                 data-jplist-control="slider-range-filter"
                                 data-path=".length .val"
                                 data-group="group1"
                                 data-name="length-range-slider"
-                                data-selected="true"
                                 data-min="355"
                                 data-from="355"
                                 data-to="10000"
                                 data-max="10000">
 
                             Length: <span data-type="value-1"></span>
+                            <div class="jplist-slider" data-type="slider"></div>
+                            <span data-type="value-2"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div
+                                data-jplist-control="slider-range-filter"
+                                data-path=".width .val"
+                                data-group="group1"
+                                data-name="width-range-slider"
+                                data-min="0"
+                                data-from="0"
+                                data-to="10000"
+                                data-max="10000">
+
+                            Width: <span data-type="value-1"></span>
+                            <div class="jplist-slider" data-type="slider"></div>
+                            <span data-type="value-2"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div
+                                data-jplist-control="slider-range-filter"
+                                data-path=".weight .val"
+                                data-group="group1"
+                                data-name="weight-range-slider"
+                                data-min="0"
+                                data-from="0"
+                                data-to="10000"
+                                data-max="10000">
+
+                            Weight: <span data-type="value-1"></span>
                             <div class="jplist-slider" data-type="slider"></div>
                             <span data-type="value-2"></span>
 

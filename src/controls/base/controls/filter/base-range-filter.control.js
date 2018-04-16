@@ -24,25 +24,46 @@ class BaseRangeFilterControl extends BaseControl{
              * min <= from <= (all numbers in the element) <= to <= max
              * @type {number}
              */
-            this.from = Number(element.getAttribute('data-from')) || -Infinity;
+            const from = element.getAttribute('data-from');
+
+            this.from = from === null ? -Infinity : Number(from);
+
+            if(isNaN(this.from)){
+                this.from = -Infinity;
+            }
 
             /**
              * min <= from <= (all numbers in the element) <= to <= max
              * @type {number}
              */
-            this.to = Number(element.getAttribute('data-to')) || Infinity;
+            const to = element.getAttribute('data-to');
+            this.to = to === null ? Infinity : Number(to);
+
+            if(isNaN(this.to)){
+                this.to = Infinity;
+            }
 
             /**
              * min <= from <= (all numbers in the element) <= to <= max
              * @type {number}
              */
-            this.min = Number(element.getAttribute('data-min')) || this.from;
+            const min = element.getAttribute('data-min');
+            this.min = min === null ? this.from : Number(min);
+
+            if(isNaN(this.min)){
+                this.min = this.from;
+            }
 
             /**
              * min <= from <= (all numbers in the element) <= to <= max
              * @type {number}
              */
-            this.max = Number(element.getAttribute('data-max')) || this.to;
+            const max = element.getAttribute('data-max');
+            this.max = max === null ? this.to : Number(max);
+
+            if(isNaN(this.max)){
+                this.max = this.to;
+            }
         }
     }
 

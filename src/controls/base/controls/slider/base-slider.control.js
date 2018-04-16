@@ -75,24 +75,35 @@ class BaseSliderControl{
 
             this.element.addEventListener('mousedown', this.jump.bind(this));
 
-            if(value2 < value1){
-                value2 = value1;
-            }
-
-            const pos1 = this.getInnerValue(value1, min, max);
-            const pos2 = this.getInnerValue(value2, min, max);
-
-            this.update({
-                x: pos2,
-                y: pos2
-            }, this.handler2);
-
-            this.update({
-                x: pos1,
-                y: pos1
-            }, this.handler1);
-
+            //set initial values
+            this.setValues(value1, value2);
         }
+    }
+
+    /**
+     * set slider values from outside
+     * @param {number} value1
+     * @param {number} value2
+     * @param {boolean} sendCallback
+     */
+    setValues(value1, value2, sendCallback = true){
+
+        if(value2 < value1){
+            value2 = value1;
+        }
+
+        const pos1 = this.getInnerValue(value1, this.min, this.max);
+        const pos2 = this.getInnerValue(value2, this.min, this.max);
+
+        this.update({
+            x: pos2,
+            y: pos2
+        }, this.handler2, sendCallback);
+
+        this.update({
+            x: pos1,
+            y: pos1
+        }, this.handler1, sendCallback);
     }
 
     /**
@@ -112,7 +123,8 @@ class BaseSliderControl{
         const originalStart = 0;
         const originalEnd = rect[size];
 
-        return Math.round((newEnd - newStart) * ((value - originalStart) / (originalEnd - originalStart)) + newStart);
+        //return Math.round((newEnd - newStart) * ((value - originalStart) / (originalEnd - originalStart)) + newStart);
+        return (newEnd - newStart) * ((value - originalStart) / (originalEnd - originalStart)) + newStart;
     }
 
     /**
@@ -132,7 +144,8 @@ class BaseSliderControl{
         const originalStart = min;
         const originalEnd = max;
 
-        return Math.round((newEnd - newStart) * ((value - originalStart) / (originalEnd - originalStart)) + newStart);
+        //return Math.round((newEnd - newStart) * ((value - originalStart) / (originalEnd - originalStart)) + newStart);
+        return (newEnd - newStart) * ((value - originalStart) / (originalEnd - originalStart)) + newStart;
     }
 
     /**
@@ -217,8 +230,9 @@ class BaseSliderControl{
      * update position and styles
      * @param {object} position
      * @param {element} handler
+     * @param {boolean} sendCallback
      */
-    update(position, handler){
+    update(position, handler, sendCallback = true){
 
         if(handler){
 
@@ -258,7 +272,8 @@ class BaseSliderControl{
             this.range.style[size] = (rangeHeight >= 0 ? rangeHeight : 0) + 'px';
 
             //call callback function
-            if(this.callback){
+            if(this.callback && sendCallback){
+
                 this.callback(this.handler1.value, this.handler2.value);
             }
         }

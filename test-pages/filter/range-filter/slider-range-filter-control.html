@@ -29,11 +29,11 @@
             data-to="100"
             data-max="800">
 
-             <span data-type="min"></span> Min |
-             <span data-type="value-1"></span> Likes |
+             Min: <span data-type="min"></span>
+             From likes: <span data-type="value-1"></span>
              <div class="jplist-slider" data-type="slider"></div>
-             <span data-type="value-2"></span> Likes |
-             <span data-type="max"></span> Max
+             To likes: <span data-type="value-2"></span>
+             Max: <span data-type="max"></span>
 
          </div>
 
@@ -430,6 +430,47 @@
 
       </div>
 
+      <div class="buttons">
+          <div
+                  data-jplist-control="slider-range-filter"
+                  data-path=".like"
+                  data-group="group1"
+                  data-name="name1"
+                  data-min="-100"
+                  data-from="50"
+                  data-to="100"
+                  data-max="800">
+
+              <span data-type="min"></span> Min |
+              <span data-type="value-1"></span> Likes |
+              <div class="jplist-slider" data-type="slider"></div>
+              <span data-type="value-2"></span> Likes |
+              <span data-type="max"></span> Max
+
+          </div>
+
+          <!--
+         <div
+            data-jplist-control="slider-range-filter"
+            class="jplist-slider"
+            data-path=".view"
+            data-group="group1"
+            data-name="name1"
+            data-from="20"
+            data-to="200">
+         Views: 20 - 200
+         </div>
+
+         <div
+            data-jplist-control="slider-range-filter"
+            class="jplist-slider"
+            data-path=".price"
+            data-group="group1"
+            data-name="name1"
+            data-from="30">
+         Prices: 30+
+         </div>-->
+      </div>
 
       <script src="../../../dist/jplist.min.js"></script>
       <script>
