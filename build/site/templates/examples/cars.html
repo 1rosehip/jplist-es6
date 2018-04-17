@@ -29,6 +29,11 @@
             background: rgb(227, 236, 243);
         }
 
+        .flex{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
 
         /**
          * slider styles
@@ -41,7 +46,6 @@
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            margin: 20px 0;
         }
 
         [data-type="value-1"]{
@@ -134,11 +138,11 @@
 
     <main role="main">
 
-        <div class="py-3 py-lg-5 controls-panel control-top-panel">
+        <div class="py-3 controls-panel control-top-panel">
             <div class="container">
 
                 <div class="row mb-2">
-                    <div class="col-md-3">
+                    <div class="col-6">
                         <div class="input-group">
 
                             <!-- text filter by model -->
@@ -155,9 +159,65 @@
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" type="button" id="model-clear-btn">Clear</button>
                             </div>
+
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-6">
+
+                        <!-- dropdown sort control -->
+                        <div class="dropdown ml-3 mb-sm-2 mb-lg-0"
+                             data-jplist-control="dropdown-sort"
+                             data-opened-class="show"
+                             data-group="group1"
+                             data-name="sort1">
+
+                            <button
+                                    data-type="panel"
+                                    class="btn btn-primary dropdown-toggle"
+                                    type="button">
+                                Sort by
+                            </button>
+
+                            <div
+                                    data-type="content"
+                                    class="dropdown-menu"
+                                    aria-labelledby="dropdownMenuButton">
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path="default">Sort By</a>
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path=".card-title"
+                                   data-order="asc"
+                                   data-type="text">Model A-Z</a>
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path=".card-title"
+                                   data-order="desc"
+                                   data-type="text">Model Z-A</a>
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path=".manufacturer"
+                                   data-order="asc"
+                                   data-type="text">Manufacturer A-Z</a>
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-path=".manufacturer"
+                                   data-order="desc"
+                                   data-type="text">Manufacturer Z-A</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-6">
                         <div class="input-group">
 
                             <!-- text filter by manufacturer -->
@@ -174,9 +234,32 @@
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" type="button" id="manufacturer-clear-btn">Clear</button>
                             </div>
+
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-6 flex align-items-center">
+                        <div
+                                data-jplist-control="slider-range-filter"
+                                data-path=".length .val"
+                                data-group="group1"
+                                data-name="length-range-slider"
+                                data-min="355"
+                                data-from="355"
+                                data-to="10000"
+                                data-max="10000">
+
+                            Length: <span data-type="value-1"></span>
+                            <div class="jplist-slider" data-type="slider"></div>
+                            <span data-type="value-2"></span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-6">
                         <div class="input-group">
 
                             <!-- text filter by engine -->
@@ -196,7 +279,28 @@
 
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-6 flex align-items-center">
+                        <div
+                                data-jplist-control="slider-range-filter"
+                                data-path=".width .val"
+                                data-group="group1"
+                                data-name="width-range-slider"
+                                data-min="0"
+                                data-from="0"
+                                data-to="10000"
+                                data-max="10000">
+
+                            Width:&nbsp;&nbsp; <span data-type="value-1"></span>
+                            <div class="jplist-slider" data-type="slider"></div>
+                            <span data-type="value-2"></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-6">
                         <div class="input-group">
 
                             <!-- text filter by transmission -->
@@ -213,6 +317,24 @@
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" type="button" id="transmission-clear-btn">Clear</button>
                             </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-6 flex align-items-center">
+                        <div
+                                data-jplist-control="slider-range-filter"
+                                data-path=".weight .val"
+                                data-group="group1"
+                                data-name="weight-range-slider"
+                                data-min="0"
+                                data-from="0"
+                                data-to="10000"
+                                data-max="10000">
+
+                            Weight: <span data-type="value-1"></span>
+                            <div class="jplist-slider" data-type="slider"></div>
+                            <span data-type="value-2"></span>
 
                         </div>
                     </div>
@@ -286,111 +408,7 @@
 
                     <div class="col-md-3">
 
-                        <!-- dropdown sort control -->
-                        <div class="dropdown ml-3 mb-sm-2 mb-lg-0"
-                             data-jplist-control="dropdown-sort"
-                             data-opened-class="show"
-                             data-group="group1"
-                             data-name="sort1">
 
-                            <button
-                                    data-type="panel"
-                                    class="btn btn-primary dropdown-toggle"
-                                    type="button">
-                                Sort by
-                            </button>
-
-                            <div
-                                    data-type="content"
-                                    class="dropdown-menu"
-                                    aria-labelledby="dropdownMenuButton">
-
-                                <a class="dropdown-item"
-                                   href="#"
-                                   data-path="default">Sort By</a>
-
-                                <a class="dropdown-item"
-                                   href="#"
-                                   data-path=".card-title"
-                                   data-order="asc"
-                                   data-type="text">Model A-Z</a>
-
-                                <a class="dropdown-item"
-                                   href="#"
-                                   data-path=".card-title"
-                                   data-order="desc"
-                                   data-type="text">Model Z-A</a>
-
-                                <a class="dropdown-item"
-                                   href="#"
-                                   data-path=".manufacturer"
-                                   data-order="asc"
-                                   data-type="text">Manufacturer A-Z</a>
-
-                                <a class="dropdown-item"
-                                   href="#"
-                                   data-path=".manufacturer"
-                                   data-order="desc"
-                                   data-type="text">Manufacturer Z-A</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-md-4">
-                        <div
-                                data-jplist-control="slider-range-filter"
-                                data-path=".length .val"
-                                data-group="group1"
-                                data-name="length-range-slider"
-                                data-min="355"
-                                data-from="355"
-                                data-to="10000"
-                                data-max="10000">
-
-                            Length: <span data-type="value-1"></span>
-                            <div class="jplist-slider" data-type="slider"></div>
-                            <span data-type="value-2"></span>
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div
-                                data-jplist-control="slider-range-filter"
-                                data-path=".width .val"
-                                data-group="group1"
-                                data-name="width-range-slider"
-                                data-min="0"
-                                data-from="0"
-                                data-to="10000"
-                                data-max="10000">
-
-                            Width: <span data-type="value-1"></span>
-                            <div class="jplist-slider" data-type="slider"></div>
-                            <span data-type="value-2"></span>
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div
-                                data-jplist-control="slider-range-filter"
-                                data-path=".weight .val"
-                                data-group="group1"
-                                data-name="weight-range-slider"
-                                data-min="0"
-                                data-from="0"
-                                data-to="10000"
-                                data-max="10000">
-
-                            Weight: <span data-type="value-1"></span>
-                            <div class="jplist-slider" data-type="slider"></div>
-                            <span data-type="value-2"></span>
-
-                        </div>
                     </div>
                 </div>
 
