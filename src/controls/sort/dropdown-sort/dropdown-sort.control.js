@@ -66,6 +66,12 @@ class DropdownSortControl extends BaseSortControlsGroup{
 
                 this.setSelectedButton(baseSortControl);
 
+                for(let control of this.controls){
+                    if(control.dropdown){
+                        control.dropdown.close();
+                    }
+                }
+
                 if(window.jplist) {
 
                     window.jplist.refresh(this.group);

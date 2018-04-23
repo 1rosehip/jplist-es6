@@ -124,6 +124,8 @@ class PaginationControl extends BasePaginationControlsGroup{
                     //set selected button in all dropdowns for the current this.itemsPerPage value
                     this.setSelectedButton();
 
+                    dd.dropdown.close();
+
                     if(window.jplist) {
 
                         window.jplist.refresh(this.group);

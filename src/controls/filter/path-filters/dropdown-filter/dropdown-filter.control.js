@@ -161,6 +161,8 @@ class DropdownFilterControl extends BasePathFilterControlsGroup{
                 //update dropdown panels value
                 control.dropdown.setPanelsContent(dropdownBtn.element.textContent);
             }
+
+            control.dropdown.close();
         }
     }
 

@@ -51,7 +51,7 @@ class BaseDropdownControl{
              */
             panel.addEventListener('click', e => {
 
-                e.stopPropagation();
+                //e.stopPropagation();
 
                 let atLeastOnePanelIsOpened = false;
 
@@ -78,16 +78,11 @@ class BaseDropdownControl{
         /**
          * close dropdowns on body click
          */
-        document.body.addEventListener('click', e => {
+        document.addEventListener('click', e => {
 
-            for(let dropdownContent of this.contents){
+            if (!this.element.contains(e.target)) { // or use: event.target.closest(selector) === null
 
-                dropdownContent.classList.remove(this.panels[0].element.openedClass);
-            }
-
-            for(let panel of this.panels){
-                panel.classList.remove(panel.element.openedClass);
-                panel.element.classList.remove(panel.element.openedClass);
+                this.close();
             }
         });
     }
@@ -113,6 +108,21 @@ class BaseDropdownControl{
             if(panel.initialContent) {
                 panel.innerHTML = panel.initialContent;
             }
+        }
+    }
+
+    /**
+     * close dropdown
+     */
+    close(){
+        for(let dropdownContent of this.contents){
+
+            dropdownContent.classList.remove(this.panels[0].element.openedClass);
+        }
+
+        for(let panel of this.panels){
+            panel.classList.remove(panel.element.openedClass);
+            panel.element.classList.remove(panel.element.openedClass);
         }
     }
 }
