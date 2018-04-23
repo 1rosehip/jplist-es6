@@ -1,0 +1,126 @@
+.card{
+    font-size: 12px;
+    height: 100%;
+}
+
+.card-header{
+    background-color: rgb(227, 236, 243);
+}
+
+.card-header h5{
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.card-img-top{
+    height: 225px;
+    width: 100%;
+    display: block;
+}
+
+.controls-panel{
+    background: rgb(227, 236, 243);
+}
+
+.flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/**
+ * slider styles
+ */
+[data-jplist-control="slider-range-filter"]{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.range-slider-value{
+    width: 100px;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+.jplist-slider {
+    width: calc(100% - 200px);
+    height: 20px;
+    background-color: #fff;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: .25rem;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.jplist-slider::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    opacity: 0;
+}
+
+.jplist-slider-holder-1,
+.jplist-slider-holder-2 {
+    width: 20px;
+    height: 100%;
+    border-radius: .25rem;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: 200;
+    -webkit-transition: 0.3s background-color;
+    -o-transition: 0.3s background-color;
+    transition: 0.3s background-color;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.jplist-slider-holder-1 {
+    background: #000;
+}
+
+.jplist-slider-holder-2 {
+    background: #106CD6;
+}
+
+.jplist-slider-holder-1:active,
+.jplist-slider-holder-2:active{
+    background: #00448c;
+    box-shadow: 0px 0px 10px #fff;
+}
+
+.jplist-slider-range {
+    width: 0;
+    height: 20px;
+    background: #ccc;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 1rem 1rem;
+}

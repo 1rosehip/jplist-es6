@@ -211,7 +211,7 @@ class BaseSliderControl{
      * @param {Object} e
      */
     stop(e){
-        e.preventDefault();
+        //e.preventDefault();
 
         this.dragging = null;
     }
