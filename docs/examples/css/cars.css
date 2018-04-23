@@ -28,6 +28,15 @@
     display: flex;
 }
 
+@media (max-width: 600px) {
+    .dropdown [data-type="panel"] {
+        max-width: 150px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
 /**
  * slider styles
  */
