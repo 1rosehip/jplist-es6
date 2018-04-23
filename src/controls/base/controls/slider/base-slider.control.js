@@ -68,7 +68,7 @@ class BaseSliderControl{
 
             document.addEventListener('mousemove', this.render.bind(this));
             document.addEventListener('touchmove', this.render.bind(this));
-            document.addEventListener('resize', this.render.bind(this));
+            window.addEventListener('resize', this.resize.bind(this));
 
             document.addEventListener('mouseup', this.stop.bind(this));
             document.addEventListener('touchend', this.stop.bind(this));
@@ -214,6 +214,18 @@ class BaseSliderControl{
         e.preventDefault();
 
         this.dragging = null;
+    }
+
+    /**
+     * on window resize
+     * @param {Object} e
+     */
+    resize(e){
+
+        if(this.handler1 && this.handler2){
+
+            this.setValues(this.handler1.value, this.handler2.value);
+        }
     }
 
     /**
