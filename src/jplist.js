@@ -55,4 +55,15 @@ export default class jPList{
         ContentManager.apply(this.settings, this.controls, this.groups, groupName);
     }
 
+    /**
+     * API: reset all jplist controls and apply them on content
+     */
+    resetControls(groupName = ''){
+
+        //find all controls split by data-group and data-name
+        this.controls = ContentManager.splitByGroupAndName(this.settings, document.body);
+
+        this.refresh(groupName);
+    }
+
 }

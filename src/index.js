@@ -66,6 +66,7 @@ import RangeSliderFilter from './controls/filter/range-filters/slider-range-filt
 import NoResultsControl from './controls/no-results/no-results.control';
 import DropdownControl from './controls/base/controls/dropdown/base-dropdown.control';
 import LayoutControl from './controls/layout/layout.control';
+import ResetControl from './controls/reset/reset.control';
 
 (() => {
     'use strict';
@@ -105,7 +106,8 @@ import LayoutControl from './controls/layout/layout.control';
 
         ['no-results', NoResultsControl],
         ['dropdown', DropdownControl],
-        ['layout', LayoutControl]
+        ['layout', LayoutControl],
+        ['reset', ResetControl]
     ]);
 
     let jplist = new jPList();
@@ -115,5 +117,6 @@ import LayoutControl from './controls/layout/layout.control';
      */
     window.jplist.init = jplist.init.bind(jplist);
     window.jplist.refresh = jplist.refresh.bind(jplist);
+    window.jplist.resetControls = jplist.resetControls.bind(jplist);
 
 })();
