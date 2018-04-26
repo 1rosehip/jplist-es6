@@ -455,6 +455,8 @@ class ContentManager{
 
                 if(!controlType) continue;
 
+                element.initialHTML = element.outerHTML;
+
                 const controlInstance = new BaseControl(element);
                 controls.push(controlInstance);
             }

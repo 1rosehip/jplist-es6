@@ -60,6 +60,24 @@ export default class jPList{
      */
     resetControls(groupName = ''){
 
+        if(this.controls) {
+
+            //this.controls is a Map: [groupName, [BaseControlsGroup1, BaseControlsGroup2, ...]]
+            for (let [groupName, groupControls] of this.controls) {
+
+                for (let group of groupControls) {
+
+                    for(let control of group.controls){
+
+                        if (!control.element || !control.element.initialHTML) continue;
+
+                        control.element.outerHTML = control.element.initialHTML;
+
+                    }
+                }
+            }
+        }
+
         //find all controls split by data-group and data-name
         this.controls = ContentManager.splitByGroupAndName(this.settings, document.body);
 
