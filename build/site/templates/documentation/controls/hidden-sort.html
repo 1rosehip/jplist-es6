@@ -1,0 +1,107 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2"><a href="#html-structure">HTML Structure</a></li>
+            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a></li>
+        </ul>
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">Hidden Sort Control</h1>
+
+        <p class="bd-lead">This is an invisible sort control that sorts content on page load.</p>
+
+        <h2 id="html-structure">HTML Structure</h2>
+
+        <p>
+            Hidden sort control is defined by required <code class="highlighter-rouge">data-jplist-control="hidden-sort"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be sorted.
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- hidden dropdown control -->
+&lt;div
+    style="display: none"
+    data-jplist-control="hidden-sort"
+    data-group="group1"
+    data-path=".title">
+&lt;/div>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="data-attributes">Data Attributes</h2>
+
+        <p>The full list of control data attributes.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="highlighter-rouge">data-jplist-control</code></td>
+                    <td>Defines hidden sort control.</td>
+                    <td>"hidden-sort"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-group</code></td>
+                    <td>Defines group of items that should be sorted. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
+                    <td>any text value</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-path</code></td>
+                    <td>CSS selector that defines the HTML element that should be sorted</td>
+                    <td>any CSS selector or "default" keyword</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Hidden Sort Control', header, body, 'controls', 'hidden-sort')
