@@ -28,6 +28,18 @@
     display: flex;
 }
 
+.car-img{
+    background: linear-gradient(to bottom right, #2c2f31, #007cfb);
+}
+
+.car-img img{
+    width: 150px;
+    height: 120px;
+    margin: 30px auto;
+    outline: 3px solid #fff;
+    border-radius: 0;
+}
+
 @media (max-width: 600px) {
     .dropdown [data-type="panel"] {
         max-width: 150px;
