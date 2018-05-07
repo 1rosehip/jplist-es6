@@ -10,7 +10,49 @@
 @function body(){
 
     <main role="main">
+        <div class="py-5 bg-light">
+            <div class="container">
 
+                <div class="row" data-jplist-group="group1">
+
+                    @{
+                        var data = JSON.parse(getData());
+                        console.log(data.length);
+                    }
+
+                    @for(var i=0; i<data.length; i++) {
+                        @{item = data[i]}
+
+                        <div class="col-md-4 mb-4" data-jplist-item>
+                            <a href="@(item.links.html)">
+                                <img src="@(item.urls.thumb)" alt="" title="" />
+                            </a>
+                            <div>Likes: @(item.likes)</div>
+                            <div>
+                                Photo by <a href="@(item.user.links.html)">@(item.user.name)</a> on Unsplash
+                            </div>
+                            @if(item.description){
+                                <div>@(item.description)</div>
+                            }
+                            <div>Creation Date: @(item.created_at)</div>
+
+                            <div>
+                            @for(var t=0; t<item.photo_tags.length; t++){
+                                @{tag = item.photo_tags[t]}
+
+                                <div>@(tag.title)</div>
+                            }
+                            </div>
+                        </div>
+                    }
+
+                    <!-- no results control -->
+                    <div class="col text-center" data-jplist-control="no-results" data-group="group1" data-name="no-results">No Results Found</div>
+
+                </div>
+
+            </div>
+        </div>
     </main>
 
     <script src="/js/jplist.min.js"></script>
@@ -21,6 +63,6 @@
 
 @render(process.cwd() + '/build/site/layouts/example.html', data, 'Mountains', header, body)
 
-@function getCarsData(){
+@function getData(){
     @render(process.cwd() + '/build/site/templates/examples/mountains-data.json')
 }
