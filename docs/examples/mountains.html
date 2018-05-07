@@ -3,7 +3,10 @@
     <head>
         <title>
             
-                Examples | jPList Library
+                
+
+    
+        Mountains | Examples | jPList Library
         </title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -35,7 +38,11 @@
         <meta name="msapplication-square310x310logo" content="/img/favicon/mstile-310x310.png" />
 
         
-	<title>AAA</title>
+    
+	<title>Mountains</title>
+
+    <!--<link href="/js/jplist.styles.css" rel="stylesheet" type="text/css" />-->
+    <link href="css/mountains.css" rel="stylesheet" type="text/css" />
 
         <!-- google analytics
         <script>
@@ -114,36 +121,32 @@
 
         
 
-    <header class="d-flex flex-column flex-md-row align-items-md-center justify-content-center p-5 bg-light">
+    <div class="breadcrumb-container">
+        <div class="container">
+            <div class="row">
 
-        <div class="pt-md-3 pb-md-4">
-            <h1 class="bd-title mt-0">jPList Examples</h1>
-            </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/examples/index">Examples</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Mountains</li>
+                    </ol>
+                </nav>
 
-    </header>
-
-    <main class="bd-content p-5" role="main">
-
-        <div class="row">
-
-            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-                <a href="/examples/cars">
-                    <img class="img-thumbnail mb-3" src="/img/examples/cars.png" alt="Cars Example Page" width="960" height="600">
-                    <h5 class="mb-1">Cars</h5>
-                </a>
-                <p class="text-muted">Pagination control, text filters, dropdown sort, range filter controls.</p>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-                <a href="/examples/mountains">
-                    <img class="img-thumbnail mb-3" src="/img/controls/test.png" alt="Pricing screenshot" width="960" height="600">
-                    <h5 class="mb-1">Mountains</h5>
-                </a>
-                <p class="text-muted">Example pricing page built with Cards and featuring a custom header and footer.</p>
             </div>
         </div>
+    </div>
 
-        </main>
+    
+
+    <main role="main">
+
+    </main>
+
+    <script src="/js/jplist.min.js"></script>
+    <script>
+        jplist.init();
+    </script>
 
         <footer class="bd-footer text-muted">
             <div class="container-fluid p-3 p-md-5">

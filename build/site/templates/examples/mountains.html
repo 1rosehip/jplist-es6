@@ -1,0 +1,26 @@
+@!(data)
+
+@function header(){
+	<title>Mountains</title>
+
+    <!--<link href="/js/jplist.styles.css" rel="stylesheet" type="text/css" />-->
+    <link href="css/mountains.css" rel="stylesheet" type="text/css" />
+}
+
+@function body(){
+
+    <main role="main">
+
+    </main>
+
+    <script src="/js/jplist.min.js"></script>
+    <script>
+        jplist.init();
+    </script>
+}
+
+@render(process.cwd() + '/build/site/layouts/example.html', data, 'Mountains', header, body)
+
+@function getCarsData(){
+    @render(process.cwd() + '/build/site/templates/examples/mountains-data.json')
+}
