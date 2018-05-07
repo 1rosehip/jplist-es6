@@ -17,31 +17,67 @@
 
                     @{
                         var data = JSON.parse(getData());
-                        console.log(data.length);
                     }
 
                     @for(var i=0; i<data.length; i++) {
-                        @{item = data[i]}
+                        @{
+                            item = data[i];
+                            item.createdDate = new Date(item.created_at);
+                        }
 
-                        <div class="col-md-4 mb-4" data-jplist-item>
-                            <a href="@(item.links.html)">
-                                <img src="@(item.urls.thumb)" alt="" title="" />
-                            </a>
-                            <div>Likes: @(item.likes)</div>
-                            <div>
-                                Photo by <a href="@(item.user.links.html)">@(item.user.name)</a> on Unsplash
-                            </div>
-                            @if(item.description){
-                                <div>@(item.description)</div>
-                            }
-                            <div>Creation Date: @(item.created_at)</div>
+                        <div class="col-lg-4 col-sm-6 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <div class="mountain-img">
+                                    <a href="@(item.links.html)">
+                                        <img src="@(item.urls.thumb)" alt="" title="" />
+                                    </a>
+                                </div>
+                                <ul class="list-group list-group-flush">
 
-                            <div>
-                            @for(var t=0; t<item.photo_tags.length; t++){
-                                @{tag = item.photo_tags[t]}
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Photo by</b>
+                                        <a href="@(item.user.links.html)">@(item.user.name)</a> on Unsplash
+                                    </li>
 
-                                <div>@(tag.title)</div>
-                            }
+                                    <li class="list-group-item">
+                                        <b class="header production-header">Likes &#9829</b>
+                                        <span class="production">
+                                            <span class="start">@(item.likes)</span>
+                                        </span>
+                                    </li>
+
+                                    @if(item.description){
+                                    <li class="list-group-item">
+                                        @(item.description)
+                                    </li>
+                                    }
+
+                                </ul>
+
+                                <div class="card-body">
+                                    @for(var t=0; t<item.photo_tags.length; t++){
+                                        @{tag = item.photo_tags[t]}
+
+                                        @if(t < 10){
+                                            @if(t%2 === 0){
+                                                <span class="badge badge-info">@(tag.title)</span>
+                                            }
+                                            else{
+                                                <span class="badge badge-secondary">@(tag.title)</span>
+                                            }
+                                        }
+                                    }
+                                </div>
+
+                                <div class="card-footer">
+                                    <small class="text-muted">Created at <span>@(item.createdDate.toLocaleDateString('en-US', {
+                                        //weekday: 'long',
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                    }))</small>
+                                </div>
+
                             </div>
                         </div>
                     }

@@ -1,0 +1,12 @@
+.mountain-img{
+    height: 150px;
+    overflow: hidden;
+}
+
+.mountain-img img{
+    width: 100%;
+}
+
+.card{
+    height: 100%;
+}
