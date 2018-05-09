@@ -1,0 +1,23 @@
+@!(data, mainClassName, additionalClassName)
+
+<div class="bd-toc-item @mainClassName">
+
+    <a class="bd-toc-link" href="/documentation/controls/pagination">
+        Pagination Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <li @isMenuItemActive('pagination')>
+            <a href="/documentation/controls/pagination">
+                Pagination
+            </a>
+        </li>
+    </ul>
+</div>
+
+@function isMenuItemActive(currentMenuItem) {
+
+    @if(additionalClassName === currentMenuItem){
+        class="active bd-sidenav-active"
+    }
+}

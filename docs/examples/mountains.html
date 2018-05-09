@@ -140,6 +140,131 @@
     
 
     <main role="main">
+
+        <div class="py-3 controls-panel control-top-panel">
+            <div class="container">
+
+                <div class="row mb-2">
+                    <div class="col-lg-6">
+
+                        <!-- all items with or without description -->
+                        <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-jplist-control="buttons-path-filter"
+                                data-path="default"
+                                data-group="group1"
+                                data-selected="true"
+                                data-mode="radio"
+                                data-name="description">
+                            All items
+                        </button>
+
+                        <!-- all items with description -->
+                        <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-jplist-control="buttons-path-filter"
+                                data-path=".description"
+                                data-group="group1"
+                                data-mode="radio"
+                                data-name="description">
+                            Items with description
+                        </button>
+
+                        <!-- all items without description -->
+                        <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-jplist-control="buttons-path-filter"
+                                data-path=":not(.description)"
+                                data-group="group1"
+                                data-mode="radio"
+                                data-name="description">
+                            Items without description
+                        </button>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col flex flex-wrap align-items-start">
+
+                            <!-- pagination control -->
+                            <nav
+                                    data-jplist-control="pagination"
+                                    data-group="group1"
+                                    data-items-per-page="12"
+                                    data-current-page="0"
+                                    data-disabled-class="disabled"
+                                    data-selected-class="active"
+                                    data-jump="top"
+                                    data-name="pagination1"
+                                    class="mb-2 mr-3">
+
+                                <!-- first and previous buttons -->
+                                <ul class="pagination d-inline-flex">
+                                    <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="first"><a class="page-link" href="#">«</a></li>
+                                    <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
+                                </ul>
+
+                                <!-- pages buttons -->
+                                <ul class="pagination d-none d-sm-none d-lg-inline-flex" data-type="pages">
+                                    <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
+                                </ul>
+
+                                <!-- next and last buttons -->
+                                <ul class="pagination d-inline-flex">
+                                    <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
+                                    <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="last"><a class="page-link" href="#">»</a></li>
+                                </ul>
+
+                                <!-- information labels -->
+                                <span data-type="info" class="d-none d-sm-none d-lg-inline-flex badge badge-secondary ml-3 p-2">
+                                Page {pageNumber} of {pagesNumber}
+                            </span>
+
+                                <!-- items per page dropdown -->
+                                <div class="dropdown d-inline-flex ml-lg-3"
+                                     data-type="items-per-page-dd"
+                                     data-opened-class="show">
+
+                                    <button
+                                            data-type="panel"
+                                            class="btn btn-primary dropdown-toggle"
+                                            type="button">
+                                        Dropdown button
+                                    </button>
+
+                                    <div
+                                            data-type="content"
+                                            class="dropdown-menu"
+                                            aria-labelledby="dropdownMenuButton">
+
+                                        <a class="dropdown-item" href="#" data-value="12">12 per page</a>
+                                        <a class="dropdown-item" href="#" data-value="24">24 per page</a>
+                                        <a class="dropdown-item" href="#" data-value="0">View All</a>
+
+                                    </div>
+                                </div>
+
+                            </nav>
+
+                            <!-- reset control -->
+                            <button
+                                    data-jplist-control="reset"
+                                    data-group="group1"
+                                    class="btn btn-secondary"
+                                    type="button">
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
         <div class="py-5 bg-light">
             <div class="container">
 
@@ -154,7 +279,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/xknt_wcgPus">
-                                        <img src="https://images.unsplash.com/photo-1518021964703-4b2030f03085?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=5b6dc742ef45917224d1e3f221978b52" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1518021964703-4b2030f03085.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -268,7 +393,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/UsbMGphPWw4">
-                                        <img src="https://images.unsplash.com/photo-1519948539518-bdeb70f90618?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=bfb4996911003ea93d60d52799d4f1a8" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1519948539518-bdeb70f90618.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -382,7 +507,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/Fo0mHMN66WE">
-                                        <img src="https://images.unsplash.com/photo-1519414119614-31e82ec0cce7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=e286163408b8c4b352f295c7501fa0de" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1519414119614-31e82ec0cce7.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -496,7 +621,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/Tf2mrYEgQd4">
-                                        <img src="https://images.unsplash.com/photo-1508815830681-a52931bf6aa6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=cedf44466ba5ce6ca43b3978d791febe" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1508815830681-a52931bf6aa6.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -573,7 +698,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/YmP0Akdp6l4">
-                                        <img src="https://images.unsplash.com/photo-1516986078574-f2f732941c4a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae6a497f869e9fc7abb1871a4135c78f" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1516986078574-f2f732941c4a.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -678,7 +803,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/8UT6LboU-PI">
-                                        <img src="https://images.unsplash.com/photo-1517233073177-42b672529763?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=910ed8b7251af1537c5864b18971613a" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1517233073177-42b672529763.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -786,7 +911,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/jWlO7HQM6bg">
-                                        <img src="https://images.unsplash.com/photo-1522280553110-ba5f9d6dfdeb?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0241ff65c141f3e0c40ce5a274a745e" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1522280553110-ba5f9d6dfdeb.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -900,7 +1025,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/5ditmO9_ae0">
-                                        <img src="https://images.unsplash.com/photo-1516821371801-280cf8069a4e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=1dd9247cadd87723ad18bdd920f97049" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1516821371801-280cf8069a4e.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1011,7 +1136,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/l1KnvdQ_4h8">
-                                        <img src="https://images.unsplash.com/photo-1514996624071-37a6f5422975?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=67545fd893caabbbda43ac8ce8d93952" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1514996624071-37a6f5422975.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1125,7 +1250,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/4IYTA3tWmz0">
-                                        <img src="https://images.unsplash.com/photo-1518869675078-080f6acfe69d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=5448068cbf33ea220fbb434ec9d3e3e3" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1518869675078-080f6acfe69d.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1227,7 +1352,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/EFvP9cHipMQ">
-                                        <img src="https://images.unsplash.com/photo-1444065707204-12decac917e8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=5dd4932a819b517082a952ac974d258c" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1444065707204-12decac917e8.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1245,7 +1370,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A hazy shot of several mountain ridges stretching to the horizon
                                     </li>
 
@@ -1335,7 +1460,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/MvxMvPO3S1M">
-                                        <img src="https://images.unsplash.com/photo-1506782081254-09bcfd996fd6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=65a16bbf4d0d896278a8c0037bb830c8" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1506782081254-09bcfd996fd6.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1440,7 +1565,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/OeC1wIsKNpk">
-                                        <img src="https://images.unsplash.com/46/iYvDeqVGRbebiQv2PIJi_DSC_8407.JPG?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=236972f96425d8aa56ba512b2e87f29b" alt="" title="" />
+                                        <img src="../img/examples/mountains/iYvDeqVGRbebiQv2PIJi_DSC_8407.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1458,7 +1583,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A scenic shot of the trident-shaped Peyto Lake in the Canadian Rockies
                                     </li>
 
@@ -1557,7 +1682,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/tvleqH3p1os">
-                                        <img src="https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=480a3ec3ebeb87dd625f42d0340ee412" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1517021897933-0e0319cfbc28.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1668,7 +1793,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/oV4bR3YoR_s">
-                                        <img src="https://images.unsplash.com/photo-1473283147055-e39c51463929?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=e8ce6490a0c3b037a6327e9951b4658a" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1473283147055-e39c51463929.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1782,7 +1907,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/915UJQaxtrk">
-                                        <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=ad425ee538f6fe8227e9db43d337b4cb" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1504208434309-cb69f4fe52b0.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1800,7 +1925,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A white dog sitting on a rock formation near a large mountain pond.
                                     </li>
 
@@ -1893,7 +2018,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/Bkci_8qcdvQ">
-                                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=3de595e202fb23911f0f88c91a66eba9" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1464822759023-fed622ff2c3b.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -1911,7 +2036,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Water in a shallow mountain valley in Kluane National Park
                                     </li>
 
@@ -2010,7 +2135,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/dfo06_DqxpA">
-                                        <img src="https://images.unsplash.com/photo-1508788397430-55907b348ba8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=6f172f587f55579a7c99d2c8049f59e3" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1508788397430-55907b348ba8.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2103,7 +2228,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/z8ct_Q3oCqM">
-                                        <img src="https://images.unsplash.com/photo-1478059299873-f047d8c5fe1a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=974f09d90e138f7caf1921bf1cbf902b" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1478059299873-f047d8c5fe1a.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2121,7 +2246,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A tree-lined mountain road with snowcapped mountains in the background
                                     </li>
 
@@ -2220,7 +2345,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/NUFnfYd09iI">
-                                        <img src="https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=be7be32d1c635bdc89b9d468c5e9b6d7" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1485160497022-3e09382fb310.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2238,7 +2363,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Craggy snow-covered mountains stretching to the horizon during sunset
                                     </li>
 
@@ -2316,7 +2441,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/Tf2mrYEgQd4">
-                                        <img src="https://images.unsplash.com/photo-1508815830681-a52931bf6aa6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=cedf44466ba5ce6ca43b3978d791febe" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1508815830681-a52931bf6aa6.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2393,7 +2518,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/_f4-rvRy5JM">
-                                        <img src="https://images.unsplash.com/photo-1491889886246-5ceb92033c12?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=5e420de85d648edf603a2e03658b3f25" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1491889886246-5ceb92033c12.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2411,7 +2536,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Red light falling on a snowy mountain ridge during sunset
                                     </li>
 
@@ -2498,7 +2623,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/Yvn6sBShnN8">
-                                        <img src="https://images.unsplash.com/photo-1518699086072-d567cb15b483?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=76a6bf95fd057f2eee1342e45014b8e5" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1518699086072-d567cb15b483.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2606,7 +2731,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/jGlqOzrhn9k">
-                                        <img src="https://images.unsplash.com/photo-1491904768633-2b7e3e7fede5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=869de18ca2775a3e1b3d45d330830119" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1491904768633-2b7e3e7fede5.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2624,7 +2749,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A mountain ridge in the Dachstein Mountains with red sun rays falling on the rocky face
                                     </li>
 
@@ -2720,7 +2845,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/_k3xBbG_yFY">
-                                        <img src="https://images.unsplash.com/photo-1487149506474-cbf9196c4f9f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=0e44195621a7660a46ca1c40393418fb" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1487149506474-cbf9196c4f9f.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2738,7 +2863,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         The heavily wooded bottom of Yosemite Valley during sunset
                                     </li>
 
@@ -2837,7 +2962,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/5GtS0qbcU0s">
-                                        <img src="https://images.unsplash.com/photo-1503751192943-5537c30ba181?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=9690aabd82957c57c21ffe51ce7d9ea0" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1503751192943-5537c30ba181.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2855,7 +2980,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Flowers in a field near a small mountain pond area.
                                     </li>
 
@@ -2954,7 +3079,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/9wg5jCEPBsw">
-                                        <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=abba2305ee5ba6bc07823468db432a65" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1454496522488-7a8e488e8606.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -2972,7 +3097,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Dramatic landscape with the peak of the mighty Ama Dablam mountain towering over a valley
                                     </li>
 
@@ -3071,7 +3196,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/ajB_imbEbkE">
-                                        <img src="https://images.unsplash.com/photo-1517980124573-d3a65a032297?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=418f7006c5b708677ad6916771dd8472" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1517980124573-d3a65a032297.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -3188,7 +3313,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/PTkB0AvR4M0">
-                                        <img src="https://images.unsplash.com/photo-1482624056776-f0cda15a49cf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=a7308faef0fda33e86d5d155d33522e8" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1482624056776-f0cda15a49cf.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -3206,7 +3331,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Reflections of snowy mountains reflect in calm foggy waters of Oeschinen Lake
                                     </li>
 
@@ -3305,7 +3430,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/__yDNYiGX-E">
-                                        <img src="https://images.unsplash.com/photo-1454618834120-0b2995ba6fe7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=0e98645676d95e6334bdd66806983cfb" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1454618834120-0b2995ba6fe7.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -3323,7 +3448,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Snowy mountains near a copse of trees
                                     </li>
 
@@ -3422,7 +3547,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/jS0zC2PJ17A">
-                                        <img src="https://images.unsplash.com/photo-1484593068577-0b446a79ed33?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=f5c0be69507bd077620834763f5c9524" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1484593068577-0b446a79ed33.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -3440,7 +3565,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A picturesque landscape with a wooden cabin in the middle of a field near a tall mountain ridge
                                     </li>
 
@@ -3539,7 +3664,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/WZ95Xj4riik">
-                                        <img src="https://images.unsplash.com/photo-1455305049585-41b8d277d68a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=5a311aca09acb90453123daba4df2ff4" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1455305049585-41b8d277d68a.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -3557,7 +3682,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A stream hugging the side of a cliff in a mountain valley in Colorado
                                     </li>
 
@@ -3656,7 +3781,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/JgOeRuGD_Y4">
-                                        <img src="https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a5599233510a30e2ee9e45e93a91dde" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1477346611705-65d1883cee1e.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -3674,7 +3799,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A red-hued shot of a mountainous landscape with numerous snow-capped peaks
                                     </li>
 
@@ -3773,7 +3898,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/RyLJxxfToTE">
-                                        <img src="https://images.unsplash.com/photo-1501437547230-2068bdccfd1d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=8807d3e61f7157e663c375fb2cff21f5" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1501437547230-2068bdccfd1d.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -3887,7 +4012,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/g30P1zcOzXo">
-                                        <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=a96d6bb401e533f545d12ae9e61ad302" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1483728642387-6c3bdd6c93e5.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -3905,7 +4030,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Soaring snow-capped mountains under the evening sky
                                     </li>
 
@@ -3980,7 +4105,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/Sa7787z58VQ">
-                                        <img src="https://images.unsplash.com/photo-1462480803487-a2edfd796460?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=768461039fd66e400e09e9336cd4183f" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1462480803487-a2edfd796460.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -3998,7 +4123,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A jagged mountaintop covered in snow under a blue sky with wispy clouds
                                     </li>
 
@@ -4097,7 +4222,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/quFGlyxQufE">
-                                        <img src="https://images.unsplash.com/photo-1470165301023-58dab8118cc9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=5666807e476a9cd829aacd4bc456b972" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1470165301023-58dab8118cc9.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -4211,7 +4336,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/5p0Mx9ZSfws">
-                                        <img src="https://images.unsplash.com/photo-1465892848208-7850a13afc51?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=ed8371598a3aab552f3d8da210a14192" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1465892848208-7850a13afc51.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -4229,7 +4354,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A mountain range partly covered in snow with low hanging clouds in between
                                     </li>
 
@@ -4328,7 +4453,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/HDd-NQ_AMNQ">
-                                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=0c80908d4327edf08fe31de7b8f1e2dc" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1500534314209-a25ddb2bd429.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -4439,7 +4564,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/pmH_Y4Qetrk">
-                                        <img src="https://images.unsplash.com/photo-1466940219795-c670f475e59f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=58c757425bdcc39783810c8ead17d83b" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1466940219795-c670f475e59f.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -4457,7 +4582,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Modern house at the top of a rocky hill with mountains and a creek in the background and foreground during sunset
                                     </li>
 
@@ -4556,7 +4681,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/_F9rJR86qf4">
-                                        <img src="https://images.unsplash.com/photo-1443996104801-80c82e789b18?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=0804c1b066a3804d6cbe08c88ac8b898" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1443996104801-80c82e789b18.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -4574,7 +4699,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Sharp mountain ridges stretching to the horizon in the High Tatras
                                     </li>
 
@@ -4673,7 +4798,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/-ESqG0cJrN4">
-                                        <img src="https://images.unsplash.com/photo-1495567505627-46dc666041f1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8e1903d6bf0ae346cd042e835315ee2" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1495567505627-46dc666041f1.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -4691,7 +4816,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         View of a valley in Zion National Park with a river flowing on its floor
                                     </li>
 
@@ -4790,7 +4915,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/sVqrUN9RZIo">
-                                        <img src="https://images.unsplash.com/photo-1488810050923-3897e8aa9037?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=364fb859bf99d50f6f009f0f56eb26ee" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1488810050923-3897e8aa9037.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -4808,7 +4933,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         A steep granite ridge in Vanoise National Park
                                     </li>
 
@@ -4907,7 +5032,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/2-MmXpeN8YE">
-                                        <img src="https://images.unsplash.com/photo-1516690553959-71a414d6b9b6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=9d14b849bb6b824dd57aa222006612cf" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1516690553959-71a414d6b9b6.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -5024,7 +5149,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/T0XLKgpyT_c">
-                                        <img src="https://images.unsplash.com/photo-1457459686225-c7db79d4e59f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=bef4b4017d4eee43c06fa0e39dd73d27" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1457459686225-c7db79d4e59f.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -5042,7 +5167,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Misty fog wraps around snowy mountain at Bunderspitz
                                     </li>
 
@@ -5141,7 +5266,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/S3eqr293Vho">
-                                        <img src="https://images.unsplash.com/photo-1519405530001-3b5e82ba4dac?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=6621bd593db19eb6eeeb098b97db951a" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1519405530001-3b5e82ba4dac.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -5249,7 +5374,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/eZF9nZKBev8">
-                                        <img src="https://images.unsplash.com/photo-1508913449378-01b9b8174e46?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=b2824e109d916c6a792506cb0f292af9" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1508913449378-01b9b8174e46.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -5316,7 +5441,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/BXasVMRGsuo">
-                                        <img src="https://images.unsplash.com/photo-1508669232496-137b159c1cdb?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=56e8c0d6e58beba70eefd8ea612b956e" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1508669232496-137b159c1cdb.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -5393,7 +5518,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/4ORoz9btfgI">
-                                        <img src="https://images.unsplash.com/photo-1503863937795-62954a3c0f05?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ca7ab8c49e1f4de6d1f6c9c210dbf4b" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1503863937795-62954a3c0f05.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -5492,7 +5617,7 @@
                             <div class="card box-shadow">
                                 <div class="mountain-img">
                                     <a href="https://unsplash.com/photos/64v-xpl8w-s">
-                                        <img src="https://images.unsplash.com/photo-1437747941115-61870b18ede5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9&s=632e44f7cc78fb81d597bf96abe7e69e" alt="" title="" />
+                                        <img src="../img/examples/mountains/photo-1437747941115-61870b18ede5.jpeg" alt="" title="" />
                                     </a>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -5510,7 +5635,7 @@
                                     </li>
 
                                     
-                                    <li class="list-group-item">
+                                    <li class="list-group-item description">
                                         Small buildings on a green slope over a mountain lake
                                     </li>
 

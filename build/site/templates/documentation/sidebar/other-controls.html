@@ -1,0 +1,33 @@
+@!(data, mainClassName, additionalClassName)
+
+<div class="bd-toc-item @mainClassName">
+    <a class="bd-toc-link" href="/documentation/controls/no-results">
+        Other Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+
+        <li @isMenuItemActive('no-results')>
+            <a href="/documentation/controls/no-results">
+                No Results Control
+            </a>
+        </li>
+        <li @isMenuItemActive('layout')>
+            <a href="/documentation/controls/layout">
+                Layout Control
+            </a>
+        </li>
+        <li @isMenuItemActive('reset')>
+            <a href="/documentation/controls/reset">
+                Reset Control
+            </a>
+        </li>
+    </ul>
+</div>
+
+@function isMenuItemActive(currentMenuItem) {
+
+    @if(additionalClassName === currentMenuItem){
+        class="active bd-sidenav-active"
+    }
+}

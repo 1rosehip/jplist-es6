@@ -1,10 +1,15 @@
 .mountain-img{
     height: 150px;
     overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .mountain-img img{
     width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .card{

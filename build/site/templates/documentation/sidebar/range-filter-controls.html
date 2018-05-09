@@ -1,0 +1,29 @@
+@!(data, mainClassName, additionalClassName)
+
+<div class="bd-toc-item @mainClassName">
+    <a class="bd-toc-link" href="/documentation/controls/buttons-range-filter">
+        Range Filter Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+
+        <li @isMenuItemActive('buttons-range-filter')>
+            <a href="/documentation/controls/buttons-range-filter">
+                Buttons Range Filter Control
+            </a>
+        </li>
+        <li @isMenuItemActive('slider-range-filter')>
+            <a href="/documentation/controls/slider-range-filter">
+                Slider Range Filter Control
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+</div>
+
+@function isMenuItemActive(currentMenuItem) {
+
+    @if(additionalClassName === currentMenuItem){
+        class="active bd-sidenav-active"
+    }
+}

@@ -26,7 +26,12 @@
                 <nav class="collapse bd-links" id="bd-docs-nav">
 
                     @render(process.cwd() + '/build/site/templates/documentation/sidebar/getting-started.html', data, isMenuItemActive('getting-started'), additionalActiveMenuItem)
-                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/controls.html', data, isMenuItemActive('controls'), additionalActiveMenuItem)
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/sort-controls.html', data, isMenuItemActive('sort-controls'), additionalActiveMenuItem)
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/pagination-controls.html', data, isMenuItemActive('pagination-controls'), additionalActiveMenuItem)
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/text-filter-controls.html', data, isMenuItemActive('text-filter-controls'), additionalActiveMenuItem)
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/path-filter-controls.html', data, isMenuItemActive('path-filter-controls'), additionalActiveMenuItem)
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/range-filter-controls.html', data, isMenuItemActive('range-filter-controls'), additionalActiveMenuItem)
+                    @render(process.cwd() + '/build/site/templates/documentation/sidebar/other-controls.html', data, isMenuItemActive('other-controls'), additionalActiveMenuItem)
                 </nav>
 
             </div>

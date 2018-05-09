@@ -1,7 +1,7 @@
 @!(data)
 
 @function header(){
-	<title>Cars</title>
+	<title>Cars Example Page</title>
 
     <!--<link href="/js/jplist.styles.css" rel="stylesheet" type="text/css" />-->
     <link href="css/cars.css" rel="stylesheet" type="text/css" />
@@ -504,7 +504,7 @@
     </script>
 }
 
-@render(process.cwd() + '/build/site/layouts/example.html', data, 'Cars', header, body)
+@render(process.cwd() + '/build/site/layouts/example.html', data, 'Cars Demo Page', header, body)
 
 @function getCarsData(){
     @render(process.cwd() + '/build/site/templates/examples/cars-data.json')

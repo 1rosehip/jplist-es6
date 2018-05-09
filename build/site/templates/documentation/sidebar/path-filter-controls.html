@@ -1,0 +1,44 @@
+@!(data, mainClassName, additionalClassName)
+
+<div class="bd-toc-item @mainClassName">
+
+    <a class="bd-toc-link" href="/documentation/controls/pagination">
+        Path Filter Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <li @isMenuItemActive('select-filter')>
+            <a href="/documentation/controls/select-filter">
+                Select Filter Control
+            </a>
+        </li>
+        <li @isMenuItemActive('dropdown-filter')>
+            <a href="/documentation/controls/dropdown-filter">
+                Dropdown Filter Control
+            </a>
+        </li>
+        <li @isMenuItemActive('checkbox-path-filter')>
+            <a href="/documentation/controls/checkbox-path-filter">
+                Checkbox Path Filter Control
+            </a>
+        </li>
+        <li @isMenuItemActive('radio-buttons-path-filter')>
+            <a href="/documentation/controls/radio-buttons-path-filter">
+                Radio Buttons Path Filter Control
+            </a>
+        </li>
+        <li @isMenuItemActive('buttons-path-filter')>
+            <a href="/documentation/controls/buttons-path-filter">
+                Buttons Path Filter Control
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+</div>
+
+@function isMenuItemActive(currentMenuItem) {
+
+    @if(additionalClassName === currentMenuItem){
+        class="active bd-sidenav-active"
+    }
+}
