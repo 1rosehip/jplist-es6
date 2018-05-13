@@ -14,8 +14,16 @@
         <div class="py-3 controls-panel control-top-panel">
             <div class="container">
 
-                <div class="row mb-2">
-                    <div class="col-lg-6">
+                <div class="row mb-2 mr-3">
+                    <div class="col flex flex-wrap align-items-start">
+
+                        <!-- hidden sort by author name -->
+                        <div
+                                style="display: none"
+                                data-jplist-control="hidden-sort"
+                                data-group="group1"
+                                data-path=".author-name">
+                        </div>
 
                         <!-- all items with or without description -->
                         <button
@@ -56,81 +64,80 @@
                         </button>
 
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col flex flex-wrap align-items-start">
 
-                    <div class="row">
-                        <div class="col flex flex-wrap align-items-start">
+                        <!-- pagination control -->
+                        <nav
+                                data-jplist-control="pagination"
+                                data-group="group1"
+                                data-items-per-page="12"
+                                data-current-page="0"
+                                data-disabled-class="disabled"
+                                data-selected-class="active"
+                                data-jump="top"
+                                data-name="pagination1"
+                                class="mb-2 mr-3">
 
-                            <!-- pagination control -->
-                            <nav
-                                    data-jplist-control="pagination"
-                                    data-group="group1"
-                                    data-items-per-page="12"
-                                    data-current-page="0"
-                                    data-disabled-class="disabled"
-                                    data-selected-class="active"
-                                    data-jump="top"
-                                    data-name="pagination1"
-                                    class="mb-2 mr-3">
+                            <!-- first and previous buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="first"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
+                            </ul>
 
-                                <!-- first and previous buttons -->
-                                <ul class="pagination d-inline-flex">
-                                    <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="first"><a class="page-link" href="#">«</a></li>
-                                    <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
-                                </ul>
+                            <!-- pages buttons -->
+                            <ul class="pagination d-none d-sm-none d-lg-inline-flex" data-type="pages">
+                                <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
+                            </ul>
 
-                                <!-- pages buttons -->
-                                <ul class="pagination d-none d-sm-none d-lg-inline-flex" data-type="pages">
-                                    <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
-                                </ul>
+                            <!-- next and last buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="last"><a class="page-link" href="#">»</a></li>
+                            </ul>
 
-                                <!-- next and last buttons -->
-                                <ul class="pagination d-inline-flex">
-                                    <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
-                                    <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="last"><a class="page-link" href="#">»</a></li>
-                                </ul>
-
-                                <!-- information labels -->
-                                <span data-type="info" class="d-none d-sm-none d-lg-inline-flex badge badge-secondary ml-3 p-2">
-                                Page {pageNumber} of {pagesNumber}
+                            <!-- information labels -->
+                            <span data-type="info" class="d-none d-sm-none d-lg-inline-flex badge badge-secondary ml-3 p-2">
+                                {startItem} - {endItem} of {itemsNumber}
                             </span>
 
-                                <!-- items per page dropdown -->
-                                <div class="dropdown d-inline-flex ml-lg-3"
-                                     data-type="items-per-page-dd"
-                                     data-opened-class="show">
+                            <!-- items per page dropdown -->
+                            <div class="dropdown d-inline-flex ml-lg-3"
+                                 data-type="items-per-page-dd"
+                                 data-opened-class="show">
 
-                                    <button
-                                            data-type="panel"
-                                            class="btn btn-primary dropdown-toggle"
-                                            type="button">
-                                        Dropdown button
-                                    </button>
+                                <button
+                                        data-type="panel"
+                                        class="btn btn-primary dropdown-toggle"
+                                        type="button">
+                                    Dropdown button
+                                </button>
 
-                                    <div
-                                            data-type="content"
-                                            class="dropdown-menu"
-                                            aria-labelledby="dropdownMenuButton">
+                                <div
+                                        data-type="content"
+                                        class="dropdown-menu"
+                                        aria-labelledby="dropdownMenuButton">
 
-                                        <a class="dropdown-item" href="#" data-value="12">12 per page</a>
-                                        <a class="dropdown-item" href="#" data-value="24">24 per page</a>
-                                        <a class="dropdown-item" href="#" data-value="0">View All</a>
+                                    <a class="dropdown-item" href="#" data-value="12">12 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="24">24 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="0">View All</a>
 
-                                    </div>
                                 </div>
+                            </div>
 
-                            </nav>
+                        </nav>
 
-                            <!-- reset control -->
-                            <button
-                                    data-jplist-control="reset"
-                                    data-group="group1"
-                                    class="btn btn-secondary"
-                                    type="button">
-                                Reset
-                            </button>
-                        </div>
+                        <!-- reset control -->
+                        <button
+                                data-jplist-control="reset"
+                                data-group="group1"
+                                class="btn btn-secondary"
+                                data-name="reset"
+                                type="button">
+                            Reset
+                        </button>
                     </div>
-
                 </div>
 
             </div>
@@ -162,7 +169,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="@(item.user.links.html)">@(item.user.name)</a> on Unsplash
+                                        <a href="@(item.user.links.html)" class="author-name">@(item.user.name)</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">

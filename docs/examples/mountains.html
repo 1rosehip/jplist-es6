@@ -144,8 +144,16 @@
         <div class="py-3 controls-panel control-top-panel">
             <div class="container">
 
-                <div class="row mb-2">
-                    <div class="col-lg-6">
+                <div class="row mb-2 mr-3">
+                    <div class="col flex flex-wrap align-items-start">
+
+                        <!-- hidden sort by author name -->
+                        <div
+                                style="display: none"
+                                data-jplist-control="hidden-sort"
+                                data-group="group1"
+                                data-path=".author-name">
+                        </div>
 
                         <!-- all items with or without description -->
                         <button
@@ -186,81 +194,80 @@
                         </button>
 
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col flex flex-wrap align-items-start">
 
-                    <div class="row">
-                        <div class="col flex flex-wrap align-items-start">
+                        <!-- pagination control -->
+                        <nav
+                                data-jplist-control="pagination"
+                                data-group="group1"
+                                data-items-per-page="12"
+                                data-current-page="0"
+                                data-disabled-class="disabled"
+                                data-selected-class="active"
+                                data-jump="top"
+                                data-name="pagination1"
+                                class="mb-2 mr-3">
 
-                            <!-- pagination control -->
-                            <nav
-                                    data-jplist-control="pagination"
-                                    data-group="group1"
-                                    data-items-per-page="12"
-                                    data-current-page="0"
-                                    data-disabled-class="disabled"
-                                    data-selected-class="active"
-                                    data-jump="top"
-                                    data-name="pagination1"
-                                    class="mb-2 mr-3">
+                            <!-- first and previous buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="first"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
+                            </ul>
 
-                                <!-- first and previous buttons -->
-                                <ul class="pagination d-inline-flex">
-                                    <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="first"><a class="page-link" href="#">«</a></li>
-                                    <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
-                                </ul>
+                            <!-- pages buttons -->
+                            <ul class="pagination d-none d-sm-none d-lg-inline-flex" data-type="pages">
+                                <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
+                            </ul>
 
-                                <!-- pages buttons -->
-                                <ul class="pagination d-none d-sm-none d-lg-inline-flex" data-type="pages">
-                                    <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
-                                </ul>
+                            <!-- next and last buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="last"><a class="page-link" href="#">»</a></li>
+                            </ul>
 
-                                <!-- next and last buttons -->
-                                <ul class="pagination d-inline-flex">
-                                    <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
-                                    <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="last"><a class="page-link" href="#">»</a></li>
-                                </ul>
-
-                                <!-- information labels -->
-                                <span data-type="info" class="d-none d-sm-none d-lg-inline-flex badge badge-secondary ml-3 p-2">
-                                Page {pageNumber} of {pagesNumber}
+                            <!-- information labels -->
+                            <span data-type="info" class="d-none d-sm-none d-lg-inline-flex badge badge-secondary ml-3 p-2">
+                                {startItem} - {endItem} of {itemsNumber}
                             </span>
 
-                                <!-- items per page dropdown -->
-                                <div class="dropdown d-inline-flex ml-lg-3"
-                                     data-type="items-per-page-dd"
-                                     data-opened-class="show">
+                            <!-- items per page dropdown -->
+                            <div class="dropdown d-inline-flex ml-lg-3"
+                                 data-type="items-per-page-dd"
+                                 data-opened-class="show">
 
-                                    <button
-                                            data-type="panel"
-                                            class="btn btn-primary dropdown-toggle"
-                                            type="button">
-                                        Dropdown button
-                                    </button>
+                                <button
+                                        data-type="panel"
+                                        class="btn btn-primary dropdown-toggle"
+                                        type="button">
+                                    Dropdown button
+                                </button>
 
-                                    <div
-                                            data-type="content"
-                                            class="dropdown-menu"
-                                            aria-labelledby="dropdownMenuButton">
+                                <div
+                                        data-type="content"
+                                        class="dropdown-menu"
+                                        aria-labelledby="dropdownMenuButton">
 
-                                        <a class="dropdown-item" href="#" data-value="12">12 per page</a>
-                                        <a class="dropdown-item" href="#" data-value="24">24 per page</a>
-                                        <a class="dropdown-item" href="#" data-value="0">View All</a>
+                                    <a class="dropdown-item" href="#" data-value="12">12 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="24">24 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="0">View All</a>
 
-                                    </div>
                                 </div>
+                            </div>
 
-                            </nav>
+                        </nav>
 
-                            <!-- reset control -->
-                            <button
-                                    data-jplist-control="reset"
-                                    data-group="group1"
-                                    class="btn btn-secondary"
-                                    type="button">
-                                Reset
-                            </button>
-                        </div>
+                        <!-- reset control -->
+                        <button
+                                data-jplist-control="reset"
+                                data-group="group1"
+                                class="btn btn-secondary"
+                                data-name="reset"
+                                type="button">
+                            Reset
+                        </button>
                     </div>
-
                 </div>
 
             </div>
@@ -287,7 +294,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@simonfitall">Simon Fitall</a> on Unsplash
+                                        <a href="https://unsplash.com/@simonfitall" class="author-name">Simon Fitall</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -401,7 +408,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@theandrewwilliam">Andrew Charney</a> on Unsplash
+                                        <a href="https://unsplash.com/@theandrewwilliam" class="author-name">Andrew Charney</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -515,7 +522,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@tadej">Tadej Skofic</a> on Unsplash
+                                        <a href="https://unsplash.com/@tadej" class="author-name">Tadej Skofic</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -629,7 +636,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@john_jennings">John Jennings</a> on Unsplash
+                                        <a href="https://unsplash.com/@john_jennings" class="author-name">John Jennings</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -706,7 +713,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@carlocolumbaphotography">Carlo Columba</a> on Unsplash
+                                        <a href="https://unsplash.com/@carlocolumbaphotography" class="author-name">Carlo Columba</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -811,7 +818,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@btristan">Tiziano Bortolotti</a> on Unsplash
+                                        <a href="https://unsplash.com/@btristan" class="author-name">Tiziano Bortolotti</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -919,7 +926,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@acharki95">Aziz Acharki</a> on Unsplash
+                                        <a href="https://unsplash.com/@acharki95" class="author-name">Aziz Acharki</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -1033,7 +1040,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@simonfitall">Simon Fitall</a> on Unsplash
+                                        <a href="https://unsplash.com/@simonfitall" class="author-name">Simon Fitall</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -1144,7 +1151,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@alexb">Alex Blăjan</a> on Unsplash
+                                        <a href="https://unsplash.com/@alexb" class="author-name">Alex Blăjan</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -1258,7 +1265,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@andaz">Andaz</a> on Unsplash
+                                        <a href="https://unsplash.com/@andaz" class="author-name">Andaz</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -1360,7 +1367,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@mparzuchowski">Michał Parzuchowski</a> on Unsplash
+                                        <a href="https://unsplash.com/@mparzuchowski" class="author-name">Michał Parzuchowski</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -1468,7 +1475,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@kmagnuson">Karl Magnuson</a> on Unsplash
+                                        <a href="https://unsplash.com/@kmagnuson" class="author-name">Karl Magnuson</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -1573,7 +1580,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@tanvimalik">Tanvi Malik</a> on Unsplash
+                                        <a href="https://unsplash.com/@tanvimalik" class="author-name">Tanvi Malik</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -1690,7 +1697,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@simonfitall">Simon Fitall</a> on Unsplash
+                                        <a href="https://unsplash.com/@simonfitall" class="author-name">Simon Fitall</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -1801,7 +1808,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@lucabravo">Luca Bravo</a> on Unsplash
+                                        <a href="https://unsplash.com/@lucabravo" class="author-name">Luca Bravo</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -1915,7 +1922,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@jfbrou">Jf Brou</a> on Unsplash
+                                        <a href="https://unsplash.com/@jfbrou" class="author-name">Jf Brou</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2026,7 +2033,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@kalenemsley">Kalen Emsley</a> on Unsplash
+                                        <a href="https://unsplash.com/@kalenemsley" class="author-name">Kalen Emsley</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2143,7 +2150,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@toriamia">Victoria Palacios</a> on Unsplash
+                                        <a href="https://unsplash.com/@toriamia" class="author-name">Victoria Palacios</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2236,7 +2243,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@ignitedit">Mark Basarab</a> on Unsplash
+                                        <a href="https://unsplash.com/@ignitedit" class="author-name">Mark Basarab</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2353,7 +2360,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@alle_sacchi">Alessandro Sacchi</a> on Unsplash
+                                        <a href="https://unsplash.com/@alle_sacchi" class="author-name">Alessandro Sacchi</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2449,7 +2456,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@john_jennings">John Jennings</a> on Unsplash
+                                        <a href="https://unsplash.com/@john_jennings" class="author-name">John Jennings</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2526,7 +2533,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@idanarad">Idan Arad</a> on Unsplash
+                                        <a href="https://unsplash.com/@idanarad" class="author-name">Idan Arad</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2631,7 +2638,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@staticlaw">Fabrizio Conti</a> on Unsplash
+                                        <a href="https://unsplash.com/@staticlaw" class="author-name">Fabrizio Conti</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2739,7 +2746,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@kaidi_guo">Kaidi Guo</a> on Unsplash
+                                        <a href="https://unsplash.com/@kaidi_guo" class="author-name">Kaidi Guo</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2853,7 +2860,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@matthiasmullie">Matthias Mullie</a> on Unsplash
+                                        <a href="https://unsplash.com/@matthiasmullie" class="author-name">Matthias Mullie</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -2970,7 +2977,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@verstuyftj">Jonas Verstuyft</a> on Unsplash
+                                        <a href="https://unsplash.com/@verstuyftj" class="author-name">Jonas Verstuyft</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -3087,7 +3094,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@rohittandon">Rohit Tandon</a> on Unsplash
+                                        <a href="https://unsplash.com/@rohittandon" class="author-name">Rohit Tandon</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -3204,7 +3211,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@mischievous_penguins">Casey Horner</a> on Unsplash
+                                        <a href="https://unsplash.com/@mischievous_penguins" class="author-name">Casey Horner</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -3321,7 +3328,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@kimonmaritz">Kimon Maritz</a> on Unsplash
+                                        <a href="https://unsplash.com/@kimonmaritz" class="author-name">Kimon Maritz</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -3438,7 +3445,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@mrbrodeur">Matthew Brodeur</a> on Unsplash
+                                        <a href="https://unsplash.com/@mrbrodeur" class="author-name">Matthew Brodeur</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -3555,7 +3562,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@inf1783">Karsten Würth (@inf1783)</a> on Unsplash
+                                        <a href="https://unsplash.com/@inf1783" class="author-name">Karsten Würth (@inf1783)</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -3672,7 +3679,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@breannagalley">Breanna Galley</a> on Unsplash
+                                        <a href="https://unsplash.com/@breannagalley" class="author-name">Breanna Galley</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -3789,7 +3796,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@heytowner">JOHN TOWNER</a> on Unsplash
+                                        <a href="https://unsplash.com/@heytowner" class="author-name">JOHN TOWNER</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -3906,7 +3913,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@gebhartyler">tyler gebhart</a> on Unsplash
+                                        <a href="https://unsplash.com/@gebhartyler" class="author-name">tyler gebhart</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -4020,7 +4027,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@danielleone">Daniel Leone</a> on Unsplash
+                                        <a href="https://unsplash.com/@danielleone" class="author-name">Daniel Leone</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -4113,7 +4120,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@radel">Marco Bonomo</a> on Unsplash
+                                        <a href="https://unsplash.com/@radel" class="author-name">Marco Bonomo</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -4230,7 +4237,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@dinoreichmuth">Dino Reichmuth</a> on Unsplash
+                                        <a href="https://unsplash.com/@dinoreichmuth" class="author-name">Dino Reichmuth</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -4344,7 +4351,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@oliviermiche">Olivier Miche</a> on Unsplash
+                                        <a href="https://unsplash.com/@oliviermiche" class="author-name">Olivier Miche</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -4461,7 +4468,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@von_co">Ivana Cajina</a> on Unsplash
+                                        <a href="https://unsplash.com/@von_co" class="author-name">Ivana Cajina</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -4572,7 +4579,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@cikstefan">Štefan Štefančík</a> on Unsplash
+                                        <a href="https://unsplash.com/@cikstefan" class="author-name">Štefan Štefančík</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -4689,7 +4696,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@mparzuchowski">Michał Parzuchowski</a> on Unsplash
+                                        <a href="https://unsplash.com/@mparzuchowski" class="author-name">Michał Parzuchowski</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -4806,7 +4813,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@clarissemeyer">Clarisse Meyer</a> on Unsplash
+                                        <a href="https://unsplash.com/@clarissemeyer" class="author-name">Clarisse Meyer</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -4923,7 +4930,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@mrwong">MR WONG</a> on Unsplash
+                                        <a href="https://unsplash.com/@mrwong" class="author-name">MR WONG</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -5040,7 +5047,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@jordansteranka">Jordan Steranka</a> on Unsplash
+                                        <a href="https://unsplash.com/@jordansteranka" class="author-name">Jordan Steranka</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -5157,7 +5164,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@samsomfotos">samsommer</a> on Unsplash
+                                        <a href="https://unsplash.com/@samsomfotos" class="author-name">samsommer</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -5274,7 +5281,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@danedeaner">Dane Deaner</a> on Unsplash
+                                        <a href="https://unsplash.com/@danedeaner" class="author-name">Dane Deaner</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -5382,7 +5389,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@eberhardgross">eberhard grossgasteiger</a> on Unsplash
+                                        <a href="https://unsplash.com/@eberhardgross" class="author-name">eberhard grossgasteiger</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -5449,7 +5456,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@eberhardgross">eberhard grossgasteiger</a> on Unsplash
+                                        <a href="https://unsplash.com/@eberhardgross" class="author-name">eberhard grossgasteiger</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -5526,7 +5533,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@mischievous_penguins">Casey Horner</a> on Unsplash
+                                        <a href="https://unsplash.com/@mischievous_penguins" class="author-name">Casey Horner</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
@@ -5625,7 +5632,7 @@
 
                                     <li class="list-group-item">
                                         <b class="header production-header">Photo by</b>
-                                        <a href="https://unsplash.com/@foemedia">Fabian Oelkers</a> on Unsplash
+                                        <a href="https://unsplash.com/@foemedia" class="author-name">Fabian Oelkers</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
