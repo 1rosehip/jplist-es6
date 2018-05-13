@@ -19,6 +19,12 @@ class BasePathFilterControl extends BaseControl{
              * @type {string}
              */
             this.path = (element.getAttribute('data-path') || '').trim();
+
+            /**
+             * defines if path is inverted; if true, the path filter returns all items that DON'T contain the specified path
+             * @type {string}
+             */
+            this.isInverted = (element.getAttribute('data-inverted') || '').toLowerCase().trim() === 'true';
         }
     }
 
@@ -29,7 +35,8 @@ class BasePathFilterControl extends BaseControl{
     getPathFilterOptions(){
 
         return {
-            path: this.path
+            path: this.path,
+            isInverted: this.isInverted
         };
     }
 
@@ -39,7 +46,7 @@ class BasePathFilterControl extends BaseControl{
      * @return {boolean}
      */
     isEqualTo(control){
-        return this.path === control.path;
+        return this.path === control.path && this.isInverted === control.isInverted;
     }
 }
 

@@ -505,6 +505,32 @@ describe('Filter Action', () => {
             const res = FilterAction.pathFilter(items, '.title');
             expect(res).toEqual([item1, item3]);
         });
+
+        it('.title path for the inverted filter', () => {
+
+            const item1 = generateHTMLElement(`
+                <div>
+                    <p class="title">aaa</p>
+                </div>
+            `);
+
+            const item2 = generateHTMLElement(`
+                <div>
+                    <p class="desc">bbb</p>
+                </div>
+            `);
+
+            const item3 = generateHTMLElement(`
+                <div>
+                    <p class="title">ccc</p>
+                </div>
+            `);
+
+            const items = [item1, item2, item3];
+
+            const res = FilterAction.pathFilter(items, '.title', true);
+            expect(res).toEqual([item2]);
+        });
     });
 
     describe('Range Filter', () => {

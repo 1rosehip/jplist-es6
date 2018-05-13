@@ -55,7 +55,7 @@ class ContentManager{
 
                         for(let pathFilterOption of options.pathFilterOptions){
 
-                            filtered = FilterAction.pathFilter(filtered, pathFilterOption.path);
+                            filtered = FilterAction.pathFilter(filtered, pathFilterOption.path, pathFilterOption.isInverted);
                             itemsNumber = filtered.length;
                             fragment = ContentManager.getItemsFragment(filtered);
                         }

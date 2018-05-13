@@ -43,6 +43,49 @@ describe('Base Path Filter Control', () => {
         `).path).toEqual('.title');
     });
 
+    it('control isInverted default value = false', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+         />
+        `).isInverted).toEqual(false);
+    });
+
+    it('control isInverted true', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-inverted="true"
+         />
+        `).isInverted).toEqual(true);
+    });
+
+    it('control isInverted should be trimmed', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-inverted="      true       "
+         />
+        `).isInverted).toEqual(true);
+    });
+
+    it('control isInverted should be lower cased', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-inverted="TRUE"
+         />
+        `).isInverted).toEqual(true);
+    });
+
     describe('isEqualTo', () => {
 
         it('isEqualTo in case of the same paths', () => {
@@ -104,6 +147,47 @@ describe('Base Path Filter Control', () => {
             `);
 
             expect(control1.isEqualTo(control2)).toEqual(true);
+        });
+
+        it('default paths with isInverted true', () => {
+
+            const control1 = generateControl(`
+             <div
+                    data-jplist-control="abc-filter"
+                    data-group="group1"
+                    data-inverted="true"
+             />
+            `);
+
+            const control2 = generateControl(`
+             <div
+                    data-jplist-control="abc-filter"
+                    data-group="group1"
+                    data-inverted="true"
+             />
+            `);
+
+            expect(control1.isEqualTo(control2)).toEqual(true);
+        });
+
+        it('default paths with different isInverted values', () => {
+
+            const control1 = generateControl(`
+             <div
+                    data-jplist-control="abc-filter"
+                    data-group="group1"
+             />
+            `);
+
+            const control2 = generateControl(`
+             <div
+                    data-jplist-control="abc-filter"
+                    data-group="group1"
+                    data-inverted="true"
+             />
+            `);
+
+            expect(control1.isEqualTo(control2)).toEqual(false);
         });
     });
 

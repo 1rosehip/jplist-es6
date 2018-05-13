@@ -15,3 +15,8 @@
 .card{
     height: 100%;
 }
+
+[data-jplist-control="buttons-path-filter"].jplist-selected{
+    background-color: #007bff;
+    border-color: #007bff;
+}

@@ -90,9 +90,10 @@ class FilterAction{
      * only items with the given path are returned
      * @param {Array.<HTMLElement>} items
      * @param {string=} path - any CSS selector or empty value meaning the whole element
+     * @param {boolean} isInverted - if true, return all items that DON'T contain the specified path
      * @return {Array.<HTMLElement>} filtered items
      */
-    static pathFilter(items, path=''){
+    static pathFilter(items, path='', isInverted = false){
 
         const filtered = [];
 
@@ -104,7 +105,7 @@ class FilterAction{
 
             const el = item.querySelector(path);
 
-            if(el){
+            if(el && !isInverted || !el && isInverted){
                 filtered.push(item);
             }
         }

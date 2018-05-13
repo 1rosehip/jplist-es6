@@ -415,6 +415,7 @@
                 <ul>
                     <li class="toc-entry toc-h3"><a href="#radio-mode">Radio buttons mode</a></li>
                     <li class="toc-entry toc-h3"><a href="#checkbox-mode">Checkbox mode</a></li>
+                    <li class="toc-entry toc-h3"><a href="#inverted">Inverted filter</a></li>
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
                     <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
                 </ul>
@@ -562,6 +563,27 @@
 &lt;script>
     jplist.init();
 &lt;/script>
+            </code></pre>
+        </div>
+
+        <h3 id="inverted">Inverted Filter</h3>
+
+        <p>
+            It's possible to find all items that <code class="highlighter-rouge">don't contain</code> the specified CSS selector using <code class="highlighter-rouge">data-inverted="true"</code> attribute:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- find all items that don't have .title class -->
+&lt;button
+        type="button"
+        data-jplist-control="buttons-path-filter"
+        data-path=".title"
+        data-inverted="true"
+        data-group="group1"
+        data-selected="true"
+        data-mode="checkbox">
+    Items with .title class
+&lt;/button>
             </code></pre>
         </div>
 
