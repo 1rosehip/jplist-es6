@@ -63,6 +63,64 @@
                             Items without description
                         </button>
 
+                        <!-- text filter by tags -->
+                        <div class="input-group">
+                            <input
+                                    data-jplist-control="textbox-filter"
+                                    data-group="group1"
+                                    data-name="my-filter-1"
+                                    data-path=".badge"
+                                    type="text"
+                                    value=""
+                                    placeholder="Filter by Tags"
+                                    data-clear-btn-id="tags-clear-btn"
+                                    class="form-control"
+                            />
+
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="tags-clear-btn">Clear</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col flex flex-wrap align-items-start">
+                        <button
+                                data-jplist-control="buttons-range-filter"
+                                class="btn btn-secondary"
+                                type="button"
+                                data-path=".date"
+                                data-group="group1"
+                                data-name="date"
+                                data-selected="true"
+                                data-from="2014"
+                                data-to="2015">
+                            Created: 2014 - 2015
+                        </button>
+
+                        <button
+                                data-jplist-control="buttons-range-filter"
+                                class="btn btn-secondary"
+                                type="button"
+                                data-path=".date"
+                                data-group="group1"
+                                data-name="date"
+                                data-from="2016"
+                                data-to="2017">
+                            Created: 2016 - 2017
+                        </button>
+
+                        <button
+                                data-jplist-control="buttons-range-filter"
+                                class="btn btn-secondary"
+                                type="button"
+                                data-path=".date"
+                                data-group="group1"
+                                data-name="date"
+                                data-from="2018">
+                            Created: >= 2018
+                        </button>
                     </div>
                 </div>
                 <div class="row">
@@ -203,7 +261,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>@(item.createdDate.toLocaleDateString('en-US', {
+                                    <small class="text-muted">Created at <span class="date">@(item.createdDate.toLocaleDateString('en-US', {
                                         //weekday: 'long',
                                         year: 'numeric',
                                         month: 'long',

@@ -193,6 +193,64 @@
                             Items without description
                         </button>
 
+                        <!-- text filter by tags -->
+                        <div class="input-group">
+                            <input
+                                    data-jplist-control="textbox-filter"
+                                    data-group="group1"
+                                    data-name="my-filter-1"
+                                    data-path=".badge"
+                                    type="text"
+                                    value=""
+                                    placeholder="Filter by Tags"
+                                    data-clear-btn-id="tags-clear-btn"
+                                    class="form-control"
+                            />
+
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="tags-clear-btn">Clear</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col flex flex-wrap align-items-start">
+                        <button
+                                data-jplist-control="buttons-range-filter"
+                                class="btn btn-secondary"
+                                type="button"
+                                data-path=".date"
+                                data-group="group1"
+                                data-name="date"
+                                data-selected="true"
+                                data-from="2014"
+                                data-to="2015">
+                            Created: 2014 - 2015
+                        </button>
+
+                        <button
+                                data-jplist-control="buttons-range-filter"
+                                class="btn btn-secondary"
+                                type="button"
+                                data-path=".date"
+                                data-group="group1"
+                                data-name="date"
+                                data-from="2016"
+                                data-to="2017">
+                            Created: 2016 - 2017
+                        </button>
+
+                        <button
+                                data-jplist-control="buttons-range-filter"
+                                class="btn btn-secondary"
+                                type="button"
+                                data-path=".date"
+                                data-group="group1"
+                                data-name="date"
+                                data-from="2018">
+                            Created: >= 2018
+                        </button>
                     </div>
                 </div>
                 <div class="row">
@@ -390,7 +448,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 7, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">February 7, 2018</small>
                                 </div>
 
                             </div>
@@ -504,7 +562,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>March 2, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">March 2, 2018</small>
                                 </div>
 
                             </div>
@@ -618,7 +676,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 23, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">February 23, 2018</small>
                                 </div>
 
                             </div>
@@ -695,7 +753,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>October 24, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">October 24, 2017</small>
                                 </div>
 
                             </div>
@@ -800,7 +858,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>January 26, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">January 26, 2018</small>
                                 </div>
 
                             </div>
@@ -908,7 +966,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>January 29, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">January 29, 2018</small>
                                 </div>
 
                             </div>
@@ -1022,7 +1080,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>March 29, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">March 29, 2018</small>
                                 </div>
 
                             </div>
@@ -1133,7 +1191,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>January 24, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">January 24, 2018</small>
                                 </div>
 
                             </div>
@@ -1247,7 +1305,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>January 3, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">January 3, 2018</small>
                                 </div>
 
                             </div>
@@ -1349,7 +1407,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 17, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">February 17, 2018</small>
                                 </div>
 
                             </div>
@@ -1457,7 +1515,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>October 5, 2015</small>
+                                    <small class="text-muted">Created at <span class="date">October 5, 2015</small>
                                 </div>
 
                             </div>
@@ -1562,7 +1620,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>September 30, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">September 30, 2017</small>
                                 </div>
 
                             </div>
@@ -1679,7 +1737,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>September 7, 2014</small>
+                                    <small class="text-muted">Created at <span class="date">September 7, 2014</small>
                                 </div>
 
                             </div>
@@ -1790,7 +1848,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>January 27, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">January 27, 2018</small>
                                 </div>
 
                             </div>
@@ -1904,7 +1962,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>September 8, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">September 8, 2016</small>
                                 </div>
 
                             </div>
@@ -2015,7 +2073,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>August 31, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">August 31, 2017</small>
                                 </div>
 
                             </div>
@@ -2132,7 +2190,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>June 2, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">June 2, 2016</small>
                                 </div>
 
                             </div>
@@ -2225,7 +2283,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>October 23, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">October 23, 2017</small>
                                 </div>
 
                             </div>
@@ -2342,7 +2400,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>November 2, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">November 2, 2016</small>
                                 </div>
 
                             </div>
@@ -2438,7 +2496,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>January 23, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">January 23, 2017</small>
                                 </div>
 
                             </div>
@@ -2515,7 +2573,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>October 24, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">October 24, 2017</small>
                                 </div>
 
                             </div>
@@ -2620,7 +2678,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>April 11, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">April 11, 2017</small>
                                 </div>
 
                             </div>
@@ -2728,7 +2786,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 15, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">February 15, 2018</small>
                                 </div>
 
                             </div>
@@ -2842,7 +2900,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>April 11, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">April 11, 2017</small>
                                 </div>
 
                             </div>
@@ -2959,7 +3017,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 15, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">February 15, 2017</small>
                                 </div>
 
                             </div>
@@ -3076,7 +3134,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>August 26, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">August 26, 2017</small>
                                 </div>
 
                             </div>
@@ -3193,7 +3251,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 3, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">February 3, 2016</small>
                                 </div>
 
                             </div>
@@ -3310,7 +3368,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 7, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">February 7, 2018</small>
                                 </div>
 
                             </div>
@@ -3427,7 +3485,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>December 25, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">December 25, 2016</small>
                                 </div>
 
                             </div>
@@ -3544,7 +3602,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 4, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">February 4, 2016</small>
                                 </div>
 
                             </div>
@@ -3661,7 +3719,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>January 16, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">January 16, 2017</small>
                                 </div>
 
                             </div>
@@ -3778,7 +3836,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 12, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">February 12, 2016</small>
                                 </div>
 
                             </div>
@@ -3895,7 +3953,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>October 25, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">October 25, 2016</small>
                                 </div>
 
                             </div>
@@ -4009,7 +4067,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>July 30, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">July 30, 2017</small>
                                 </div>
 
                             </div>
@@ -4102,7 +4160,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>January 6, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">January 6, 2017</small>
                                 </div>
 
                             </div>
@@ -4219,7 +4277,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>May 5, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">May 5, 2016</small>
                                 </div>
 
                             </div>
@@ -4333,7 +4391,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>August 2, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">August 2, 2016</small>
                                 </div>
 
                             </div>
@@ -4450,7 +4508,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>June 14, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">June 14, 2016</small>
                                 </div>
 
                             </div>
@@ -4561,7 +4619,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>July 20, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">July 20, 2017</small>
                                 </div>
 
                             </div>
@@ -4678,7 +4736,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>June 26, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">June 26, 2016</small>
                                 </div>
 
                             </div>
@@ -4795,7 +4853,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>October 5, 2015</small>
+                                    <small class="text-muted">Created at <span class="date">October 5, 2015</small>
                                 </div>
 
                             </div>
@@ -4912,7 +4970,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>May 23, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">May 23, 2017</small>
                                 </div>
 
                             </div>
@@ -5029,7 +5087,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>March 6, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">March 6, 2017</small>
                                 </div>
 
                             </div>
@@ -5146,7 +5204,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>January 23, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">January 23, 2018</small>
                                 </div>
 
                             </div>
@@ -5263,7 +5321,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>March 8, 2016</small>
+                                    <small class="text-muted">Created at <span class="date">March 8, 2016</small>
                                 </div>
 
                             </div>
@@ -5371,7 +5429,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>February 23, 2018</small>
+                                    <small class="text-muted">Created at <span class="date">February 23, 2018</small>
                                 </div>
 
                             </div>
@@ -5438,7 +5496,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>October 25, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">October 25, 2017</small>
                                 </div>
 
                             </div>
@@ -5515,7 +5573,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>October 22, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">October 22, 2017</small>
                                 </div>
 
                             </div>
@@ -5614,7 +5672,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>August 27, 2017</small>
+                                    <small class="text-muted">Created at <span class="date">August 27, 2017</small>
                                 </div>
 
                             </div>
@@ -5731,7 +5789,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span>July 24, 2015</small>
+                                    <small class="text-muted">Created at <span class="date">July 24, 2015</small>
                                 </div>
 
                             </div>
