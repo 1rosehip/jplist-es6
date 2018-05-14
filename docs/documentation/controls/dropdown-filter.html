@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            
+                
+
+    
+        Dropdown Filter Control | Documentation | jPList Library
+        </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/styles.min.css?v=1" />
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="jPList Library"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/img/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/img/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/img/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/img/favicon/mstile-310x310.png" />
+
+        
+    
+    <link rel="stylesheet" href="/highlight/default.min.css" />
+
+        <!-- google analytics
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-36006444-3', 'jplist.com');
+            ga('send', 'pageview');
+        </script>
+        -->
+    </head>
+    <body>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row main-navbar">
+
+            <!-- logo -->
+            <a class="navbar-brand mr-0 mr-md-4" href="/" aria-label="jPList">
+                <img src="/img/logo/logo.png" alt="jPList" title="jPList" />
+            </a>
+
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav main-navbar-nav flex-row flex-wrap justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link 
+
+    " href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
+
+    " href="/controls">Controls</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
+
+    
+        active" href="/documentation/index">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
+
+    " href="/examples/index">Examples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
+
+    " href="/download">Download</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+
+                <li class="nav-item">
+                    <a
+                            class="nav-link github-link"
+                            href="https://github.com/1rosehip/jplist-es6"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="GitHub">
+
+                        <img
+                                src="/img/icons/github-logo-light.png"
+                                class="d-inline-block align-top mr-1"
+                                alt="Fork me on GitHub"
+                                title="Fork me on GitHub" />
+                        Fork me on GitHub
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        
+
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+
+            <!-- first sidebar -->
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+    <a class="bd-toc-link" href="/documentation/controls/hidden-sort">
+        Getting Started
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <li 
+
+    >
+            <a href="/documentation/controls/hidden-sort">
+                Hidden Sort Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/sort-buttons">
+                Buttons Sort Control
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+
+    <a class="bd-toc-link" href="/documentation/controls/hidden-sort">
+        Sort Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <li 
+
+    >
+            <a href="/documentation/controls/hidden-sort">
+                Hidden Sort Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/sort-buttons">
+                Buttons Sort Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/radio-buttons-sort">
+                Radio Buttons Sort Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/checkbox-sort">
+                Checkbox Sort Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/select-sort">
+                Select Sort Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/dropdown-sort">
+                Dropdown Sort Control
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+
+    <a class="bd-toc-link" href="/documentation/controls/pagination">
+        Pagination Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <li 
+
+    >
+            <a href="/documentation/controls/pagination">
+                Pagination
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+
+    <a class="bd-toc-link" href="/documentation/controls/textbox-filter">
+        Text Filter Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <!--<li class="spacer"></li>-->
+
+        <li 
+
+    >
+            <a href="/documentation/controls/textbox-filter">
+                Textbox Filter Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/checkbox-text-filter">
+                Checkbox Text Filter Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/radio-buttons-text-filter">
+                Radio Buttons Text Filter Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/buttons-text-filter">
+                Buttons Text Filter Control
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    
+        active">
+
+    <a class="bd-toc-link" href="/documentation/controls/select-filter">
+        Path Filter Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <li 
+
+    >
+            <a href="/documentation/controls/select-filter">
+                Select Filter Control
+            </a>
+        </li>
+        <li 
+
+    
+        class="active bd-sidenav-active">
+            <a href="/documentation/controls/dropdown-filter">
+                Dropdown Filter Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/checkbox-path-filter">
+                Checkbox Path Filter Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/radio-buttons-path-filter">
+                Radio Buttons Path Filter Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/buttons-path-filter">
+                Buttons Path Filter Control
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+    <a class="bd-toc-link" href="/documentation/controls/buttons-range-filter">
+        Range Filter Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+
+        <li 
+
+    >
+            <a href="/documentation/controls/buttons-range-filter">
+                Buttons Range Filter Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/slider-range-filter">
+                Slider Range Filter Control
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+    <a class="bd-toc-link" href="/documentation/controls/no-results">
+        Other Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+
+        <li 
+
+    >
+            <a href="/documentation/controls/no-results">
+                No Results Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/layout">
+                Layout Control
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/reset">
+                Reset Control
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </nav>
+
+            </div>
+
+            
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2">
+                <a href="#html-structure">HTML Structure</a>
+                <ul>
+                    <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
+                    <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
+                </ul>
+            </li>
+            <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
+            <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
+            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a>
+                <ul>
+                    <li class="toc-entry toc-h3"><a href="#inner-elements-data-attributes">Inner elements</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">Dropdown Filter Control</h1>
+
+        <p class="bd-lead">This is a dropdown control with custom styles that filters content by the specified CSS selector path.</p>
+
+        <h2 id="html-structure">HTML Structure</h2>
+
+        <p>
+            Dropdown filter control is defined by required <code class="highlighter-rouge">data-jplist-control="dropdown-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+                
+&lt;!-- filter dropdown control -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h3 id="panels">Top and bottom panels</h3>
+
+        <p>
+            Dropdown control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. All other data attributes should also have the same values:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- filter dropdown control in the top panel -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- filter dropdown control in the bottom panel -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h3 id="jump">Jump to top</h3>
+
+        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user selects a dropdown option. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    data-jump="top"
+    class="jplist-dd">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h2 id="deep-linking">Deep Linking</h2>
+
+        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>deepLinking</i> setting should be <i>true</i> in jPList parameters and <code class="highlighter-rouge">data-value</code> should be added to each option.</p>
+        
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+
+&lt;!-- filter dropdown control -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd"
+    data-id="dd1">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        deepLinking: true
+    });
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="storage">Storage</h2>
+
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>storage</i> setting should be passed to jPList constructor and <code class="highlighter-rouge">data-value</code> should be added to each option.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+
+&lt;!-- filter dropdown control -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd"
+    data-id="dd1">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        storage: 'localStorage', //'localStorage', 'sessionStorage' or 'cookies'
+        storageName: 'jplist'
+    });
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="data-attributes">Data Attributes</h2>
+
+        <p>The full list of control data attributes.</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Values</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code class="highlighter-rouge">data-jplist-control</code></td>
+                <td>Defines dropdown filter control.</td>
+                <td>"dropdown-filter"</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-group</code></td>
+                <td>Defines group of items that should be filtered. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
+                <td>any text value</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-name</code></td>
+                <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
+                <td>any text value</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-jump</code></td>
+                <td>This data attribute can be used to scroll page to the specified location when user selects an option. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
+                <td><i>top</i> keyword or any CS selector</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-id</code></td>
+                <td>This attribute is used for deep linking.</td>
+                <td>any text value that may contain letters, digits, underscores or dashes</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-opened-class</code></td>
+                <td>Optional data attribute that defines CSS class of opened dropdown with custom styles.</td>
+                <td>CSS class name, by default <i>jplist-dd-opened</i></td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <h3 id="inner-elements-data-attributes">Inner elements</h3>
+
+        <p>Data attributes of inner elements.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="panel"</code></td>
+                    <td>Defines a dropdown panel that contains selected text.</td>
+                    <td>"panel"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="content"</code></td>
+                    <td>Defines a wrapper around dropdown options.</td>
+                    <td>"content"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-path</code></td>
+                    <td>CSS selector that defines the HTML element that should be filtered</td>
+                    <td>"default" keyword for the initial value or any CSS selector</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-selected</code></td>
+                    <td>Specifies the initial selected value</td>
+                    <td>"true" or "false"</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+        </div>
+    </div>
+
+    <script src="/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+        <footer class="bd-footer text-muted">
+            <div class="container-fluid p-3 p-md-5">
+                <ul class="bd-footer-links">
+                    <li><a href="/controls">Controls</a></li>
+                    <li><a href="/documentation/index">Documentation</a></li>
+                    <li><a href="/examples/index">Examples</a></li>
+                    <li><a href="/download">Download</a></li>
+                    <li><a href="https://github.com/1rosehip/jplist-es6" target="_blank">GitHub</a></li>
+                </ul>
+
+                <p>jPList Library v1.0.0. <a href="https://github.com/1rosehip/jplist-es6/blob/master/LICENSE.txt" rel="nofollow" target="_blank" rel="license noopener">MIT License</a>.</p>
+
+                <p>
+                    Credits: <a rel="nofollow" href="https://getbootstrap.com">Bootstrap documentation website</a> with changes licensed under <a href="https://creativecommons.org/licenses/by/3.0/" rel="nofollow">the Creative Commons Attribution 3.0 Unported License</a>
+                </p>
+            </div>
+        </footer>
+
+    </body>
+</html>

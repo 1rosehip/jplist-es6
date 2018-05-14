@@ -1,0 +1,493 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2">
+                <a href="#html-structure">HTML Structure</a>
+                <ul>
+                    <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
+                    <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
+                </ul>
+            </li>
+            <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
+            <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
+            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a>
+                <ul>
+                    <li class="toc-entry toc-h3"><a href="#inner-elements-data-attributes">Inner elements</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">Dropdown Filter Control</h1>
+
+        <p class="bd-lead">This is a dropdown control with custom styles that filters content by the specified CSS selector path.</p>
+
+        <h2 id="html-structure">HTML Structure</h2>
+
+        <p>
+            Dropdown filter control is defined by required <code class="highlighter-rouge">data-jplist-control="dropdown-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+                
+&lt;!-- filter dropdown control -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h3 id="panels">Top and bottom panels</h3>
+
+        <p>
+            Dropdown control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. All other data attributes should also have the same values:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- filter dropdown control in the top panel -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- filter dropdown control in the bottom panel -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h3 id="jump">Jump to top</h3>
+
+        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user selects a dropdown option. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    data-jump="top"
+    class="jplist-dd">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h2 id="deep-linking">Deep Linking</h2>
+
+        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>deepLinking</i> setting should be <i>true</i> in jPList parameters and <code class="highlighter-rouge">data-value</code> should be added to each option.</p>
+        
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+
+&lt;!-- filter dropdown control -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd"
+    data-id="dd1">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        deepLinking: true
+    });
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="storage">Storage</h2>
+
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>storage</i> setting should be passed to jPList constructor and <code class="highlighter-rouge">data-value</code> should be added to each option.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+
+&lt;!-- filter dropdown control -->
+&lt;div
+    data-jplist-control="dropdown-filter"
+    data-group="group1"
+    data-name="name1"
+    class="jplist-dd"
+    data-id="dd1">
+
+    &lt;div data-type="panel" class="jplist-dd-panel">Filter by&lt;/div>
+    &lt;div data-type="content" class="jplist-dd-content">
+
+    &lt;div
+            data-value="0"
+            data-path="default"
+            class="jplist-dd-item">Filter by&lt;/div>
+
+    &lt;div
+            data-value="1"
+            data-path=".title"
+            class="jplist-dd-item"
+            data-selected="true">Title&lt;/div>
+
+    &lt;div
+            data-value="2"
+            data-path=".desc"
+            class="jplist-dd-item">Description&lt;/div>
+
+    &lt;div
+            data-value="3"
+            data-path=".likes"
+            class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        storage: 'localStorage', //'localStorage', 'sessionStorage' or 'cookies'
+        storageName: 'jplist'
+    });
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="data-attributes">Data Attributes</h2>
+
+        <p>The full list of control data attributes.</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Values</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code class="highlighter-rouge">data-jplist-control</code></td>
+                <td>Defines dropdown filter control.</td>
+                <td>"dropdown-filter"</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-group</code></td>
+                <td>Defines group of items that should be filtered. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
+                <td>any text value</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-name</code></td>
+                <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
+                <td>any text value</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-jump</code></td>
+                <td>This data attribute can be used to scroll page to the specified location when user selects an option. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
+                <td><i>top</i> keyword or any CS selector</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-id</code></td>
+                <td>This attribute is used for deep linking.</td>
+                <td>any text value that may contain letters, digits, underscores or dashes</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-opened-class</code></td>
+                <td>Optional data attribute that defines CSS class of opened dropdown with custom styles.</td>
+                <td>CSS class name, by default <i>jplist-dd-opened</i></td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <h3 id="inner-elements-data-attributes">Inner elements</h3>
+
+        <p>Data attributes of inner elements.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="panel"</code></td>
+                    <td>Defines a dropdown panel that contains selected text.</td>
+                    <td>"panel"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type="content"</code></td>
+                    <td>Defines a wrapper around dropdown options.</td>
+                    <td>"content"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-path</code></td>
+                    <td>CSS selector that defines the HTML element that should be filtered</td>
+                    <td>"default" keyword for the initial value or any CSS selector</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-selected</code></td>
+                    <td>Specifies the initial selected value</td>
+                    <td>"true" or "false"</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Dropdown Filter Control', header, body, 'path-filter-controls', 'dropdown-filter')
