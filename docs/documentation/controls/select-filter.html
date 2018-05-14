@@ -6,7 +6,7 @@
                 
 
     
-        Select Sort Control | Documentation | jPList Library
+        Select Filter Control | Documentation | jPList Library
         </title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -158,8 +158,7 @@
 
 <div class="bd-toc-item 
 
-    
-        active">
+    ">
 
     <a class="bd-toc-link" href="/documentation/controls/hidden-sort">
         Sort Controls
@@ -196,8 +195,7 @@
         </li>
         <li 
 
-    
-        class="active bd-sidenav-active">
+    >
             <a href="/documentation/controls/select-sort">
                 Select Sort Control
             </a>
@@ -287,7 +285,8 @@
 
 <div class="bd-toc-item 
 
-    ">
+    
+        active">
 
     <a class="bd-toc-link" href="/documentation/controls/select-filter">
         Path Filter Controls
@@ -296,7 +295,8 @@
     <ul class="nav bd-sidenav">
         <li 
 
-    >
+    
+        class="active bd-sidenav-active">
             <a href="/documentation/controls/select-filter">
                 Select Filter Control
             </a>
@@ -431,57 +431,41 @@
     <!-- main content -->
     <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-        <h1 class="bd-title">Select Sort Control</h1>
+        <h1 class="bd-title">Select Filter Control</h1>
 
-        <p class="bd-lead">Select sort control is used to sorts content located at the specified CSS selector depending on user selection.</p>
+        <p class="bd-lead">Select filter control is used to filter content located at the specified CSS selector depending on user selection.</p>
 
         <h2 id="html-structure">HTML Structure</h2>
 
         <p>
-            Select sort control is defined by required <code class="highlighter-rouge">data-jplist-control="select-sort"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be sorted. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+            Select filter control is defined by required <code class="highlighter-rouge">data-jplist-control="select-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. The full list of data attributes can be found <a href="#data-attributes">here</a>.
         </p>
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
                 
-&lt;!-- select sort control -->
+&lt;!-- select filter control -->
 &lt;select
-    data-jplist-control="select-sort"
+    data-jplist-control="select-filter"
     data-group="group1"
     data-name="name1">
 
     &lt;option
             value="0"
-            data-path="default">Sort by&lt;/option>
+            data-path="default">Filter by&lt;/option>
 
     &lt;option
             value="1"
             data-path=".title"
-            data-order="asc"
-            data-type="text"
-            selected>Title A-Z&lt;/option>
+            selected>Title&lt;/option>
 
     &lt;option
             value="2"
-            data-path=".title"
-            data-order="desc"
-            data-type="text">Title Z-A&lt;/option>
-
-    &lt;option
-            value="3"
-            data-path=".likes"
-            data-order="asc"
-            data-type="number">Likes asc&lt;/option>
-
-    &lt;option
-            value="4"
-            data-path=".likes"
-            data-order="desc"
-            data-type="number">Likes desc&lt;/option>
+            data-path=".likes">Likes&lt;/option>
 &lt;/select>
 
-&lt;!-- content to sort -->
+&lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
     &lt;!-- item -->
@@ -518,47 +502,31 @@
         <h3 id="panels">Top and bottom panels</h3>
 
         <p>
-            Select control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. All other data attributes should also have the same values:
+            Select filter control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. All other data attributes should also have the same values:
         </p>
 
         <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- select sort control in the top panel -->
+            <pre><code class="language-html" data-lang="html">&lt;!-- select filter control in the top panel -->
 &lt;select
-    data-jplist-control="select-sort"
+    data-jplist-control="select-filter"
     data-group="group1"
     data-name="name1">
 
     &lt;option
             value="0"
-            data-path="default">Sort by&lt;/option>
+            data-path="default">Filter by&lt;/option>
 
     &lt;option
             value="1"
             data-path=".title"
-            data-order="asc"
-            data-type="text"
-            selected>Title A-Z&lt;/option>
+            selected>Title&lt;/option>
 
     &lt;option
             value="2"
-            data-path=".title"
-            data-order="desc"
-            data-type="text">Title Z-A&lt;/option>
-
-    &lt;option
-            value="3"
-            data-path=".likes"
-            data-order="asc"
-            data-type="number">Likes asc&lt;/option>
-
-    &lt;option
-            value="4"
-            data-path=".likes"
-            data-order="desc"
-            data-type="number">Likes desc&lt;/option>
+            data-path=".likes">Likes&lt;/option>
 &lt;/select>
 
-&lt;!-- content to sort -->
+&lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
     &lt;!-- item -->
@@ -584,40 +552,24 @@
 
 &lt;/div>
 
-&lt;!-- select sort control in the bottom panel -->
+&lt;!-- select filter control in the bottom panel -->
 &lt;select
-    data-jplist-control="select-sort"
+    data-jplist-control="select-filter"
     data-group="group1"
     data-name="name1">
 
     &lt;option
             value="0"
-            data-path="default">Sort by&lt;/option>
+            data-path="default">Filter by&lt;/option>
 
     &lt;option
             value="1"
             data-path=".title"
-            data-order="asc"
-            data-type="text"
-            selected>Title A-Z&lt;/option>
+            selected>Title&lt;/option>
 
     &lt;option
             value="2"
-            data-path=".title"
-            data-order="desc"
-            data-type="text">Title Z-A&lt;/option>
-
-    &lt;option
-            value="3"
-            data-path=".likes"
-            data-order="asc"
-            data-type="number">Likes asc&lt;/option>
-
-    &lt;option
-            value="4"
-            data-path=".likes"
-            data-order="desc"
-            data-type="number">Likes desc&lt;/option>
+            data-path=".likes">Likes&lt;/option>
 &lt;/select>
             </code></pre>
         </div>
@@ -628,77 +580,57 @@
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;select
-    data-jplist-control="select-sort"
+    data-jplist-control="select-filter"
     data-group="group1"
-    data-name="name1"
-    data-jump="top">
+    data-jump="top"
+    data-name="name1">
 
     &lt;option
             value="0"
-            data-path="default">Sort by&lt;/option>
+            data-path="default">Filter by&lt;/option>
 
     &lt;option
             value="1"
             data-path=".title"
-            data-order="asc"
-            data-type="text"
-            selected>Title A-Z&lt;/option>
+            selected>Title&lt;/option>
 
     &lt;option
             value="2"
-            data-path=".title"
-            data-order="desc"
-            data-type="text">Title Z-A&lt;/option>
+            data-path=".likes">Likes&lt;/option>
 &lt;/select>
             </code></pre>
         </div>
 
         <h2 id="deep-linking">Deep Linking</h2>
 
-        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>deepLinking</i> setting should be <i>true</i> in jPList parameters and <code class="highlighter-rouge">value</code> should be added to each option.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>deepLinking</i> setting should be <i>true</i> in jPList parameters.</p>
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
-&lt;!-- select sort control -->
+&lt;!-- select filter control -->
 &lt;select
-    data-jplist-control="select-sort"
+    data-jplist-control="select-filter"
     data-group="group1"
-    data-name="name1"
-    data-id="select1">
+    data-id="select1"
+    data-name="name1">
 
     &lt;option
             value="0"
-            data-path="default">Sort by&lt;/option>
+            data-path="default">Filter by&lt;/option>
 
     &lt;option
             value="1"
             data-path=".title"
-            data-order="asc"
-            data-type="text"
-            selected>Title A-Z&lt;/option>
+            selected>Title&lt;/option>
 
     &lt;option
             value="2"
-            data-path=".title"
-            data-order="desc"
-            data-type="text">Title Z-A&lt;/option>
-
-    &lt;option
-            value="3"
-            data-path=".likes"
-            data-order="asc"
-            data-type="number">Likes asc&lt;/option>
-
-    &lt;option
-            value="4"
-            data-path=".likes"
-            data-order="desc"
-            data-type="number">Likes desc&lt;/option>
+            data-path=".likes">Likes&lt;/option>
 &lt;/select>
 
-&lt;!-- content to sort -->
+&lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
     &lt;!-- item -->
@@ -736,50 +668,34 @@
 
         <h2 id="storage">Storage</h2>
 
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure, <i>storage</i> setting should be passed to jPList constructor and <code class="highlighter-rouge">value</code> should be added to each option.</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>storage</i> setting should be passed to jPList constructor.</p>
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
-&lt;!-- select sort control -->
+&lt;!-- select filter control -->
 &lt;select
-    data-jplist-control="select-sort"
+    data-jplist-control="select-filter"
     data-group="group1"
-    data-name="name1"
-    data-id="select1">
+    data-id="select1"
+    data-name="name1">
 
     &lt;option
             value="0"
-            data-path="default">Sort by&lt;/option>
+            data-path="default">Filter by&lt;/option>
 
     &lt;option
             value="1"
             data-path=".title"
-            data-order="asc"
-            data-type="text"
-            selected>Title A-Z&lt;/option>
+            selected>Title&lt;/option>
 
     &lt;option
             value="2"
-            data-path=".title"
-            data-order="desc"
-            data-type="text">Title Z-A&lt;/option>
-
-    &lt;option
-            value="3"
-            data-path=".likes"
-            data-order="asc"
-            data-type="number">Likes asc&lt;/option>
-
-    &lt;option
-            value="4"
-            data-path=".likes"
-            data-order="desc"
-            data-type="number">Likes desc&lt;/option>
+            data-path=".likes">Likes&lt;/option>
 &lt;/select>
 
-&lt;!-- content to sort -->
+&lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
     &lt;!-- item -->
@@ -831,13 +747,13 @@
             <tbody>
                 <tr>
                     <td><code class="highlighter-rouge">data-jplist-control</code></td>
-                    <td>Defines select sort control.</td>
-                    <td>"select-sort"</td>
+                    <td>Defines select filter control.</td>
+                    <td>"select-filter"</td>
                 </tr>
 
                 <tr>
                     <td><code class="highlighter-rouge">data-group</code></td>
-                    <td>Defines group of items that should be sorted. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
+                    <td>Defines group of items that should be filtered. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
                     <td>any text value</td>
                 </tr>
 
@@ -878,21 +794,10 @@
 
                 <tr>
                     <td><code class="highlighter-rouge">data-path</code></td>
-                    <td>CSS selector that defines the HTML element that should be sorted</td>
+                    <td>CSS selector that defines the HTML element that should be filtered</td>
                     <td>"default" keyword for the initial value or any CSS selector</td>
                 </tr>
 
-                <tr>
-                    <td><code class="highlighter-rouge">data-order</code></td>
-                    <td>Specifies the sort order.</td>
-                    <td>"asc" or "desc"</td>
-                </tr>
-
-                <tr>
-                    <td><code class="highlighter-rouge">data-type</code></td>
-                    <td>Specifies the type of content that should be sorted.</td>
-                    <td>"text", "number" or "datetime"</td>
-                </tr>
             </tbody>
         </table>
 
