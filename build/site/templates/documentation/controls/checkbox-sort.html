@@ -25,15 +25,14 @@
     <!-- main content -->
     <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-        <h1 class="bd-title">Radio Buttons Sort Control</h1>
+        <h1 class="bd-title">Checkbox Sort Control</h1>
 
-        <p class="bd-lead">Radio buttons sort controls are used to sorts content located at the specified CSS selector paths.</p>
+        <p class="bd-lead">Checkbox sort controls are used to sorts content located at the specified CSS selector paths.</p>
 
         <h2 id="html-structure">HTML Structure</h2>
 
         <p>
-            Radio buttons sort control is defined by required <code class="highlighter-rouge">data-jplist-control="radio-buttons-sort"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be sorted.
-        All buttons of the same group should have the same <code class="highlighter-rouge">name</code> or <code class="highlighter-rouge">data-name</code> attribute.
+            Checkbox sort control is defined by required <code class="highlighter-rouge">data-jplist-control="checkbox-sort"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be sorted.
         The full list of data attributes can be found <a href="#data-attributes">here</a>.
     </p>
         </p>
@@ -44,28 +43,24 @@
 
 &lt;!-- sort by title ASC -->
 &lt;input
-    type="radio"
-    data-jplist-control="radio-buttons-sort"
+    type="checkbox"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="asc"
     data-type="text"
-    data-name="sort1"
-    name="sort1"
     checked>
     Sort by title asc
 &lt;/input>
 
 &lt;!-- sort by title DESC -->
 &lt;input
-    type="radio"
-    data-jplist-control="radio-buttons-sort"
+    type="checkbox"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="desc"
-    data-type="text"
-    data-name="sort1"
-    name="sort1">
+    data-type="text">
     Sort by title desc
 &lt;/input>
 
@@ -103,7 +98,7 @@
         <h3 id="panels">Top and bottom panels</h3>
 
         <p>
-            Radio button sort controls can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute should be the same within all radio buttons of the same group, but the <code class="highlighter-rouge">name</code> attribute should be different in top and bottom panels:
+            Checkbox sort controls can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute should be the same within all controls in top and bottom panels:
         </p>
 
         <div class="highlight">
@@ -111,13 +106,12 @@
 &lt;!-- sort by title ASC -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-sort"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="asc"
     data-type="text"
     data-name="sort1"
-    name="top-panel-sort"
     checked>
     Sort by title asc
 &lt;/input>
@@ -125,13 +119,12 @@
 &lt;!-- sort by title DESC -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-sort"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="desc"
     data-type="text"
-    data-name="sort1"
-    name="top-panel-sort">
+    data-name="sort1">
     Sort by title desc
 &lt;/input>
 
@@ -162,13 +155,12 @@
 &lt;!-- sort by title ASC -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-sort"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="asc"
     data-type="text"
     data-name="sort1"
-    name="bottom-panel-sort"
     checked>
     Sort by title asc
 &lt;/input>
@@ -176,13 +168,12 @@
 &lt;!-- sort by title DESC -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-sort"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="desc"
     data-type="text"
-    data-name="sort1"
-    name="bottom-panel-sort">
+    data-name="sort1">
     Sort by title desc
 &lt;/input>
             </code></pre>
@@ -190,19 +181,17 @@
 
         <h3 id="jump">Jump to top</h3>
 
-        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user selects a radio button. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
+        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user changes a checkbox value. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- sort by title ASC -->
 &lt;input
-    type="radio"
-    data-jplist-control="radio-buttons-sort"
+    type="checkbox"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="asc"
     data-type="text"
-    data-name="sort1"
-    name="sort1"
     data-jump="top">
     Sort by title asc
 &lt;/input>
@@ -219,14 +208,12 @@
 
 &lt;!-- sort by title ASC -->
 &lt;input
-    type="radio"
-    data-jplist-control="radio-buttons-sort"
+    type="checkbox"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="asc"
     data-type="text"
-    data-name="sort1"
-    name="sort1"
     data-id="titleasc"
     checked>
     Sort by title asc
@@ -235,14 +222,12 @@
 &lt;!-- sort by title DESC -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-sort"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="desc"
     data-type="text"
-    data-name="sort1"
-    data-id="titledesc"
-    name="sort1">
+    data-id="titledesc">
     Sort by title desc
 &lt;/input>
 
@@ -289,14 +274,12 @@
 
 &lt;!-- sort by title ASC -->
 &lt;input
-    type="radio"
-    data-jplist-control="radio-buttons-sort"
+    type="checkbox"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="asc"
     data-type="text"
-    data-name="sort1"
-    name="sort1"
     data-id="titleasc"
     checked>
     Sort by title asc
@@ -304,15 +287,13 @@
 
 &lt;!-- sort by title DESC -->
 &lt;input
-    type="radio"
-    data-jplist-control="radio-buttons-sort"
+    type="checkbox"
+    data-jplist-control="checkbox-sort"
     data-path=".title"
     data-group="group1"
     data-order="desc"
     data-type="text"
-    data-name="sort1"
-    data-id="titledesc"
-    name="sort1">
+    data-id="titledesc">
     Sort by title desc
 &lt;/input>
 
@@ -366,7 +347,7 @@
                 <tr>
                     <td><code class="highlighter-rouge">data-jplist-control</code></td>
                     <td>Defines radio buttons sort control.</td>
-                    <td>"radio-buttons-sort"</td>
+                    <td>"checkbox-sort"</td>
                 </tr>
 
                 <tr>
@@ -377,14 +358,8 @@
 
                 <tr>
                     <td><code class="highlighter-rouge">data-name</code></td>
-                    <td>The data-name attribute is used to identify the group of sort buttons in radio mode or the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
+                    <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
                     <td>any text value</td>
-                </tr>
-
-                <tr>
-                    <td><code class="highlighter-rouge">data-mode</code></td>
-                    <td>Defines sort buttons behaviour.</td>
-                    <td>"radio" (the default) or "checkbox"</td>
                 </tr>
 
                 <tr>
@@ -406,14 +381,8 @@
                 </tr>
 
                 <tr>
-                    <td><code class="highlighter-rouge">data-selected</code></td>
-                    <td>Specifies if the button should be selected on page load.</td>
-                    <td>"true" or "false"</td>
-                </tr>
-
-                <tr>
                     <td><code class="highlighter-rouge">data-jump</code></td>
-                    <td>This data attribute can be used to scroll page to the specified location when user clicks a button. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
+                    <td>This data attribute can be used to scroll page to the specified location when user changes a checkbox value. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
                     <td><i>top</i> keyword or any CS selector</td>
                 </tr>
 
@@ -429,4 +398,4 @@
     </div>
 }
 
-@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Radio Buttons Sort Control', header, body, 'sort-controls', 'radio-buttons-sort')
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Checkbox Sort Control', header, body, 'sort-controls', 'checkbox-sort')
