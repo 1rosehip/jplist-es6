@@ -6,7 +6,7 @@
                 
 
     
-        Checkbox Text Filter Control | Documentation | jPList Library
+        Buttons Text Filter Control | Documentation | jPList Library
         </title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -258,8 +258,7 @@
         </li>
         <li 
 
-    
-        class="active bd-sidenav-active">
+    >
             <a href="/documentation/controls/checkbox-text-filter">
                 Checkbox Text Filter Control
             </a>
@@ -273,7 +272,8 @@
         </li>
         <li 
 
-    >
+    
+        class="active bd-sidenav-active">
             <a href="/documentation/controls/buttons-text-filter">
                 Buttons Text Filter Control
             </a>
@@ -413,6 +413,8 @@
             <li class="toc-entry toc-h2">
                 <a href="#html-structure">HTML Structure</a>
                 <ul>
+                    <li class="toc-entry toc-h3"><a href="#radio-mode">Radio buttons mode</a></li>
+                    <li class="toc-entry toc-h3"><a href="#checkbox-mode">Checkbox mode</a></li>
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
                     <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
                 </ul>
@@ -427,41 +429,38 @@
     <!-- main content -->
     <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-        <h1 class="bd-title">Checkbox Text Filter Control</h1>
+        <h1 class="bd-title">Buttons Text Filter Control</h1>
 
-        <p class="bd-lead">Checkbox text filter control is used to filter content by the defined text value at the specified CSS selector path.</p>
+        <p class="bd-lead">This control works like checkbox or radio button but has a button layout. It's used to filter content that contains the specified CSS selector.</p>
 
         <h2 id="html-structure">HTML Structure</h2>
 
         <p>
-            Checkbox text filter control is defined by required <code class="highlighter-rouge">data-jplist-control="checkbox-text-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+            Buttons text filter control is defined by required <code class="highlighter-rouge">data-jplist-control="buttons-text-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+        </p>
+
+        <h3 id="radio-mode">Radio Buttons Mode</h3>
+
+        <p>
+            In radio mode all buttons should have the same <code class="highlighter-rouge">name</code> or <code class="highlighter-rouge">data-name</code> attribute. Also <code class="highlighter-rouge">data-mode</code> attribute should be <b>radio</b>.
         </p>
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
-                
-&lt;!-- checkbox text filter control -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-text-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    value="car"
-    checked>
-Filter by 'car'
-&lt;/input>
 
-&lt;input
-        type="checkbox"
-        data-jplist-control="checkbox-text-filter"
-        data-group="group1"
-        data-name="name1"
+&lt;!-- filter control -->
+&lt;button
+        type="button"
+        data-jplist-control="buttons-text-filter"
         data-path=".title"
-        value="tree">
-Filter by 'tree'
-&lt;/input>
+        data-group="group1"
+        data-mode="radio"
+        data-selected="true"
+        data-text="car"
+        data-name="filter-1">
+    Items with .title class that contains "car" word
+&lt;/button>
 
 &lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
@@ -474,13 +473,66 @@ Filter by 'tree'
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 2&lt;/div>
+        &lt;div class="likes">Title value 1&lt;/div>
         ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 3&lt;/div>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h3 id="checkbox-mode">Checkbox Mode</h3>
+
+        <p>
+            In checkbox mode all buttons should have <code class="highlighter-rouge">data-mode="checkbox"</code> attribute.
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+
+&lt;!-- filter control -->
+&lt;button
+        type="button"
+        data-jplist-control="buttons-text-filter"
+        data-path=".title"
+        data-group="group1"
+        data-selected="true"
+        data-text="car"
+        data-mode="checkbox">
+    Items with .title class that contains "car" word
+&lt;/button>
+
+&lt;!-- content to filter -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="likes">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
         ....
     &lt;/div>
 
@@ -497,22 +549,23 @@ Filter by 'tree'
         <h3 id="panels">Top and bottom panels</h3>
 
         <p>
-            Checkbox text filter control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. All other data attributes should also have the same values:
+            Button text filter controls can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added to all controls. All other data attributes should also have the same values:
         </p>
 
         <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- checkbox text filter control in the top panel -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-text-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    value="t"
-    checked>
-Filter by 't'
-&lt;/input>
-
+            <pre><code class="language-html" data-lang="html">&lt;!-- TOP PANEL CONTROLS -->
+&lt;button
+        type="button"
+        data-jplist-control="buttons-text-filter"
+        data-path=".title"
+        data-group="group1"
+        data-mode="radio"
+        data-selected="true"
+        data-text="car"
+        data-name="filter-1">
+    Items with .title class that contains "car" word
+&lt;/button>
+                
 &lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
@@ -524,71 +577,75 @@ Filter by 't'
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 2&lt;/div>
+        &lt;div class="title">Title value 1&lt;/div>
         ....
     &lt;/div>
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 3&lt;/div>
+        &lt;div class="title">Title value 1&lt;/div>
         ....
     &lt;/div>
 
 &lt;/div>
 
-&lt;!-- checkbox text filter control in the bottom panel -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-text-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    value="t"
-    checked>
-Filter by 't'
-&lt;/input>
+&lt;!-- BOTTOM PANEL CONTROLS -->
+&lt;button
+        type="button"
+        data-jplist-control="buttons-text-filter"
+        data-path=".title"
+        data-group="group1"
+        data-mode="radio"
+        data-selected="true"
+        data-text="car"
+        data-name="filter-1">
+    Items with .title class that contains "car" word
+&lt;/button>
             </code></pre>
         </div>
 
         <h3 id="jump">Jump to top</h3>
 
-        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user changes checkbox value. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
+        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user clicks a button. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
 
         <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-text-filter"
-    data-jump="top"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    value="t"
-    checked>
-Filter by 't'
-&lt;/input>
+            <pre><code class="language-html" data-lang="html">&lt;!-- filter all items that have .title class -->
+&lt;button
+        type="button"
+        data-jplist-control="buttons-text-filter"
+        data-path=".title"
+        data-group="group1"
+        data-mode="radio"
+        data-selected="true"
+        data-text="car"
+        data-jump="top"
+        data-name="filter-1">
+    Items with .title class that contains "car" word
+&lt;/button>
             </code></pre>
         </div>
 
         <h2 id="deep-linking">Deep Linking</h2>
 
-        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user changes and control state after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>deepLinking</i> setting should be <i>true</i> in jPList parameters.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>deepLinking</i> setting should be <i>true</i> in jPList parameters.</p>
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
-&lt;!-- checkbox text filter control -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-text-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    data-id="title1"
-    value="d"
-    checked>
-Filter by 'd'
-&lt;/input>
+&lt;!-- filter control -->
+&lt;button
+        type="button"
+        data-jplist-control="buttons-text-filter"
+        data-path=".title"
+        data-group="group1"
+        data-mode="radio"
+        data-selected="true"
+        data-text="car"
+        data-id="cartitle"
+        data-name="filter-1">
+    Items with .title class that contains "car" word
+&lt;/button>
 
 &lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
@@ -601,7 +658,7 @@ Filter by 'd'
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="likes">Title value 1&lt;/div>
         ....
     &lt;/div>
 
@@ -631,18 +688,19 @@ Filter by 'd'
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
-&lt;!-- checkbox text filter control -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-text-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    data-id="title1"
-    value="d"
-    checked>
-Filter by 'd'
-&lt;/input>
+&lt;!-- filter control -->
+&lt;button
+        type="button"
+        data-jplist-control="buttons-text-filter"
+        data-path=".title"
+        data-group="group1"
+        data-mode="radio"
+        data-selected="true"
+        data-text="car"
+        data-id="cartitle"
+        data-name="filter-1">
+    Items with .title class that contains "car" word
+&lt;/button>
 
 &lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
@@ -655,7 +713,7 @@ Filter by 'd'
 
     &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="likes">Title value 1&lt;/div>
         ....
     &lt;/div>
 
@@ -693,19 +751,13 @@ Filter by 'd'
             <tbody>
             <tr>
                 <td><code class="highlighter-rouge">data-jplist-control</code></td>
-                <td>Defines checkbox text filter control.</td>
-                <td>"checkbox-text-filter"</td>
+                <td>Defines buttons text filter control.</td>
+                <td>"buttons-text-filter"</td>
             </tr>
 
             <tr>
                 <td><code class="highlighter-rouge">data-group</code></td>
                 <td>Defines group of items that should be filtered. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
-                <td>any text value</td>
-            </tr>
-
-            <tr>
-                <td><code class="highlighter-rouge">data-name</code></td>
-                <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
                 <td>any text value</td>
             </tr>
 
@@ -722,8 +774,26 @@ Filter by 'd'
             </tr>
 
             <tr>
+                <td><code class="highlighter-rouge">data-mode</code></td>
+                <td>Defines filter behaviour.</td>
+                <td>"radio" (the default) or "checkbox"</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-selected</code></td>
+                <td>Defines if a button is selected.</td>
+                <td>"true" or "false"</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-name</code></td>
+                <td>The data-name attribute is used to identify the same controls in different panels or the group of buttons in radio mode. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
+                <td>any text value</td>
+            </tr>
+
+            <tr>
                 <td><code class="highlighter-rouge">data-jump</code></td>
-                <td>This data attribute can be used to scroll page to the specified location when user changes a checkbox value. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
+                <td>This data attribute can be used to scroll page to the specified location when user selects an option. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
                 <td><i>top</i> keyword or any CS selector</td>
             </tr>
 
@@ -735,7 +805,6 @@ Filter by 'd'
 
             </tbody>
         </table>
-
     </div>
 
         </div>

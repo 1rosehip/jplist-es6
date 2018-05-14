@@ -32,7 +32,7 @@
         <h2 id="html-structure">HTML Structure</h2>
 
         <p>
-            Checkbox text filter control is defined by required <code class="highlighter-rouge">data-jplist-control="checkbox-text-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be sorted. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+            Checkbox text filter control is defined by required <code class="highlighter-rouge">data-jplist-control="checkbox-text-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. The full list of data attributes can be found <a href="#data-attributes">here</a>.
         </p>
 
         <div class="highlight">
@@ -61,7 +61,7 @@ Filter by 'car'
 Filter by 'tree'
 &lt;/input>
 
-&lt;!-- content to sort -->
+&lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
     &lt;!-- item -->
@@ -111,7 +111,7 @@ Filter by 'tree'
 Filter by 't'
 &lt;/input>
 
-&lt;!-- content to sort -->
+&lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
     &lt;!-- item -->
@@ -188,7 +188,7 @@ Filter by 't'
 Filter by 'd'
 &lt;/input>
 
-&lt;!-- content to sort -->
+&lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
     &lt;!-- item -->
@@ -242,7 +242,7 @@ Filter by 'd'
 Filter by 'd'
 &lt;/input>
 
-&lt;!-- content to sort -->
+&lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
     &lt;!-- item -->
@@ -311,6 +311,12 @@ Filter by 'd'
                 <td><code class="highlighter-rouge">data-path</code></td>
                 <td>CSS selector that defines the HTML element that should be filtered</td>
                 <td>"default" keyword for the initial value or any CSS selector</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-text</code></td>
+                <td>the filter text value</td>
+                <td>any text value</td>
             </tr>
 
             <tr>
