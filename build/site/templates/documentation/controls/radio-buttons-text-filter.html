@@ -1,0 +1,361 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2">
+                <a href="#html-structure">HTML Structure</a>
+                <ul>
+                    <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
+                    <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
+                </ul>
+            </li>
+            <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
+            <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
+            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a></li>
+        </ul>
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">Radio Buttons Text Filter Control</h1>
+
+        <p class="bd-lead">Radio buttons text filter control is used to filter content by the defined text value at the specified CSS selector path.</p>
+
+        <h2 id="html-structure">HTML Structure</h2>
+
+        <p>
+            Radio buttons text filter control is defined by required <code class="highlighter-rouge">data-jplist-control="radio-buttons-text-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be sorted. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+                
+&lt;!-- radio button text filter control -->
+&lt;input
+    type="radio"
+    data-jplist-control="radio-buttons-text-filter"
+    data-path=".title"
+    data-group="group1"
+    data-name="name1"
+    name="name1"
+    value="car"
+    checked>
+Filter by 'd'
+&lt;/input>
+
+&lt;input
+    type="radio"
+    data-jplist-control="radio-buttons-text-filter"
+    data-group="group1"
+    data-name="name1"
+    data-path=".title"
+    name="name1"
+    value="a">
+Filter by 'a'
+&lt;/input>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 2&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 3&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h3 id="panels">Top and bottom panels</h3>
+
+        <p>
+            Radio button text filter control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. <code class="highlighter-rouge">name</code> attribute should be different in top and bottom panels. All other data attributes should have the same values:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- radio button text text filter control in the top panel -->
+&lt;input
+    type="radio"
+    data-jplist-control="radio-buttons-text-filter"
+    data-path=".title"
+    data-group="group1"
+    data-name="name1"
+    name="top-panel-name"
+    value="car"
+    checked>
+Filter by 'd'
+&lt;/input>
+
+&lt;input
+    type="radio"
+    data-jplist-control="radio-buttons-text-filter"
+    data-group="group1"
+    data-name="name1"
+    data-path=".title"
+    name="top-panel-name"
+    value="a">
+Filter by 'a'
+&lt;/input>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 2&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 3&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- radio button text filter control in the bottom panel -->
+&lt;input
+    type="radio"
+    data-jplist-control="radio-buttons-text-filter"
+    data-path=".title"
+    data-group="group1"
+    data-name="name1"
+    name="bottom-panel-name"
+    value="car"
+    checked>
+Filter by 'd'
+&lt;/input>
+
+&lt;input
+    type="radio"
+    data-jplist-control="radio-buttons-text-filter"
+    data-group="group1"
+    data-name="name1"
+    data-path=".title"
+    name="bottom-panel-name"
+    value="a">
+Filter by 'a'
+&lt;/input>
+            </code></pre>
+        </div>
+
+        <h3 id="jump">Jump to top</h3>
+
+        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user changes radio button value. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;input
+    type="radio"
+    data-jplist-control="radio-buttons-text-filter"
+    data-path=".title"
+    data-group="group1"
+    data-name="name1"
+    name="top-panel-name"
+    value="car"
+    data-jump="top"
+    checked>
+Filter by 'd'
+&lt;/input>
+            </code></pre>
+        </div>
+
+        <h2 id="deep-linking">Deep Linking</h2>
+
+        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user changes and control state after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>deepLinking</i> setting should be <i>true</i> in jPList parameters.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+
+&lt;!-- radio button text filter control -->
+&lt;input
+    type="radio"
+    data-jplist-control="radio-buttons-text-filter"
+    data-group="group1"
+    data-name="name1"
+    data-path=".title"
+    name="name1"
+    data-id="title1"
+    value="a">
+Filter by 'a'
+&lt;/input>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        deepLinking: true
+    });
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="storage">Storage</h2>
+
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>storage</i> setting should be passed to jPList constructor.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
+&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+
+&lt;!-- radio button text filter control -->
+&lt;input
+    type="radio"
+    data-jplist-control="radio-buttons-text-filter"
+    data-group="group1"
+    data-name="name1"
+    data-path=".title"
+    name="name1"
+    data-id="title1"
+    value="a">
+Filter by 'a'
+&lt;/input>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init({
+        storage: 'localStorage', //'localStorage', 'sessionStorage' or 'cookies'
+        storageName: 'jplist'
+    });
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="data-attributes">Data Attributes</h2>
+
+        <p>The full list of control data attributes.</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Values</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code class="highlighter-rouge">data-jplist-control</code></td>
+                <td>Defines radio button text filter control.</td>
+                <td>"radio-buttons-text-filter"</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-group</code></td>
+                <td>Defines group of items that should be filtered. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
+                <td>any text value</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-name</code></td>
+                <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
+                <td>any text value</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-path</code></td>
+                <td>CSS selector that defines the HTML element that should be filtered</td>
+                <td>"default" keyword for the initial value or any CSS selector</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-jump</code></td>
+                <td>This data attribute can be used to scroll page to the specified location when user changes a radio button value. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
+                <td><i>top</i> keyword or any CS selector</td>
+            </tr>
+
+            <tr>
+                <td><code class="highlighter-rouge">data-id</code></td>
+                <td>This attribute is used for deep linking.</td>
+                <td>any text value that may contain letters, digits, underscores or dashes</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Radio Button Text Filter Control', header, body, 'text-filter-controls', 'radio-buttons-text-filter')
