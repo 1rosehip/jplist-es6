@@ -1,0 +1,134 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2"><a href="#html-structure">HTML Structure</a></li>
+            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a></li>
+        </ul>
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">Layout Control</h1>
+
+        <p class="bd-lead">Layout control allows to change wrapper class on button click.</p>
+
+        <h2 id="html-structure">HTML Structure</h2>
+
+        <p>
+            Layout control is defined by required <code class="highlighter-rouge">data-jplist-control="layout"</code> data attribute. The <code class="highlighter-rouge">data-class</code> attribute contains a class name that will be added to the group container on button click:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;button
+            data-jplist-control="layout"
+            type="button"
+            data-class="jplist-list"
+            data-group="group1"
+            data-name="name1">List&lt;/button>
+
+    &lt;button
+            type="button"
+            data-jplist-control="layout"
+            data-class="jplist-grid"
+            data-group="group1"
+            data-name="name1"
+            data-selected="true">Grid&lt;/button>
+
+    &lt;button
+            type="button"
+            data-jplist-control="layout"
+            data-class="jplist-thumb"
+            data-group="group1"
+            data-name="name1">Thumb&lt;/button>
+&lt;/div>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="data-attributes">Data Attributes</h2>
+
+        <p>The full list of control data attributes.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code class="highlighter-rouge">data-jplist-control</code></td>
+                    <td>Defines layout control.</td>
+                    <td>"layout"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-group</code></td>
+                    <td>Defines group of items that should be influenced. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
+                    <td>any text value</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-class</code></td>
+                    <td>Defines a class name that should be added to the group container on button click</td>
+                    <td>CSS class name without the dot</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-name</code></td>
+                    <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
+                    <td>any text value</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-selected</code></td>
+                    <td>Defines if a button is selected.</td>
+                    <td>"true" or "false"</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Layout Control', header, body, 'other-controls', 'layout')
