@@ -6,7 +6,7 @@
                 
 
     
-        Radio Button Text Filter Control | Documentation | jPList Library
+        Radio Button Path Filter Control | Documentation | jPList Library
         </title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -239,8 +239,7 @@
 
 <div class="bd-toc-item 
 
-    
-        active">
+    ">
 
     <a class="bd-toc-link" href="/documentation/controls/textbox-filter">
         Text Filter Controls
@@ -265,8 +264,7 @@
         </li>
         <li 
 
-    
-        class="active bd-sidenav-active">
+    >
             <a href="/documentation/controls/radio-buttons-text-filter">
                 Radio Buttons Text Filter Control
             </a>
@@ -287,7 +285,8 @@
 
 <div class="bd-toc-item 
 
-    ">
+    
+        active">
 
     <a class="bd-toc-link" href="/documentation/controls/select-filter">
         Path Filter Controls
@@ -317,7 +316,8 @@
         </li>
         <li 
 
-    >
+    
+        class="active bd-sidenav-active">
             <a href="/documentation/controls/radio-buttons-path-filter">
                 Radio Buttons Path Filter Control
             </a>
@@ -427,42 +427,40 @@
     <!-- main content -->
     <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-        <h1 class="bd-title">Radio Buttons Text Filter Control</h1>
+        <h1 class="bd-title">Radio Buttons Path Filter Control</h1>
 
-        <p class="bd-lead">Radio buttons text filter control is used to filter content by the defined text value at the specified CSS selector path.</p>
+        <p class="bd-lead">Radio buttons path filter control is used to filter content by the defined path value at the specified CSS selector path.</p>
 
         <h2 id="html-structure">HTML Structure</h2>
 
         <p>
-            Radio buttons text filter control is defined by required <code class="highlighter-rouge">data-jplist-control="radio-buttons-text-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. The full list of data attributes can be found <a href="#data-attributes">here</a>.
+            Radio buttons path filter control is defined by required <code class="highlighter-rouge">data-jplist-control="radio-buttons-path-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. The full list of data attributes can be found <a href="#data-attributes">here</a>.
         </p>
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
-&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+&lt;link href="jplist.styles.css" rel="stylesheet" type="path/css" />
                 
-&lt;!-- radio button text filter control -->
+&lt;!-- radio button path filter control -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-text-filter"
+    data-jplist-control="radio-buttons-path-filter"
     data-path=".title"
     data-group="group1"
     data-name="name1"
     name="name1"
-    value="car"
     checked>
-Filter by 'car'
+Filter by 'd'
 &lt;/input>
 
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-text-filter"
+    data-jplist-control="radio-buttons-path-filter"
     data-group="group1"
     data-name="name1"
     data-path=".title"
-    name="name1"
-    value="a">
-Filter by 'a'
+    name="name1">
+Filter by .title
 &lt;/input>
 
 &lt;!-- content to filter -->
@@ -499,32 +497,20 @@ Filter by 'a'
         <h3 id="panels">Top and bottom panels</h3>
 
         <p>
-            Radio button text filter control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. <code class="highlighter-rouge">name</code> attribute should be different in top and bottom panels. All other data attributes should have the same values:
+            Radio button path filter control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. <code class="highlighter-rouge">name</code> attribute should be different in top and bottom panels. All other data attributes should have the same values:
         </p>
 
         <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- radio button text text filter control in the top panel -->
+            <pre><code class="language-html" data-lang="html">&lt;!-- radio button path path filter control in the top panel -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-text-filter"
+    data-jplist-control="radio-buttons-path-filter"
     data-path=".title"
     data-group="group1"
     data-name="name1"
     name="top-panel-name"
-    value="car"
     checked>
-Filter by 'car'
-&lt;/input>
-
-&lt;input
-    type="radio"
-    data-jplist-control="radio-buttons-text-filter"
-    data-group="group1"
-    data-name="name1"
-    data-path=".title"
-    name="top-panel-name"
-    value="a">
-Filter by 'a'
+Filter by .title
 &lt;/input>
 
 &lt;!-- content to filter -->
@@ -550,28 +536,26 @@ Filter by 'a'
 
 &lt;/div>
 
-&lt;!-- radio button text filter control in the bottom panel -->
+&lt;!-- radio button path filter control in the bottom panel -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-text-filter"
+    data-jplist-control="radio-buttons-path-filter"
     data-path=".title"
     data-group="group1"
     data-name="name1"
     name="bottom-panel-name"
-    value="car"
     checked>
-Filter by 'car'
+Filter by .title
 &lt;/input>
 
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-text-filter"
+    data-jplist-control="radio-buttons-path-filter"
     data-group="group1"
     data-name="name1"
     data-path=".title"
-    name="bottom-panel-name"
-    value="a">
-Filter by 'a'
+    name="bottom-panel-name">
+Filter by .title
 &lt;/input>
             </code></pre>
         </div>
@@ -583,15 +567,14 @@ Filter by 'a'
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;input
     type="radio"
-    data-jplist-control="radio-buttons-text-filter"
+    data-jplist-control="radio-buttons-path-filter"
     data-path=".title"
     data-group="group1"
     data-name="name1"
     name="top-panel-name"
-    value="car"
     data-jump="top"
     checked>
-Filter by 'car'
+Filter by .title
 &lt;/input>
             </code></pre>
         </div>
@@ -602,19 +585,18 @@ Filter by 'car'
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
-&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+&lt;link href="jplist.styles.css" rel="stylesheet" type="path/css" />
 
-&lt;!-- radio button text filter control -->
+&lt;!-- radio button path filter control -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-text-filter"
+    data-jplist-control="radio-buttons-path-filter"
     data-group="group1"
     data-name="name1"
     data-path=".title"
     name="name1"
-    data-id="title1"
-    value="a">
-Filter by 'a'
+    data-id="title1">
+Filter by .title
 &lt;/input>
 
 &lt;!-- content to filter -->
@@ -656,19 +638,18 @@ Filter by 'a'
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
-&lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
+&lt;link href="jplist.styles.css" rel="stylesheet" type="path/css" />
 
-&lt;!-- radio button text filter control -->
+&lt;!-- radio button path filter control -->
 &lt;input
     type="radio"
-    data-jplist-control="radio-buttons-text-filter"
+    data-jplist-control="radio-buttons-path-filter"
     data-group="group1"
     data-name="name1"
     data-path=".title"
     name="name1"
-    data-id="title1"
-    value="a">
-Filter by 'a'
+    data-id="title1">
+Filter by .title
 &lt;/input>
 
 &lt;!-- content to filter -->
@@ -720,32 +701,26 @@ Filter by 'a'
             <tbody>
             <tr>
                 <td><code class="highlighter-rouge">data-jplist-control</code></td>
-                <td>Defines radio button text filter control.</td>
-                <td>"radio-buttons-text-filter"</td>
+                <td>Defines radio button path filter control.</td>
+                <td>"radio-buttons-path-filter"</td>
             </tr>
 
             <tr>
                 <td><code class="highlighter-rouge">data-group</code></td>
                 <td>Defines group of items that should be filtered. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
-                <td>any text value</td>
+                <td>any path value</td>
             </tr>
 
             <tr>
                 <td><code class="highlighter-rouge">data-name</code></td>
                 <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
-                <td>any text value</td>
+                <td>any path value</td>
             </tr>
 
             <tr>
                 <td><code class="highlighter-rouge">data-path</code></td>
                 <td>CSS selector that defines the HTML element that should be filtered</td>
                 <td>"default" keyword for the initial value or any CSS selector</td>
-            </tr>
-
-            <tr>
-                <td><code class="highlighter-rouge">data-text</code></td>
-                <td>the filter text value</td>
-                <td>any text value</td>
             </tr>
 
             <tr>
@@ -757,7 +732,7 @@ Filter by 'a'
             <tr>
                 <td><code class="highlighter-rouge">data-id</code></td>
                 <td>This attribute is used for deep linking.</td>
-                <td>any text value that may contain letters, digits, underscores or dashes</td>
+                <td>any path value that may contain letters, digits, underscores or dashes</td>
             </tr>
 
             </tbody>
