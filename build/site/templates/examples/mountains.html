@@ -90,7 +90,7 @@
                                 data-jplist-control="buttons-range-filter"
                                 class="btn btn-secondary"
                                 type="button"
-                                data-path=".date"
+                                data-path=".create-date-year"
                                 data-group="group1"
                                 data-name="date"
                                 data-selected="true"
@@ -103,7 +103,7 @@
                                 data-jplist-control="buttons-range-filter"
                                 class="btn btn-secondary"
                                 type="button"
-                                data-path=".date"
+                                data-path=".create-date-year"
                                 data-group="group1"
                                 data-name="date"
                                 data-from="2016"
@@ -115,7 +115,7 @@
                                 data-jplist-control="buttons-range-filter"
                                 class="btn btn-secondary"
                                 type="button"
-                                data-path=".date"
+                                data-path=".create-date-year"
                                 data-group="group1"
                                 data-name="date"
                                 data-from="2018">
@@ -261,12 +261,14 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at <span class="date">@(item.createdDate.toLocaleDateString('en-US', {
+                                    <small class="text-muted">Created at @(item.createdDate.toLocaleDateString('en-US', {
                                         //weekday: 'long',
                                         year: 'numeric',
                                         month: 'long',
                                         day: 'numeric'
-                                    }))</small>
+                                    }))
+                                        <span class="create-date-year" style="display: none">@(item.createdDate.getFullYear())</span>
+                                    </small>
                                 </div>
 
                             </div>

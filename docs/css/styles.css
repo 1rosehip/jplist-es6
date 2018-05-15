@@ -27,6 +27,8 @@ a:hover{
 }
 
 .main-navbar .nav-link{
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
     transition: color 0.5s;
 }
 
@@ -57,8 +59,9 @@ a:hover{
 }
 
 @media (min-width: 768px) {
-    @supports (position: sticky) {
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
         .main-navbar {
+            position: -webkit-sticky;
             position: sticky;
             top: 0;
             z-index: 1071;
@@ -178,6 +181,8 @@ a:hover{
 
 /* ==================== CONTENT ====================== */
 .bd-content {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
 }
 
@@ -293,14 +298,17 @@ a:hover{
 
 /* ========================== SIDE BAR 2 ==================================== */
 .bd-toc {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     font-size: .875rem;
 }
 
-@supports (position: sticky) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
     .bd-toc {
+        position: -webkit-sticky;
         position: sticky;
         top: 4rem;
         height: calc(100vh - 4rem);
@@ -346,6 +354,8 @@ a:hover{
 
 /* ======================== SIDE BAR 1 =================================== */
 .bd-sidebar {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
     order: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -355,8 +365,9 @@ a:hover{
         border-right: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    @supports (position: sticky) {
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
         .bd-sidebar {
+            position: -webkit-sticky;
             position: sticky;
             top: 4rem;
             z-index: 1000;
@@ -367,6 +378,8 @@ a:hover{
 
 @media (min-width: 1200px) {
     .bd-sidebar {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 320px;
         flex: 0 1 320px;
     }
 }
@@ -379,7 +392,7 @@ a:hover{
 }
 
 @media (min-width: 768px) {
-    @supports (position: sticky) {
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
         .bd-links {
             max-height: calc(100vh - 9rem);
             overflow-y: auto;
@@ -452,6 +465,25 @@ a:hover{
     border-bottom: 1px solid #eee;
     margin-bottom: 5px;
     padding-bottom: 5px;
+}
+
+.bd-sidebar .nav>li>a{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.bd-sidenav .fa,
+.bd-sidenav .fas,
+.bd-sidenav .far{
+    color: #e83e8c;
+    margin: 5px 10px 0 0;
 }
 
 /* =========================== FOOTER --------------------------- */
@@ -1690,18 +1722,26 @@ a:hover{
  */
 .thumb-icon{
     font-size: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border-radius: 3px;
     height: 150px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 3px solid #565151;
     color: #fff;
 
     background: #cedbe9;
-    background: -moz-linear-gradient(-45deg, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #3a84c3 51%, #419ad6 59%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
     background: -webkit-linear-gradient(-45deg, #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%);
+    background: -webkit-linear-gradient(315deg, #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%);
+    background: -o-linear-gradient(315deg, #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%);
     background: linear-gradient(135deg, #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=1 );
 }
