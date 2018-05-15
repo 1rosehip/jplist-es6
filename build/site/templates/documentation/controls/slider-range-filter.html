@@ -9,8 +9,9 @@
 
         <ul class="section-nav">
             <li class="toc-entry toc-h2">
-                <a href="#html-structure">HTML Structure</a>
+                <a href="#html-structure">HTML &amp; CSS</a>
                 <ul>
+                    <li class="toc-entry toc-h3"><a href="#css">Slider CSS</a></li>
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
                 </ul>
             </li>
@@ -32,7 +33,13 @@
 
         <p class="bd-lead">This control is used to filter content according to the selected range values. The content to filter is defined with CSS selectors. Background colors, width, height and other styles can be easily customized with CSS too.</p>
 
-        <h2 id="html-structure">HTML Structure</h2>
+        <!-- codepen -->
+       <div class="codepen">
+           <p data-height="265" data-theme-id="0" data-slug-hash="zjLXdb" data-default-tab="html,result" data-user="1rosehip" data-embed-version="2" data-pen-title="jPList Slider Range Filter Control" class="codepen">See the Pen <a href="https://codepen.io/1rosehip/pen/zjLXdb/">jPList Slider Range Filter Control</a> by 1rosehip (<a href="https://codepen.io/1rosehip">@1rosehip</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+       </div>
+
+        <h2 id="html-structure">HTML &amp; CSS</h2>
 
         <p>
             Range slider control is defined by required <code class="highlighter-rouge">data-jplist-control="slider-range-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be sorted. The full list of data attributes can be found <a href="#data-attributes">here</a>.
@@ -88,6 +95,116 @@
 &lt;script>
     jplist.init();
 &lt;/script>
+            </code></pre>
+        </div>
+
+        <h2 id="css">Slider CSS</h2>
+
+        <p>
+            Slider styles are fully customizable, all background and foreground colors can be changed via CSS. The basic slider styles can be as following:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-css" data-lang="css">/* the slider control container */
+[data-jplist-control="slider-range-filter"]{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* the slider control */
+.jplist-slider {
+    width: calc(100% - 200px);
+    height: 20px;
+    background-color: #fff;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: .25rem;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.jplist-slider::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    opacity: 0;
+}
+
+/* the slider holders */
+.jplist-slider-holder-1,
+.jplist-slider-holder-2 {
+    width: 20px;
+    height: 100%;
+    border-radius: .25rem;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: 200;
+    -webkit-transition: 0.3s background-color;
+    -o-transition: 0.3s background-color;
+    transition: 0.3s background-color;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+/* first holder custom styles */
+.jplist-slider-holder-1 {
+    background: #000;
+}
+
+/* second holder custom styles */
+.jplist-slider-holder-2 {
+    background: #106CD6;
+}
+
+.jplist-slider-holder-1:active,
+.jplist-slider-holder-2:active{
+    background: #00448c;
+    box-shadow: 0px 0px 10px #fff;
+}
+
+/* the space between holders */
+.jplist-slider-range {
+    width: 0;
+    height: 20px;
+    background: #ccc;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 1rem 1rem;
+}
+
+/* slider labels */
+.range-slider-value{
+    width: 100px;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
             </code></pre>
         </div>
 
