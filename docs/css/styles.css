@@ -9,6 +9,10 @@
  * The changes were made in the styles, the initial source can be found at https://getbootstrap.com
  */
 
+a:hover{
+    text-decoration: none;
+}
+
 /**
  * =============================== NAV BAR STYLES =====================================
  */
@@ -1679,4 +1683,25 @@
  */
 .pagination{
     margin-bottom: 0;
+}
+
+/**
+ * font awesome icons as thumbs
+ */
+.thumb-icon{
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    height: 150px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 3px solid #565151;
+    color: #fff;
+
+    background: #cedbe9;
+    background: -moz-linear-gradient(-45deg, #cedbe9 0%, #aac5de 17%, #6199c7 50%, #3a84c3 51%, #419ad6 59%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%);
+    background: -webkit-linear-gradient(-45deg, #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%);
+    background: linear-gradient(135deg, #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=1 );
 }
