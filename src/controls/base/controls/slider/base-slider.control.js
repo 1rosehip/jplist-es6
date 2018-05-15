@@ -72,6 +72,8 @@ class BaseSliderControl{
 
             document.addEventListener('mouseup', this.stop.bind(this));
             document.addEventListener('touchend', this.stop.bind(this));
+            window.addEventListener('mouseup', this.stop.bind(this));
+            window.addEventListener('touchend', this.stop.bind(this));
 
             this.element.addEventListener('mousedown', this.jump.bind(this));
 
