@@ -21,6 +21,11 @@
 
         <p class="bd-lead">This is an invisible sort control that sorts content on page load.</p>
 
+        <div class="codepen">
+            <p data-height="265" data-theme-id="0" data-slug-hash="GdXzJm" data-default-tab="html,result" data-user="1rosehip" data-embed-version="2" data-pen-title="jPList Hidden Sort Control" class="codepen">See the Pen <a href="https://codepen.io/1rosehip/pen/GdXzJm/">jPList Hidden Sort Control</a> by 1rosehip (<a href="https://codepen.io/1rosehip">@1rosehip</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </div>
+
         <h2 id="html-structure">HTML Structure</h2>
 
         <p>
@@ -33,7 +38,9 @@
     style="display: none"
     data-jplist-control="hidden-sort"
     data-group="group1"
-    data-path=".title">
+    data-path=".title"
+    data-order="asc"
+    data-type="text">
 &lt;/div>
 
 &lt;!-- content to sort -->
@@ -98,6 +105,17 @@
                     <td>any CSS selector or "default" keyword</td>
                 </tr>
 
+                <tr>
+                    <td><code class="highlighter-rouge">data-order</code></td>
+                    <td>Specifies the sort order.</td>
+                    <td>"asc" or "desc"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-type</code></td>
+                    <td>Specifies the type of content that should be sorted.</td>
+                    <td>"text", "number" or "datetime"</td>
+                </tr>
             </tbody>
         </table>
 
