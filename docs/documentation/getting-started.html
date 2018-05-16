@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            
+                
+
+    
+        Getting Started | Documentation | jPList Library
+        </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="/fontawesome-5.0.13/css/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/styles.min.css?v=1" />
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/img/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="jPList Library"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/img/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/img/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/img/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/img/favicon/mstile-310x310.png" />
+
+        
+    
+    <link rel="stylesheet" href="/highlight/default.min.css" />
+
+        <!-- google analytics
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-36006444-3', 'jplist.com');
+            ga('send', 'pageview');
+        </script>
+        -->
+    </head>
+    <body>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row main-navbar">
+
+            <!-- logo -->
+            <a class="navbar-brand mr-0 mr-md-4" href="/" aria-label="jPList">
+                <img src="/img/logo/logo.png" alt="jPList" title="jPList" />
+            </a>
+
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav main-navbar-nav flex-row flex-wrap justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link 
+
+    " href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
+
+    
+        active" href="/documentation/index">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
+
+    " href="/examples/index">Examples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
+
+    " href="/download">Download</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+
+                <li class="nav-item">
+                    <a
+                            class="nav-link github-link"
+                            href="https://github.com/1rosehip/jplist-es6"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="GitHub">
+
+                        <img
+                                src="/img/icons/github-logo-light.png"
+                                class="d-inline-block align-top mr-1"
+                                alt="Fork me on GitHub"
+                                title="Fork me on GitHub" />
+                        Fork me on GitHub
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        
+
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+
+            <!-- first sidebar -->
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    
+
+<div class="bd-toc-item 
+
+    
+        active">
+    <a class="bd-toc-link" href="/documentation/getting-started">
+        Getting Started
+    </a>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+
+    <a class="bd-toc-link" href="/documentation/controls/hidden-sort">
+        Sort Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <li 
+
+    >
+            <a href="/documentation/controls/hidden-sort">
+                <i class="fas fa-sort-alpha-up"></i>
+                <span>Hidden Sort Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/sort-buttons">
+                <i class="fas fa-sort"></i>
+                <span>Buttons Sort Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/radio-buttons-sort">
+                <i class="fas fa-sort-alpha-down"></i>
+                <span>Radio Buttons Sort Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/checkbox-sort">
+                <i class="fas fa-sort-amount-up"></i>
+                <span>Checkbox Sort Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/select-sort">
+                <i class="fas fa-sort-amount-down"></i>
+                <span>Select Sort Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/dropdown-sort">
+                <i class="fas fa-sort-numeric-up"></i>
+                <span>Dropdown Sort Control</span>
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+
+    <a class="bd-toc-link" href="/documentation/controls/pagination">
+        Pagination Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <li 
+
+    >
+            <a href="/documentation/controls/pagination">
+                <i class="fas fa-list-ol"></i>
+                <span>Pagination</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+
+    <a class="bd-toc-link" href="/documentation/controls/textbox-filter">
+        Text Filter Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <!--<li class="spacer"></li>-->
+
+        <li 
+
+    >
+            <a href="/documentation/controls/textbox-filter">
+                <i class="fas fa-search"></i>
+                <span>Textbox Filter Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/checkbox-text-filter">
+                <i class="fas fa-check-square"></i>
+                <span>Checkbox Text Filter Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/radio-buttons-text-filter">
+                <i class="fas fa-dot-circle"></i>
+                <span>Radio Buttons Text Filter Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/buttons-text-filter">
+                <i class="fas fa-filter"></i>
+                <span>Buttons Text Filter Control</span>
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+
+    <a class="bd-toc-link" href="/documentation/controls/select-filter">
+        Path Filter Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+        <li 
+
+    >
+            <a href="/documentation/controls/select-filter">
+                <i class="fas fa-caret-square-down"></i>
+                <span>Select Filter Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/dropdown-filter">
+                <i class="far fa-caret-square-down"></i>
+                <span>Dropdown Filter Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/checkbox-path-filter">
+                <i class="far fa-check-circle"></i>
+                <span>Checkbox Path Filter Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/radio-buttons-path-filter">
+                <i class="far fa-dot-circle"></i>
+                <span>Radio Buttons Path Filter Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/buttons-path-filter">
+                <i class="fas fa-hockey-puck"></i>
+                <span>Buttons Path Filter Control</span>
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+    <a class="bd-toc-link" href="/documentation/controls/buttons-range-filter">
+        Range Filter Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+
+        <li 
+
+    >
+            <a href="/documentation/controls/buttons-range-filter">
+                <i class="fas fa-arrows-alt-h"></i>
+                <span>Buttons Range Filter Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/slider-range-filter">
+                <i class="fas fa-sliders-h"></i>
+                <span>Slider Range Filter Control</span>
+            </a>
+        </li>
+        <!--<li class="spacer"></li>-->
+    </ul>
+</div>
+
+
+                    
+
+<div class="bd-toc-item 
+
+    ">
+    <a class="bd-toc-link" href="/documentation/controls/no-results">
+        Other Controls
+    </a>
+
+    <ul class="nav bd-sidenav">
+
+        <li 
+
+    >
+            <a href="/documentation/controls/no-results">
+                <i class="fas fa-search-minus"></i>
+                <span>No Results Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/layout">
+                <i class="fas fa-th"></i>
+                <span>Layout Control</span>
+            </a>
+        </li>
+        <li 
+
+    >
+            <a href="/documentation/controls/reset">
+                <i class="fas fa-undo-alt"></i>
+                <span>Reset Control</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </nav>
+
+            </div>
+
+            
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2">
+                <a href="#html-structure">HTML Structure</a>
+                <ul>
+                    <li class="toc-entry toc-h3"><a href="#radio-mode">Radio buttons mode</a></li>
+                    <li class="toc-entry toc-h3"><a href="#checkbox-mode">Checkbox mode</a></li>
+                    <li class="toc-entry toc-h3"><a href="#inverted">Inverted filter</a></li>
+                    <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
+                    <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
+                </ul>
+            </li>
+            <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
+            <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
+            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a></li>
+        </ul>
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">Getting Started</h1>
+
+        <p class="bd-lead">The following tutorial describes how to create a page with ascending sort control and text filter control using jPList library.</p>
+
+        <div class="codepen">
+            <p data-height="265" data-theme-id="0" data-slug-hash="OZoKJV" data-default-tab="html,result" data-user="1rosehip" data-embed-version="2" data-pen-title="jPList Getting Started" class="codepen">See the Pen <a href="https://codepen.io/1rosehip/pen/OZoKJV/">jPList Getting Started</a> by 1rosehip (<a href="https://codepen.io/1rosehip">@1rosehip</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </div>
+
+        <ol>
+            <li class="mt-3 mb-3">Create a folder named <span class="badge badge-info">test-project</span> and create a new <span class="badge badge-info">jplist</span> folder inside it.</li>
+
+            <li class="mb-3">
+                Download jPList <a href="https://raw.githubusercontent.com/1rosehip/jplist-es6/master/dist/jplist.min.js">JS</a> and <a href="https://raw.githubusercontent.com/1rosehip/jplist-es6/master/dist/jplist.styles.css">CSS</a> files and save them to the <span class="badge badge-info">test-project/jplist</span> folder.
+            </li>
+
+            <li class="mb-3">Create an empty <span class="badge badge-info">index.html</span> file and save it to the <span class="badge badge-info">test-project</span> folder.</li>
+
+            <li class="mb-3">
+                <p>Copy &amp; paste the basic HTMl structure:</p>
+                <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!doctype html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;title>jPList Hello World&lt;/title>
+        &lt;meta charset="utf-8" />
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    &lt;/head>
+    &lt;body>
+        
+    &lt;/body>
+&lt;/html></code></pre>
+                </div>
+            </li>
+
+            <li class="mb-3">
+                <p>Add CSS file to the HEAD:</p>
+                <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!doctype html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;title>jPList Hello World&lt;/title>
+        &lt;meta charset="utf-8" />
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        &lt;!-- jPList CSS -->
+        &lt;link rel="stylesheet" href="jplist/jplist.styles.css" />
+    &lt;/head>
+    &lt;body>
+        
+		
+    &lt;/body>
+&lt;/html></code></pre></div>
+            </li>
+
+            <li class="mb-3">
+                <p>Let's add <a href="/documentation/controls/hidden-sort">hidden sort</a> and <a href="/documentation/controls/textbox-filter">textbox filter</a> controls:</p>
+<!doctype html>
+                <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;html lang="en">
+    &lt;head>
+        &lt;title>jPList Hello World&lt;/title>
+        &lt;meta charset="utf-8" />
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        &lt;!-- jPList CSS -->
+        &lt;link rel="stylesheet" href="jplist/jplist.styles.css" />
+    &lt;/head>
+    &lt;body>
+        
+        &lt;!-- hidden sort control -->
+        &lt;div
+            style="display: none"
+            data-jplist-control="hidden-sort"
+            data-group="group1"
+            data-path=".name"
+            data-order="asc"
+            data-type="text">
+        &lt;/div>
+
+        &lt;!-- text filter control -->
+        &lt;div>
+            &lt;input
+                data-jplist-control="textbox-filter"
+                data-group="group1"
+                data-name="my-filter-1"
+                data-path=".name"
+                type="text"
+                value=""
+                data-clear-btn-id="name-clear-btn"
+                placeholder="Filter by Name" />
+            
+            &lt;button type="button" id="name-clear-btn">Clear&lt;/button>
+        &lt;/div>
+    &lt;/body>
+&lt;/html></code></pre></div>
+            </li>
+
+            <li class="mb-3">
+                <p>Now let's add sample data that should be wrapped by HTML element with <code class="highlighter-rouge">data-jplist-group="group1"</code> attribute. The value <code class="highlighter-rouge">group1</code> can be any text value. Sort and textbox filter controls have <code class="highlighter-rouge">data-group="group1"</code> meaning that these controls should be applied to this group.</p>
+
+                <p>
+                    Also every element in the group should have <code class="highlighter-rouge">data-jplist-item</code> data attribute. This way jPList identifies HTML elements that should be sorted and filtered:
+                </p>
+
+                <div class="highlight">
+                    <pre><code class="language-html" data-lang="html">&lt;!doctype html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;title>jPList Hello World&lt;/title>
+        &lt;meta charset="utf-8" />
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        &lt;!-- jPList CSS -->
+        &lt;link rel="stylesheet" href="jplist/jplist.styles.css" />
+    &lt;/head>
+    &lt;body>
+
+            &lt;!-- hidden sort control -->
+            &lt;div
+                style="display: none"
+                data-jplist-control="hidden-sort"
+                data-group="group1"
+                data-path=".name"
+                data-order="asc"
+                data-type="text">&lt;/div>
+
+            &lt;!-- text filter control -->
+            &lt;div>
+                &lt;input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-name="my-filter-1"
+                    data-path=".name"
+                    type="text"
+                    value=""
+                    data-clear-btn-id="name-clear-btn"
+                    placeholder="Filter by Name" />
+
+                &lt;button type="button" id="name-clear-btn">Clear&lt;/button>
+            &lt;/div>
+
+            &lt;!-- content to filter -->
+            &lt;div data-jplist-group="group1">
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Cecilia Hanson&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Alejandro Miles&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Andy Harris&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Deanna Castillo&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Danny Richards&lt;/div>
+                &lt;/div>
+
+                 &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Allie Moss&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Stefanie Reyes&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Jakob Flores&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Christine Richards&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Miranda Hill&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Meghan Williamson&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Kierra Long&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Tara Park&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Anthony Reyes&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Malik Becker&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Daisy Hunter&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Arianna Fuller&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Stephan Wang&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Cristal Wallace&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Alyson Chandler&lt;/div>
+                &lt;/div>
+
+        &lt;/div>
+
+    &lt;/body>
+&lt;/html></code></pre>
+                </div>
+            </li>
+
+            <li class="mb-3">
+                <p>We can also add <a href="/documentation/controls/no-results">no results control</a> that shows a message when no results are found:</p>
+
+                <div class="highlight">
+                    <pre><code class="language-html" data-lang="html">&lt;!doctype html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;title>jPList Hello World&lt;/title>
+        &lt;meta charset="utf-8" />
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        &lt;!-- jPList CSS -->
+        &lt;link rel="stylesheet" href="jplist/jplist.styles.css" />
+    &lt;/head>
+    &lt;body>
+
+            &lt;!-- hidden sort control -->
+            &lt;div
+                style="display: none"
+                data-jplist-control="hidden-sort"
+                data-group="group1"
+                data-path=".name"
+                data-order="asc"
+                data-type="text">&lt;/div>
+
+            &lt;!-- text filter control -->
+            &lt;div>
+                &lt;input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-name="my-filter-1"
+                    data-path=".name"
+                    type="text"
+                    value=""
+                    data-clear-btn-id="name-clear-btn"
+                    placeholder="Filter by Name" />
+
+                &lt;button type="button" id="name-clear-btn">Clear&lt;/button>
+            &lt;/div>
+
+            &lt;!-- content to filter -->
+            &lt;div data-jplist-group="group1">
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Cecilia Hanson&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Alejandro Miles&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Andy Harris&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Deanna Castillo&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Danny Richards&lt;/div>
+                &lt;/div>
+
+                 &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Allie Moss&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Stefanie Reyes&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Jakob Flores&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Christine Richards&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Miranda Hill&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Meghan Williamson&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Kierra Long&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Tara Park&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Anthony Reyes&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Malik Becker&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Daisy Hunter&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Arianna Fuller&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Stephan Wang&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Cristal Wallace&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Alyson Chandler&lt;/div>
+                &lt;/div>
+
+                &lt;!-- no results control -->               
+                &lt;div data-jplist-control="no-results" data-group="group1" data-name="no-results">No Results Found&lt;/div>
+
+        &lt;/div>
+
+    &lt;/body>
+&lt;/html></code></pre>
+                </div>
+
+            </li>
+
+            <li class="mb-3">
+                <p>Now let's add jPList javascript file to the bottom of HTML:</p>
+                <div class="highlight">
+                    <pre><code class="language-html" data-lang="html">&lt;!doctype html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;title>jPList Hello World&lt;/title>
+        &lt;meta charset="utf-8" />
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        &lt;!-- jPList CSS -->
+        &lt;link rel="stylesheet" href="jplist/jplist.styles.css" />
+    &lt;/head>
+    &lt;body>
+
+            &lt;!-- hidden sort control -->
+            &lt;div
+                style="display: none"
+                data-jplist-control="hidden-sort"
+                data-group="group1"
+                data-path=".name"
+                data-order="asc"
+                data-type="text">&lt;/div>
+
+            &lt;!-- text filter control -->
+            &lt;div>
+                &lt;input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-name="my-filter-1"
+                    data-path=".name"
+                    type="text"
+                    value=""
+                    data-clear-btn-id="name-clear-btn"
+                    placeholder="Filter by Name" />
+
+                &lt;button type="button" id="name-clear-btn">Clear&lt;/button>
+            &lt;/div>
+
+            &lt;!-- content to filter -->
+            &lt;div data-jplist-group="group1">
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Cecilia Hanson&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Alejandro Miles&lt;/div>
+                &lt;/div>
+
+                &lt;!-- item -->
+                &lt;div data-jplist-item>
+                    &lt;div class="name">Andy Harris&lt;/div>
+                &lt;/div>
+
+                ...
+
+                &lt;!-- no results control -->
+                &lt;div data-jplist-control="no-results" data-group="group1" data-name="no-results">No Results Found&lt;/div>
+
+        &lt;/div>
+
+        &lt;script src="jplist/jplist.min.js">&lt;/script>
+        &lt;script>
+            jplist.init();
+        &lt;/script>
+
+    &lt;/body>
+&lt;/html></code></pre>
+                </div>
+            </li>
+
+        </ol>
+
+    </div>
+
+        </div>
+    </div>
+
+    <script src="/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+        <footer class="bd-footer text-muted">
+            <div class="container-fluid p-3 p-md-5">
+                <ul class="bd-footer-links">
+                    <li><a href="/controls">Controls</a></li>
+                    <li><a href="/documentation/index">Documentation</a></li>
+                    <li><a href="/examples/index">Examples</a></li>
+                    <li><a href="/download">Download</a></li>
+                    <li><a href="https://github.com/1rosehip/jplist-es6" target="_blank">GitHub</a></li>
+                </ul>
+
+                <p>jPList Library v1.0.0. <a href="https://github.com/1rosehip/jplist-es6/blob/master/LICENSE.txt" rel="nofollow" target="_blank" rel="license noopener">MIT License</a>.</p>
+
+                <p>
+                    Credits: <a rel="nofollow" href="https://getbootstrap.com">Bootstrap documentation website</a> with changes licensed under <a href="https://creativecommons.org/licenses/by/3.0/" rel="nofollow">the Creative Commons Attribution 3.0 Unported License</a>
+                </p>
+            </div>
+        </footer>
+
+    </body>
+</html>
