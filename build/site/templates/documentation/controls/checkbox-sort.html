@@ -29,6 +29,11 @@
 
         <p class="bd-lead">Checkbox sort controls are used to sorts content located at the specified CSS selector paths.</p>
 
+        <div class="codepen">
+            <p data-height="265" data-theme-id="0" data-slug-hash="ELeMVW" data-default-tab="html,result" data-user="1rosehip" data-embed-version="2" data-pen-title="jPList Checkbox Sort Control" class="codepen">See the Pen <a href="https://codepen.io/1rosehip/pen/ELeMVW/">jPList Checkbox Sort Control</a> by 1rosehip (<a href="https://codepen.io/1rosehip">@1rosehip</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </div>
+
         <h2 id="html-structure">HTML Structure</h2>
 
         <p>
@@ -42,27 +47,17 @@
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
 &lt;!-- sort by title ASC -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="asc"
-    data-type="text"
-    checked>
+&lt;label>
+    &lt;input
+        type="checkbox"
+        data-jplist-control="checkbox-sort"
+        data-path=".title"
+        data-group="group1"
+        data-order="asc"
+        data-type="text"
+        checked />
     Sort by title asc
-&lt;/input>
-
-&lt;!-- sort by title DESC -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="desc"
-    data-type="text">
-    Sort by title desc
-&lt;/input>
+&lt;/label>
 
 &lt;!-- content to sort -->
 &lt;div data-jplist-group="group1">
@@ -104,29 +99,17 @@
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- TOP PANEL CONTROLS -->
 &lt;!-- sort by title ASC -->
-&lt;input
-    type="radio"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="asc"
-    data-type="text"
-    data-name="sort1"
-    checked>
+&lt;label>
+    &lt;input
+        type="checkbox"
+        data-jplist-control="checkbox-sort"
+        data-path=".title"
+        data-group="group1"
+        data-order="asc"
+        data-type="text"
+        checked />
     Sort by title asc
-&lt;/input>
-
-&lt;!-- sort by title DESC -->
-&lt;input
-    type="radio"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="desc"
-    data-type="text"
-    data-name="sort1">
-    Sort by title desc
-&lt;/input>
+&lt;/label>
 
 &lt;!-- content to sort -->
 &lt;div data-jplist-group="group1">
@@ -153,29 +136,17 @@
 
 &lt;!-- BOTTOM PANEL CONTROLS -->
 &lt;!-- sort by title ASC -->
-&lt;input
-    type="radio"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="asc"
-    data-type="text"
-    data-name="sort1"
-    checked>
+&lt;label>
+    &lt;input
+        type="checkbox"
+        data-jplist-control="checkbox-sort"
+        data-path=".title"
+        data-group="group1"
+        data-order="asc"
+        data-type="text"
+        checked />
     Sort by title asc
-&lt;/input>
-
-&lt;!-- sort by title DESC -->
-&lt;input
-    type="radio"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="desc"
-    data-type="text"
-    data-name="sort1">
-    Sort by title desc
-&lt;/input>
+&lt;/label>
             </code></pre>
         </div>
 
@@ -185,16 +156,17 @@
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- sort by title ASC -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="asc"
-    data-type="text"
-    data-jump="top">
+&lt;label>
+    &lt;input
+        type="checkbox"
+        data-jplist-control="checkbox-sort"
+        data-path=".title"
+        data-group="group1"
+        data-order="asc"
+        data-type="text"
+        data-jump="top" />
     Sort by title asc
-&lt;/input>
+&lt;/label>
             </code></pre>
         </div>
 
@@ -207,29 +179,18 @@
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
 &lt;!-- sort by title ASC -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="asc"
-    data-type="text"
-    data-id="titleasc"
-    checked>
+&lt;label>
+    &lt;input
+        type="checkbox"
+        data-jplist-control="checkbox-sort"
+        data-path=".title"
+        data-group="group1"
+        data-order="asc"
+        data-type="text"
+        data-id="titleasc"
+        checked />
     Sort by title asc
-&lt;/input>
-
-&lt;!-- sort by title DESC -->
-&lt;input
-    type="radio"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="desc"
-    data-type="text"
-    data-id="titledesc">
-    Sort by title desc
-&lt;/input>
+&lt;/label>
 
 &lt;!-- content to sort -->
 &lt;div data-jplist-group="group1">
@@ -273,29 +234,18 @@
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
 &lt;!-- sort by title ASC -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="asc"
-    data-type="text"
-    data-id="titleasc"
-    checked>
+&lt;label>
+    &lt;input
+        type="checkbox"
+        data-jplist-control="checkbox-sort"
+        data-path=".title"
+        data-group="group1"
+        data-order="asc"
+        data-type="text"
+        data-id="titleasc"
+        checked />
     Sort by title asc
-&lt;/input>
-
-&lt;!-- sort by title DESC -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-sort"
-    data-path=".title"
-    data-group="group1"
-    data-order="desc"
-    data-type="text"
-    data-id="titledesc">
-    Sort by title desc
-&lt;/input>
+&lt;/label>
 
 &lt;!-- content to sort -->
 &lt;div data-jplist-group="group1">
