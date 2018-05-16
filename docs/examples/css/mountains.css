@@ -16,7 +16,26 @@
     height: 100%;
 }
 
-[data-jplist-control="buttons-path-filter"].jplist-selected{
+.jplist-selected,
+.jplist-selected:hover{
     background-color: #007bff;
     border-color: #007bff;
+}
+
+.btn-group{
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+}
+
+.btn-group button{
+    border-left: 1px solid #dee2e6;
+    border-collapse: collapse;
+}
+
+.btn-group button:first-child{
+    border-left: 0;
+}
+
+.btn-group button.jplist-selected{
+    color: #fff;
 }

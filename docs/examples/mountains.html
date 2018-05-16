@@ -141,7 +141,8 @@
             <div class="container">
 
                 <div class="row mb-2 mr-3">
-                    <div class="col flex flex-wrap align-items-start">
+
+                    <div class="col-lg-6 mb-2">
 
                         <!-- hidden sort by author name -->
                         <div
@@ -150,44 +151,6 @@
                                 data-group="group1"
                                 data-path=".author-name">
                         </div>
-
-                        <!-- all items with or without description -->
-                        <button
-                                type="button"
-                                class="btn btn-secondary"
-                                data-jplist-control="buttons-path-filter"
-                                data-path="default"
-                                data-group="group1"
-                                data-selected="true"
-                                data-mode="radio"
-                                data-name="description">
-                            All items
-                        </button>
-
-                        <!-- all items with description -->
-                        <button
-                                type="button"
-                                class="btn btn-secondary"
-                                data-jplist-control="buttons-path-filter"
-                                data-path=".description"
-                                data-group="group1"
-                                data-mode="radio"
-                                data-name="description">
-                            Items with description
-                        </button>
-
-                        <!-- all items without description -->
-                        <button
-                                type="button"
-                                class="btn btn-secondary"
-                                data-jplist-control="buttons-path-filter"
-                                data-path=".description"
-                                data-group="group1"
-                                data-mode="radio"
-                                data-name="description"
-                                data-inverted="true">
-                            Items without description
-                        </button>
 
                         <!-- text filter by tags -->
                         <div class="input-group">
@@ -209,47 +172,222 @@
                         </div>
 
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col flex flex-wrap align-items-start">
-                        <button
-                                data-jplist-control="buttons-range-filter"
-                                class="btn btn-secondary"
-                                type="button"
-                                data-path=".create-date-year"
-                                data-group="group1"
-                                data-name="date"
-                                data-selected="true"
-                                data-from="2014"
-                                data-to="2015">
-                            Created: 2014 - 2015
-                        </button>
 
-                        <button
-                                data-jplist-control="buttons-range-filter"
-                                class="btn btn-secondary"
-                                type="button"
-                                data-path=".create-date-year"
-                                data-group="group1"
-                                data-name="date"
-                                data-from="2016"
-                                data-to="2017">
-                            Created: 2016 - 2017
-                        </button>
+                    <div class="col-lg-6 mb-2 d-none d-sm-none d-md-inline-block">
 
-                        <button
-                                data-jplist-control="buttons-range-filter"
-                                class="btn btn-secondary"
-                                type="button"
-                                data-path=".create-date-year"
-                                data-group="group1"
-                                data-name="date"
-                                data-from="2018">
-                            Created: >= 2018
-                        </button>
+                        <div class="btn-group">
+
+                            <button
+                                    data-jplist-control="buttons-range-filter"
+                                    class="btn btn-light"
+                                    type="button"
+                                    data-path=".create-date-year"
+                                    data-group="group1"
+                                    data-name="date"
+                                    data-selected="true"
+                                    data-from="2000"
+                                    data-to="3000">
+                                All
+                            </button>
+
+                            <button
+                                    data-jplist-control="buttons-range-filter"
+                                    class="btn btn-light"
+                                    type="button"
+                                    data-path=".create-date-year"
+                                    data-group="group1"
+                                    data-name="date"
+                                    data-from="2014"
+                                    data-to="2015">
+                                2014 - 2015
+                            </button>
+
+                            <button
+                                    data-jplist-control="buttons-range-filter"
+                                    class="btn btn-light"
+                                    type="button"
+                                    data-path=".create-date-year"
+                                    data-group="group1"
+                                    data-name="date"
+                                    data-from="2016"
+                                    data-to="2017">
+                                2016 - 2017
+                            </button>
+
+                            <button
+                                    data-jplist-control="buttons-range-filter"
+                                    class="btn btn-light"
+                                    type="button"
+                                    data-path=".create-date-year"
+                                    data-group="group1"
+                                    data-name="date"
+                                    data-from="2018">
+                                2018+
+                            </button>
+
+                        </div>
+
                     </div>
                 </div>
-                <div class="row">
+
+                <div class="row mb-2 mr-3">
+
+                    <div class="col-lg-6 mb-2">
+
+                        <!-- text filter by author name -->
+                        <div class="input-group">
+                            <input
+                                    data-jplist-control="textbox-filter"
+                                    data-group="group1"
+                                    data-name="my-filter-2"
+                                    data-path=".author-name"
+                                    type="text"
+                                    value=""
+                                    placeholder="Filter by Author Name"
+                                    data-clear-btn-id="author-clear-btn"
+                                    class="form-control"
+                            />
+
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="author-clear-btn">Clear</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 mb-2 d-none d-sm-none d-md-inline-block">
+
+                        <div class="btn-group">
+
+                            <!-- all items with or without description -->
+                            <button
+                                    type="button"
+                                    class="btn btn-light"
+                                    data-jplist-control="buttons-path-filter"
+                                    data-path="default"
+                                    data-group="group1"
+                                    data-selected="true"
+                                    data-mode="radio"
+                                    data-name="description">
+                                All
+                            </button>
+
+                            <!-- all items with description -->
+                            <button
+                                    type="button"
+                                    class="btn btn-light"
+                                    data-jplist-control="buttons-path-filter"
+                                    data-path=".description-content"
+                                    data-group="group1"
+                                    data-mode="radio"
+                                    data-name="description">
+                                With description
+                            </button>
+
+                            <!-- all items without description -->
+                            <button
+                                    type="button"
+                                    class="btn btn-light"
+                                    data-jplist-control="buttons-path-filter"
+                                    data-path=".description-content"
+                                    data-group="group1"
+                                    data-mode="radio"
+                                    data-name="description"
+                                    data-inverted="true">
+                                Without description
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 mr-3">
+
+                    <div class="col-lg-6 mb-2">
+
+                        <!-- text filter by description -->
+                        <div class="input-group">
+                            <input
+                                    data-jplist-control="textbox-filter"
+                                    data-group="group1"
+                                    data-name="my-filter-2"
+                                    data-path=".description"
+                                    type="text"
+                                    value=""
+                                    placeholder="Filter by Description"
+                                    data-clear-btn-id="desc-clear-btn"
+                                    class="form-control"
+                            />
+
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="desc-clear-btn">Clear</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 mb-2 d-none d-sm-none d-md-inline-block">
+
+                        <div class="btn-group">
+
+                            <button
+                                    data-jplist-control="buttons-range-filter"
+                                    class="btn btn-light"
+                                    type="button"
+                                    data-path=".likes"
+                                    data-group="group1"
+                                    data-name="likes"
+                                    data-selected="true"
+                                    data-from="0"
+                                    data-to="1000000">
+                                All
+                            </button>
+
+                            <button
+                                    data-jplist-control="buttons-range-filter"
+                                    class="btn btn-light"
+                                    type="button"
+                                    data-path=".likes"
+                                    data-group="group1"
+                                    data-name="likes"
+                                    data-from="0"
+                                    data-to="100">
+                                0 - 100 Likes
+                            </button>
+
+                            <button
+                                    data-jplist-control="buttons-range-filter"
+                                    class="btn btn-light"
+                                    type="button"
+                                    data-path=".likes"
+                                    data-group="group1"
+                                    data-name="likes"
+                                    data-from="101"
+                                    data-to="200">
+                                101 - 200 Likes
+                            </button>
+
+                            <button
+                                    data-jplist-control="buttons-range-filter"
+                                    class="btn btn-light"
+                                    type="button"
+                                    data-path=".likes"
+                                    data-group="group1"
+                                    data-name="likes"
+                                    data-from="201">
+                                201+ Likes
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 mr-3">
+
                     <div class="col flex flex-wrap align-items-start">
 
                         <!-- pagination control -->
@@ -282,7 +420,7 @@
                             </ul>
 
                             <!-- information labels -->
-                            <span data-type="info" class="d-none d-sm-none d-lg-inline-flex badge badge-secondary ml-3 p-2">
+                            <span data-type="info" class="d-none d-sm-none d-md-inline-flex badge badge-secondary ml-3 p-2">
                                 {startItem} - {endItem} of {itemsNumber}
                             </span>
 
@@ -312,6 +450,13 @@
 
                         </nav>
 
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 mr-3">
+                    <div class="col flex flex-wrap align-items-start">
+
                         <!-- reset control -->
                         <button
                                 data-jplist-control="reset"
@@ -321,6 +466,7 @@
                                 type="button">
                             Reset
                         </button>
+
                     </div>
                 </div>
 
@@ -347,18 +493,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@simonfitall" class="author-name">Simon Fitall</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">20</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">20</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -463,18 +610,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@theandrewwilliam" class="author-name">Andrew Charney</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">41</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">41</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -579,18 +727,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@tadej" class="author-name">Tadej Skofic</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">6</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">6</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -695,18 +844,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@john_jennings" class="author-name">John Jennings</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">145</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">145</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -774,18 +924,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@carlocolumbaphotography" class="author-name">Carlo Columba</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">3</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">3</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -881,18 +1032,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@btristan" class="author-name">Tiziano Bortolotti</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">1</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">1</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -991,18 +1143,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@acharki95" class="author-name">Aziz Acharki</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">5</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">5</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -1107,18 +1260,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@simonfitall" class="author-name">Simon Fitall</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">136</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">136</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -1220,18 +1374,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@alexb" class="author-name">Alex Blăjan</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">30</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">30</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -1336,18 +1491,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@andaz" class="author-name">Andaz</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">0</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">0</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -1440,21 +1596,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@mparzuchowski" class="author-name">Michał Parzuchowski</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">218</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">218</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A hazy shot of several mountain ridges stretching to the horizon
+                                        
+                                            <span class="description-content">A hazy shot of several mountain ridges stretching to the horizon</span>
                                     </li>
+
 
                                 </ul>
 
@@ -1550,18 +1705,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@kmagnuson" class="author-name">Karl Magnuson</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">241</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">241</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -1657,21 +1813,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@tanvimalik" class="author-name">Tanvi Malik</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">760</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">760</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A scenic shot of the trident-shaped Peyto Lake in the Canadian Rockies
+                                        
+                                            <span class="description-content">A scenic shot of the trident-shaped Peyto Lake in the Canadian Rockies</span>
                                     </li>
+
 
                                 </ul>
 
@@ -1776,18 +1931,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@simonfitall" class="author-name">Simon Fitall</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">1048</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">1048</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -1889,18 +2045,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@lucabravo" class="author-name">Luca Bravo</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">587</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">587</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -2005,21 +2162,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@jfbrou" class="author-name">Jf Brou</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">449</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">449</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A white dog sitting on a rock formation near a large mountain pond.
+                                        
+                                            <span class="description-content">A white dog sitting on a rock formation near a large mountain pond.</span>
                                     </li>
+
 
                                 </ul>
 
@@ -2118,21 +2274,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@kalenemsley" class="author-name">Kalen Emsley</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">2108</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">2108</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Water in a shallow mountain valley in Kluane National Park
+                                        
+                                            <span class="description-content">Water in a shallow mountain valley in Kluane National Park</span>
                                     </li>
+
 
                                 </ul>
 
@@ -2237,18 +2392,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@toriamia" class="author-name">Victoria Palacios</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">468</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">468</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -2332,21 +2488,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@ignitedit" class="author-name">Mark Basarab</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">382</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">382</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A tree-lined mountain road with snowcapped mountains in the background
+                                        
+                                            <span class="description-content">A tree-lined mountain road with snowcapped mountains in the background</span>
                                     </li>
+
 
                                 </ul>
 
@@ -2451,21 +2606,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@alle_sacchi" class="author-name">Alessandro Sacchi</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">607</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">607</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Craggy snow-covered mountains stretching to the horizon during sunset
+                                        
+                                            <span class="description-content">Craggy snow-covered mountains stretching to the horizon during sunset</span>
                                     </li>
+
 
                                 </ul>
 
@@ -2549,18 +2703,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@john_jennings" class="author-name">John Jennings</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">146</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">146</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -2628,21 +2783,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@idanarad" class="author-name">Idan Arad</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">138</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">138</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Red light falling on a snowy mountain ridge during sunset
+                                        
+                                            <span class="description-content">Red light falling on a snowy mountain ridge during sunset</span>
                                     </li>
+
 
                                 </ul>
 
@@ -2735,18 +2889,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@staticlaw" class="author-name">Fabrizio Conti</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">36</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">36</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -2845,21 +3000,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@kaidi_guo" class="author-name">Kaidi Guo</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">282</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">282</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A mountain ridge in the Dachstein Mountains with red sun rays falling on the rocky face
+                                        
+                                            <span class="description-content">A mountain ridge in the Dachstein Mountains with red sun rays falling on the rocky face</span>
                                     </li>
+
 
                                 </ul>
 
@@ -2961,21 +3115,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@matthiasmullie" class="author-name">Matthias Mullie</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">299</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">299</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        The heavily wooded bottom of Yosemite Valley during sunset
+                                        
+                                            <span class="description-content">The heavily wooded bottom of Yosemite Valley during sunset</span>
                                     </li>
+
 
                                 </ul>
 
@@ -3080,21 +3233,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@verstuyftj" class="author-name">Jonas Verstuyft</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">112</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">112</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Flowers in a field near a small mountain pond area.
+                                        
+                                            <span class="description-content">Flowers in a field near a small mountain pond area.</span>
                                     </li>
+
 
                                 </ul>
 
@@ -3199,21 +3351,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@rohittandon" class="author-name">Rohit Tandon</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">391</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">391</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Dramatic landscape with the peak of the mighty Ama Dablam mountain towering over a valley
+                                        
+                                            <span class="description-content">Dramatic landscape with the peak of the mighty Ama Dablam mountain towering over a valley</span>
                                     </li>
+
 
                                 </ul>
 
@@ -3318,18 +3469,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@mischievous_penguins" class="author-name">Casey Horner</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">70</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">70</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -3437,21 +3589,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@kimonmaritz" class="author-name">Kimon Maritz</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">225</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">225</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Reflections of snowy mountains reflect in calm foggy waters of Oeschinen Lake
+                                        
+                                            <span class="description-content">Reflections of snowy mountains reflect in calm foggy waters of Oeschinen Lake</span>
                                     </li>
+
 
                                 </ul>
 
@@ -3556,21 +3707,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@mrbrodeur" class="author-name">Matthew Brodeur</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">123</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">123</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Snowy mountains near a copse of trees
+                                        
+                                            <span class="description-content">Snowy mountains near a copse of trees</span>
                                     </li>
+
 
                                 </ul>
 
@@ -3675,21 +3825,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@inf1783" class="author-name">Karsten Würth (@inf1783)</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">152</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">152</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A picturesque landscape with a wooden cabin in the middle of a field near a tall mountain ridge
+                                        
+                                            <span class="description-content">A picturesque landscape with a wooden cabin in the middle of a field near a tall mountain ridge</span>
                                     </li>
+
 
                                 </ul>
 
@@ -3794,21 +3943,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@breannagalley" class="author-name">Breanna Galley</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">162</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">162</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A stream hugging the side of a cliff in a mountain valley in Colorado
+                                        
+                                            <span class="description-content">A stream hugging the side of a cliff in a mountain valley in Colorado</span>
                                     </li>
+
 
                                 </ul>
 
@@ -3913,21 +4061,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@heytowner" class="author-name">JOHN TOWNER</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">4103</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">4103</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A red-hued shot of a mountainous landscape with numerous snow-capped peaks
+                                        
+                                            <span class="description-content">A red-hued shot of a mountainous landscape with numerous snow-capped peaks</span>
                                     </li>
+
 
                                 </ul>
 
@@ -4032,18 +4179,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@gebhartyler" class="author-name">tyler gebhart</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">100</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">100</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -4148,21 +4296,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@danielleone" class="author-name">Daniel Leone</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">991</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">991</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Soaring snow-capped mountains under the evening sky
+                                        
+                                            <span class="description-content">Soaring snow-capped mountains under the evening sky</span>
                                     </li>
+
 
                                 </ul>
 
@@ -4243,21 +4390,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@radel" class="author-name">Marco Bonomo</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">138</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">138</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A jagged mountaintop covered in snow under a blue sky with wispy clouds
+                                        
+                                            <span class="description-content">A jagged mountaintop covered in snow under a blue sky with wispy clouds</span>
                                     </li>
+
 
                                 </ul>
 
@@ -4362,18 +4508,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@dinoreichmuth" class="author-name">Dino Reichmuth</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">192</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">192</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -4478,21 +4625,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@oliviermiche" class="author-name">Olivier Miche</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">124</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">124</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A mountain range partly covered in snow with low hanging clouds in between
+                                        
+                                            <span class="description-content">A mountain range partly covered in snow with low hanging clouds in between</span>
                                     </li>
+
 
                                 </ul>
 
@@ -4597,18 +4743,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@von_co" class="author-name">Ivana Cajina</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">368</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">368</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -4710,21 +4857,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@cikstefan" class="author-name">Štefan Štefančík</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">153</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">153</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Modern house at the top of a rocky hill with mountains and a creek in the background and foreground during sunset
+                                        
+                                            <span class="description-content">Modern house at the top of a rocky hill with mountains and a creek in the background and foreground during sunset</span>
                                     </li>
+
 
                                 </ul>
 
@@ -4829,21 +4975,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@mparzuchowski" class="author-name">Michał Parzuchowski</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">299</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">299</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Sharp mountain ridges stretching to the horizon in the High Tatras
+                                        
+                                            <span class="description-content">Sharp mountain ridges stretching to the horizon in the High Tatras</span>
                                     </li>
+
 
                                 </ul>
 
@@ -4948,21 +5093,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@clarissemeyer" class="author-name">Clarisse Meyer</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">106</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">106</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        View of a valley in Zion National Park with a river flowing on its floor
+                                        
+                                            <span class="description-content">View of a valley in Zion National Park with a river flowing on its floor</span>
                                     </li>
+
 
                                 </ul>
 
@@ -5067,21 +5211,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@mrwong" class="author-name">MR WONG</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">133</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">133</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        A steep granite ridge in Vanoise National Park
+                                        
+                                            <span class="description-content">A steep granite ridge in Vanoise National Park</span>
                                     </li>
+
 
                                 </ul>
 
@@ -5186,18 +5329,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@jordansteranka" class="author-name">Jordan Steranka</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">247</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">247</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -5305,21 +5449,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@samsomfotos" class="author-name">samsommer</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">221</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">221</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Misty fog wraps around snowy mountain at Bunderspitz
+                                        
+                                            <span class="description-content">Misty fog wraps around snowy mountain at Bunderspitz</span>
                                     </li>
+
 
                                 </ul>
 
@@ -5424,18 +5567,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@danedeaner" class="author-name">Dane Deaner</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">41</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">41</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -5534,18 +5678,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@eberhardgross" class="author-name">eberhard grossgasteiger</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">118</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">118</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -5603,18 +5748,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@eberhardgross" class="author-name">eberhard grossgasteiger</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">317</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">317</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -5682,18 +5828,19 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@mischievous_penguins" class="author-name">Casey Horner</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">244</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">244</span>
                                     </li>
 
-                                    
+                                    <li class="list-group-item description">
+                                        
+                                    </li>
+
 
                                 </ul>
 
@@ -5783,21 +5930,20 @@
                                 <ul class="list-group list-group-flush">
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Photo by</b>
+                                        <b class="header">Photo by</b>
                                         <a href="https://unsplash.com/@foemedia" class="author-name">Fabian Oelkers</a> on Unsplash
                                     </li>
 
                                     <li class="list-group-item">
-                                        <b class="header production-header">Likes &#9829</b>
-                                        <span class="production">
-                                            <span class="start">37</span>
-                                        </span>
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">37</span>
                                     </li>
 
-                                    
                                     <li class="list-group-item description">
-                                        Small buildings on a green slope over a mountain lake
+                                        
+                                            <span class="description-content">Small buildings on a green slope over a mountain lake</span>
                                     </li>
+
 
                                 </ul>
 
