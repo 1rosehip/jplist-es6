@@ -1,6 +1,6 @@
 # [jPList Library](https://jplist.org)
 
-**jPList** is a JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc. **Get started at [jplist.org](https://jplist.org)**
+**jPList** is a JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc. **Get started at [jplist.org](https://jplist.org)** with [documentation](https://jplist.org/documentation/getting-started) or [examples](https://jplist.org/examples/index).
 
 ## [Common Features](#common-features) <img src="https://raw.githubusercontent.com/1rosehip/jplist/master/demo/img/common/jplist.png" align="right">
 - Works with any content (tables, lists, div elements etc...)
