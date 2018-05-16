@@ -8,19 +8,16 @@
     <div class="d-none d-xl-block col-xl-2 bd-toc">
 
         <ul class="section-nav">
-            <li class="toc-entry toc-h2">
-                <a href="#html-structure">HTML Structure</a>
-                <ul>
-                    <li class="toc-entry toc-h3"><a href="#radio-mode">Radio buttons mode</a></li>
-                    <li class="toc-entry toc-h3"><a href="#checkbox-mode">Checkbox mode</a></li>
-                    <li class="toc-entry toc-h3"><a href="#inverted">Inverted filter</a></li>
-                    <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
-                    <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
-                </ul>
-            </li>
-            <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
-            <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
-            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a></li>
+            <li class="toc-entry toc-h2"><a href="#p1">#1</a></li>
+            <li class="toc-entry toc-h2"><a href="#p2">#2</a></li>
+            <li class="toc-entry toc-h2"><a href="#p3">#3</a></li>
+            <li class="toc-entry toc-h2"><a href="#p4">#4</a></li>
+            <li class="toc-entry toc-h2"><a href="#p5">#5</a></li>git status
+
+            <li class="toc-entry toc-h2"><a href="#p6">#6</a></li>
+            <li class="toc-entry toc-h2"><a href="#p7">#7</a></li>
+            <li class="toc-entry toc-h2"><a href="#p8">#8</a></li>
+            <li class="toc-entry toc-h2"><a href="#p9">#9</a></li>
         </ul>
 
     </div>
@@ -38,15 +35,15 @@
         </div>
 
         <ol>
-            <li class="mt-3 mb-3">Create a folder named <span class="badge badge-info">test-project</span> and create a new <span class="badge badge-info">jplist</span> folder inside it.</li>
+            <li id="p1" class="mt-3 mb-3">Create a folder named <span class="badge badge-info">test-project</span> and create a new <span class="badge badge-info">jplist</span> folder inside it.</li>
 
-            <li class="mb-3">
+            <li id="p2" class="mb-3">
                 Download jPList <a href="https://raw.githubusercontent.com/1rosehip/jplist-es6/master/dist/jplist.min.js">JS</a> and <a href="https://raw.githubusercontent.com/1rosehip/jplist-es6/master/dist/jplist.styles.css">CSS</a> files and save them to the <span class="badge badge-info">test-project/jplist</span> folder.
             </li>
 
-            <li class="mb-3">Create an empty <span class="badge badge-info">index.html</span> file and save it to the <span class="badge badge-info">test-project</span> folder.</li>
+            <li id="p3" class="mb-3">Create an empty <span class="badge badge-info">index.html</span> file and save it to the <span class="badge badge-info">test-project</span> folder.</li>
 
-            <li class="mb-3">
+            <li id="p4" class="mb-3">
                 <p>Copy &amp; paste the basic HTMl structure:</p>
                 <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!doctype html>
@@ -63,7 +60,7 @@
                 </div>
             </li>
 
-            <li class="mb-3">
+            <li id="p5" class="mb-3">
                 <p>Add CSS file to the HEAD:</p>
                 <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!doctype html>
@@ -83,7 +80,7 @@
 &lt;/html></code></pre></div>
             </li>
 
-            <li class="mb-3">
+            <li id="p6" class="mb-3">
                 <p>Let's add <a href="/documentation/controls/hidden-sort">hidden sort</a> and <a href="/documentation/controls/textbox-filter">textbox filter</a> controls:</p>
 <!doctype html>
                 <div class="highlight">
@@ -126,7 +123,7 @@
 &lt;/html></code></pre></div>
             </li>
 
-            <li class="mb-3">
+            <li id="p7" class="mb-3">
                 <p>Now let's add sample data that should be wrapped by HTML element with <code class="highlighter-rouge">data-jplist-group="group1"</code> attribute. The value <code class="highlighter-rouge">group1</code> can be any text value. Sort and textbox filter controls have <code class="highlighter-rouge">data-group="group1"</code> meaning that these controls should be applied to this group.</p>
 
                 <p>
@@ -280,7 +277,7 @@
                 </div>
             </li>
 
-            <li class="mb-3">
+            <li id="p8" class="mb-3">
                 <p>We can also add <a href="/documentation/controls/no-results">no results control</a> that shows a message when no results are found:</p>
 
                 <div class="highlight">
@@ -434,7 +431,7 @@
 
             </li>
 
-            <li class="mb-3">
+            <li id="p9" class="mb-3">
                 <p>Now let's add jPList javascript file to the bottom of HTML:</p>
                 <div class="highlight">
                     <pre><code class="language-html" data-lang="html">&lt;!doctype html>

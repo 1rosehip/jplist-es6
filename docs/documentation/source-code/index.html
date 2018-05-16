@@ -6,7 +6,7 @@
                 
 
     
-        Checkbox Path Filter Control | Documentation | jPList Library
+        Working with the source code | Documentation | jPList Library
         </title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -275,8 +275,7 @@
 
 <div class="bd-toc-item 
 
-    
-        active">
+    ">
 
     <a class="bd-toc-link" href="/documentation/controls/select-filter">
         Path Filter Controls
@@ -301,8 +300,7 @@
         </li>
         <li 
 
-    
-        class="active bd-sidenav-active">
+    >
             <a href="/documentation/controls/checkbox-path-filter">
                 <i class="far fa-check-circle"></i>
                 <span>Checkbox Path Filter Control</span>
@@ -404,7 +402,8 @@
 
 <div class="bd-toc-item 
 
-    ">
+    
+        active">
     <a class="bd-toc-link" href="/documentation/source-code">
         Source Code
     </a>
@@ -436,6 +435,9 @@
             <li class="toc-entry toc-h2">
                 <a href="#html-structure">HTML Structure</a>
                 <ul>
+                    <li class="toc-entry toc-h3"><a href="#radio-mode">Radio buttons mode</a></li>
+                    <li class="toc-entry toc-h3"><a href="#checkbox-mode">Checkbox mode</a></li>
+                    <li class="toc-entry toc-h3"><a href="#inverted">Inverted filter</a></li>
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
                     <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
                 </ul>
@@ -450,303 +452,9 @@
     <!-- main content -->
     <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-        <h1 class="bd-title">Checkbox Path Filter Control</h1>
+        <h1 class="bd-title">Working with the source code</h1>
 
-        <p class="bd-lead">Checkbox path filter control is used to filter content by the defined path value at the specified CSS selector path.</p>
-
-        <div class="codepen">
-            <p data-height="265" data-theme-id="0" data-slug-hash="RyYrJG" data-default-tab="html,result" data-user="1rosehip" data-embed-version="2" data-pen-title="jPList Checkbox Path Filter Control" class="codepen">See the Pen <a href="https://codepen.io/1rosehip/pen/RyYrJG/">jPList Checkbox Path Filter Control</a> by 1rosehip (<a href="https://codepen.io/1rosehip">@1rosehip</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-        </div>
-
-        <h2 id="html-structure">HTML Structure</h2>
-
-        <p>
-            Checkbox path filter control is defined by required <code class="highlighter-rouge">data-jplist-control="checkbox-path-filter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered. The full list of data attributes can be found <a href="#data-attributes">here</a>.
-        </p>
-
-        <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
-&lt;link href="jplist.styles.css" rel="stylesheet" type="path/css" />
-                
-&lt;!-- checkbox path filter control -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-path-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    checked>
-Filter by .title
-&lt;/input>
-
-&lt;!-- content to filter -->
-&lt;div data-jplist-group="group1">
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 2&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 3&lt;/div>
-        ....
-    &lt;/div>
-
-&lt;/div>
-
-&lt;!-- jplist library -->
-&lt;script src="jplist.min.js">&lt;/script>
-&lt;script>
-    jplist.init();
-&lt;/script>
-            </code></pre>
-        </div>
-
-        <h3 id="panels">Top and bottom panels</h3>
-
-        <p>
-            Checkbox path filter control can be placed in both top and bottom panels for the better user experience. In this case <code class="highlighter-rouge">data-name</code> attribute <b>with the same value</b> should be added. All other data attributes should also have the same values:
-        </p>
-
-        <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- checkbox path filter control in the top panel -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-path-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    checked>
-Filter by .title
-&lt;/input>
-
-&lt;!-- content to filter -->
-&lt;div data-jplist-group="group1">
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 2&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 3&lt;/div>
-        ....
-    &lt;/div>
-
-&lt;/div>
-
-&lt;!-- checkbox path filter control in the bottom panel -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-path-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    checked>
-Filter by .title
-&lt;/input>
-            </code></pre>
-        </div>
-
-        <h3 id="jump">Jump to top</h3>
-
-        <p><code class="highlighter-rouge">data-jump</code> data attribute can be used to scroll page to the specified location when user changes checkbox value. <code class="highlighter-rouge">data-jump="top"</code> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</p>
-
-        <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-path-filter"
-    data-jump="top"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    checked>
-Filter by .title
-&lt;/input>
-            </code></pre>
-        </div>
-
-        <h2 id="deep-linking">Deep Linking</h2>
-
-        <p><a href="https://en.wikipedia.org/wiki/Deep_linking">Deep links</a> can be used to keep user changes and control state after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>deepLinking</i> setting should be <i>true</i> in jPList parameters.</p>
-
-        <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
-&lt;link href="jplist.styles.css" rel="stylesheet" type="path/css" />
-
-&lt;!-- checkbox path filter control -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-path-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    data-id="title1"
-    checked>
-Filter by .title
-&lt;/input>
-
-&lt;!-- content to filter -->
-&lt;div data-jplist-group="group1">
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-&lt;/div>
-
-&lt;!-- jplist library -->
-&lt;script src="jplist.min.js">&lt;/script>
-&lt;script>
-    jplist.init({
-        deepLinking: true
-    });
-&lt;/script>
-            </code></pre>
-        </div>
-
-        <h2 id="storage">Storage</h2>
-
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Local storage, session storage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">cookies</a> can be used to keep user selections and control states after the page refresh. To implement them <code class="highlighter-rouge">data-id</code> attribute should be added to HTML structure and <i>storage</i> setting should be passed to jPList constructor.</p>
-
-        <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
-&lt;link href="jplist.styles.css" rel="stylesheet" type="path/css" />
-
-&lt;!-- checkbox path filter control -->
-&lt;input
-    type="checkbox"
-    data-jplist-control="checkbox-path-filter"
-    data-path=".title"
-    data-group="group1"
-    data-name="name1"
-    data-id="title1"
-    checked>
-Filter by .title
-&lt;/input>
-
-&lt;!-- content to filter -->
-&lt;div data-jplist-group="group1">
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-&lt;/div>
-
-&lt;!-- jplist library -->
-&lt;script src="jplist.min.js">&lt;/script>
-&lt;script>
-    jplist.init({
-        storage: 'localStorage', //'localStorage', 'sessionStorage' or 'cookies'
-        storageName: 'jplist'
-    });
-&lt;/script>
-            </code></pre>
-        </div>
-
-        <h2 id="data-attributes">Data Attributes</h2>
-
-        <p>The full list of control data attributes.</p>
-
-        <table>
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Values</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><code class="highlighter-rouge">data-jplist-control</code></td>
-                <td>Defines checkbox path filter control.</td>
-                <td>"checkbox-path-filter"</td>
-            </tr>
-
-            <tr>
-                <td><code class="highlighter-rouge">data-group</code></td>
-                <td>Defines group of items that should be filtered. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
-                <td>any path value</td>
-            </tr>
-
-            <tr>
-                <td><code class="highlighter-rouge">data-name</code></td>
-                <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
-                <td>any path value</td>
-            </tr>
-
-            <tr>
-                <td><code class="highlighter-rouge">data-path</code></td>
-                <td>CSS selector that defines the HTML element that should be filtered</td>
-                <td>"default" keyword for the initial value or any CSS selector</td>
-            </tr>
-
-            <tr>
-                <td><code class="highlighter-rouge">data-path</code></td>
-                <td>the filter path value</td>
-                <td>any path value</td>
-            </tr>
-
-            <tr>
-                <td><code class="highlighter-rouge">data-jump</code></td>
-                <td>This data attribute can be used to scroll page to the specified location when user changes a checkbox value. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
-                <td><i>top</i> keyword or any CS selector</td>
-            </tr>
-
-            <tr>
-                <td><code class="highlighter-rouge">data-id</code></td>
-                <td>This attribute is used for deep linking.</td>
-                <td>any path value that may contain letters, digits, underscores or dashes</td>
-            </tr>
-
-            </tbody>
-        </table>
+        <p class="bd-lead">The following tutorial describes how to create a page with ascending sort control and text filter control using jPList library.</p>
 
     </div>
 
