@@ -8,19 +8,11 @@
     <div class="d-none d-xl-block col-xl-2 bd-toc">
 
         <ul class="section-nav">
-            <li class="toc-entry toc-h2">
-                <a href="#html-structure">HTML Structure</a>
-                <ul>
-                    <li class="toc-entry toc-h3"><a href="#radio-mode">Radio buttons mode</a></li>
-                    <li class="toc-entry toc-h3"><a href="#checkbox-mode">Checkbox mode</a></li>
-                    <li class="toc-entry toc-h3"><a href="#inverted">Inverted filter</a></li>
-                    <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
-                    <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
-                </ul>
-            </li>
-            <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
-            <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
-            <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a></li>
+            <li class="toc-entry toc-h2"><a href="#p1">#1</a></li>
+            <li class="toc-entry toc-h2"><a href="#p2">#2</a></li>
+            <li class="toc-entry toc-h2"><a href="#p3">#3</a></li>
+            <li class="toc-entry toc-h2"><a href="#p4">#4</a></li>
+            <li class="toc-entry toc-h2"><a href="#p5">#5</a></li>
         </ul>
 
     </div>
@@ -30,8 +22,33 @@
 
         <h1 class="bd-title">Working with the source code</h1>
 
-        <p class="bd-lead">The following tutorial describes how to create a page with ascending sort control and text filter control using jPList library.</p>
+        <p class="bd-lead">This tutorial describes how to start working with jPList source code.</p>
 
+        <ol>
+            <li id="p1">Download and install <a href="https://nodejs.org/en/">NodeJS</a>.</li>
+            <li id="p2" class="mt-3 mb-3">
+                <p><a href="https://github.com/1rosehip/jplist-es6/archive/master.zip">Download</a> jPList library from GitHub or use GIT to get it:</p>
+                <div class="highlight"><pre><code class="language-html" data-lang="html">git clone https://github.com/1rosehip/jplist-es6.git</code></pre></div>
+            </li>
+
+            <li id="p3" class="mb-3">
+                <p>Go to the downloaded folder, open CMD or Terminal window and run the following commands:</p>
+                <div class="highlight"><pre><code class="language-html" data-lang="html">cd jplist-es6
+npm install</code></pre></div>
+            </li>
+
+            <li id="p4" class="mb-3">
+                <p>jPList uses <a href="https://babeljs.io/">Babel</a> and <a href="https://webpack.js.org/">Webpack</a> to transpile and bundle JavaScript source code:</p>
+                <div class="highlight"><pre><code class="language-html" data-lang="html">npm run build</code></pre></div>
+                <p>It's also possible to run them in the <b>watch</b> mode:</p>
+                <div class="highlight"><pre><code class="language-html" data-lang="html">npm run watch</code></pre></div>
+            </li>
+
+            <li id="p5" class="mb-3">
+                <p>jPList uses <a href="https://facebook.github.io/jest/">Jest</a> for the unit testing:</p>
+                <div class="highlight"><pre><code class="language-html" data-lang="html">npm test</code></pre></div>
+            </li>
+        </ol>
     </div>
 }
 
