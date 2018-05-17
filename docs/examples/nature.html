@@ -186,7 +186,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-2 mr-3">
+                <div class="row mb-2 mr-3 d-none d-sm-none d-md-inline-block">
 
                     <div class="col mb-2">
 
@@ -282,7 +282,7 @@
 
                 </div>
 
-                <div class="row mb-2 mr-3">
+                <div class="row mb-2 mr-3 d-none d-sm-none d-md-inline-block">
 
                     <div class="col mb-2">
 
@@ -297,8 +297,9 @@
                                                 data-path=".badge"
                                                 data-group="group1"
                                                 data-name="cb-filter"
-                                                value="wallpaper" />
-                                        wallpapers
+                                                value="wallpaper"
+                                                class="mr-1" />
+                                        Wallpapers
                                     </label>
                                 </div>
                                 <div class="input-group-text">
@@ -309,8 +310,9 @@
                                                 data-path=".badge"
                                                 data-group="group1"
                                                 data-name="cb-filter"
-                                                value="flower" />
-                                        flowers
+                                                value="flower"
+                                                class="mr-1" />
+                                        Flowers
                                     </label>
                                 </div>
                                 <div class="input-group-text">
@@ -321,8 +323,37 @@
                                                 data-path=".badge"
                                                 data-group="group1"
                                                 data-name="cb-filter"
-                                                value="mountain" />
-                                        mountains
+                                                value="mountain"
+                                                class="mr-1" />
+                                        Mountains
+                                    </label>
+                                </div>
+
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-text-filter"
+                                                data-path=".badge"
+                                                data-group="group1"
+                                                data-name="cb-filter"
+                                                value="water"
+                                                class="mr-1" />
+                                        Water
+                                    </label>
+                                </div>
+
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-text-filter"
+                                                data-path=".badge"
+                                                data-group="group1"
+                                                data-name="cb-filter"
+                                                value="river"
+                                                class="mr-1" />
+                                        Rivers
                                     </label>
                                 </div>
                             </div>
@@ -336,8 +367,87 @@
                                                 data-path=".badge"
                                                 data-group="group1"
                                                 data-name="cb-filter"
-                                                value="tree" />
-                                        trees
+                                                value="tree"
+                                                class="mr-1" />
+                                        Trees
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 mr-3 d-none d-sm-none d-md-inline-block">
+
+                    <div class="col mb-2">
+
+                        <div class="input-group">
+
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="radio"
+                                                data-jplist-control="radio-buttons-path-filter"
+                                                data-path="default"
+                                                data-group="group1"
+                                                name="radio-filter"
+                                                class="mr-1"
+                                                checked />
+                                        All Seasons
+                                    </label>
+                                </div>
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="radio"
+                                                data-jplist-control="radio-buttons-path-filter"
+                                                data-path=".winter"
+                                                data-group="group1"
+                                                name="radio-filter"
+                                                class="mr-1" />
+                                        Winter
+                                    </label>
+                                </div>
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="radio"
+                                                data-jplist-control="radio-buttons-path-filter"
+                                                data-path=".spring"
+                                                data-group="group1"
+                                                name="radio-filter"
+                                                class="mr-1" />
+                                        Spring
+                                    </label>
+                                </div>
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="radio"
+                                                data-jplist-control="radio-buttons-path-filter"
+                                                data-path=".summer"
+                                                data-group="group1"
+                                                name="radio-filter"
+                                                class="mr-1" />
+                                        Summer
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="radio"
+                                                data-jplist-control="radio-buttons-path-filter"
+                                                data-path=".autumn"
+                                                data-group="group1"
+                                                name="radio-filter"  />
+                                        autumn
                                     </label>
                                 </div>
                             </div>
@@ -424,6 +534,7 @@
                         <select
                                 data-jplist-control="select-filter"
                                 data-group="group1"
+                                class="mr-3"
                                 data-name="tags-filter">
 
                             <option
