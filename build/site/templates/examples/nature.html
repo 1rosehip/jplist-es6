@@ -1,0 +1,412 @@
+@!(data)
+
+@function header(){
+	<title>Nature</title>
+
+    <!--<link href="/js/jplist.styles.css" rel="stylesheet" type="text/css" />-->
+    <link href="css/nature.css" rel="stylesheet" type="text/css" />
+}
+
+@function body(){
+
+    <main role="main">
+
+        <div class="py-3 controls-panel control-top-panel">
+            <div class="container">
+
+                <div class="row mb-2 mr-3">
+
+                    <div class="col-lg-6 mb-2">
+
+                        <!-- text filter by author name -->
+                        <div class="input-group">
+                            <input
+                                    data-jplist-control="textbox-filter"
+                                    data-group="group1"
+                                    data-name="my-filter-2"
+                                    data-path=".author-name"
+                                    type="text"
+                                    value=""
+                                    placeholder="Filter by Author Name"
+                                    data-clear-btn-id="author-clear-btn"
+                                    class="form-control"
+                            />
+
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="author-clear-btn">Clear</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 mb-2 d-none d-sm-none d-md-inline-block">
+
+                        <!-- text filter by description -->
+                        <div class="input-group">
+                            <input
+                                    data-jplist-control="textbox-filter"
+                                    data-group="group1"
+                                    data-name="my-filter-2"
+                                    data-path=".description"
+                                    type="text"
+                                    value=""
+                                    placeholder="Filter by Description"
+                                    data-clear-btn-id="desc-clear-btn"
+                                    class="form-control"
+                            />
+
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="desc-clear-btn">Clear</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row mb-2 mr-3">
+
+                    <div class="col mb-2">
+
+                        <div class="btn-toolbar">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text mr-3">Sort By:</span>
+                                </div>
+                            </div>
+
+                            <div class="btn-group">
+
+                                <button
+                                        class="btn btn-light"
+                                        data-jplist-control="sort-buttons"
+                                        data-path=".author-name"
+                                        data-group="group1"
+                                        data-order="asc"
+                                        data-type="text"
+                                        data-name="sort1"
+                                        data-selected="true"
+                                        data-mode="radio">
+                                    Author <i class="fas fa-angle-double-down ml-2"></i>
+                                </button>
+
+                                <button
+                                        class="btn btn-light"
+                                        data-jplist-control="sort-buttons"
+                                        data-path=".author-name"
+                                        data-group="group1"
+                                        data-order="desc"
+                                        data-type="text"
+                                        data-name="sort1"
+                                        data-mode="radio">
+                                    Author <i class="fas fa-angle-double-up ml-2"></i>
+                                </button>
+
+                                <button
+                                        class="btn btn-light"
+                                        data-jplist-control="sort-buttons"
+                                        data-path=".likes"
+                                        data-group="group1"
+                                        data-order="asc"
+                                        data-type="number"
+                                        data-name="sort1"
+                                        data-mode="radio">
+                                    Likes <i class="fas fa-angle-double-down ml-2"></i>
+                                </button>
+
+                                <button
+                                        class="btn btn-light"
+                                        data-jplist-control="sort-buttons"
+                                        data-path=".likes"
+                                        data-group="group1"
+                                        data-order="desc"
+                                        data-type="number"
+                                        data-name="sort1"
+                                        data-mode="radio">
+                                    Likes <i class="fas fa-angle-double-up ml-2"></i>
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 mr-3">
+
+                    <div class="col mb-2">
+
+                        <div class="input-group">
+
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-text-filter"
+                                                data-path=".badge"
+                                                data-group="group1"
+                                                data-name="cb-filter"
+                                                value="wallpaper" />
+                                        wallpapers
+                                    </label>
+                                </div>
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-text-filter"
+                                                data-path=".badge"
+                                                data-group="group1"
+                                                data-name="cb-filter"
+                                                value="flower" />
+                                        flowers
+                                    </label>
+                                </div>
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-text-filter"
+                                                data-path=".badge"
+                                                data-group="group1"
+                                                data-name="cb-filter"
+                                                value="mountain" />
+                                        mountains
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-text-filter"
+                                                data-path=".badge"
+                                                data-group="group1"
+                                                data-name="cb-filter"
+                                                value="tree" />
+                                        trees
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 mr-3">
+
+                    <div class="col flex flex-wrap align-items-start">
+
+                        <!-- pagination control -->
+                        <nav
+                                data-jplist-control="pagination"
+                                data-group="group1"
+                                data-items-per-page="12"
+                                data-current-page="0"
+                                data-disabled-class="disabled"
+                                data-selected-class="active"
+                                data-jump="top"
+                                data-name="pagination1"
+                                class="mb-2 mr-3">
+
+                            <!-- first and previous buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="first"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
+                            </ul>
+
+                            <!-- pages buttons -->
+                            <ul class="pagination d-none d-sm-none d-lg-inline-flex" data-type="pages">
+                                <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
+                            </ul>
+
+                            <!-- next and last buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="last"><a class="page-link" href="#">»</a></li>
+                            </ul>
+
+                            <!-- information labels -->
+                            <span data-type="info" class="d-none d-sm-none d-md-inline-flex badge badge-secondary ml-3 p-2">
+                                {startItem} - {endItem} of {itemsNumber}
+                            </span>
+
+                            <!-- items per page dropdown -->
+                            <div class="dropdown d-inline-flex ml-lg-3"
+                                 data-type="items-per-page-dd"
+                                 data-opened-class="show">
+
+                                <button
+                                        data-type="panel"
+                                        class="btn btn-primary dropdown-toggle"
+                                        type="button">
+                                    Dropdown button
+                                </button>
+
+                                <div
+                                        data-type="content"
+                                        class="dropdown-menu"
+                                        aria-labelledby="dropdownMenuButton">
+
+                                    <a class="dropdown-item" href="#" data-value="9">9 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="12">12 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="24">24 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="0">View All</a>
+
+                                </div>
+                            </div>
+
+                        </nav>
+
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 mr-3">
+                    <div class="col flex flex-wrap align-items-start">
+
+                        <!-- select filter control -->
+                        <select
+                                data-jplist-control="select-filter"
+                                data-group="group1"
+                                data-name="tags-filter">
+
+                            <option
+                                    value="0"
+                                    data-path="default">Filter by</option>
+
+                            <option
+                                    value="1"
+                                    data-path=".forest">Forest</option>
+
+                            <option
+                                    value="2"
+                                    data-path=".garden">Garden</option>
+
+                            <option
+                                    value="3"
+                                    data-path=".lake">Lake</option>
+
+                            <option
+                                    value="4"
+                                    data-path=".sky">Sky</option>
+
+                            <option
+                                    value="r"
+                                    data-path=".rock">Rock</option>
+                        </select>
+
+                        <!-- reset control -->
+                        <button
+                                data-jplist-control="reset"
+                                data-group="group1"
+                                class="btn btn-secondary"
+                                data-name="reset"
+                                type="button">
+                            Reset
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="py-5 bg-light">
+            <div class="container">
+
+                <div class="row" data-jplist-group="group1">
+
+                    @{
+                        var data = JSON.parse(getData());
+                    }
+
+                    @for(var i=0; i<data.length; i++) {
+                        @{
+                            item = data[i];
+                            item.createdDate = new Date(item.created_at);
+                        }
+
+                        <div class="col-lg-4 col-sm-6 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <div class="nature-img">
+                                    <a href="@(item.links.html)">
+                                        <img src="@(item.urls.thumb)" alt="" title="" />
+                                    </a>
+                                </div>
+                                <ul class="list-group list-group-flush">
+
+                                    <li class="list-group-item">
+                                        <b class="header">Photo by</b>
+                                        <a href="@(item.user.links.html)" class="author-name">@(item.user.name)</a> on Unsplash
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">@(item.likes)</span>
+                                    </li>
+
+                                    <li class="list-group-item description">
+                                        @if(item.description){
+                                            <span class="description-content">@(item.description)</span>
+                                        }
+                                    </li>
+
+
+                                </ul>
+
+                                <div class="card-body">
+                                    @for(var t=0; t<item.photo_tags.length; t++){
+                                        @{tag = item.photo_tags[t]}
+
+                                        @if(t < 10){
+                                            @if(t%2 === 0){
+                                                <span class="badge badge-info @(tag.title)">@(tag.title)</span>
+                                            }
+                                            else{
+                                                <span class="badge badge-secondary @(tag.title)">@(tag.title)</span>
+                                            }
+                                        }
+                                    }
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Created at @(item.createdDate.toLocaleDateString('en-US', {
+                                        //weekday: 'long',
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                    }))
+                                        <span class="create-date-year" style="display: none">@(item.createdDate.getFullYear())</span>
+                                    </small>
+                                </div>
+
+                            </div>
+                        </div>
+                    }
+
+                    <!-- no results control -->
+                    <div class="col text-center" data-jplist-control="no-results" data-group="group1" data-name="no-results">No Results Found</div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/jplist.min.js"></script>
+    <script>
+        jplist.init();
+    </script>
+}
+
+@render(process.cwd() + '/build/site/layouts/example.html', data, 'Nature', header, body)
+
+@function getData(){
+    @render(process.cwd() + '/build/site/templates/examples/nature-data.json')
+}
