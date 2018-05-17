@@ -126,6 +126,32 @@
                                     Likes <i class="fas fa-angle-double-up ml-2"></i>
                                 </button>
 
+                                <button
+                                        class="btn btn-light"
+                                        data-jplist-control="sort-buttons"
+                                        data-path=".create-date"
+                                        data-group="group1"
+                                        data-order="asc"
+                                        data-type="datetime"
+                                        data-datetime-format="{month} {day}, {year}"
+                                        data-name="sort1"
+                                        data-mode="radio">
+                                    Date <i class="fas fa-angle-double-down ml-2"></i>
+                                </button>
+
+                                <button
+                                        class="btn btn-light"
+                                        data-jplist-control="sort-buttons"
+                                        data-path=".create-date"
+                                        data-group="group1"
+                                        data-order="desc"
+                                        data-type="datetime"
+                                        data-datetime-format="{month} {day}, {year}"
+                                        data-name="sort1"
+                                        data-mode="radio">
+                                    Date <i class="fas fa-angle-double-up ml-2"></i>
+                                </button>
+
                             </div>
                         </div>
 
@@ -376,12 +402,13 @@
                                     }
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted">Created at @(item.createdDate.toLocaleDateString('en-US', {
+                                    <small class="text-muted">Created at <span class="create-date">@(item.createdDate.toLocaleDateString('en-US', {
                                         //weekday: 'long',
                                         year: 'numeric',
                                         month: 'long',
                                         day: 'numeric'
                                     }))
+                                    </span>
                                         <span class="create-date-year" style="display: none">@(item.createdDate.getFullYear())</span>
                                     </small>
                                 </div>

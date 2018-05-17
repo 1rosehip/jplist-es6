@@ -114,7 +114,13 @@
                 <tr>
                     <td><code class="highlighter-rouge">data-type</code></td>
                     <td>Specifies the type of content that should be sorted.</td>
-                    <td>"text", "number" or "datetime"</td>
+                    <td>"text" (default), "number" or "datetime"</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-datetime-format</code></td>
+                    <td>This attribute is used when <code class="highlighter-rouge">data-type="datetime"</code>. It defines the structure of the date using following wildcards: <b>{year}, {month}, {day}, {hour}, {min}, {sec}</b>.</td>
+                    <td>Date structure, for example: <code class="highlighter-rouge">data-datetime-format="{month} {day}, {year}"</code></td>
                 </tr>
             </tbody>
         </table>
