@@ -90,6 +90,87 @@
                 </div>
 
                 <div class="row mb-2 mr-3">
+                    <div class="col mb-2">
+
+                        <div class="input-group">
+
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-path-filter"
+                                                data-path=".architecture"
+                                                data-group="group1"
+                                                data-name="cb-badge"
+                                                class="mr-1" />
+                                        Architecture
+                                    </label>
+                                </div>
+
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-path-filter"
+                                                data-path=".bridge"
+                                                data-group="group1"
+                                                data-name="cb-badge"
+                                                class="mr-1" />
+                                        Bridge
+                                    </label>
+                                </div>
+
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-path-filter"
+                                                data-path=".mountain"
+                                                data-group="group1"
+                                                data-name="cb-badge"
+                                                class="mr-1" />
+                                        Mountain
+                                    </label>
+                                </div>
+
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-path-filter"
+                                                data-path=".cloud"
+                                                data-group="group1"
+                                                data-name="cb-badge"
+                                                class="mr-1" />
+                                        Clouds
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <label>
+                                        <input
+                                                type="checkbox"
+                                                data-jplist-control="checkbox-path-filter"
+                                                data-path=".galaxy"
+                                                data-group="group1"
+                                                class="mr-1"
+                                                data-name="cb-badge" />
+                                        Galaxy
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 mr-3">
 
                     <div class="col flex flex-wrap align-items-start">
 
@@ -152,6 +233,42 @@
                             </div>
 
                         </nav>
+
+                        <!-- filter dropdown control -->
+                        <div
+                                data-jplist-control="dropdown-filter"
+                                data-group="group1"
+                                data-opened-class="show"
+                                data-name="description"
+                                class="jplist-dd ml-3">
+
+                            <button
+                                    data-type="panel"
+                                    class="btn btn-primary dropdown-toggle"
+                                    type="button">
+                                Filter by
+                            </button>
+
+                            <div data-type="content" class="dropdown-menu">
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-value="0"
+                                   data-path="default">Filter By</a>
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-value="1"
+                                   data-path=".description-content">With Description</a>
+
+                                <a class="dropdown-item"
+                                   href="#"
+                                   data-value="2"
+                                   data-path=".description-content"
+                                    data-inverted="true">Without Description</a>
+
+                            </div>
+                        </div>
 
                     </div>
 
@@ -275,10 +392,10 @@
 
                                         @if(t < 10){
                                             @if(t%2 === 0){
-                                                <span class="badge badge-info">@(tag.title)</span>
+                                                <span class="badge badge-info @(tag.title)">@(tag.title)</span>
                                             }
                                             else{
-                                                <span class="badge badge-secondary">@(tag.title)</span>
+                                                <span class="badge badge-secondary @(tag.title)">@(tag.title)</span>
                                             }
                                         }
                                     }

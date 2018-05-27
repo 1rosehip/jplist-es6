@@ -16,10 +16,17 @@
     height: 100%;
 }
 
+[data-name="buttons-text-filter"].jplist-selected{
+    color: #fff;
+}
+
 .jplist-selected,
-.jplist-selected:hover{
+.jplist-selected:hover,
+.jplist-selected:active,
+.jplist-selected:focus{
     background-color: #007bff;
     border-color: #007bff;
+    outline: none;
 }
 
 .btn-group{
@@ -44,4 +51,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
 }

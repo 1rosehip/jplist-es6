@@ -434,6 +434,7 @@
                 <a href="#html-structure">HTML Structure</a>
                 <ul>
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
+                    <li class="toc-entry toc-h3"><a href="#bootstrap-example">Bootstrap dropdown</a></li>
                     <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
                 </ul>
             </li>
@@ -627,6 +628,48 @@
             data-value="3"
             data-path=".likes"
             class="jplist-dd-item">Likes&lt;/div>
+    &lt;/div>
+&lt;/div>
+            </code></pre>
+        </div>
+
+        <h3 id="bootstrap-example">Bootstrap dropdown example</h3>
+
+        <p>The following example demonstrates how to use jPList control with bootstrap framework:</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;div
+        data-jplist-control="dropdown-filter"
+        data-group="group1"
+        data-opened-class="show"
+        data-name="description"
+        class="jplist-dd">
+
+    &lt;button
+            data-type="panel"
+            class="btn btn-primary dropdown-toggle"
+            type="button">
+        Filter by
+    &lt;/button>
+
+    &lt;div data-type="content" class="dropdown-menu">
+
+        &lt;a class="dropdown-item"
+           href="#"
+           data-value="0"
+           data-path="default">Filter By&lt;/a>
+
+        &lt;a class="dropdown-item"
+           href="#"
+           data-value="1"
+           data-path=".description-content">With Description&lt;/a>
+
+        &lt;a class="dropdown-item"
+           href="#"
+           data-value="2"
+           data-path=".description-content"
+           data-inverted="true">Without Description&lt;/a>
+
     &lt;/div>
 &lt;/div>
             </code></pre>
