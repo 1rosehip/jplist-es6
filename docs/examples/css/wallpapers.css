@@ -1,0 +1,47 @@
+.wallpapers-img{
+    height: 150px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.wallpapers-img img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card{
+    height: 100%;
+}
+
+.jplist-selected,
+.jplist-selected:hover{
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-group{
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+}
+
+.btn-group button{
+    border-left: 1px solid #dee2e6;
+    border-collapse: collapse;
+}
+
+.btn-group button:first-child{
+    border-left: 0;
+}
+
+.btn-group button.jplist-selected{
+    color: #fff;
+}
+
+.input-group label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

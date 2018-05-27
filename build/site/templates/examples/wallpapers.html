@@ -1,0 +1,321 @@
+@!(data)
+
+@function header(){
+	<title>Wallpapers</title>
+
+    <!--<link href="/js/jplist.styles.css" rel="stylesheet" type="text/css" />-->
+    <link href="css/wallpapers.css" rel="stylesheet" type="text/css" />
+}
+
+@function body(){
+
+    <main role="main">
+
+        <div class="py-3 controls-panel control-top-panel">
+            <div class="container">
+
+                <div class="row mb-2 mr-3">
+                    <div class="col mb-2 d-none d-sm-none d-md-inline-block">
+
+                        <div class="input-group">
+
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Filter By:</span>
+                            </div>
+
+                            <button
+                                    type="button"
+                                    data-jplist-control="buttons-text-filter"
+                                    data-path="default"
+                                    data-group="group1"
+                                    data-mode="radio"
+                                    data-selected="true"
+                                    data-text=""
+                                    class="form-control"
+                                    data-name="buttons-text-filter">
+                                All
+                            </button>
+
+                            <button
+                                    type="button"
+                                    data-jplist-control="buttons-text-filter"
+                                    data-path=".badge"
+                                    data-group="group1"
+                                    data-mode="radio"
+                                    data-text="Desktop Wallpapers"
+                                    class="form-control"
+                                    data-name="buttons-text-filter">
+                                Desktop Wallpapers
+                            </button>
+
+                            <button
+                                    type="button"
+                                    data-jplist-control="buttons-text-filter"
+                                    data-path=".badge"
+                                    data-group="group1"
+                                    data-mode="radio"
+                                    data-text="HD Wallpapers"
+                                    class="form-control"
+                                    data-name="buttons-text-filter">
+                                HD Wallpapers
+                            </button>
+
+                            <button
+                                    type="button"
+                                    data-jplist-control="buttons-text-filter"
+                                    data-path=".badge"
+                                    data-group="group1"
+                                    data-mode="radio"
+                                    data-text="black and white"
+                                    class="form-control"
+                                    data-name="buttons-text-filter">
+                                Black and White
+                            </button>
+
+                            <button
+                                    type="button"
+                                    data-jplist-control="buttons-text-filter"
+                                    data-path=".badge"
+                                    data-group="group1"
+                                    data-mode="radio"
+                                    data-text="Animal Wallpapers"
+                                    class="form-control"
+                                    data-name="buttons-text-filter">
+                                Animal Wallpapers
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row mb-2 mr-3">
+
+                    <div class="col flex flex-wrap align-items-start">
+
+                        <!-- pagination control -->
+                        <nav
+                                data-jplist-control="pagination"
+                                data-group="group1"
+                                data-items-per-page="12"
+                                data-current-page="0"
+                                data-disabled-class="disabled"
+                                data-selected-class="active"
+                                data-jump="top"
+                                data-name="pagination1"
+                                class="mb-2 mr-3">
+
+                            <!-- first and previous buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="first"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item" data-type="prev"><a class="page-link" href="#">‹</a></li>
+                            </ul>
+
+                            <!-- pages buttons -->
+                            <ul class="pagination d-none d-sm-none d-lg-inline-flex" data-type="pages">
+                                <li class="page-item" data-type="page"><a class="page-link" href="#">{pageNumber}</a></li>
+                            </ul>
+
+                            <!-- next and last buttons -->
+                            <ul class="pagination d-inline-flex">
+                                <li class="page-item" data-type="next"><a class="page-link" href="#">›</a></li>
+                                <li class="page-item d-none d-sm-none d-lg-inline-block" data-type="last"><a class="page-link" href="#">»</a></li>
+                            </ul>
+
+                            <!-- information labels -->
+                            <span data-type="info" class="d-none d-sm-none d-md-inline-flex badge badge-secondary ml-3 p-2">
+                                Page {pageNumber} of {pagesNumber}
+                            </span>
+
+                            <!-- items per page dropdown -->
+                            <div class="dropdown d-inline-flex ml-lg-3"
+                                 data-type="items-per-page-dd"
+                                 data-opened-class="show">
+
+                                <button
+                                        data-type="panel"
+                                        class="btn btn-primary dropdown-toggle"
+                                        type="button">
+                                    Dropdown button
+                                </button>
+
+                                <div
+                                        data-type="content"
+                                        class="dropdown-menu"
+                                        aria-labelledby="dropdownMenuButton">
+
+                                    <a class="dropdown-item" href="#" data-value="12">12 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="24">24 per page</a>
+                                    <a class="dropdown-item" href="#" data-value="0">View All</a>
+
+                                </div>
+                            </div>
+
+                        </nav>
+
+                    </div>
+
+                </div>
+
+                <div class="row mb-2 mr-3">
+                    <div class="col flex flex-wrap align-items-start">
+
+                        <!-- reset control -->
+                        <button
+                                data-jplist-control="reset"
+                                data-group="group1"
+                                class="btn btn-secondary mr-3"
+                                data-name="reset"
+                                type="button">
+                            Reset
+                        </button>
+
+                        <!-- select sort control -->
+                        <select
+                                data-jplist-control="select-sort"
+                                data-group="group1"
+                                data-name="sort">
+
+                            <option
+                                    value="0"
+                                    data-path="default">Sort by</option>
+
+                            <option
+                                    value="1"
+                                    data-path=".author-name"
+                                    data-order="asc"
+                                    data-type="text"
+                                    selected>Author Name A-Z</option>
+
+                            <option
+                                    value="2"
+                                    data-path=".author-name"
+                                    data-order="desc"
+                                    data-type="text">Author Name Z-A</option>
+
+                            <option
+                                    value="3"
+                                    data-path=".likes"
+                                    data-order="asc"
+                                    data-type="number">Likes ASC</option>
+
+                            <option
+                                    value="4"
+                                    data-path=".likes"
+                                    data-order="desc"
+                                    data-type="number">Likes DESC</option>
+
+                            <option
+                                    value="5"
+                                    data-path=".create-date"
+                                    data-order="asc"
+                                    data-datetime-format="{month} {day}, {year}"
+                                    data-type="datetime">Created ASC</option>
+
+                            <option
+                                    value="6"
+                                    data-path=".create-date"
+                                    data-order="desc"
+                                    data-datetime-format="{month} {day}, {year}"
+                                    data-type="datetime">Created DESC</option>
+                        </select>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="py-5 bg-light">
+            <div class="container">
+
+                <div class="row" data-jplist-group="group1">
+
+                    @{
+                        var data = JSON.parse(getData());
+                    }
+
+                    @for(var i=0; i<data.length; i++) {
+                        @{
+                            item = data[i];
+                            item.createdDate = new Date(item.created_at);
+                        }
+
+                        <div class="col-lg-4 col-sm-6 mb-4" data-jplist-item>
+                            <div class="card box-shadow">
+                                <div class="wallpapers-img">
+                                    <a href="@(item.links.html)">
+                                        <img src="@(item.urls.thumb)" alt="" title="" />
+                                    </a>
+                                </div>
+                                <ul class="list-group list-group-flush">
+
+                                    <li class="list-group-item">
+                                        <b class="header">Photo by</b>
+                                        <a href="@(item.user.links.html)" class="author-name">@(item.user.name)</a> on Unsplash
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <b class="header">Likes &#9829</b>
+                                        <span class="likes">@(item.likes)</span>
+                                    </li>
+
+                                    <li class="list-group-item description">
+                                        @if(item.description){
+                                            <span class="description-content">@(item.description)</span>
+                                        }
+                                    </li>
+
+
+                                </ul>
+
+                                <div class="card-body">
+                                    @for(var t=0; t<item.photo_tags.length; t++){
+                                        @{tag = item.photo_tags[t]}
+
+                                        @if(t < 10){
+                                            @if(t%2 === 0){
+                                                <span class="badge badge-info">@(tag.title)</span>
+                                            }
+                                            else{
+                                                <span class="badge badge-secondary">@(tag.title)</span>
+                                            }
+                                        }
+                                    }
+                                </div>
+
+                                <div class="card-footer">
+                                    <small class="text-muted">Created at <span class="create-date">@(item.createdDate.toLocaleDateString('en-US', {
+                                        //weekday: 'long',
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                        }))</span>
+                                        <span class="create-date-year" style="display: none">@(item.createdDate.getFullYear())</span>
+                                    </small>
+                                </div>
+
+                            </div>
+                        </div>
+                    }
+
+                    <!-- no results control -->
+                    <div class="col text-center" data-jplist-control="no-results" data-group="group1" data-name="no-results">No Results Found</div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/jplist.min.js"></script>
+    <script>
+        jplist.init();
+    </script>
+}
+
+@render(process.cwd() + '/build/site/layouts/example.html', data, 'Wallpapers', header, body)
+
+@function getData(){
+    @render(process.cwd() + '/build/site/templates/examples/wallpapers-data.json')
+}
