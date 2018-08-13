@@ -3,6 +3,8 @@ const path = require('path');
 
 //https://github.com/jprichardson/node-fs-extra
 const fse = require('fs-extra');
+const pjson = fs.readFileSync('./package.json', 'utf8');
+const version = JSON.parse(pjson).version;
 
 class CopyPlugin {
 
@@ -13,21 +15,24 @@ class CopyPlugin {
                 try{
                     console.log();
 
-                    console.log('Copying files to docs/js...');
-                    const srcFolder = path.join(process.cwd(), 'dist');
+                    console.log('Copying files to docs/js/' + version + '...');
+                    const srcFolder = path.join(process.cwd(), 'dist/' + version);
                     const items = fs.readdirSync(srcFolder);
 
                     items.forEach((item) => {
 
-                        //get the absolute file / folder path
-                        const sourceItemPath = path.join(srcFolder, item);
-                        const targetFilePath = path.join(process.cwd(), 'docs/js', item);
+                        let sourceItemPath = path.join(srcFolder, item);
 
+                        //docs
+                        let targetFilePath = path.join(process.cwd(), 'docs/js/' + version, item);
                         console.log(targetFilePath);
-                        //create all the needed nested folders at destination path
                         fse.ensureFileSync(targetFilePath);
+                        fse.copySync(sourceItemPath, targetFilePath);
 
-                        //copy the file
+                        //test pages
+                        targetFilePath = path.join(process.cwd(), 'test-pages/' + version + '/dist', item);
+                        console.log(targetFilePath);
+                        fse.ensureFileSync(targetFilePath);
                         fse.copySync(sourceItemPath, targetFilePath);
                     });
                 }

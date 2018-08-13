@@ -1,8 +1,12 @@
 const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 //const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const copy = require('./build/webpack-copy-plugin/plugin');
+
+const pjson = fs.readFileSync('./package.json', 'utf8');
+const version = JSON.parse(pjson).version;
 
 const config = {
 
@@ -12,7 +16,7 @@ const config = {
     output: {
         //filename: 'jplist.min.js',
         filename: '[name].min.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist/' + version)
     },
     mode: 'production', //development, production
     module: {

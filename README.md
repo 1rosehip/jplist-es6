@@ -28,3 +28,6 @@
 - Checkbox and radio button filters
 - Button filter controls
 - Range filter controls
+
+## Versioning
+jPList library follows semantic versioning specification (**semver**). Please read more about it [here.](https://semver.org/)
