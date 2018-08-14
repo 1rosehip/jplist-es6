@@ -35,7 +35,7 @@
 jPList library follows semantic versioning specification (**semver**). Please read more about it [here.](https://semver.org/)
 
 ## [Browser Compatibility](#browser-compat) <img src="https://raw.githubusercontent.com/no81no/jplist/master/demo/img/common/puzzle.png" align="right">
-- Internet Explorer 11+
+- Internet Explorer 10+
 - Firefox
 - Chrome
 - Safari
