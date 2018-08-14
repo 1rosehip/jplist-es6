@@ -24,7 +24,7 @@
 - Items per page dropdown
 - Fully customizable pagination styles
 
-### Filter and Search
+### Filtering and Search
 - Multiple textbox filters
 - Multiple dropdown filters
 - Checkbox and radio button filters
@@ -33,3 +33,15 @@
 
 ## [Versioning](#versioning)
 jPList library follows semantic versioning specification (**semver**). Please read more about it [here.](https://semver.org/)
+
+## [Browser Compatibility](#browser-compat) <img src="https://raw.githubusercontent.com/no81no/jplist/master/demo/img/common/puzzle.png" align="right">
+- Internet Explorer 11+
+- Firefox
+- Chrome
+- Safari
+- Opera
+
+## [Donations](#donation)
+If you find jPList useful, please consider making a donation to support project development. Thank you for your help!
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N54PFNPQ8ZJSU)
