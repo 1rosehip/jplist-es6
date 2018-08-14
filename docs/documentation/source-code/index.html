@@ -463,11 +463,17 @@ npm install</code></pre></div>
                 <div class="highlight"><pre><code class="language-html" data-lang="html">npm run build</code></pre></div>
                 <p>It's also possible to run them in the <b>watch</b> mode:</p>
                 <div class="highlight"><pre><code class="language-html" data-lang="html">npm run watch</code></pre></div>
+                <p>By default the latest version defined in <b>package.json</b> in <b>version</b> filed is compiled. To build a different version use <b>--version=</b> argument. For example it's possible to build version <i>1.1.0</i> as following:</p>
+                <div class="highlight"><pre><code class="language-html" data-lang="html">node node_modules/.bin/webpack --config webpack.config.js --version=1.1.0</code></pre></div>
             </li>
 
             <li id="p5" class="mb-3">
                 <p>jPList uses <a href="https://facebook.github.io/jest/">Jest</a> for the unit testing:</p>
                 <div class="highlight"><pre><code class="language-html" data-lang="html">npm test</code></pre></div>
+                <p>By default the command above runs all tests defined in <b>src</b> folder. To narrow it down or to test a specific version use the following command:</p>
+                <div class="highlight"><pre><code class="language-html" data-lang="html">node node_modules/.bin/jest path_to_folder</code></pre></div>
+                <p>For example to test version <i>1.1.0</i>:</p>
+                <div class="highlight"><pre><code class="language-html" data-lang="html">node node_modules/.bin/jest src/1.1.0</code></pre></div>
             </li>
         </ol>
     </div>

@@ -5,13 +5,20 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const copy = require('./build/webpack-copy-plugin/plugin');
 
+//handle source version
 const pjson = fs.readFileSync('./package.json', 'utf8');
-const version = JSON.parse(pjson).version;
+let version = JSON.parse(pjson).version;
+
+for(let arg of process.argv){
+    if(arg.indexOf('--version=') !== -1){
+        version = arg.replace('--version=', '').trim();
+    }
+}
 
 const config = {
 
     entry: {
-        'jplist': './src/index.js'
+        'jplist': path.resolve(__dirname, 'src/' + version + '/index.js')
     },
     output: {
         //filename: 'jplist.min.js',

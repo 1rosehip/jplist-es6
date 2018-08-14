@@ -5,6 +5,7 @@
   "scripts": {
     "watch": "webpack --config webpack.config.js --watch",
     "build": "webpack --config webpack.config.js",
+    "build110": "webpack --config webpack.config.js --version=1.1.0",
     "test": "jest src",
     "lint": "./node_modules/.bin/eslint src",
     "site": "light-server -s docs -p 3000 -b localhost --no-reload -w 'build/site/** # npm run render && echo Rendered!'",

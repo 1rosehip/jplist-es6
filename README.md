@@ -29,5 +29,5 @@
 - Button filter controls
 - Range filter controls
 
-## Versioning
+## [Versioning](#versioning)
 jPList library follows semantic versioning specification (**semver**). Please read more about it [here.](https://semver.org/)
