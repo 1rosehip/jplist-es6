@@ -71,6 +71,21 @@ import ResetControl from './controls/reset/reset.control';
 (() => {
     'use strict';
 
+    //custom events polyfill for IE 10+
+    //https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent
+    if (typeof window.CustomEvent !== 'function' ){
+
+        const CustomEvent = (event, params) => {
+            params = params || { bubbles: false, cancelable: false, detail: undefined };
+            var evt = document.createEvent( 'CustomEvent' );
+            evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+            return evt;
+        };
+
+        CustomEvent.prototype = window.Event.prototype;
+        window.CustomEvent = CustomEvent;
+    }
+
     /**
      * global jplist function, one per page
      */
