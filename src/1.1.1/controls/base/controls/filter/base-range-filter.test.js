@@ -217,6 +217,35 @@ describe('Base Range Filter Control', () => {
         `).min).toEqual(15);
     });
 
+    it('"or" logic property is null by default', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-min="aaa"
+                data-from="15"
+                data-to="20"
+                data-max="25"
+         />
+        `).or).toEqual(null);
+    });
+
+    it('"or" logic = test', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-min="aaa"
+                data-from="15"
+                data-to="20"
+                data-max="25"
+                data-or="test"
+         />
+        `).or).toEqual('test');
+    });
+
     describe('isEqualTo', () => {
 
         it('isEqualTo in case of same properties', () => {

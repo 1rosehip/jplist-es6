@@ -21,6 +21,21 @@ class ContentManager{
 
         if(!controls || !groups) return;
 
+        const filters = [
+            {
+                options: 'pathFilterOptions',
+                name: 'pathFilter'
+            },
+            {
+                options: 'rangeFilterOptions',
+                name: 'rangeFilter'
+            },
+            {
+                options: 'textFilterOptions',
+                name: 'textFilter'
+            }
+        ];
+
         //group structure is Array.<{root: HTMLElement, items: Array.<HTMLElement>}>
         for(let [cGroupName, groupValueArr] of groups){
 
@@ -50,43 +65,22 @@ class ContentManager{
                     }
 
                     let filtered = itemsBlock.items;
+                    for(let filter of filters){
 
-                    if(options.pathFilterOptions){
+                        //pathFilterOptions, rangeFilterOptions or textFilterOptions
+                        const filterName = filter.options;
 
-                        for(let pathFilterOption of options.pathFilterOptions){
+                        if(options[filterName]){
 
-                            filtered = FilterAction.pathFilter(filtered, pathFilterOption.path, pathFilterOption.isInverted);
-                            itemsNumber = filtered.length;
-                            fragment = ContentManager.getItemsFragment(filtered);
-                        }
-                    }
+                            const splitted = ContentManager.splitByLogic(options[filterName]);
 
-                    if(options.rangeFilterOptions){
+                            //apply "AND" filter
+                            filtered = ContentManager.handleFilter(filtered, splitted.and, 'and', filter.name);
 
-                        for(let rangeFilterOption of options.rangeFilterOptions){
-
-                            filtered = FilterAction.rangeFilter(filtered,
-                                rangeFilterOption.path,
-                                rangeFilterOption.from,
-                                rangeFilterOption.to,
-                                rangeFilterOption.min,
-                                rangeFilterOption.max);
-
-                            itemsNumber = filtered.length;
-                            fragment = ContentManager.getItemsFragment(filtered);
-                        }
-                    }
-
-                    if(options.textFilterOptions){
-
-                        for(let textFilterOption of options.textFilterOptions){
-
-                            filtered = FilterAction.textFilter(
-                                filtered,
-                                textFilterOption.text,
-                                textFilterOption.path,
-                                textFilterOption.mode,
-                                textFilterOption.ignoreRegex);
+                            //apply "OR" filters
+                            for(let orOptionsGroupName in splitted.or){
+                                filtered = ContentManager.handleFilter(filtered, splitted.or[orOptionsGroupName], 'or', filter.name);
+                            }
 
                             itemsNumber = filtered.length;
                             fragment = ContentManager.getItemsFragment(filtered);
@@ -142,6 +136,113 @@ class ContentManager{
                 StorageService.set(ContentManager.getDeepLink(controls, groups), settings.storage, settings.storageName, settings.cookiesExpiration);
             }
         }
+    }
+
+    /**
+     * perform filter
+     * @param {object} option
+     * @param {Array.<object>} filtered
+     * @param {string} filterType - 'textFilter', 'rangeFilter' or 'pathFilter'
+     * @returns {Array.<object>}
+     */
+    static performFilter(option, filtered, filterType){
+
+        switch(filterType){
+
+            case 'textFilter' : {
+                return FilterAction.textFilter(
+                    filtered,
+                    option.text,
+                    option.path,
+                    option.mode,
+                    option.ignoreRegex);
+            }
+
+            case 'pathFilter' : {
+                return FilterAction.pathFilter(filtered,
+                    option.path,
+                    option.isInverted);
+            }
+
+            case 'rangeFilter' : {
+                return FilterAction.rangeFilter(filtered,
+                    option.path,
+                    option.from,
+                    option.to,
+                    option.min,
+                    option.max);
+            }
+        }
+
+        return filtered;
+    }
+
+    /**
+     * filter text / path / range
+     * @param {Array.<object>} filtered
+     * @param {Array.<object>} options
+     * @param {string} logic - 'or' / 'and'
+     * @param {string} filterType - 'textFilter', 'rangeFilter' or 'pathFilter'
+     * @returns {Array.<object>}
+     */
+    static handleFilter(filtered, options, logic, filterType){
+
+        if(options.length <= 0) return filtered;
+
+        if(logic === 'and'){
+            for(let option of options){
+                filtered = ContentManager.performFilter(option, filtered, filterType);
+            }
+        }
+
+        if(logic === 'or'){
+
+            let orFiltered = new Set();
+
+            for(let option of options){
+
+                let temp = ContentManager.performFilter(option, filtered, filterType);
+
+                orFiltered = new Set([...orFiltered, ...temp]);
+            }
+
+            filtered = Array.from(orFiltered);
+        }
+
+        return filtered;
+    }
+
+    /**
+     * split array of options by "OR" / "AND" logic
+     * all options with "AND" logic organize 1 group, "OR" options can organize multiple groups
+     * @param {Array.<object>} options
+     * @return {object}, {and: [option1, option2, ...], or: {'name1': [option1, options, ...], 'name2': [option1, options, ...], ...}}
+     */
+    static splitByLogic(options){
+
+        const result = {
+            and: [],
+            or: {}
+        };
+
+        for(let option of options){
+
+            const orName = option.or;
+
+            if(!orName){
+                result.and.push(option);
+            }
+            else{
+                if(result.or[orName] === undefined){
+                    result.or[orName] = [option];
+                }
+                else{
+                    result.or[orName].push(option);
+                }
+            }
+        }
+
+        return result;
     }
 
     /**

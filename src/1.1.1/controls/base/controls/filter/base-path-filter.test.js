@@ -86,6 +86,27 @@ describe('Base Path Filter Control', () => {
         `).isInverted).toEqual(true);
     });
 
+    it('"or" logic property is null by default', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+         />
+        `).or).toEqual(null);
+    });
+
+    it('"or" logic = test', () => {
+        expect(generateControl(`
+         <div
+                data-jplist-control="abc-filter"
+                data-group="group1"
+                data-path=".title"
+                data-or="test"
+         />
+        `).or).toEqual('test');
+    });
+
     describe('isEqualTo', () => {
 
         it('isEqualTo in case of the same paths', () => {

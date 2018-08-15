@@ -119,7 +119,7 @@ describe('Base Text Filter Control', () => {
         `).text).toEqual('abc');
     });
 
-    it('control initial text should not be trimmed', () => {
+    it('control text should be trimmed', () => {
         expect(generateControl(`
          <input
                 data-jplist-control="textbox-filter"
@@ -130,7 +130,7 @@ describe('Base Text Filter Control', () => {
                 value=""
                 placeholder="Filter by Title"
          />
-        `).initialText).toEqual('      abc    ');
+        `).text).toEqual('abc');
     });
 
     it('control mode', () => {
@@ -172,6 +172,33 @@ describe('Base Text Filter Control', () => {
                 placeholder="Filter by Title"
          />
         `).mode).toEqual('contains');
+    });
+
+    it('"or" logic property is null by default', () => {
+        expect(generateControl(`
+         <input
+                data-jplist-control="textbox-filter"
+                data-group="group1"
+                data-path=".title"
+                type="text"
+                value=""
+                placeholder="Filter by Title"
+         />
+        `).or).toEqual(null);
+    });
+
+    it('"or" logic = test', () => {
+        expect(generateControl(`
+         <input
+                data-jplist-control="textbox-filter"
+                data-group="group1"
+                data-path=".title"
+                type="text"
+                value=""
+                data-or="test"
+                placeholder="Filter by Title"
+         />
+        `).or).toEqual('test');
     });
 
     describe('isEqualTo', () => {

@@ -25,6 +25,12 @@ class BasePathFilterControl extends BaseControl{
              * @type {string}
              */
             this.isInverted = (element.getAttribute('data-inverted') || '').toLowerCase().trim() === 'true';
+
+            /**
+             * optional "OR" logic property, used to combine different filter controls with "OR" logic instead of "AND"
+             * @type {string|null}
+             */
+            this.or = element.getAttribute('data-or') || null;
         }
     }
 
@@ -36,7 +42,8 @@ class BasePathFilterControl extends BaseControl{
 
         return {
             path: this.path,
-            isInverted: this.isInverted
+            isInverted: this.isInverted,
+            or: this.or
         };
     }
 

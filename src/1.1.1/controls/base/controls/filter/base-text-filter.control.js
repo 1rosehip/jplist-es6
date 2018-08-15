@@ -43,6 +43,12 @@ class BaseTextFilterControl extends BaseControl{
              * @type {string}
              */
             this.regex = element.getAttribute('data-regex') || '';
+
+            /**
+             * optional "OR" logic property, used to combine different filter controls with "OR" logic instead of "AND"
+             * @type {string|null}
+             */
+            this.or = element.getAttribute('data-or') || null;
         }
     }
 
@@ -76,7 +82,8 @@ class BaseTextFilterControl extends BaseControl{
             path: this.path,
             text: this.text,
             mode: this.mode,
-            ignoreRegex: this.regex
+            ignoreRegex: this.regex,
+            or: this.or
         };
     }
 

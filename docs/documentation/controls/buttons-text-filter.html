@@ -767,72 +767,78 @@
 
         <table>
             <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Values</th>
-            </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Values</th>
+                </tr>
             </thead>
             <tbody>
-            <tr>
-                <td><code class="highlighter-rouge">data-jplist-control</code></td>
-                <td>Defines buttons text filter control.</td>
-                <td>"buttons-text-filter"</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-jplist-control</code></td>
+                    <td>Defines buttons text filter control.</td>
+                    <td>"buttons-text-filter"</td>
+                </tr>
 
-            <tr>
-                <td><code class="highlighter-rouge">data-group</code></td>
-                <td>Defines group of items that should be filtered. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
-                <td>any text value</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-group</code></td>
+                    <td>Defines group of items that should be filtered. For example, if a control has <b>data-group="group1"</b> then items group should have <b>data-jplist-group="group1"</b> data attribute.</td>
+                    <td>any text value</td>
+                </tr>
 
-            <tr>
-                <td><code class="highlighter-rouge">data-path</code></td>
-                <td>CSS selector that defines the HTML element that should be filtered</td>
-                <td>"default" keyword for the initial value or any CSS selector</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-path</code></td>
+                    <td>CSS selector that defines the HTML element that should be filtered</td>
+                    <td>"default" keyword for the initial value or any CSS selector</td>
+                </tr>
 
-            <tr>
-                <td><code class="highlighter-rouge">data-text</code></td>
-                <td>the filter text value</td>
-                <td>any text value</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-text</code></td>
+                    <td>the filter text value</td>
+                    <td>any text value</td>
+                </tr>
 
-            <tr>
-                <td><code class="highlighter-rouge">data-mode</code></td>
-                <td>Defines filter behaviour.</td>
-                <td>"radio" (the default) or "checkbox"</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-mode</code></td>
+                    <td>Defines filter behaviour.</td>
+                    <td>"radio" (the default) or "checkbox"</td>
+                </tr>
 
-            <tr>
-                <td><code class="highlighter-rouge">data-selected</code></td>
-                <td>Defines if a button is selected.</td>
-                <td>"true" or "false"</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-selected</code></td>
+                    <td>Defines if a button is selected.</td>
+                    <td>"true" or "false"</td>
+                </tr>
 
-            <tr>
-                <td><code class="highlighter-rouge">data-name</code></td>
-                <td>The data-name attribute is used to identify the same controls in different panels or the group of buttons in radio mode. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
-                <td>any text value</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-name</code></td>
+                    <td>The data-name attribute is used to identify the same controls in different panels or the group of buttons in radio mode. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
+                    <td>any text value</td>
+                </tr>
 
-            <tr>
-                <td><code class="highlighter-rouge">data-jump</code></td>
-                <td>This data attribute can be used to scroll page to the specified location when user selects an option. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
-                <td><i>top</i> keyword or any CS selector</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-jump</code></td>
+                    <td>This data attribute can be used to scroll page to the specified location when user selects an option. <b>data-jump="top"</b> scrolls page to the top. Any CSS selector can be used instead of <b>top</b> keyword.</td>
+                    <td><i>top</i> keyword or any CS selector</td>
+                </tr>
 
-            <tr>
-                <td><code class="highlighter-rouge">data-id</code></td>
-                <td>This attribute is used for deep linking.</td>
-                <td>any text value that may contain letters, digits, underscores or dashes</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-id</code></td>
+                    <td>This attribute is used for deep linking.</td>
+                    <td>any text value that may contain letters, digits, underscores or dashes</td>
+                </tr>
 
-            <tr>
-                <td><code class="highlighter-rouge">data-regex</code></td>
-                <td>This optional data attribute defines characters that should be ignored during the filtering. For example, <b>data-regex="[^a-zA-Z0-9]+"</b> ignores all characters except English letters and numbers.</td>
-                <td>JavaScript regex</td>
-            </tr>
+                <tr>
+                    <td><code class="highlighter-rouge">data-regex</code></td>
+                    <td>This optional data attribute defines characters that should be ignored during the filtering. For example, <b>data-regex="[^a-zA-Z0-9]+"</b> ignores all characters except English letters and numbers.</td>
+                    <td>JavaScript regex</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-or</code></td>
+                    <td>Defines a group of controls that should be filtered though the "OR" logic</td>
+                    <td>any text value, for example <b>data-or="bags"</b></td>
+                </tr>
 
             </tbody>
         </table>

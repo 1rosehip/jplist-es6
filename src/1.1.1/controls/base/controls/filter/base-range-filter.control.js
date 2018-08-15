@@ -20,50 +20,59 @@ class BaseRangeFilterControl extends BaseControl{
              */
             this.path = (element.getAttribute('data-path') || '').trim();
 
+            const from = element.getAttribute('data-from');
+
             /**
              * min <= from <= (all numbers in the element) <= to <= max
              * @type {number}
              */
-            const from = element.getAttribute('data-from');
-
             this.from = from === null ? -Infinity : Number(from);
 
             if(isNaN(this.from)){
                 this.from = -Infinity;
             }
 
+            const to = element.getAttribute('data-to');
+
             /**
              * min <= from <= (all numbers in the element) <= to <= max
              * @type {number}
              */
-            const to = element.getAttribute('data-to');
             this.to = to === null ? Infinity : Number(to);
 
             if(isNaN(this.to)){
                 this.to = Infinity;
             }
 
+            const min = element.getAttribute('data-min');
+
             /**
              * min <= from <= (all numbers in the element) <= to <= max
              * @type {number}
              */
-            const min = element.getAttribute('data-min');
             this.min = min === null ? this.from : Number(min);
 
             if(isNaN(this.min)){
                 this.min = this.from;
             }
 
+            const max = element.getAttribute('data-max');
+
             /**
              * min <= from <= (all numbers in the element) <= to <= max
              * @type {number}
              */
-            const max = element.getAttribute('data-max');
             this.max = max === null ? this.to : Number(max);
 
             if(isNaN(this.max)){
                 this.max = this.to;
             }
+
+            /**
+             * optional "OR" logic property, used to combine different filter controls with "OR" logic instead of "AND"
+             * @type {string|null}
+             */
+            this.or = element.getAttribute('data-or') || null;
         }
     }
 
@@ -78,7 +87,8 @@ class BaseRangeFilterControl extends BaseControl{
             min: this.min,
             from: this.from,
             to: this.to,
-            max: this.max
+            max: this.max,
+            or: this.or
         };
     }
 

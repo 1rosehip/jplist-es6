@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jPList Checkbox Text Filter Control with "OR" Logic</title>
+        <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+        <h1>jPList Checkbox Text Filter Control with "OR" Logic</h1>
+
+        <div class="box">
+
+            <!-- checkbox text filter control -->
+            <label>
+                <input
+                        type="checkbox"
+                        data-jplist-control="checkbox-text-filter"
+                        data-path=".type"
+                        data-group="data-group-1"
+                        data-name="name1"
+                        value="type 1"
+                        data-or="1"
+                        checked />
+                Filter by 'type 1'
+            </label>
+
+            <!-- checkbox text filter control -->
+            <label>
+                <input
+                        type="checkbox"
+                        data-jplist-control="checkbox-text-filter"
+                        data-path=".type"
+                        data-group="data-group-1"
+                        data-name="name2"
+                        data-or="1"
+                        value="type 2" />
+                Filter by 'type 2'
+            </label>
+        </div>
+
+        <!-- content to filter -->
+        <div data-jplist-group="data-group-1">
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="type">Type 1</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="type">Type 2</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="type">
+                    <div>Type 1</div>
+                    <div>Type 2</div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+        <script src="../../../dist/jplist.min.js"></script>
+        <script>
+            jplist.init();
+        </script>
+    </body>
+</html>
