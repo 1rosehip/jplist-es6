@@ -17,6 +17,7 @@
                     <li class="toc-entry toc-h3"><a href="#jump">Jump to top</a></li>
                 </ul>
             </li>
+            <li class="toc-entry toc-h2"><a href="#double-sorting">Double / Multiple Sorting</a></li>
             <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
             <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
             <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a></li>
@@ -267,6 +268,63 @@
        data-mode="checkbox">
     Sort by title asc
 &lt;/button>
+            </code></pre>
+        </div>
+
+        <h2 id="double-sorting">Double / Multiple Sorting</h2>
+
+        <p>Double sorting can be achieved with additional set of <b>data-path-1, data-order-1</b> and <b>data-type-1</b> attributes. There can be any number of such sets, for example (<b>data-path-2, data-order-2, data-type-2)</b>, (<b>data-path-3, data-order-3, data-type-3)</b>, ... etc.</p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- Sort by title ASC and by price DESC -->
+&lt;button
+        data-jplist-control="sort-buttons"
+        data-group="group1"
+        data-name="sort1"
+        data-selected="true"
+        data-mode="radio"
+
+        data-path=".title"
+        data-order="asc"
+        data-type="text"
+
+        data-path-1=".price"
+        data-order-1="desc"
+        data-type-1="number">
+    Sort by title ASC and by price DESC
+&lt;/button>
+
+&lt;!-- content to sort -->
+&lt;div data-jplist-group="group1">
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="price">12&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="price">45&lt;/div>
+        ....
+    &lt;/div>
+
+    &lt;!-- item -->
+    &lt;div data-jplist-item>
+        &lt;div class="title">Title value 1&lt;/div>
+        &lt;div class="price">10&lt;/div>
+        ....
+    &lt;/div>
+
+&lt;/div>
+
+&lt;!-- jplist library -->
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    jplist.init();
+&lt;/script>
             </code></pre>
         </div>
 
