@@ -713,7 +713,14 @@
             </code></pre>
         </div>
 
-        <h2 id="ignore-characters">Ignore special characters</h2>
+        <h2 id="ignore-characters">Ignore Special Characters</h2>
+
+        <p>To ignore some characters during the search <b>data-regex</b> attribute can be use like in the example below. Here all names defined with underscore character instead of a space, for example <i>Alejandro_Miles</i>. To allow the user search for <i>Alejandro Miles</i> with space instead we may use the regex <b>data-regex="[^a-zA-Z0-9]+"</b> that ignores all characters except English letters and numbers.</p>
+
+        <div class="codepen">
+            <p data-height="265" data-theme-id="0" data-slug-hash="QBREXd" data-default-tab="html,result" data-user="1rosehip" data-pen-title="jPList Textbox Ignore Characters" class="codepen">See the Pen <a href="https://codepen.io/1rosehip/pen/QBREXd/">jPList Textbox Ignore Characters</a> by 1rosehip (<a href="https://codepen.io/1rosehip">@1rosehip</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </div>
 
         <h2 id="data-attributes">Data Attributes</h2>
 
@@ -772,7 +779,7 @@
 
             <tr>
                 <td><code class="highlighter-rouge">data-regex</code></td>
-                <td>This optional data attribute defines characters that should be ignored during the filtering.</td>
+                <td>This optional data attribute defines characters that should be ignored during the filtering. For example, <b>data-regex="[^a-zA-Z0-9]+"</b> ignores all characters except English letters and numbers.</td>
                 <td>JavaScript regex</td>
             </tr>
 

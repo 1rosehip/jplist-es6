@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>jPList JavaScript library</title>
+        <meta name="description" content="jPList is a vanilla JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc." />
+
+        <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <h1>Textbox filter control: regex</h1>
+
+        <div class="buttons">
+
+            <!-- hidden sort control -->
+            <div
+                    style="display: none"
+                    data-jplist-control="hidden-sort"
+                    data-group="group1"
+                    data-path=".name"
+                    data-order="asc"
+                    data-type="text"></div>
+
+            <!-- text filter control -->
+            <div>
+                <input
+                        data-jplist-control="textbox-filter"
+                        data-group="group1"
+                        data-name="my-filter-1"
+                        data-path=".name"
+                        type="text"
+                        data-regex="[^a-zA-Z0-9]+"
+                        value=""
+                        data-clear-btn-id="name-clear-btn"
+                        placeholder="Search name" />
+
+                <button type="button" id="name-clear-btn">Clear</button>
+            </div>
+
+        </div>
+
+        <!-- content to filter -->
+        <div data-jplist-group="group1">
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Cecilia_Hanson</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Alejandro_Miles</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Andy_Harris</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Deanna_Castillo</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Danny_Richards</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Allie_Moss</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Stefanie_Reyes</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Jakob_Flores</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Christine_Richards</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Miranda_Hill</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Meghan_Williamson</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Kierra_Long</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Tara_Park </div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Anthony_Reyes</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Malik_Becker</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Daisy_Hunter</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Arianna_Fuller</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Stephan_Wang</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Cristal_Wallace</div>
+            </div>
+
+            <!-- item -->
+            <div data-jplist-item>
+                <div class="name">Alyson_Chandler</div>
+            </div>
+
+            <!-- no results control -->
+            <div data-jplist-control="no-results" data-group="group1" data-name="no-results">No Results Found</div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+        <script src="../../../dist/jplist.min.js"></script>
+        <script>
+            jplist.init();
+        </script>
+    </body>
+</html>
