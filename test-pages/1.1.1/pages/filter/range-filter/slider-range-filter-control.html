@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8" />
+       <meta http-equiv="x-ua-compatible" content="ie=edge" />
+       <meta name="viewport" content="width=device-width, initial-scale=1" />
+       <title>jPList JavaScript library</title>
+       <meta name="description" content="jPList is a vanilla JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc." />
+       <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+       <link href="../../../dist/jplist.styles.css" rel="stylesheet" type="text/css" />
+       <style>
+           .desc{
+               display: none;
+           }
+       </style>
+   </head>
+   <body>
+       <h1><a href="https://jplist.org/documentation/controls/slider-range-filter">jPList Slider Range Filter Control</a></h1>
+
+
+       <!-- <div data-jplist-control="slider-range-filter" data-path=".length .val" data-group="group1" data-name="length-range-slider" data-min="355" data-from="355" data-to="10000" data-max="10000">
+       <div class="dropdown mr-3" data-jplist-control="dropdown-sort" data-opened-class="show" data-group="group1" data-name="sort1">
+       -->
+       <div
+               data-jplist-control="slider-range-filter"
+               data-path=".price"
+               data-group="prices-group-1"
+               data-name="price-filter-1"
+               data-min="100"
+               data-from="100"
+               data-to="300"
+               data-max="300">
+
+           <div class="jplist-slider" data-type="slider"></div>
+
+           <div class="jplist-slider-values">
+               <b>Min:</b> <span data-type="min"></span>,
+               <b>Value 1:</b> <span data-type="value-1"></span>,
+               <b>Value 2:</b> <span data-type="value-2"></span>,
+               <b>Max:</b> <span data-type="max"></span>
+           </div>
+       </div>
+
+       <div class="col text-left"
+            data-jplist-control="dropdown-sort"
+            data-group="prices-group-1"
+            data-name="sort">
+           <span data-type="panel"></span>
+
+
+           <div data-type="content">
+               <button
+                       data-path=".views"
+                       data-order="desc"
+                       data-type="number"
+               >Sort by views</button>
+           </div>
+
+       </div>
+
+
+       <!--
+       <div
+               style="display: none"
+               data-jplist-control="hidden-sort"
+               data-name="sort1"
+               data-group="prices-group-1"
+               data-path=".views"
+               data-order="desc"
+               data-type="number"
+
+               data-path-1=".price"
+               data-order-1="asc"
+               data-type-1="number">
+       </div>-->
+
+       <!-- content to filter -->
+       <div data-jplist-group="prices-group-1">
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 1</h2>
+               <div class="price">150</div>
+               <span class="views">723</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 2</h2>
+               <div class="price">150</div>
+               <span class="views">45</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 3</h2>
+               <div class="price">200</div>
+               <span class="views">567</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 4</h2>
+               <div class="price">200</div>
+               <span class="views">657</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 5</h2>
+               <div class="price">100</div>
+               <span class="views">233</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 6</h2>
+               <div class="price">150</div>
+               <span class="views">723</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 1</h2>
+               <div class="price">300</div>
+               <span class="views">245</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 8</h2>
+               <div class="price">200</div>
+               <span class="views">723</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 9</h2>
+               <div class="price">250</div>
+               <span class="views">456</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 14</h2>
+               <div class="price">300</div>
+               <span class="views">743</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 10</h2>
+               <div class="price">150</div>
+               <span class="views">723</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 11</h2>
+               <div class="price">100</div>
+               <span class="views">723</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 12</h2>
+               <div class="price">150</div>
+               <span class="views">435</span>
+           </div>
+
+           <!-- item -->
+           <div data-jplist-item>
+               <h2>Product 13</h2>
+               <div class="price">200</div>
+               <span class="views">723</span>
+           </div>
+           <!-- no results control -->
+           <div data-jplist-control="no-results" data-group="prices-group-1" data-name="no-results">No Results Found</div>
+       </div>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+      <script src="../../../dist/jplist.min.js"></script>
+      <script>
+         jplist.init();
+      </script>
+   </body>
+</html>
