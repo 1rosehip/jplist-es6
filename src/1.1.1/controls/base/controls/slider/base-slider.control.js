@@ -78,12 +78,6 @@ class BaseSliderControl{
 
             //set initial values
             this.setValues(value1, value2);
-
-            //call callback function
-            if(this.callback){
-
-                this.callback(this.handler1.value, this.handler2.value);
-            }
         }
     }
 
@@ -91,8 +85,9 @@ class BaseSliderControl{
      * set slider values from outside
      * @param {number} value1
      * @param {number} value2
+     * @param {boolean} sendCallback
      */
-    setValues(value1, value2){
+    setValues(value1, value2, sendCallback = true){
 
         if(value2 < value1){
             value2 = value1;
@@ -104,12 +99,12 @@ class BaseSliderControl{
         this.update({
             x: pos2,
             y: pos2
-        }, this.handler2);
+        }, this.handler2, sendCallback);
 
         this.update({
             x: pos1,
             y: pos1
-        }, this.handler1);
+        }, this.handler1, sendCallback);
     }
 
     /**
@@ -220,12 +215,6 @@ class BaseSliderControl{
         //e.preventDefault();
 
         this.dragging = null;
-
-        //call callback function
-        if(this.callback){
-
-            this.callback(this.handler1.value, this.handler2.value);
-        }
     }
 
     /**
@@ -254,8 +243,9 @@ class BaseSliderControl{
      * update position and styles
      * @param {object} position
      * @param {element} handler
+     * @param {boolean} sendCallback
      */
-    update(position, handler){
+    update(position, handler, sendCallback = true){
 
         if(handler){
 
@@ -293,6 +283,12 @@ class BaseSliderControl{
 
             const rangeHeight = this.handler2[lefttop] - this.handler1[lefttop];
             this.range.style[size] = (rangeHeight >= 0 ? rangeHeight : 0) + 'px';
+
+            //call callback function
+            if(this.callback && sendCallback){
+
+                this.callback(this.handler1.value, this.handler2.value);
+            }
         }
     }
 
