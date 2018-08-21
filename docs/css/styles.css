@@ -27,6 +27,12 @@ a:hover{
 
 .main-navbar .navbar-brand{
     display: flex;
+    align-items: center;
+}
+
+.navbar-brand span{
+    color: #A8D0E0;
+    margin-left: 5px;
 }
 
 .main-navbar .navbar-brand svg{
@@ -1754,4 +1760,36 @@ a:hover{
 .svg-thumb{
     width: 100%;
     height: 100%;
+}
+
+/**
+ * homepage top section
+ */
+.hp-top{
+    background: #000;
+    color: #fff;
+}
+
+.hp-top .bd-lead{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 2rem!important;
+}
+
+.hp-top .btn{
+    padding: 0.8rem 2rem;
+}
+
+.hp-top .btn-primary{
+    margin-right: 5px;
+}
+
+.hp-top .btn-secondary{
+    margin-left: 5px;
+}
+
+@media (max-width: 576px) {
+    .hp-top .btn{
+        padding: 0.5rem 1rem;
+    }
 }
