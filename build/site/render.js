@@ -13,6 +13,10 @@ const bliss = new Bliss({
     }
 });
 
+//handle source version
+const pjson = fs.readFileSync('./package.json', 'utf8');
+let version = JSON.parse(pjson).version;
+
 /**
  * render static content recursive helper
  * @param {string} folderPath
@@ -62,7 +66,9 @@ const renderStaticHelper = (folderPath, relativeFolderPath, data) => {
 
 };
 
-renderStaticHelper(process.cwd() + '/build/site/templates', 'docs/', {});
+renderStaticHelper(process.cwd() + '/build/site/templates', 'docs/', {
+    version: version
+});
 
 //minify site css file
 //https://github.com/fmarcia/uglifycss

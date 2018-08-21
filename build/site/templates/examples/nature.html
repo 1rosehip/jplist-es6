@@ -1,5 +1,9 @@
 @!(data)
 
+@{
+    var version = data.version;
+}
+
 @function header(){
 	<title>Nature</title>
 
@@ -541,7 +545,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
 
     <!-- jPList Library -->
-    <script src="/js/1.1.1/jplist.min.js"></script>
+    <script src="/js/@(version)/jplist.min.js"></script>
     <script>
         jplist.init();
     </script>
