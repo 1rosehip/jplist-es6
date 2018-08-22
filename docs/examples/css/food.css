@@ -45,3 +45,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.jplist-items-number-0 > ul.pagination{
+    display: none !important;
+}
+
+.jplist-items-number-0 > span[data-type="info"]{
+    margin-left: 0 !important;
+}

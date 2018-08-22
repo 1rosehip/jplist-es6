@@ -43,3 +43,11 @@
 .input-group label{
     margin-bottom: 0;
 }
+
+.jplist-items-number-0 > ul.pagination{
+    display: none !important;
+}
+
+.jplist-items-number-0 > span[data-type="info"]{
+    margin-left: 0 !important;
+}

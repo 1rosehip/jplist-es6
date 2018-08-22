@@ -284,6 +284,16 @@ class PaginationControl extends BasePaginationControlsGroup{
                     label.innerHTML = html;
                 }
             }
+
+            //update whole control classes
+            const classesToRemove = (Array.from(control.element.classList)).filter(className => className.startsWith('jplist-pages-number-') || className.startsWith('jplist-items-number-'));
+
+            for(let className of classesToRemove){
+                control.element.classList.remove(className);
+            }
+
+            control.element.classList.add('jplist-pages-number-' + paginationOptions.pagesNumber);
+            control.element.classList.add('jplist-items-number-' + paginationOptions.itemsNumber);
         }
     }
 
