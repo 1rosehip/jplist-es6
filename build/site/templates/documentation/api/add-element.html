@@ -1,0 +1,101 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <!--
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2"><a href="#p1">#1</a></li>
+            <li class="toc-entry toc-h2"><a href="#p2">#2</a></li>
+            <li class="toc-entry toc-h2"><a href="#p3">#3</a></li>
+            <li class="toc-entry toc-h2"><a href="#p4">#4</a></li>
+            <li class="toc-entry toc-h2"><a href="#p5">#5</a></li>
+        </ul>-->
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">API: Add Element Dynamically</h1>
+
+        <!--<p class="bd-lead">This tutorial describes how to start working with jPList source code.</p>-->
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- hidden sort control -->
+&lt;div
+    id="hidden-sort-control"
+    style="display: none"
+    data-jplist-control="hidden-sort"
+    data-group="group1"
+    data-path=".title">
+&lt;/div>
+
+&lt;!-- group #1 -->
+&lt;div data-jplist-group="group1" id="group">
+
+    &lt;!-- item #1 -->
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">ddd&lt;/span>
+        &lt;/p>
+    &lt;/div>
+
+    &lt;!-- item #2 -->
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">aaa&lt;/span>
+        &lt;/p>
+    &lt;/div>
+
+    &lt;!-- item #3 -->
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">ccc&lt;/span>
+        &lt;/p>
+    &lt;/div>
+
+    &lt;!-- item #4 -->
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">bbb&lt;/span>
+        &lt;/p>
+    &lt;/div>
+&lt;/div>
+
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">&lt;/script>
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    (function(){
+        'use strict';
+
+        //start jPList
+        jplist.init();
+
+        //find the elements group
+        var group = document.getElementById('group');
+
+        //create a new element
+        const div = document.createElement('div');
+        div.innerHTML = '&lt;div data-jplist-item>&lt;span class="title">a111&lt;/span>&lt;/div>';
+
+        //add element to the group
+        group.appendChild(div);
+
+        //refresh jPList
+        jplist.refresh();
+    })();
+&lt;/script>
+&lt;/html></code></pre>
+                </div>
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Add Element API', header, body, 'api', 'api-add-element')

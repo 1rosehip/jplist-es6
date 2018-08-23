@@ -1,0 +1,88 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <!--
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2"><a href="#p1">#1</a></li>
+            <li class="toc-entry toc-h2"><a href="#p2">#2</a></li>
+            <li class="toc-entry toc-h2"><a href="#p3">#3</a></li>
+            <li class="toc-entry toc-h2"><a href="#p4">#4</a></li>
+            <li class="toc-entry toc-h2"><a href="#p5">#5</a></li>
+        </ul>-->
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">API: Refresh</h1>
+
+        <p class="bd-lead">Refresh API may be used to apply modified controls on content dynamically.</p>
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">&lt;/script>
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    (function(){
+        'use strict';
+
+        //start jPList
+        jplist.init();
+
+        // DO SOME LOGIC...
+
+        //refresh jPList
+        jplist.refresh();
+    })();
+&lt;/script>
+&lt;/html></code></pre>
+        </div>
+
+        <p class="bd-lead">It also can be applied to the specific <b>content group</b>:</p>
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">&lt;/script>
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    (function(){
+        'use strict';
+
+        //start jPList
+        jplist.init();
+
+        // DO SOME LOGIC...
+
+        //refresh jPList
+        jplist.refresh(groupName);
+    })();
+&lt;/script>
+&lt;/html></code></pre>
+        </div>
+
+        <p class="bd-lead">Also the element <b>that triggered the event</b> can be provided:</p>
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">&lt;/script>
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    (function(){
+        'use strict';
+
+        //start jPList
+        jplist.init();
+
+        // DO SOME LOGIC...
+
+        //refresh jPList
+        jplist.refresh(groupName, targetElement);
+    })();
+&lt;/script>
+&lt;/html></code></pre>
+        </div>
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Add Element API', header, body, 'api', 'api-refresh')

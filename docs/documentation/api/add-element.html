@@ -6,7 +6,7 @@
                 
 
     
-        Reset Control | Documentation | jPList Library
+        Add Element API | Documentation | jPList Library
         </title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -361,8 +361,7 @@
 
 <div class="bd-toc-item 
 
-    
-        active">
+    ">
     <a class="bd-toc-link" href="/documentation/controls/no-results">
         Other Controls
     </a>
@@ -387,8 +386,7 @@
         </li>
         <li 
 
-    
-        class="active bd-sidenav-active">
+    >
             <a href="/documentation/controls/reset">
                 <i class="fas fa-undo-alt"></i>
                 <span>Reset Control</span>
@@ -402,7 +400,8 @@
 
 <div class="bd-toc-item 
 
-    ">
+    
+        active">
     <a class="bd-toc-link" href="/documentation/api/add-element">
         API
     </a>
@@ -411,7 +410,8 @@
 
         <li 
 
-    >
+    
+        class="active bd-sidenav-active">
             <a href="/documentation/api/add-element">
                 <i class="fas fa-cog"></i>
                 <span>Add element</span>
@@ -480,71 +480,94 @@
     <!-- links sidebar -->
     <div class="d-none d-xl-block col-xl-2 bd-toc">
 
+        <!--
         <ul class="section-nav">
-            <li class="toc-entry toc-h2">
-                <a href="#html-structure">HTML Structure</a></ul>
-            </li>
-        </ul>
+            <li class="toc-entry toc-h2"><a href="#p1">#1</a></li>
+            <li class="toc-entry toc-h2"><a href="#p2">#2</a></li>
+            <li class="toc-entry toc-h2"><a href="#p3">#3</a></li>
+            <li class="toc-entry toc-h2"><a href="#p4">#4</a></li>
+            <li class="toc-entry toc-h2"><a href="#p5">#5</a></li>
+        </ul>-->
 
     </div>
 
     <!-- main content -->
     <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-        <h1 class="bd-title">Reset Control</h1>
+        <h1 class="bd-title">API: Add Element Dynamically</h1>
 
-        <p class="bd-lead">This control resets all other controls to their initial state.</p>
-
-        <h2 id="html-structure">HTML Structure</h2>
-
-        <p>
-            Reset control is defined by required <code class="highlighter-rouge">data-jplist-control="reset"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be filtered.
-        </p>
-
+        <!--<p class="bd-lead">This tutorial describes how to start working with jPList source code.</p>-->
         <div class="highlight">
-            <pre><code class="language-html" data-lang="html">&lt;!-- different jplist controls -->
-...
-
-&lt;!-- reset control -->
-&lt;button
-        data-jplist-control="reset"
-        data-group="group1"
-        data-name="reset"
-        type="button">
-    Reset
-&lt;/button>
-                
-&lt;!-- content -->
-&lt;div data-jplist-group="group1">
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
-    &lt;!-- item -->
-    &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
-    &lt;/div>
-
+            <pre><code class="language-html" data-lang="html">&lt;!-- hidden sort control -->
+&lt;div
+    id="hidden-sort-control"
+    style="display: none"
+    data-jplist-control="hidden-sort"
+    data-group="group1"
+    data-path=".title">
 &lt;/div>
 
-&lt;!-- jplist library -->
+&lt;!-- group #1 -->
+&lt;div data-jplist-group="group1" id="group">
+
+    &lt;!-- item #1 -->
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">ddd&lt;/span>
+        &lt;/p>
+    &lt;/div>
+
+    &lt;!-- item #2 -->
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">aaa&lt;/span>
+        &lt;/p>
+    &lt;/div>
+
+    &lt;!-- item #3 -->
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">ccc&lt;/span>
+        &lt;/p>
+    &lt;/div>
+
+    &lt;!-- item #4 -->
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">bbb&lt;/span>
+        &lt;/p>
+    &lt;/div>
+&lt;/div>
+
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">&lt;/script>
 &lt;script src="jplist.min.js">&lt;/script>
 &lt;script>
-    jplist.init();
-&lt;/script>
-            </code></pre>
-        </div>
+    (function(){
+        'use strict';
 
+        //start jPList
+        jplist.init();
+
+        //find the elements group
+        var group = document.getElementById('group');
+
+        //create a new element
+        const div = document.createElement('div');
+        div.innerHTML = '&lt;div data-jplist-item>&lt;span class="title">a111&lt;/span>&lt;/div>';
+
+        //add element to the group
+        group.appendChild(div);
+
+        //refresh jPList
+        jplist.refresh();
+    })();
+&lt;/script>
+&lt;/html></code></pre>
+                </div>
     </div>
 
         </div>

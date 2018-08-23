@@ -1,0 +1,94 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <!--
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2"><a href="#p1">#1</a></li>
+            <li class="toc-entry toc-h2"><a href="#p2">#2</a></li>
+            <li class="toc-entry toc-h2"><a href="#p3">#3</a></li>
+            <li class="toc-entry toc-h2"><a href="#p4">#4</a></li>
+            <li class="toc-entry toc-h2"><a href="#p5">#5</a></li>
+        </ul>-->
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">API: Reset Controls</h1>
+
+        <p class="bd-lead">This API allows reset controls by CSS selector and apply it to the content dynamically.</p>
+
+        <p>Reset <b>all</b> jPList controls:</p>
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">&lt;/script>
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    (function(){
+        'use strict';
+
+        //start jPList
+        jplist.init();
+
+        // DO SOME LOGIC...
+
+        //reset ALL controls
+        jplist.resetControls();
+    })();
+&lt;/script>
+&lt;/html></code></pre>
+        </div>
+
+        <p>Reset all controls of the <b>specified group</b>:</p>
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">&lt;/script>
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    (function(){
+        'use strict';
+
+        //start jPList
+        jplist.init();
+
+        // DO SOME LOGIC...
+
+        //reset all controls of the specified group
+        const groupName = 'group-1';
+
+        jplist.resetControls(groupName);
+    })();
+&lt;/script>
+&lt;/html></code></pre>
+        </div>
+
+        <p>Reset <b>one control</b> using it's HTML element:</p>
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">&lt;/script>
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+    (function(){
+        'use strict';
+
+        //start jPList
+        jplist.init();
+
+        // DO SOME LOGIC...
+
+        //reset the specified control using it's HTML element
+        const element = document.getElementByID('my-element');
+
+        jplist.resetControl(element);
+    })();
+&lt;/script>
+&lt;/html></code></pre>
+        </div>
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'Reset Controls API', header, body, 'api', 'api-reset-controls')

@@ -1,4 +1,5 @@
 import ContentManager from './content/content-manager';
+import BaseControl from "./controls/base/controls/base.control";
 
 /**
  * the main jPList class
@@ -57,7 +58,53 @@ export default class jPList{
     }
 
     /**
+     * API: reset control by CSS selector and apply it on content
+     * @param {HTMLElement} element
+     */
+    resetControl(element){
+
+        if(!element) return;
+
+        if(this.controls) {
+
+            for (let [groupName, groupControls] of this.controls) {
+                for (let group of groupControls) {
+                    let controlIndex = group.controls.findIndex(control => control.element === element);
+
+                    if(controlIndex >= 0){
+
+                        //find the control
+                        const control = group.controls[controlIndex];
+                        const oldElement = control.element;
+
+                        //create HTML element from outer HTML string
+                        const div = document.createElement('div');
+                        div.innerHTML = oldElement.initialHTML;
+                        const newElement = div.firstChild;
+
+                        if(oldElement.parentNode) {
+
+                            //replace HTML element in the DOM
+                            oldElement.parentNode.replaceChild(newElement, oldElement);
+
+                            //replace the control in the group
+                            group.controls.splice(controlIndex, 1);
+                            group.addControl(new BaseControl(newElement));
+
+                            //update state
+                            this.refresh(groupName);
+                        }
+
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
+    /**
      * API: reset all jplist controls and apply them on content
+     * @param {string=} groupName
      */
     resetControls(groupName = ''){
 

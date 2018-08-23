@@ -16,6 +16,12 @@ class BaseControl{
             this.element = element;
 
             /**
+             * element initial html
+             * @type {string}
+             */
+            this.element.initialHTML = element.outerHTML;
+
+            /**
              * used to define appropriate class for the control
              * @type {string} required
              */

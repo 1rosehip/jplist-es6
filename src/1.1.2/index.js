@@ -133,5 +133,5 @@ import ResetControl from './controls/reset/reset.control';
     window.jplist.init = jplist.init.bind(jplist);
     window.jplist.refresh = jplist.refresh.bind(jplist);
     window.jplist.resetControls = jplist.resetControls.bind(jplist);
-
+    window.jplist.resetControl = jplist.resetControl.bind(jplist);
 })();

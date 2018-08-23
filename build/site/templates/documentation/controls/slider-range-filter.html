@@ -15,6 +15,7 @@
                     <li class="toc-entry toc-h3"><a href="#panels">Top and bottom panels</a></li>
                 </ul>
             </li>
+            <li class="toc-entry toc-h2"><a href="#show-hide-slider">Show / Hide Slider</a></li>
             <li class="toc-entry toc-h2"><a href="#deep-linking">Deep Linking</a></li>
             <li class="toc-entry toc-h2"><a href="#storage">Storage</a></li>
             <li class="toc-entry toc-h2"><a href="#data-attributes">Data Attributes</a>
@@ -274,6 +275,71 @@
      To: &lt;span data-type="value-2">&lt;/span>
 
 &lt;/div>
+            </code></pre>
+        </div>
+
+        <h2 id="show-hide-slider">Show / Hide Slider</h2>
+
+        <p>
+            Slider control is not rendered properly if it's hidden on page load. To handle this issue <b>jplist.resetControl</b> API may be used:
+        </p>
+
+        <div class="highlight">
+            <pre><code class="language-html" data-lang="html">&lt;!-- toogle button -->
+&lt;button id="toggle-slider-btn">Toggle Slider&lt;/button>
+
+&lt;!-- slider container, hidden on page load -->
+&lt;div class="buttons hidden" id="slider-box">
+ &lt;div
+	id="range-slider-1"
+	data-jplist-control="slider-range-filter"
+	data-path=".like"
+	data-group="group1"
+	data-name="name1"
+	data-min="-100"
+	data-from="50"
+	data-to="100"
+	data-max="800">&lt;/div>
+&lt;/div>
+
+&lt;!-- items group -->
+&lt;div data-jplist-group="group1">
+
+	&lt;div data-jplist-item>
+	   ...
+	&lt;/div>
+
+	&lt;div data-jplist-item>
+	   ...
+	&lt;/div>
+
+	&lt;div data-jplist-item>
+	   ...
+	&lt;/div>
+&lt;/div>
+
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">&lt;/script>
+&lt;script src="jplist.min.js">&lt;/script>
+&lt;script>
+ jplist.init();
+
+ const btn = document.getElementById('toggle-slider-btn');
+ const box = document.getElementById('slider-box');
+ let sliderUpdated = false;
+
+ // call jplist.resetControl API on button click only once
+ btn.addEventListener('click', () => {
+
+	 box.classList.toggle('hidden');
+
+	 if(!sliderUpdated) {
+		 sliderUpdated = true;
+
+		 const slider = document.getElementById('range-slider-1');
+		 jplist.resetControl(slider);
+	 }
+ }, false);
+&lt;/script>
             </code></pre>
         </div>
 
