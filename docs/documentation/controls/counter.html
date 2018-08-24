@@ -516,64 +516,109 @@
         <h2 id="html-structure">HTML Structure</h2>
 
         <p>
-            Radio buttons sort control is defined by required <code class="highlighter-rouge">data-jplist-control="radio-buttons-sort"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be sorted.
-        All buttons of the same group should have the same <code class="highlighter-rouge">name</code> or <code class="highlighter-rouge">data-name</code> attribute.
+            Counter control is defined by required <code class="highlighter-rouge">data-jplist-control="counter"</code> data attribute. The <code class="highlighter-rouge">data-group</code> attribute defines group of elements that should be counted.
+        All counters of the same group should have the same <code class="highlighter-rouge">name</code> or <code class="highlighter-rouge">data-name</code> attribute.
         The full list of data attributes can be found <a href="#data-attributes">here</a>.
     </p>
         </p>
+
+        <p>The counter control could be of two types: <b>static</b> or <b>dynamic</b>. The static counter is updated only once on JPlist initialization. The dynamic counter is updated on every jPList action. The dynamic is the default one.</p>
+
+        <p>Below is an example of <i>dynamic counter</i> controls together with <i>button path</i> controls:</p>
 
         <div class="highlight">
             <pre><code class="language-html" data-lang="html">&lt;!-- jplist styles - should not be added if bootstrap or other CSS framework is used -->
 &lt;link href="jplist.styles.css" rel="stylesheet" type="text/css" />
 
-&lt;!-- sort by title ASC -->
-&lt;label>
-    &lt;input
-        type="radio"
-        data-jplist-control="radio-buttons-sort"
-        data-path=".title"
-        data-group="group1"
-        data-order="asc"
-        data-type="text"
-        data-name="sort1"
-        name="sort1"
-        checked />
-    Sort by title asc
-&lt;/label>
+&lt;!-- button path filter by title -->
+&lt;button
+     data-jplist-control="buttons-path-filter"
+     data-path=".title"
+     data-group="group1"
+     data-selected="true"
+     data-mode="radio">
+            Filter by title
+&lt;/button>
 
-&lt;!-- sort by title DESC -->
-&lt;label>
-    &lt;input
-        type="radio"
-        data-jplist-control="radio-buttons-sort"
-        data-path=".title"
+&lt;!-- title counter control -->
+&lt;span
+        data-jplist-control="counter"
         data-group="group1"
-        data-order="desc"
-        data-type="text"
-        data-name="sort1"
-        name="sort1" />
-    Sort by title desc
-&lt;/label>
+        data-format="({count})"
+        data-path=".title"
+        data-mode="dynamic"
+        data-name="counter-title-filter"
+        data-filter-type="path">&lt;/span>
 
-&lt;!-- content to sort -->
+&lt;!-- button path filter by description -->
+&lt;button
+        data-jplist-control="buttons-path-filter"
+        data-path=".desc"
+        data-group="group1"
+        data-mode="radio">
+    Filter by description
+&lt;/button>
+
+&lt;!-- description counter control -->
+&lt;span
+        data-jplist-control="counter"
+        data-group="group1"
+        data-format="({count})"
+        data-path=".desc"
+        data-mode="dynamic"
+        data-name="counter-desc-filter"
+        data-filter-type="path">&lt;/span>
+
+&lt;!-- content to filter -->
 &lt;div data-jplist-group="group1">
 
-    &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">ddd&lt;/span>
+        &lt;/p>
     &lt;/div>
 
-    &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
+        &lt;p>
+            &lt;b>Description:&lt;/b>
+            &lt;span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.&lt;/span>
+        &lt;/p>
     &lt;/div>
 
-    &lt;!-- item -->
     &lt;div data-jplist-item>
-        &lt;div class="title">Title value 1&lt;/div>
-        ....
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">bbb&lt;/span>
+        &lt;/p>
+    &lt;/div>
+
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">ddd&lt;/span>
+        &lt;/p>
+    &lt;/div>
+
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Description:&lt;/b>
+            &lt;span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.&lt;/span>
+        &lt;/p>
+    &lt;/div>
+
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">bbb&lt;/span>
+        &lt;/p>
+    &lt;/div>
+    
+    &lt;div data-jplist-item>
+        &lt;p>
+            &lt;b>Title:&lt;/b>
+            &lt;span class="title">ddd&lt;/span>
+        &lt;/p>
     &lt;/div>
 
 &lt;/div>
@@ -627,6 +672,15 @@
                     <td><code class="highlighter-rouge">data-name</code></td>
                     <td>The data-name attribute is used to identify the same controls in different panels. Different controls should have different data-name attributes. By default, data-name attribute has <b>default</b> value.</td>
                     <td>any text value</td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-mode</code></td>
+                    <td>
+                        <b>static mode</b> means that counter is updated on <i>jPList initialization</i> only<br/>
+                        <b>dynamic mode</b> means that counter is updated on every <i>jPList action</i>
+                    </td>
+                    <td>static or dynamic; the default is <b>dynamic</b></td>
                 </tr>
 
             </tbody>

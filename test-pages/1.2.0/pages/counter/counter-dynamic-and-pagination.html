@@ -14,7 +14,7 @@
     <body>
 
         <!-- =========================== Group 1 - radio buttons mode ================================ -->
-        <h1>Counter + Buttons path filter<br/> control in radio mode</h1>
+        <h1>Dynamic Counter + Buttons path filter + Pagination</h1>
 
         <div class="buttons">
 
@@ -32,6 +32,7 @@
                     data-group="group1"
                     data-format="({count})"
                     data-path=".title"
+                    data-mode="dynamic"
                     data-name="counter-title-filter"
                     data-filter-type="path"></span>
 
@@ -48,6 +49,7 @@
                     data-group="group1"
                     data-format="({count})"
                     data-path=".desc"
+                    data-mode="dynamic"
                     data-name="counter-desc-filter"
                     data-filter-type="path"></span>
 
@@ -64,21 +66,205 @@
                     data-group="group1"
                     data-format="({count})"
                     data-path=".likes"
+                    data-mode="dynamic"
                     data-name="counter-likes-filter"
                     data-filter-type="path"></span>
 
-            <!-- reset control -->
-            <button
-                    data-jplist-control="reset"
-                    data-group="group1"
-                    type="button">
-                Reset
-            </button>
-
         </div>
+
+        <!-- pagination control -->
+        <div
+                data-jplist-control="pagination"
+                data-group="group1"
+                data-items-per-page="5"
+                data-current-page="0"
+                data-name="pagination1">
+
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">Page {pageNumber}</button>
+            </div>
+
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+
+            <span data-type="info">
+                {startItem} - {endItem} of {itemsNumber}
+            </span>
+        </div>
+
+        <!-- reset control -->
+        <button
+                data-jplist-control="reset"
+                data-group="group1"
+                type="button">
+            Reset
+        </button>
 
         <!-- items group -->
         <div data-jplist-group="group1">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+            </div>
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+            </div>
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+            </div>
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+            </div>
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+            </div>
 
             <!-- item #1 -->
             <div data-jplist-item>
@@ -125,6 +311,15 @@
                 Filter by title
             </button>
 
+            <span
+                    data-jplist-control="counter"
+                    data-group="group1"
+                    data-format="({count})"
+                    data-path=".title"
+                    data-mode="dynamic"
+                    data-name="counter-title-filter"
+                    data-filter-type="path"></span>
+
             <button
                     data-jplist-control="buttons-path-filter"
                     data-path=".desc"
@@ -133,6 +328,15 @@
                 Filter by description
             </button>
 
+            <span
+                    data-jplist-control="counter"
+                    data-group="group1"
+                    data-format="({count})"
+                    data-path=".desc"
+                    data-mode="dynamic"
+                    data-name="counter-desc-filter"
+                    data-filter-type="path"></span>
+
             <button
                     data-jplist-control="buttons-path-filter"
                     data-path=".likes"
@@ -140,6 +344,15 @@
                     data-mode="radio">
                 Filter by likes
             </button>
+
+            <span
+                    data-jplist-control="counter"
+                    data-group="group1"
+                    data-format="({count})"
+                    data-path=".likes"
+                    data-mode="dynamic"
+                    data-name="counter-likes-filter"
+                    data-filter-type="path"></span>
         </div>
 
         <!-- =========================== Group 2 - checkbox mode ================================ -->

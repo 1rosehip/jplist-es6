@@ -116,7 +116,7 @@ class ContentManager{
                     itemsBlock.root.appendChild(fragment);
 
                     //dispatch the event with different data about state of controls and items
-                    ContentManager.sendStateEvent(options, itemsNumber, baseControlsGroups, groups);
+                    ContentManager.sendStateEvent(options, itemsNumber, baseControlsGroups, groups, filtered);
                 }
 
                 //if one of controls has data-jump attribute -> jump to the specified CSS selector or to the top
@@ -306,8 +306,9 @@ class ContentManager{
      * @param {number} itemsNumber
      * @param {BaseControlsGroup} baseControlsGroups
      * @param {Map} groups - [groupName, Array.<{root: HTMLElement, items: Array.<HTMLElement>] groups
+     * @param {Array.<HTMLElement>} filtered
      */
-    static sendStateEvent(options, itemsNumber, baseControlsGroups, groups){
+    static sendStateEvent(options, itemsNumber, baseControlsGroups, groups, filtered){
 
         if(!baseControlsGroups) return;
 
@@ -316,7 +317,8 @@ class ContentManager{
         stateEvent.jplistState = {
             options: options,
             itemsNumber: itemsNumber,
-            groups: groups
+            groups: groups,
+            filtered: filtered
         };
 
         for(let baseControlsGroup of baseControlsGroups){
