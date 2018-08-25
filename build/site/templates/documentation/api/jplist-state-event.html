@@ -1,0 +1,56 @@
+@!(data, className)
+
+@function header(){}
+
+@function body(){
+
+    <!-- links sidebar -->
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+
+        <!--
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2"><a href="#p1">#1</a></li>
+            <li class="toc-entry toc-h2"><a href="#p2">#2</a></li>
+            <li class="toc-entry toc-h2"><a href="#p3">#3</a></li>
+            <li class="toc-entry toc-h2"><a href="#p4">#4</a></li>
+            <li class="toc-entry toc-h2"><a href="#p5">#5</a></li>
+        </ul>-->
+
+    </div>
+
+    <!-- main content -->
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+        <h1 class="bd-title">jPList State Event</h1>
+
+        <p class="bd-lead">On every <i>sort, filter, pagination</i> or other action jPList library sends <b>jplist.state</b> event. This event can be used to implement custom logic.</p>
+
+        <div class="highlight">
+            <pre><code class="language-js" data-lang="js">//get a jPList control element
+const element = document.getElementById('my-jplist-control-element');
+
+//listen to the state event
+element.addEventListener('jplist.state', (e) => {
+
+    //the whole state object
+    console.log(e.jplistState);
+
+    //jPList options provided by user
+    console.log(e.jplistState.options);
+
+    //current items number after filtering + pagination
+    console.log(e.jplistState.itemsNumber);
+
+    //control groups
+    console.log(e.jplistState.groups);
+
+    //the elements list after filtering + pagination
+    console.log(e.jplistState.filtered);
+
+}, false);</code></pre>
+        </div>
+
+    </div>
+}
+
+@render(process.cwd() + '/build/site/layouts/documentation.html', data, 'jPList State Event', header, body, 'api', 'jplist-state-event')

@@ -8,12 +8,13 @@ import BaseRangeFilterControl from "../base/controls/filter/base-range-filter.co
  * counter control
  * Example:
  * <span
- *  data-jplist-control="counter"
- *  data-group="group1"
- *  data-format="({count})"
- *  data-path=".architecture"
- *  data-mode="filter"
- *  data-type="path">(<span data-type="count-value">6</span>)</span>
+     data-jplist-control="counter"
+     data-group="group1"
+     data-format="({count})"
+     data-path=".title"
+     data-mode="dynamic"
+     data-name="counter-title-filter"
+     data-filter-type="path"></span>
  */
 class CounterControl extends BaseControlsGroup{
 

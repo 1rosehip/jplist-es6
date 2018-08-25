@@ -452,6 +452,15 @@
                 <span>Reset Controls</span>
             </a>
         </li>
+
+        <li 
+
+    >
+            <a href="/documentation/api/jplist-state-event">
+                <i class="fas fa-cog"></i>
+                <span>jPList State Event</span>
+            </a>
+        </li>
     </ul>
 </div>
 
@@ -897,6 +906,18 @@
                     <td><code class="highlighter-rouge">data-or</code></td>
                     <td>Defines a group of controls that should be filtered though the "OR" logic</td>
                     <td>any text value, for example <b>data-or="bags"</b></td>
+                </tr>
+
+                <tr>
+                    <td><code class="highlighter-rouge">data-mode</code></td>
+                    <td>
+                        Defines text filter mode:<br/>
+                        <b>contains</b> - find all elements that <i>contain</i> user input<br/>
+                        <b>startsWith</b> - find all elements that <i>start with</i> user input<br/>
+                        <b>endsWith</b> - find all elements that <i>end with</i> user input<br/>
+                        <b>equal</b> - find all elements that <i>equal</i> to user input
+                    </td>
+                    <td>contains (default), startsWith, endsWith, equal</b></td>
                 </tr>
 
             </tbody>
