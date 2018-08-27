@@ -38,7 +38,7 @@
 - [Food Demo](https://www.jplist.org/examples/food) - radio buttons sort control, radio buttons text filter control, multiple text filters, buttons path filter, pagination and more.
 - [Wallpapers Demo](https://www.jplist.org/examples/wallpapers) - pagination control, select sort control, buttons text filter control, checkbox path filter control, dropdown filter control.
 
-## [Controls](#controls) <img src="https://www.jplist.org/img/github/tools.png" align="right">
+## [Controls](#controls) 
 
 ### Sort Controls
 - [Hidden Sort Control](https://www.jplist.org/documentation/controls/hidden-sort)
