@@ -38,10 +38,46 @@
 - [Food Demo](https://www.jplist.org/examples/food) - radio buttons sort control, radio buttons text filter control, multiple text filters, buttons path filter, pagination and more.
 - [Wallpapers Demo](https://www.jplist.org/examples/wallpapers) - pagination control, select sort control, buttons text filter control, checkbox path filter control, dropdown filter control.
 
-## [Versioning](#versioning)
+## [Controls](#controls) <img src="https://www.jplist.org/img/github/tools.png" align="right">
+
+### Sort Controls
+- [Hidden Sort Control](https://www.jplist.org/documentation/controls/hidden-sort)
+- [Sort Buttons Control](https://www.jplist.org/documentation/controls/sort-buttons)
+- [Radio Buttons Sort Control](https://www.jplist.org/documentation/controls/radio-buttons-sort)
+- [Checkbox Sort Control](https://www.jplist.org/documentation/controls/checkbox-sort)
+- [Select Sort Control](https://www.jplist.org/documentation/controls/select-sort)
+- [Dropdown Sort Control](https://www.jplist.org/documentation/controls/dropdown-sort)
+
+### Pagination Controls
+- [Pagination Control](https://www.jplist.org/documentation/controls/pagination)
+
+### Text Filter Controls
+- [Textbox Filter Control](https://www.jplist.org/documentation/controls/textbox-filter)
+- [Checkbox Text Filter Control](https://www.jplist.org/documentation/controls/checkbox-text-filter)
+- [Radio Buttons Text Filter Control](https://www.jplist.org/documentation/controls/radio-buttons-text-filter)
+- [Buttons Text Filter Control](https://www.jplist.org/documentation/controls/buttons-text-filter)
+
+### Path Filter Controls
+- [Select Filter Control](https://www.jplist.org/documentation/controls/select-filter)
+- [Dropdown Filter Control](https://www.jplist.org/documentation/controls/dropdown-filter)
+- [Checkbox Path Filter Control](https://www.jplist.org/documentation/controls/checkbox-path-filter)
+- [Radio Buttons Path Filter Control](https://www.jplist.org/documentation/controls/radio-buttons-path-filter)
+- [Buttons Path Filter Control](https://www.jplist.org/documentation/controls/buttons-path-filter)
+
+### Range Filter Controls
+- [Buttons Range Filter Control](https://www.jplist.org/documentation/controls/buttons-range-filter)
+- [Slider Range Filter Control](https://www.jplist.org/documentation/controls/slider-range-filter)
+
+### Other Controls
+- [No Results Control](https://www.jplist.org/documentation/controls/no-results)
+- [Layout Control](https://www.jplist.org/documentation/controls/layout)
+- [Reset Control](https://www.jplist.org/documentation/controls/reset)
+- [Counter Control](https://www.jplist.org/documentation/controls/counter)
+
+## [Versioning](#versioning) <img src="https://www.jplist.org/img/github/puzzle.png" align="right">
 jPList library follows semantic versioning specification (**semver**). Please read more about it [here.](https://semver.org/)
 
-## [Browser Compatibility](#browser-compat) <img src="https://www.jplist.org/img/github/puzzle.png" align="right">
+## [Browser Compatibility](#browser-compat) 
 - Internet Explorer 10+
 - Firefox
 - Chrome
