@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>jPList JavaScript library</title>
+        <meta name="description" content="jPList is a vanilla JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc." />
+
+        <link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="../../../dist/jplist.styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <!-- =========================== Group 1 ================================ -->
+        <h1>Dropdown filter<br/> Group 1</h1>
+
+        <div
+                data-jplist-control="dropdown-filter"
+                data-group="group1"
+                data-name="name1"
+                class="jplist-dd"
+                style="margin: 20px">
+
+            <div data-type="panel" class="jplist-dd-panel">Filter by</div>
+            <div data-type="content" class="jplist-dd-content">
+
+            <div
+                    data-value="0"
+                    data-path="default"
+                    class="jplist-dd-item">Filter by</div>
+
+            <div
+                    data-value="1"
+                    data-path=".title"
+                    class="jplist-dd-item"
+                    data-selected="true">Title</div>
+
+            <div
+                    data-value="2"
+                    data-path=".desc"
+                    class="jplist-dd-item">Description</div>
+
+            <div
+                    data-value="3"
+                    data-path=".likes"
+                    class="jplist-dd-item">Likes</div>
+            </div>
+        </div>
+
+        <!-- items group -->
+        <div data-jplist-group="group1">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+            </div>
+
+        </div>
+
+        <div
+                data-jplist-control="dropdown-filter"
+                data-group="group1"
+                data-name="name1"
+                class="jplist-dd"
+                style="margin: 20px">
+
+            <div data-type="panel" class="jplist-dd-panel">Filter by</div>
+            <div data-type="content" class="jplist-dd-content">
+
+                <div
+                        data-value="0"
+                        data-path="default"
+                        class="jplist-dd-item">Filter by</div>
+
+                <div
+                        data-value="1"
+                        data-path=".title"
+                        class="jplist-dd-item"
+                        data-selected="true">Title</div>
+
+                <div
+                        data-value="2"
+                        data-path=".desc"
+                        class="jplist-dd-item">Description</div>
+
+                <div
+                        data-value="3"
+                        data-path=".likes"
+                        class="jplist-dd-item">Likes</div>
+            </div>
+        </div>
+
+        <!-- =========================== Group 2 ================================ -->
+        <h1>Dropdown filter<br/> Group 2</h1>
+
+        <div
+                data-jplist-control="dropdown-filter"
+                data-group="group2"
+                data-name="name2"
+                class="jplist-dd"
+                style="margin: 20px">
+
+            <div data-type="panel" class="jplist-dd-panel">Filter by</div>
+            <div data-type="content" class="jplist-dd-content">
+
+                <div
+                        data-value="0"
+                        data-path="default"
+                        class="jplist-dd-item">Filter by</div>
+
+                <div
+                        data-value="1"
+                        data-path=".title"
+                        class="jplist-dd-item"
+                        data-selected="true">Title</div>
+
+                <div
+                        data-value="2"
+                        data-path=".desc"
+                        class="jplist-dd-item">Description</div>
+
+                <div
+                        data-value="3"
+                        data-path=".likes"
+                        class="jplist-dd-item">Likes</div>
+            </div>
+        </div>
+
+        <!-- items group -->
+        <div data-jplist-group="group2">
+
+            <!-- item #1 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">ddd</span>
+                </p>
+            </div>
+
+            <!-- item #2 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Description:</b>
+                    <span class="desc">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+                </p>
+            </div>
+
+            <!-- item #3 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Likes:</b>
+                    <span class="likes">5</span>
+                </p>
+            </div>
+
+            <!-- item #4 -->
+            <div data-jplist-item>
+                <p>
+                    <b>Title:</b>
+                    <span class="title">bbb</span>
+                </p>
+            </div>
+
+            <div data-jplist-control="no-results" data-group="group2" name="no-results">No Results Found</div>
+        </div>
+
+        <div
+                data-jplist-control="dropdown-filter"
+                data-group="group2"
+                data-name="name2"
+                class="jplist-dd"
+                style="margin: 20px">
+
+            <div data-type="panel" class="jplist-dd-panel">Filter by</div>
+            <div data-type="content" class="jplist-dd-content">
+
+                <div
+                        data-value="0"
+                        data-path="default"
+                        class="jplist-dd-item">Filter by</div>
+
+                <div
+                        data-value="1"
+                        data-path=".title"
+                        class="jplist-dd-item"
+                        data-selected="true">Title</div>
+
+                <div
+                        data-value="2"
+                        data-path=".desc"
+                        class="jplist-dd-item">Description</div>
+
+                <div
+                        data-value="3"
+                        data-path=".likes"
+                        class="jplist-dd-item">Likes</div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+        <script src="../../../dist/jplist.min.js"></script>
+        <script>
+            jplist.init();
+        </script>
+    </body>
+</html>
