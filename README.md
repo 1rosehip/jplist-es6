@@ -4,7 +4,7 @@
 
 ![jPList library](https://www.jplist.org/img/github/screenshot-2.png "jPList library")
 
-## [Common Features](#common-features) <img src="https://raw.githubusercontent.com/1rosehip/jplist/master/demo/img/common/jplist.png" align="right">
+## [Common Features](#common-features) <img src="https://www.jplist.org/img/github/jplist.png" align="right">
 - Works with any content (tables, lists, div elements etc...)
 - Supports local storage and cookies
 - Has deep links support
@@ -31,7 +31,7 @@
 - Button filter controls
 - Range filter controls
 
-## [Examples](#examples) <img src="https://raw.githubusercontent.com/no81no/jplist/master/demo/img/common/bookmark.png" align="right">
+## [Examples](#examples) <img src="https://www.jplist.org/img/github/bookmark.png" align="right">
 - [Cars Demo](https://www.jplist.org/examples/cars) - pagination control, text filters, dropdown sort, range filter controls.
 - [Mountains Demo](https://www.jplist.org/examples/mountains) - hidden sort control, buttons path filter, buttons range filter, pagination control, text filter.
 - [Nature Demo](https://www.jplist.org/examples/nature) - sort buttons, checkbox text filter, select filter, pagination, text filter, radio buttons path filter and reset controls.
@@ -41,7 +41,7 @@
 ## [Versioning](#versioning)
 jPList library follows semantic versioning specification (**semver**). Please read more about it [here.](https://semver.org/)
 
-## [Browser Compatibility](#browser-compat) <img src="https://raw.githubusercontent.com/no81no/jplist/master/demo/img/common/puzzle.png" align="right">
+## [Browser Compatibility](#browser-compat) <img src="https://www.jplist.org/img/github/puzzle.png" align="right">
 - Internet Explorer 10+
 - Firefox
 - Chrome
