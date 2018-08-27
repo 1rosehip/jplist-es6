@@ -18,10 +18,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/1rosehip/jplist"
+    "url": "https://github.com/1rosehip/jplist-es6"
   },
   "bugs": {
-    "url": "https://github.com/1rosehip/jplist/issues"
+    "url": "https://github.com/1rosehip/jplist-es6/issues"
   },
   "keywords": [
     "sort",
