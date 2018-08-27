@@ -16,7 +16,7 @@
 ### Sorting
 - Ascending and descending sorting
 - Sort numbers, text, date and time
-- Sorting with Buttons, checkboxes, radio buttons, dropdowns and other controls
+- Sorting with buttons, checkboxes, radio buttons, dropdowns and other controls
 - Double and multiple sorting
 
 ### Pagination
@@ -30,6 +30,13 @@
 - Checkbox and radio button filters
 - Button filter controls
 - Range filter controls
+
+## [Examples](#examples) <img src="https://raw.githubusercontent.com/no81no/jplist/master/demo/img/common/bookmark.png" align="right">
+- [Cars Demo](https://www.jplist.org/examples/cars) - pagination control, text filters, dropdown sort, range filter controls.
+- [Mountains Demo](https://www.jplist.org/examples/mountains) - hidden sort control, buttons path filter, buttons range filter, pagination control, text filter.
+- [Nature Demo](https://www.jplist.org/examples/nature) - sort buttons, checkbox text filter, select filter, pagination, text filter, radio buttons path filter and reset controls.
+- [Food Demo](https://www.jplist.org/examples/food) - radio buttons sort control, radio buttons text filter control, multiple text filters, buttons path filter, pagination and more.
+- [Wallpapers Demo](https://www.jplist.org/examples/wallpapers) - pagination control, select sort control, buttons text filter control, checkbox path filter control, dropdown filter control.
 
 ## [Versioning](#versioning)
 jPList library follows semantic versioning specification (**semver**). Please read more about it [here.](https://semver.org/)
