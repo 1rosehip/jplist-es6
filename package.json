@@ -5,6 +5,8 @@
   "scripts": {
     "watch": "webpack --config webpack.config.js --watch",
     "build": "webpack --config webpack.config.js",
+    "watch.es6": "webpack --config webpack.config.es6.js --watch",
+    "build.es6": "webpack --config webpack.config.es6.js",
     "build110": "webpack --config webpack.config.js --version=1.1.0",
     "test": "jest src",
     "test120": "jest src/1.2.0",
