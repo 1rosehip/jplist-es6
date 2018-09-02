@@ -77,6 +77,9 @@
 ## [Versioning](#versioning) <img src="https://www.jplist.org/img/github/puzzle.png" align="right">
 jPList library follows semantic versioning specification (**semver**). Please read more about it [here.](https://semver.org/)
 
+## [Links](#links) 
+- [jPList on Facebook](https://www.facebook.com/jplist/)
+
 ## [Browser Compatibility](#browser-compat) 
 - Internet Explorer 10+
 - Firefox
