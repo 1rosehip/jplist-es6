@@ -136,4 +136,5 @@ import CounterControl from './controls/counter/counter.control';
     window.jplist.refresh = jplist.refresh.bind(jplist);
     window.jplist.resetControls = jplist.resetControls.bind(jplist);
     window.jplist.resetControl = jplist.resetControl.bind(jplist);
+    window.jplist.resetContent = jplist.resetContent.bind(jplist);
 })();

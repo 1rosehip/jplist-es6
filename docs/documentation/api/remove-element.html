@@ -569,11 +569,11 @@
         //start jPList
         jplist.init();
 
-        //remove element with id = el1
-        document.getElementById('el1').remove();
+        jplist.resetContent(function(){
 
-        //refresh jPList
-        jplist.init();
+            //remove element with id = el1
+            document.getElementById('el1').remove();
+        });
     })();
 &lt;/script>
 &lt;/html></code></pre>
