@@ -87,7 +87,4 @@ jPList library follows semantic versioning specification (**semver**). Please re
 - Safari
 - Opera
 
-## [Donations](#donation)
-If you find jPList useful, please consider making a donation to support project development. Thank you for your help!
-
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N54PFNPQ8ZJSU)
