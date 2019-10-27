@@ -16,7 +16,7 @@ class BaseSliderControl{
      * @param {number} max
      * @param {Function} callback
      */
-    constructor(element, isVertical = false, min = 0, value1 = 0, value2 = 0, max = 0, callback = (value1, value2) => {}){
+    constructor(element, isVertical = false, min = 0, value1 = 0, value2 = 0, max = 0, step = 1, callback = (value1, value2) => {}){
 
         if(element) {
 
@@ -29,6 +29,7 @@ class BaseSliderControl{
             this.callback = callback;
             this.min = min;
             this.max = max;
+            this.step = step;
 
             if(isVertical){
                 this.element.classList.add('jplist-slider-vertical');
@@ -275,6 +276,15 @@ class BaseSliderControl{
             handler[lefttop] = position[xy];
             //const value = Math.round(position[xy] * 100 / rect[size]); //value in %
             handler.value = this.getPreviewValue(position[xy], this.min, this.max);
+
+            //update the position with steps
+            if (this.step > 1) {
+                const stepValue = Math.ceil(handler.value / this.step) * this.step;
+                handler.value = stepValue > this.max ? this.max : stepValue;
+                const step = rect[size] / (this.max / this.step);
+    
+                position[xy] = Math.fround(position[xy] / step) * step;
+            }
 
             handler.style[lefttop] = (position[xy]) + 'px';
 

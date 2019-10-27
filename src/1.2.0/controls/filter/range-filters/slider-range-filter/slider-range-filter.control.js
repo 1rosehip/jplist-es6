@@ -33,6 +33,7 @@ class SliderRangeFilter extends BaseRangeFilterControlsGroup{
         rangeSliderFilterControl.val2Elements = control.element.querySelectorAll('[data-type="value-2"]');
         rangeSliderFilterControl.minElements = control.element.querySelectorAll('[data-type="min"]');
         rangeSliderFilterControl.maxElements = control.element.querySelectorAll('[data-type="max"]');
+        rangeSliderFilterControl.stepElements = control.element.querySelectorAll('[data-type="step"]');
 
         if(!sliderEl) return;
 
@@ -70,6 +71,7 @@ class SliderRangeFilter extends BaseRangeFilterControlsGroup{
             rangeSliderFilterControl.from,
             rangeSliderFilterControl.to,
             rangeSliderFilterControl.max,
+            rangeSliderFilterControl.step,
             (value1, value2) => {
 
                 for(let el of rangeSliderFilterControl.val1Elements){

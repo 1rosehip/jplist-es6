@@ -68,6 +68,18 @@ class BaseRangeFilterControl extends BaseControl{
                 this.max = this.to;
             }
 
+            const step = element.getAttribute('data-step');
+            
+            /**
+             * Step >= 1 (all numbers in the element)
+             * @type {number}
+             */
+            this.step = step === null ? 1 : Number(step);
+
+            if(isNaN(this.step)){
+                this.step = 1;
+            }
+
             /**
              * optional "OR" logic property, used to combine different filter controls with "OR" logic instead of "AND"
              * @type {string|null}
@@ -88,6 +100,7 @@ class BaseRangeFilterControl extends BaseControl{
             from: this.from,
             to: this.to,
             max: this.max,
+            step: this.step,
             or: this.or
         };
     }
@@ -102,7 +115,8 @@ class BaseRangeFilterControl extends BaseControl{
                 this.from === control.from &&
                 this.to === control.to &&
                 this.min === control.min &&
-                this.max === control.max;
+                this.max === control.max &&
+                this.step === control.step;
     }
 }
 
