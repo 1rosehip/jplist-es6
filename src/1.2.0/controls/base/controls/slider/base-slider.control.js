@@ -16,7 +16,7 @@ class BaseSliderControl{
      * @param {number} max
      * @param {Function} callback
      */
-    constructor(element, isVertical = false, min = 0, value1 = 0, value2 = 0, max = 0, step = 1, callback = (value1, value2) => {}){
+    constructor(element, isVertical = false, min = 0, value1 = 0, value2 = 0, max = 0, step = 1, valInput1 = null, valInput2 = null, callback = (value1, value2) => {}){
 
         if(element) {
 
@@ -62,6 +62,10 @@ class BaseSliderControl{
 
             this.dragging = null;
 
+            //slider input control
+            this.valueInput1 = valInput1;
+            this.valueInput2 = valInput2;
+
             this.handler1.addEventListener('mousedown', this.start.bind(this));
             this.handler2.addEventListener('mousedown', this.start.bind(this));
             this.handler1.addEventListener('touchstart', this.start.bind(this));
@@ -76,6 +80,12 @@ class BaseSliderControl{
             document.body.addEventListener('mouseleave', this.stop.bind(this));
 
             this.element.addEventListener('mousedown', this.jump.bind(this));
+
+            //slider input control jump
+            if (valInput1 && valInput2) {
+                this.valueInput1.addEventListener('keydown', this.inputJump.bind(this));
+                this.valueInput2.addEventListener('keydown', this.inputJump.bind(this));
+            }
 
             //set initial values
             this.setValues(value1, value2);
@@ -168,6 +178,28 @@ class BaseSliderControl{
 
         //render the updated state
         this.render(e);
+    }
+
+    /**
+     * jump to the specified point on the slider with input
+     * @param {Object} e
+     */
+    inputJump(e) {
+
+        if (e.which === 13) {
+
+            let value1 = this.valueInput1.value ? this.valueInput1.value : this.handler1.value;
+            let value2 = this.valueInput2.value ? this.valueInput2.value : this.handler2.value;
+
+            if (this.valueInput1.value > this.handler2.value) {
+                value1 = this.valueInput1.value = this.handler2.value;
+            }
+            if (this.valueInput2.value < this.handler1.value) {
+                value2 = this.valueInput2.value = this.handler1.value;
+            }
+            
+            this.setValues(value1, value2);
+        }
     }
 
     /**
