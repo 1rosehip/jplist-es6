@@ -198,7 +198,19 @@ class BaseSliderControl{
                 value2 = this.valueInput2.value = this.handler1.value;
             }
             
-            this.setValues(value1, value2);
+            //convert value to position
+            const pos1 = this.getInnerValue(value1, this.min, this.max);
+            const pos2 = this.getInnerValue(value2, this.min, this.max);
+
+            this.update({
+                x: pos2,
+                y: pos2
+            }, this.handler2, true);
+
+            this.update({
+                x: pos1,
+                y: pos1
+            }, this.handler1, true);
         }
     }
 
