@@ -136,7 +136,7 @@ class BaseSliderControl{
         const originalEnd = rect[size];
 
         //return Math.round((newEnd - newStart) * ((value - originalStart) / (originalEnd - originalStart)) + newStart);
-        return (newEnd - newStart) * ((value - originalStart) / (originalEnd - originalStart)) + newStart;
+        return Math.trunc((newEnd - newStart) * ((value - originalStart) / (originalEnd - originalStart)) + newStart);
     }
 
     /**
