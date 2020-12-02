@@ -1,5 +1,9 @@
 # [jPList Library](https://jplist.org)
 
+![npm](https://img.shields.io/npm/v/jplist-es6)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/1rosehip/jplist-es6)
+[![GitHub license](https://img.shields.io/github/license/1rosehip/jplist-es6)](https://github.com/1rosehip/jplist-es6/blob/master/LICENSE.txt)
+
 **jPList** is a JavaScript library for sorting, pagination and filtering of any HTML structure like DIVs, UL/LI, tables, etc. [MIT Licensed](https://github.com/1rosehip/jplist-es6/blob/master/LICENSE.txt). Get started at [jplist.org](https://jplist.org) with [documentation](https://jplist.org/documentation/getting-started) or [examples](https://jplist.org/examples/index).
 
 ![jPList library](https://www.jplist.org/img/github/screenshot-2.png "jPList library")
