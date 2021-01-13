@@ -24,16 +24,20 @@
             data-path=".like"
             data-group="group1"
             data-name="name1"
-            data-min="-100"
-            data-from="50"
-            data-to="100"
-            data-max="800">
+            data-min="0"
+            data-from="10"
+            data-to="800"
+            data-max="1000"
+            data-step="10">
 
              Min: <span data-type="min"></span>
              From likes: <span data-type="value-1"></span>
              <div class="jplist-slider" data-type="slider"></div>
              To likes: <span data-type="value-2"></span>
              Max: <span data-type="max"></span>
+
+            <input type="text" data-type="value-1-input" value />
+            <input type="text" data-type="value-2-input" value />
 
          </div>
 
@@ -431,21 +435,27 @@
       </div>
 
       <div class="buttons">
-          <div
-                  data-jplist-control="slider-range-filter"
-                  data-path=".like"
-                  data-group="group1"
-                  data-name="name1"
-                  data-min="-100"
-                  data-from="50"
-                  data-to="100"
-                  data-max="800">
+         <div
+         data-jplist-control="slider-range-filter"
+         data-path=".like"
+         data-group="group1"
+         data-name="name1"
+         data-min="0"
+         data-from="10"
+         data-to="800"
+         data-max="1000"
+         data-step="10">
 
-              <span data-type="min"></span> Min |
-              <span data-type="value-1"></span> Likes |
-              <div class="jplist-slider" data-type="slider"></div>
-              <span data-type="value-2"></span> Likes |
-              <span data-type="max"></span> Max
+         Min: <span data-type="min"></span>
+         From likes: <span data-type="value-1"></span>
+         <div class="jplist-slider" data-type="slider"></div>
+         To likes: <span data-type="value-2"></span>
+         Max: <span data-type="max"></span>
+
+         <input type="text" data-type="value-1-input" value />
+         <input type="text" data-type="value-2-input" value />
+
+      </div>
 
           </div>
 

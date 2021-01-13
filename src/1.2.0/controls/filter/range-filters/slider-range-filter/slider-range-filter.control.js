@@ -33,6 +33,8 @@ class SliderRangeFilter extends BaseRangeFilterControlsGroup{
         rangeSliderFilterControl.val2Elements = control.element.querySelectorAll('[data-type="value-2"]');
         rangeSliderFilterControl.minElements = control.element.querySelectorAll('[data-type="min"]');
         rangeSliderFilterControl.maxElements = control.element.querySelectorAll('[data-type="max"]');
+        const valInput1 = control.element.querySelector('[data-type="value-1-input"]');
+        const valInput2 = control.element.querySelector('[data-type="value-2-input"]');
 
         if(!sliderEl) return;
 
@@ -70,7 +72,15 @@ class SliderRangeFilter extends BaseRangeFilterControlsGroup{
             rangeSliderFilterControl.from,
             rangeSliderFilterControl.to,
             rangeSliderFilterControl.max,
+            rangeSliderFilterControl.step,
+            valInput1, valInput2,
             (value1, value2) => {
+                
+                //setup values for input
+                if (valInput1 && valInput2) {
+                    valInput1.value = Math.round(value1);
+                    valInput2.value = Math.round(value2);
+                }
 
                 for(let el of rangeSliderFilterControl.val1Elements){
                     el.textContent = Math.round(value1);
